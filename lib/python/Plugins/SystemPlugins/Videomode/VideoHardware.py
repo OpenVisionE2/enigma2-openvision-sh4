@@ -43,6 +43,8 @@ class VideoHardware:
 		modes["Scart"] = ["PAL"]
 	if has_rca:
 		modes["RCA"] = ["576i", "PAL"]
+	if has_avjack:
+		modes["Jack"] = ["PAL", "NTSC", "Multi"]
 
 	modes["HDMI"] = ["720p", "1080p", "1080i", "576p", "576i", "480p", "480i"]
 	widescreen_modes = {"720p", "1080p", "1080i"}

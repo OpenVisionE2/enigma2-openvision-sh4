@@ -9,13 +9,16 @@ install_PYTHON =	\
 	VideoWizard.py
 
 dist_install_DATA = \
+	HDMI-PC.png \
+	HDMI.png \
+	Jack.png \
+	lcd_HDMI-PC.png \
+	lcd_HDMI.png \
+	lcd_Jack.png \
+	lcd_RCA.png \
 	lcd_Scart.png \
 	lcd_YPbPr.png \
+	RCA.png \
 	Scart.png \
-	videowizard.xml \
 	YPbPr.png \
-	HDMI.png \
-	HDMI-PC.png \
-	lcd_HDMI.png \
-	Jack.png \
-	RCA.png
+	videowizard.xml

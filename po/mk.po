@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:09+0430\n"
+"POT-Creation-Date: 2021-07-18 11:27+0430\n"
 "PO-Revision-Date: 2021-02-19 14:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: Muzoss-VELEBRDO\n"
@@ -1749,6 +1749,10 @@ msgstr "Откажете го уредувањето на букет"
 
 msgid "Abort favourites edit"
 msgstr "Откажете го уредувањето на фаворити"
+
+#, fuzzy
+msgid "Aborted"
+msgstr "Прекини"
 
 msgid "About"
 msgstr "За"
@@ -6340,7 +6344,7 @@ msgstr "Флеш Имиџ"
 
 #, fuzzy
 msgid "Flashing"
-msgstr "Флеширање Имиџ"
+msgstr "Флеш имиџ"
 
 msgid "Flashing Image"
 msgstr "Флеширање Имиџ"
@@ -8007,9 +8011,8 @@ msgstr "Луксембург"
 msgid "Luxembourgish"
 msgstr "Луксембургски"
 
-#, fuzzy
 msgid "MAC Address Setup"
-msgstr "Поставки на Хард диск"
+msgstr ""
 
 #, fuzzy
 msgid "MAC address"
@@ -8694,6 +8697,9 @@ msgstr "Науру"
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. OK to perform the action described in the currently highlighted help."
 msgstr ""
 
+msgid "Neither .png nor .jpg nor .svg, please fix file extension"
+msgstr ""
+
 msgid "Nepal"
 msgstr "Непал"
 
@@ -9037,9 +9043,8 @@ msgstr "Недефинирано"
 msgid "Not Installed"
 msgstr "Не е инсталирано"
 
-#, fuzzy
 msgid "Not a valid MAC address"
-msgstr "IP-адреса"
+msgstr ""
 
 msgid "Not associated"
 msgstr "Не се поврзани"
@@ -9195,6 +9200,10 @@ msgstr "Исклучи"
 
 msgid "Offline decode delay (ms)"
 msgstr "Доцнење за дешифрирање офлајн (ms)"
+
+#, fuzzy
+msgid "Offline delete failed"
+msgstr "Бришењето не успеа!"
 
 msgid "Old - SH4"
 msgstr ""
@@ -10160,7 +10169,7 @@ msgstr "Притиснете ОК за да продолжите."
 
 #, fuzzy
 msgid "Press OK to activate the MAC address."
-msgstr "Притиснете OK за да ги уредите поставките."
+msgstr "Притиснете OK за да ги активирате поставките."
 
 #, python-format
 msgid "Press OK to activate the selected %s skin."
@@ -10238,7 +10247,7 @@ msgstr "Назад"
 
 #, fuzzy
 msgid "Prev Image"
-msgstr "Имиџ: "
+msgstr "Избриши имиџ"
 
 msgid "Preview"
 msgstr "Преглед"
@@ -10403,7 +10412,7 @@ msgstr "Данска"
 
 #, fuzzy
 msgid "RC default name"
-msgstr "Преименувај"
+msgstr "стандардно"
 
 #, fuzzy
 msgid "RC default type"
@@ -10537,9 +10546,8 @@ msgstr "Назад на последниот канал"
 msgid "Receiver"
 msgstr ""
 
-#, fuzzy
 msgid "Receiver Image Actions"
-msgstr "Информации"
+msgstr ""
 
 #, fuzzy
 msgid "Receiver Information"
@@ -10636,6 +10644,9 @@ msgstr "Избор на стапка на освежување."
 msgid "Refresh the screen"
 msgstr "Избор на стапка на освежување."
 
+msgid "Refusing to move to the same directory"
+msgstr "Одбива да се смени во истиот директориум"
+
 msgid "Regard deep standby as standby"
 msgstr "Длабокото стендбај сметајте го како стендбај"
 
@@ -10680,7 +10691,7 @@ msgstr "Потсетник за зачувување на датотеката �
 
 #, fuzzy
 msgid "Remote Control"
-msgstr "Отстрани елемент"
+msgstr "Тип на далечински управувач"
 
 #, fuzzy
 msgid "Remote control information"
@@ -12104,7 +12115,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Set a new MAC address"
-msgstr "IP-адреса"
+msgstr "Тековна CEC адреса"
 
 msgid "Set a temporary sort method for this directory"
 msgstr ""
@@ -12559,7 +12570,7 @@ msgstr "Прикажи повеќеканален EPG"
 
 #, fuzzy
 msgid "Show next image"
-msgstr "Прикажи филмови"
+msgstr "Покажи CI пораки"
 
 msgid "Show notification when import channels and/or EPG from remote receiver URL did not complete"
 msgstr "Покажи известување ако увозните канали и / или EPG од URL-то на далечинскиот приемник не се завршени"
@@ -12616,9 +12627,8 @@ msgstr "Префрли се на претходниот канал"
 msgid "Show python in plugin browser"
 msgstr "Заштитете го прелистувачот на плагин"
 
-#, fuzzy
 msgid "Show receiver image(s)"
-msgstr "Внеси IP адреса"
+msgstr ""
 
 msgid "Show record clock icons"
 msgstr "Покажи икони за снимање"
@@ -13337,7 +13347,7 @@ msgstr "Стоп за снимање"
 
 #, fuzzy
 msgid "Stop live TV service"
-msgstr "Отстранете ги кабелските канали"
+msgstr "Оди на последниот канал"
 
 msgid "Stop play TV"
 msgstr "Стоп за телевизорот"
@@ -14433,6 +14443,9 @@ msgstr "Временска зона"
 
 msgid "Time zone area"
 msgstr "Област на временска зона"
+
+msgid "Timeout elapsed, sorry."
+msgstr ""
 
 msgid "Timer"
 msgstr "Тајмер"
@@ -16392,6 +16405,9 @@ msgstr "водич за доделување услуги / даватели /ca
 msgid "about to start"
 msgstr "стартирам"
 
+msgid "action enum must be simple."
+msgstr ""
+
 msgid "activate network adapter configuration"
 msgstr "активирајте ја конфигурацијата на мрежниот адаптер"
 
@@ -16765,6 +16781,9 @@ msgstr "екстра широк"
 msgid "failed"
 msgstr "неуспешно"
 
+msgid "failed to execute command!"
+msgstr ""
+
 msgid "false"
 msgstr "неточно"
 
@@ -17073,6 +17092,9 @@ msgstr "не се пронајдени слотови за CI"
 
 msgid "no channel list"
 msgstr "не е пронајден список со канали"
+
+msgid "no comma"
+msgstr ""
 
 msgid "no module found"
 msgstr "не е пронајден модул"

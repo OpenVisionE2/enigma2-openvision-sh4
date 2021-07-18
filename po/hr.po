@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:09+0430\n"
+"POT-Creation-Date: 2021-07-18 11:27+0430\n"
 "PO-Revision-Date: 2021-01-17 18:31+0100\n"
 "Last-Translator: Željko <zeljko2@hi.ht.hr>\n"
 "Language-Team: Željko\n"
@@ -1884,6 +1884,10 @@ msgstr "Prekini uređivanje paketa"
 
 msgid "Abort favourites edit"
 msgstr "Prekid uređenja favorita"
+
+#, fuzzy
+msgid "Aborted"
+msgstr "Prekid"
 
 msgid "About"
 msgstr "Informacije o programu"
@@ -6482,7 +6486,7 @@ msgstr "Fleš imagea"
 
 #, fuzzy
 msgid "Flashing"
-msgstr "Flešanje imagea"
+msgstr "Fleš imagea"
 
 msgid "Flashing Image"
 msgstr "Flešanje imagea"
@@ -8151,9 +8155,8 @@ msgstr "Luxemburg"
 msgid "Luxembourgish"
 msgstr "Luxemburški"
 
-#, fuzzy
 msgid "MAC Address Setup"
-msgstr "Postavke hard diska"
+msgstr ""
 
 #, fuzzy
 msgid "MAC address"
@@ -8838,6 +8841,9 @@ msgstr "Nauru"
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. OK to perform the action described in the currently highlighted help."
 msgstr ""
 
+msgid "Neither .png nor .jpg nor .svg, please fix file extension"
+msgstr ""
+
 msgid "Nepal"
 msgstr "Nepal"
 
@@ -9181,9 +9187,8 @@ msgstr "Nije definirano"
 msgid "Not Installed"
 msgstr "Nije instalirano"
 
-#, fuzzy
 msgid "Not a valid MAC address"
-msgstr "IP-adresa"
+msgstr ""
 
 msgid "Not associated"
 msgstr "Nije povezano"
@@ -9339,6 +9344,10 @@ msgstr "Isklj."
 
 msgid "Offline decode delay (ms)"
 msgstr "Odgoda izvanmrežnog dekodiranja (ms)"
+
+#, fuzzy
+msgid "Offline delete failed"
+msgstr "Brisanje nije uspjelo!"
 
 msgid "Old - SH4"
 msgstr ""
@@ -10304,7 +10313,7 @@ msgstr "Pritisnite OK na daljinskom upravljaču za nastavak."
 
 #, fuzzy
 msgid "Press OK to activate the MAC address."
-msgstr "Pritisnite OK za uređivanje postavki."
+msgstr "Pritisnite OK za aktiviranje postavki."
 
 #, python-format
 msgid "Press OK to activate the selected %s skin."
@@ -10382,7 +10391,7 @@ msgstr "Prijašnji"
 
 #, fuzzy
 msgid "Prev Image"
-msgstr "Image: "
+msgstr "Izbriši image"
 
 msgid "Preview"
 msgstr "Pretpregled"
@@ -10547,7 +10556,7 @@ msgstr "Danska"
 
 #, fuzzy
 msgid "RC default name"
-msgstr "Preimenovati"
+msgstr "zadano"
 
 #, fuzzy
 msgid "RC default type"
@@ -10681,9 +10690,8 @@ msgstr "Povratak na prethodnu uslugu"
 msgid "Receiver"
 msgstr ""
 
-#, fuzzy
 msgid "Receiver Image Actions"
-msgstr "Informacije"
+msgstr ""
 
 #, fuzzy
 msgid "Receiver Information"
@@ -10780,6 +10788,9 @@ msgstr "Odabir brzine osvježavanja."
 msgid "Refresh the screen"
 msgstr "Odabir brzine osvježavanja."
 
+msgid "Refusing to move to the same directory"
+msgstr "Odbija premještanje u isti direktorij"
+
 msgid "Regard deep standby as standby"
 msgstr "Duboko stanje čekanja kao čekanje"
 
@@ -10824,7 +10835,7 @@ msgstr "Zapamtite, odlučili ste spremiti datoteku vremenskog pomaka."
 
 #, fuzzy
 msgid "Remote Control"
-msgstr "Ukloni unos"
+msgstr "Tip daljinskog upravljača"
 
 #, fuzzy
 msgid "Remote control information"
@@ -12251,7 +12262,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Set a new MAC address"
-msgstr "IP-adresa"
+msgstr "Trenutna CEC adresa"
 
 msgid "Set a temporary sort method for this directory"
 msgstr ""
@@ -12706,7 +12717,7 @@ msgstr "Prikažite višekanalni EPG"
 
 #, fuzzy
 msgid "Show next image"
-msgstr "Prikažite filmove"
+msgstr "Prikažite CI poruke"
 
 msgid "Show notification when import channels and/or EPG from remote receiver URL did not complete"
 msgstr "Prikažite obavijest prilikom uvoza kanala i/ili EPG s URL-a udaljenog primatelja kada nije kompletan"
@@ -12763,9 +12774,8 @@ msgstr "Prebacite se na prethodni kanal"
 msgid "Show python in plugin browser"
 msgstr "Zaštitita dodatka preglednika"
 
-#, fuzzy
 msgid "Show receiver image(s)"
-msgstr "Unesite IP adresu"
+msgstr ""
 
 msgid "Show record clock icons"
 msgstr "Prikažite ikone sata za snimanje"
@@ -13486,7 +13496,7 @@ msgstr "Zaustavite unos"
 
 #, fuzzy
 msgid "Stop live TV service"
-msgstr "Uklonite kabelske usluge"
+msgstr "Idite na zadnju uslugu"
 
 msgid "Stop play TV"
 msgstr "Zaustavite reprodukciju TV-a"
@@ -14590,6 +14600,9 @@ msgstr "Vremenska zona"
 
 msgid "Time zone area"
 msgstr "Područje vremenske zone"
+
+msgid "Timeout elapsed, sorry."
+msgstr ""
 
 msgid "Timer"
 msgstr "Tajmer"
@@ -16553,6 +16566,9 @@ msgstr "GUI za dodjeljivanje usluga/pružatelja usluga/caids-a zajedničkim modu
 msgid "about to start"
 msgstr "o početku"
 
+msgid "action enum must be simple."
+msgstr ""
+
 msgid "activate network adapter configuration"
 msgstr "aktivirati konfiguraciju mrežnog adaptera"
 
@@ -16926,6 +16942,9 @@ msgstr "izuzetno širok"
 msgid "failed"
 msgstr "neuspješno"
 
+msgid "failed to execute command!"
+msgstr ""
+
 msgid "false"
 msgstr "lažno"
 
@@ -17234,6 +17253,9 @@ msgstr "nema pronađenih CI utora"
 
 msgid "no channel list"
 msgstr "nema popisa kanala"
+
+msgid "no comma"
+msgstr ""
 
 msgid "no module found"
 msgstr "nema pronađenih modula"

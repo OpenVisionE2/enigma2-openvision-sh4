@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:09+0430\n"
+"POT-Creation-Date: 2021-07-18 11:27+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: PLiteam <translators@openpli.org>\n"
@@ -1872,6 +1872,10 @@ msgstr "Bouquet bewerken afsluiten"
 
 msgid "Abort favourites edit"
 msgstr "Favorieten bewerken afsluiten"
+
+#, fuzzy
+msgid "Aborted"
+msgstr "Afbreken"
 
 msgid "About"
 msgstr "Uw ontvanger"
@@ -6683,7 +6687,7 @@ msgstr "Flash de image"
 
 #, fuzzy
 msgid "Flashing"
-msgstr "Het image wordt geflasht"
+msgstr "Image flashen"
 
 msgid "Flashing Image"
 msgstr "Het image wordt geflasht"
@@ -8360,9 +8364,8 @@ msgstr "Luxemburg"
 msgid "Luxembourgish"
 msgstr "Luxemburgs"
 
-#, fuzzy
 msgid "MAC Address Setup"
-msgstr "Instellingen m.b.t. de harde schijf."
+msgstr ""
 
 #, fuzzy
 msgid "MAC address"
@@ -9047,6 +9050,9 @@ msgstr "Nauru"
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. OK to perform the action described in the currently highlighted help."
 msgstr ""
 
+msgid "Neither .png nor .jpg nor .svg, please fix file extension"
+msgstr ""
+
 msgid "Nepal"
 msgstr "Nepal"
 
@@ -9392,9 +9398,8 @@ msgstr "Niet vestgelegd"
 msgid "Not Installed"
 msgstr "Niet geïnstalleerd"
 
-#, fuzzy
 msgid "Not a valid MAC address"
-msgstr "IP-adres:"
+msgstr ""
 
 msgid "Not associated"
 msgstr "Geen verband"
@@ -9555,6 +9560,10 @@ msgstr "Uit"
 
 msgid "Offline decode delay (ms)"
 msgstr "Vertraging in ms voor het achteraf decoderen"
+
+#, fuzzy
+msgid "Offline delete failed"
+msgstr "Verwijderen mislukt!"
 
 msgid "Old - SH4"
 msgstr ""
@@ -10545,7 +10554,7 @@ msgstr "Druk Ok op uw afstandsbediening om verder te gaan."
 
 #, fuzzy
 msgid "Press OK to activate the MAC address."
-msgstr "Druk op Ok om te wijzigen."
+msgstr "Druk Ok om de wijziging op te slaan."
 
 #, python-format
 msgid "Press OK to activate the selected %s skin."
@@ -10626,7 +10635,7 @@ msgstr "Vorige"
 
 #, fuzzy
 msgid "Prev Image"
-msgstr "Image: "
+msgstr "Verwijderen de image"
 
 msgid "Preview"
 msgstr "Voorbeeld"
@@ -10791,7 +10800,7 @@ msgstr "Denemarken"
 
 #, fuzzy
 msgid "RC default name"
-msgstr "Wijzigen"
+msgstr "standaard"
 
 #, fuzzy
 msgid "RC default type"
@@ -10925,9 +10934,8 @@ msgstr "Herinner aan het eerdere programma"
 msgid "Receiver"
 msgstr ""
 
-#, fuzzy
 msgid "Receiver Image Actions"
-msgstr "Informatie"
+msgstr ""
 
 #, fuzzy
 msgid "Receiver Information"
@@ -11024,6 +11032,9 @@ msgstr "Herhalingsfrequentie"
 msgid "Refresh the screen"
 msgstr "Herhalingsfrequentie"
 
+msgid "Refusing to move to the same directory"
+msgstr "Verplaatsen naar dezelfde doelmap wordt niet geaccepteerd."
+
 msgid "Regard deep standby as standby"
 msgstr "Beschouw de diepe stand-by als normale stand-by"
 
@@ -11068,7 +11079,7 @@ msgstr "Herinnering, u heeft ervoor gekozen om de timeshiftopname op te slaan."
 
 #, fuzzy
 msgid "Remote Control"
-msgstr "Verwijder het huidige item"
+msgstr "Type afstandsbediening"
 
 #, fuzzy
 msgid "Remote control information"
@@ -12497,7 +12508,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Set a new MAC address"
-msgstr "IP-adres:"
+msgstr "Huidig CEC adres"
 
 msgid "Set a temporary sort method for this directory"
 msgstr ""
@@ -12963,7 +12974,7 @@ msgstr "Toon de meerkanaals EPG"
 
 #, fuzzy
 msgid "Show next image"
-msgstr "Toon de films"
+msgstr "CI berichten tonen"
 
 msgid "Show notification when import channels and/or EPG from remote receiver URL did not complete"
 msgstr "Indien geactiveerd, dan wordt er een melding weergegeven indien de import van zenders en/of EPG vanaf de externe ontvanger niet (compleet) gelukt is."
@@ -13020,9 +13031,8 @@ msgstr "Ga naar de vorige zender"
 msgid "Show python in plugin browser"
 msgstr "Beveilig plugins zoekmenu"
 
-#, fuzzy
 msgid "Show receiver image(s)"
-msgstr "Voer een IPadres in"
+msgstr ""
 
 msgid "Show record clock icons"
 msgstr "Opname klok iconen tonen"
@@ -13752,7 +13762,7 @@ msgstr "Stop de invoer"
 
 #, fuzzy
 msgid "Stop live TV service"
-msgstr "Verwijder kabelkanalen"
+msgstr "Ga naar het laatste kanaal"
 
 msgid "Stop play TV"
 msgstr "Stop met TV kijken."
@@ -14879,6 +14889,9 @@ msgstr "Tijdzone"
 
 msgid "Time zone area"
 msgstr "Tijdzone gebied"
+
+msgid "Timeout elapsed, sorry."
+msgstr ""
 
 msgid "Timer"
 msgstr "Timer"
@@ -16893,6 +16906,9 @@ msgstr "een GUI om zenders/providers/ caids aan de CI modules toe te voegen"
 msgid "about to start"
 msgstr "start zodadelijk"
 
+msgid "action enum must be simple."
+msgstr ""
+
 msgid "activate network adapter configuration"
 msgstr "Start de netwerkadapter configuratie"
 
@@ -17269,6 +17285,9 @@ msgstr "Extra breed"
 msgid "failed"
 msgstr "mislukt"
 
+msgid "failed to execute command!"
+msgstr ""
+
 msgid "false"
 msgstr "incorrect"
 
@@ -17577,6 +17596,9 @@ msgstr "Geen CI slots gevonden"
 
 msgid "no channel list"
 msgstr "geen zenderlijst"
+
+msgid "no comma"
+msgstr ""
 
 msgid "no module found"
 msgstr "Geen module gevonden"

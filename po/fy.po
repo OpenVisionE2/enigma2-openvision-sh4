@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:09+0430\n"
+"POT-Creation-Date: 2021-07-18 11:27+0430\n"
 "PO-Revision-Date: 2008-12-29 16:22+0100\n"
 "Last-Translator: gerrit <gerrit@nedlinux.nl>\n"
 "Language-Team: gerrit <fy@li.org>\n"
@@ -1938,6 +1938,9 @@ msgstr "Boeket bewurkjen ôfbrekke"
 #
 msgid "Abort favourites edit"
 msgstr "Favoriet bewurkje ôfbrekke"
+
+msgid "Aborted"
+msgstr ""
 
 #
 msgid "About"
@@ -7972,10 +7975,8 @@ msgid ""
 "%s"
 msgstr ""
 
-#
-#, fuzzy
 msgid "Images"
-msgstr "Flash"
+msgstr ""
 
 msgid "Immediately restart selected devices."
 msgstr ""
@@ -8920,10 +8921,8 @@ msgstr ""
 msgid "Luxembourgish"
 msgstr ""
 
-#
-#, fuzzy
 msgid "MAC Address Setup"
-msgstr "Hurde skiif ynstellingen"
+msgstr ""
 
 #
 #, fuzzy
@@ -9718,6 +9717,9 @@ msgstr ""
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. OK to perform the action described in the currently highlighted help."
 msgstr ""
 
+msgid "Neither .png nor .jpg nor .svg, please fix file extension"
+msgstr ""
+
 msgid "Nepal"
 msgstr ""
 
@@ -10120,10 +10122,8 @@ msgstr "Gebruker ynstelling"
 msgid "Not Installed"
 msgstr "Oan it ynstallearjen"
 
-#
-#, fuzzy
 msgid "Not a valid MAC address"
-msgstr "IP Adres"
+msgstr ""
 
 msgid "Not associated"
 msgstr ""
@@ -10296,6 +10296,11 @@ msgstr "Ut"
 
 msgid "Offline decode delay (ms)"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Offline delete failed"
+msgstr "Ferwiderjen mislearre!"
 
 msgid "Old - SH4"
 msgstr ""
@@ -11394,7 +11399,7 @@ msgstr "Druk OK op of ôfstandsbestjinning om fierder te gean."
 #
 #, fuzzy
 msgid "Press OK to activate the MAC address."
-msgstr "Druk OK om dizze ynstellingen te bewurkjen"
+msgstr "Druk Ok om ynstellingen aktief te meitsjen."
 
 #
 #, fuzzy, python-format
@@ -11489,7 +11494,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Prev Image"
-msgstr "Flash"
+msgstr "triem ferwiderje"
 
 #
 msgid "Preview"
@@ -11667,10 +11672,8 @@ msgstr ""
 msgid "RAM benchmark"
 msgstr ""
 
-#
-#, fuzzy
 msgid "RC default name"
-msgstr "Omneame"
+msgstr ""
 
 #
 #, fuzzy
@@ -11821,10 +11824,8 @@ msgstr ""
 msgid "Receiver"
 msgstr ""
 
-#
-#, fuzzy
 msgid "Receiver Image Actions"
-msgstr "Ynformaasje"
+msgstr ""
 
 #
 #, fuzzy
@@ -11937,6 +11938,11 @@ msgstr "Fernij faasje seleksje"
 msgid "Refresh the screen"
 msgstr "Fernij faasje seleksje"
 
+#
+#, fuzzy
+msgid "Refusing to move to the same directory"
+msgstr "Jou in namme yn foar de nije map"
+
 msgid "Regard deep standby as standby"
 msgstr ""
 
@@ -11982,7 +11988,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Remote Control"
-msgstr "Ferwiderje yngong"
+msgstr "Alderlik tasjoch type"
 
 #
 #, fuzzy
@@ -13643,10 +13649,8 @@ msgstr ""
 msgid "Set PIN Pressing [OK]"
 msgstr ""
 
-#
-#, fuzzy
 msgid "Set a new MAC address"
-msgstr "IP Adres"
+msgstr ""
 
 msgid "Set a temporary sort method for this directory"
 msgstr ""
@@ -14144,7 +14148,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Show next image"
-msgstr "Satellyten"
+msgstr "Infolyne sjen litte"
 
 msgid "Show notification when import channels and/or EPG from remote receiver URL did not complete"
 msgstr ""
@@ -14203,10 +14207,8 @@ msgstr "Gjin nei foarige undersender"
 msgid "Show python in plugin browser"
 msgstr "Ynstekker browser"
 
-#
-#, fuzzy
 msgid "Show receiver image(s)"
-msgstr "IP Adres"
+msgstr ""
 
 msgid "Show record clock icons"
 msgstr ""
@@ -15028,7 +15030,7 @@ msgstr "stopje rigele"
 #
 #, fuzzy
 msgid "Stop live TV service"
-msgstr "Ferwiderje yngong"
+msgstr "Befeilich kanalen"
 
 msgid "Stop play TV"
 msgstr ""
@@ -16225,6 +16227,9 @@ msgstr "Tiidszone"
 #, fuzzy
 msgid "Time zone area"
 msgstr "Tiidszone"
+
+msgid "Timeout elapsed, sorry."
+msgstr ""
 
 #
 msgid "Timer"
@@ -18365,6 +18370,9 @@ msgstr ""
 msgid "about to start"
 msgstr "op it punt om te starten"
 
+msgid "action enum must be simple."
+msgstr ""
+
 #
 msgid "activate network adapter configuration"
 msgstr ""
@@ -18765,6 +18773,9 @@ msgstr ""
 msgid "failed"
 msgstr ""
 
+msgid "failed to execute command!"
+msgstr ""
+
 msgid "false"
 msgstr ""
 
@@ -19104,6 +19115,9 @@ msgid "no CI slots found"
 msgstr ""
 
 msgid "no channel list"
+msgstr ""
+
+msgid "no comma"
 msgstr ""
 
 #

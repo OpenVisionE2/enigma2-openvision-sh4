@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:09+0430\n"
+"POT-Creation-Date: 2021-07-18 11:27+0430\n"
 "PO-Revision-Date: 2020-12-05 15:11+0100\n"
 "Last-Translator: mcfly82\n"
 "Language-Team: mcfly82 & wysless\n"
@@ -1872,6 +1872,10 @@ msgstr "Lista szerkesztés megszakítása"
 
 msgid "Abort favourites edit"
 msgstr "Kedvencek módosításának megszakítása"
+
+#, fuzzy
+msgid "Aborted"
+msgstr "Mégsem"
 
 msgid "About"
 msgstr "Névjegy"
@@ -6453,7 +6457,7 @@ msgstr "Flash Image"
 
 #, fuzzy
 msgid "Flashing"
-msgstr "Image flashelése"
+msgstr "Flash image"
 
 msgid "Flashing Image"
 msgstr "Image flashelése"
@@ -8119,9 +8123,8 @@ msgstr "Luxemburg"
 msgid "Luxembourgish"
 msgstr "Luxemburgi"
 
-#, fuzzy
 msgid "MAC Address Setup"
-msgstr "Háttértár beállítások"
+msgstr ""
 
 #, fuzzy
 msgid "MAC address"
@@ -8806,6 +8809,9 @@ msgstr "Nauru"
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. OK to perform the action described in the currently highlighted help."
 msgstr ""
 
+msgid "Neither .png nor .jpg nor .svg, please fix file extension"
+msgstr ""
+
 msgid "Nepal"
 msgstr "Nepál"
 
@@ -9149,9 +9155,8 @@ msgstr "Nincs megadva"
 msgid "Not Installed"
 msgstr "Nincs telepítve"
 
-#, fuzzy
 msgid "Not a valid MAC address"
-msgstr "IP cím"
+msgstr ""
 
 msgid "Not associated"
 msgstr "Nem-csatlakozott"
@@ -9309,6 +9314,10 @@ msgstr "Ki"
 
 msgid "Offline decode delay (ms)"
 msgstr "Offline dekódolási késleltetés (ms)"
+
+#, fuzzy
+msgid "Offline delete failed"
+msgstr "A törlés sikertelen!"
 
 msgid "Old - SH4"
 msgstr ""
@@ -10274,7 +10283,7 @@ msgstr "Nyomja le az OK gombot a távirányítón a folytatáshoz."
 
 #, fuzzy
 msgid "Press OK to activate the MAC address."
-msgstr "Az OK gombbal módosíthatja a beállításokat."
+msgstr "Az OK gombbal aktiválhatja a beállításokat."
 
 #, python-format
 msgid "Press OK to activate the selected %s skin."
@@ -10352,7 +10361,7 @@ msgstr "Előző"
 
 #, fuzzy
 msgid "Prev Image"
-msgstr "Image: "
+msgstr "Image törlése"
 
 msgid "Preview"
 msgstr "Előnézet"
@@ -10517,7 +10526,7 @@ msgstr "Dánia"
 
 #, fuzzy
 msgid "RC default name"
-msgstr "Átnevezés"
+msgstr "alapértelmezett"
 
 #, fuzzy
 msgid "RC default type"
@@ -10651,9 +10660,8 @@ msgstr "Előző csatornára váltás"
 msgid "Receiver"
 msgstr ""
 
-#, fuzzy
 msgid "Receiver Image Actions"
-msgstr "Információk"
+msgstr ""
 
 #, fuzzy
 msgid "Receiver Information"
@@ -10750,6 +10758,9 @@ msgstr "Frissítés kiválasztása."
 msgid "Refresh the screen"
 msgstr "Frissítés kiválasztása."
 
+msgid "Refusing to move to the same directory"
+msgstr "Ugyanabba a mappába való áthelyezés elutasítása"
+
 msgid "Regard deep standby as standby"
 msgstr "A kikapcsolás legyen az alapértelmezett készenlét"
 
@@ -10794,7 +10805,7 @@ msgstr "Figyelem, azt választotta, hogy az időcsűsztatás felvétele ne törl
 
 #, fuzzy
 msgid "Remote Control"
-msgstr "Bejegyzés törlése"
+msgstr "Távirányító típusa"
 
 #, fuzzy
 msgid "Remote control information"
@@ -12216,7 +12227,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Set a new MAC address"
-msgstr "IP cím"
+msgstr "Aktuális CEC cím"
 
 msgid "Set a temporary sort method for this directory"
 msgstr ""
@@ -12671,7 +12682,7 @@ msgstr "Több csatornás EPG megjelenítése"
 
 #, fuzzy
 msgid "Show next image"
-msgstr "Filmek megjelenítése"
+msgstr "CI üzenetek mutatása"
 
 msgid "Show notification when import channels and/or EPG from remote receiver URL did not complete"
 msgstr "Figyelmeztetés mutatása, ha a csatornák és/vagy az EPG importálása a távoli vevő URL-ből nem fejeződött be"
@@ -12728,9 +12739,8 @@ msgstr "Ugrás az előző csatornára"
 msgid "Show python in plugin browser"
 msgstr "Bővítménykezelő védelme"
 
-#, fuzzy
 msgid "Show receiver image(s)"
-msgstr "Adja meg az IP címet"
+msgstr ""
 
 msgid "Show record clock icons"
 msgstr "Felvételi óra ikonok megjelenítése"
@@ -13451,7 +13461,7 @@ msgstr "Bejegyzés leállítása"
 
 #, fuzzy
 msgid "Stop live TV service"
-msgstr "Kábeles szolgáltatás eltávolítása"
+msgstr "Ugrás az utolsó csatornára"
 
 msgid "Stop play TV"
 msgstr "TV adás megállítása"
@@ -14561,6 +14571,9 @@ msgstr "Időzóna"
 
 msgid "Time zone area"
 msgstr "Időzóna területe"
+
+msgid "Timeout elapsed, sorry."
+msgstr ""
 
 msgid "Timer"
 msgstr "Időzítő"
@@ -16520,6 +16533,9 @@ msgstr "egy felhasználói felület, mely lehetővé teszi szolgáltatók/csator
 msgid "about to start"
 msgstr "az indításról"
 
+msgid "action enum must be simple."
+msgstr ""
+
 msgid "activate network adapter configuration"
 msgstr "hálózati adapter konfiguráció aktiválása"
 
@@ -16893,6 +16909,9 @@ msgstr "extra széles"
 msgid "failed"
 msgstr "sikertelen"
 
+msgid "failed to execute command!"
+msgstr ""
+
 msgid "false"
 msgstr "nem"
 
@@ -17201,6 +17220,9 @@ msgstr "nem található CI foglalat"
 
 msgid "no channel list"
 msgstr "nincs csatornalista"
+
+msgid "no comma"
+msgstr ""
 
 msgid "no module found"
 msgstr "nincs behelyezve modul"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi-enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:09+0430\n"
+"POT-Creation-Date: 2021-07-18 11:27+0430\n"
 "PO-Revision-Date: 2020-05-16 18:46+0200\n"
 "Last-Translator: Gringo <openpli@tiscali.it>\n"
 "Language-Team: www.linsat.net <spaeleus@croci.org>\n"
@@ -1882,6 +1882,10 @@ msgstr "Annullare le modifiche ai bouquet"
 
 msgid "Abort favourites edit"
 msgstr "Annullare le modifiche ai Preferiti"
+
+#, fuzzy
+msgid "Aborted"
+msgstr "Annullare"
 
 msgid "About"
 msgstr "Informazioni sul sistema"
@@ -8150,9 +8154,8 @@ msgstr "Lussemburgo"
 msgid "Luxembourgish"
 msgstr "Lussemburghese"
 
-#, fuzzy
 msgid "MAC Address Setup"
-msgstr "Disco rigido"
+msgstr ""
 
 #, fuzzy
 msgid "MAC address"
@@ -8850,6 +8853,9 @@ msgstr "Nauru"
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. OK to perform the action described in the currently highlighted help."
 msgstr ""
 
+msgid "Neither .png nor .jpg nor .svg, please fix file extension"
+msgstr ""
+
 msgid "Nepal"
 msgstr "Nepal"
 
@@ -9192,9 +9198,8 @@ msgstr "Non definito"
 msgid "Not Installed"
 msgstr "Non Installato"
 
-#, fuzzy
 msgid "Not a valid MAC address"
-msgstr "Indirizzo IP"
+msgstr ""
 
 msgid "Not associated"
 msgstr "Non associato"
@@ -9350,6 +9355,10 @@ msgstr "No"
 
 msgid "Offline decode delay (ms)"
 msgstr "Ritardo decodifica offline (ms)"
+
+#, fuzzy
+msgid "Offline delete failed"
+msgstr "Eliminazione non riuscita!"
 
 msgid "Old - SH4"
 msgstr ""
@@ -10313,7 +10322,7 @@ msgstr "Premere OK sul telecomando per continuare."
 
 #, fuzzy
 msgid "Press OK to activate the MAC address."
-msgstr "Premere OK per modificare le impostazioni."
+msgstr "Premere OK per attivare le impostazioni."
 
 #, fuzzy, python-format
 msgid "Press OK to activate the selected %s skin."
@@ -10392,7 +10401,7 @@ msgstr "Precedente"
 
 #, fuzzy
 msgid "Prev Image"
-msgstr "Immagine: "
+msgstr "Eliminare l'immagine"
 
 msgid "Preview"
 msgstr "Anteprima"
@@ -10558,7 +10567,7 @@ msgstr "Danimarca"
 
 #, fuzzy
 msgid "RC default name"
-msgstr "Rinominare"
+msgstr "Predefinito"
 
 #, fuzzy
 msgid "RC default type"
@@ -10692,9 +10701,8 @@ msgstr "Ritorno al canale precedente"
 msgid "Receiver"
 msgstr ""
 
-#, fuzzy
 msgid "Receiver Image Actions"
-msgstr "Informazioni"
+msgstr ""
 
 #, fuzzy
 msgid "Receiver Information"
@@ -10791,6 +10799,9 @@ msgstr "Selezione della frequenza di aggiornamento."
 msgid "Refresh the screen"
 msgstr "Selezione della frequenza di aggiornamento."
 
+msgid "Refusing to move to the same directory"
+msgstr "Impossibile spostare dentro la stessa cartella"
+
 msgid "Regard deep standby as standby"
 msgstr "Trattare lo spegnimento come sospensione"
 
@@ -10835,7 +10846,7 @@ msgstr "Promemoria, si è scelto di salvare il file del timeshift."
 
 #, fuzzy
 msgid "Remote Control"
-msgstr "Eliminare la voce selezionata"
+msgstr "Tipo di telecomando"
 
 #, fuzzy
 msgid "Remote control information"
@@ -12267,7 +12278,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Set a new MAC address"
-msgstr "Indirizzo IP"
+msgstr "Indirizzo CEC attuale"
 
 msgid "Set a temporary sort method for this directory"
 msgstr ""
@@ -12722,7 +12733,7 @@ msgstr "Mostrare l'EPG multi canale"
 
 #, fuzzy
 msgid "Show next image"
-msgstr "Mostrare i video"
+msgstr "Mostrare i messaggi della CI"
 
 msgid "Show notification when import channels and/or EPG from remote receiver URL did not complete"
 msgstr "Mostrare una notifica quando i canali di importazione e/o l'EPG dall'URL del ricevitore remoto non sono stati completati"
@@ -12779,9 +12790,8 @@ msgstr "Passare al canale precedente"
 msgid "Show python in plugin browser"
 msgstr "Proteggere l'elenco dei plugin"
 
-#, fuzzy
 msgid "Show receiver image(s)"
-msgstr "Inserire Indirizzo IP"
+msgstr ""
 
 msgid "Show record clock icons"
 msgstr "Mostrare le icone di registrazione a forma di orologio"
@@ -13506,7 +13516,7 @@ msgstr "Interrompere la voce"
 
 #, fuzzy
 msgid "Stop live TV service"
-msgstr "Eliminare il canale via cavo"
+msgstr "Andare all'ultimo canale"
 
 msgid "Stop play TV"
 msgstr "Interrompere la visione della TV"
@@ -14615,6 +14625,9 @@ msgstr "Fuso orario"
 #, fuzzy
 msgid "Time zone area"
 msgstr "Fuso orario"
+
+msgid "Timeout elapsed, sorry."
+msgstr ""
 
 msgid "Timer"
 msgstr "Timer"
@@ -16591,6 +16604,9 @@ msgstr "Interfaccia per l'assegnazione dei canali/provider/CAID ai moduli common
 msgid "about to start"
 msgstr "Avvio imminente"
 
+msgid "action enum must be simple."
+msgstr ""
+
 msgid "activate network adapter configuration"
 msgstr "Attivare la configurazione dell'interfaccia di rete"
 
@@ -16964,6 +16980,9 @@ msgstr "Super esteso"
 msgid "failed"
 msgstr "Non riuscito"
 
+msgid "failed to execute command!"
+msgstr ""
+
 msgid "false"
 msgstr "Falso"
 
@@ -17272,6 +17291,9 @@ msgstr "Nessun slot CI trovato!"
 
 msgid "no channel list"
 msgstr "Nessuna lista canali"
+
+msgid "no comma"
+msgstr ""
 
 msgid "no module found"
 msgstr "Nessun modulo trovato!"

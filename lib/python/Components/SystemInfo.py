@@ -155,7 +155,7 @@ class BoxInformation:  # To maintain data integrity class variables should not b
 
 BoxInfo = BoxInformation()
 
-from Tools.Multiboot import getMultibootStartupDevice, getMultibootslots  # This import needs to be here to avoid a SystemInfo load loop!
+from Tools.MultiBoot import getMultiBootStartupDevice, getMultiBootSlots  # This import needs to be here to avoid a SystemInfo load loop!
 
 # Parse the boot commandline.
 cmdline = fileReadLine("/proc/cmdline", source=MODULE_NAME)
@@ -294,7 +294,7 @@ SystemInfo["Has3DSpeaker"] = fileAccess("/proc/stb/audio/3d_surround_speaker_pos
 SystemInfo["Has3DSurroundSpeaker"] = fileAccess("/proc/stb/audio/3dsurround_choices") or fileCheck("/proc/stb/audio/3dsurround")
 SystemInfo["Has3DSurroundSoftLimiter"] = fileAccess("/proc/stb/audio/3dsurround_softlimiter_choices") or fileCheck("/proc/stb/audio/3dsurround_softlimiter")
 SystemInfo["HasOfflineDecoding"] = True
-SystemInfo["MultibootStartupDevice"] = getMultibootStartupDevice()
+SystemInfo["MultiBootStartupDevice"] = getMultiBootStartupDevice()
 SystemInfo["canMode12"] = False
 SystemInfo["canMultiBoot"] = False
 SystemInfo["canFlashWithOfgwrite"] = True

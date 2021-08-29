@@ -52,6 +52,7 @@
  * 20210322 Audioniek       Set display width on spark7162 to match actual
  *                          display type and time mode.
  * 20210326 Audioniek       Set correct display width on spark with VFD.
+ * 20210625 Audioniek       Kathrein UFS922 added.
  *
  ***************************************************************************/
 #include <stdarg.h>
@@ -162,7 +163,8 @@ evfd::evfd()
    || defined (ENABLE_HS7429)
 	vfd_type = 11;
 #elif defined (ENABLE_UFS912) \
-   || defined (ENABLE_UFS913)
+   || defined (ENABLE_UFS913) \
+   || defined (ENABLE_UFS922)
 	vfd_type = 12;
 #elif defined (ENABLE_CUBEREVO)
 	vfd_type = 13;
@@ -248,7 +250,7 @@ void *start_loop (void *arg)
 	// ioctl(fpc, FRONTPANELSCROLLMODE, &scrollMode);
 
 	// display string
-	char str[] = "OV";
+	char str[] = "        OV";
 	int length = strlen(str);
 	char dispData[MAX_CHARS + 1];
 	int offset = 0;
@@ -395,7 +397,6 @@ void *start_loop(void *arg)
 	/* These boxes can control display brightness */
 	#if defined (ENABLE_FORTIS_HDBOX) \
 	 || defined (ENABLE_OCTAGON1008) \
-	 || defined (ENABLE_ATEVIO7500) \
 	 || defined (ENABLE_CUBEREVO) \
 	 || defined (ENABLE_CUBEREVO_MINI) \
 	 || defined (ENABLE_CUBEREVO_MINI2) \
@@ -404,8 +405,10 @@ void *start_loop(void *arg)
 	 || defined (ENABLE_CUBEREVO_3000HD) \
 	 || defined (ENABLE_CUBEREVO_9500HD) \
 	 || defined (ENABLE_SPARK7162) \
+	 || defined (ENABLE_UFS910) \
 	 || defined (ENABLE_UFS912) \
 	 || defined (ENABLE_UFS913) \
+	 || defined (ENABLE_UFS922) \
 	 || defined (ENABLE_HS7119) \
 	 || defined (ENABLE_HS7420) \
 	 || defined (ENABLE_HS7429) \
@@ -415,6 +418,7 @@ void *start_loop(void *arg)
 	 || defined (ENABLE_FOREVER_NANOSMART) \
 	 || defined (ENABLE_FOREVER_9898HD) \
 	 || defined (ENABLE_FOREVER_2424HD) \
+	 || defined (ENABLE_ATEVIO7500) \
 	 || defined (ENABLE_VITAMIN_HD5000) \
 	 || defined (ENABLE_ADB_BOX) \
 	 || defined (ENABLE_PACE7241) \
@@ -513,8 +517,10 @@ void *start_loop(void *arg)
 	 && !defined (ENABLE_CUBEREVO_3000HD) \
 	 && !defined (ENABLE_CUBEREVO_9500HD) \
 	 && !defined (ENABLE_SPARK7162) \
+	 && !defined (ENABLE_UFS910) \
 	 && !defined (ENABLE_UFS912) \
 	 && !defined (ENABLE_UFS913) \
+	 && !defined (ENABLE_UFS922) \
 	 && !defined (ENABLE_HS7119) \
 	 && !defined (ENABLE_HS7420) \
 	 && !defined (ENABLE_HS7429) \

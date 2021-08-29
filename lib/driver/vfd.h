@@ -52,9 +52,11 @@
 #define ICON_MAX 28
 #elif defined (ENABLE_ATEVIO7500)
 #define ICON_MAX 22
-#elif defined (ENABLE_UFS912) \
- ||   defined (ENABLE_UFS913)
-#define ICON_MAX 15
+#elif defined (ENABLE_UFS910) \
+ ||   defined (ENABLE_UFS912) \
+ ||   defined (ENABLE_UFS913) \
+ ||   defined (ENABLE_UFS922)
+#define ICON_MAX 16
 #elif defined (ENABLE_CUBEREVO)
 #define ICON_MAX 27
 #elif defined (ENABLE_CUBEREVO_MINI) \
@@ -84,7 +86,7 @@
 #define ICON_OFF 0
 
 #if 0 //!defined (ENABLE_FORTIS_HDBOX)
-typedef enum { USB = 0x10, HD, HDD, LOCK, BT, MP3, MUSIC, DD, MAIL, MUTE, PLAY, PAUSE, FF, FR, REC, CLOCK } tvfd_icon;
+typedef enum { USB = 1, HD, HDD, LOCK, BT, MP3, MUSIC, DD, MAIL, MUTE, PLAY, PAUSE, FF, FR, REC, CLOCK } tvfd_icon;
 typedef enum { RED_LED = 0, GREEN_LED } tvfd_led;
 //#else
 //typedef enum { USB = 1, I_STANDBY, I_SAT, I_REC, I_TIMESHIFT, I_TIMER, I_HD, I_LOCK, I_DD, I_MUTE, I_TUNER1, I_TUNER2, I_MP3, I_REPEAT,

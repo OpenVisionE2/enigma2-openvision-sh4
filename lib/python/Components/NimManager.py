@@ -907,13 +907,13 @@ class NimManager:
 				entry["i2c"] = None
 			if "has_outputs" not in entry:
 				entry["has_outputs"] = entry["name"] in BoxInfo.getItem("HasPhysicalLoopthrough")  # "Has_Outputs: yes" not in /proc/bus/nim_sockets NIM, but the physical loopthrough exist.
+			entry["internally_connectable"] = None
 			if "frontend_device" in entry:  # Check if internally connectable.
 				if exists("/proc/stb/frontend/%d/rf_switch" % entry["frontend_device"]) and (not id or entries[id]["name"] == entries[id - 1]["name"]):
-					entry["internally_connectable"] = entry["frontend_device"] - 1
-				else:
-					entry["internally_connectable"] = None
+					if id:
+						entry["internally_connectable"] = entry["frontend_device"] - 1
 			else:
-				entry["frontend_device"] = entry["internally_connectable"] = None
+				entry["frontend_device"] = None
 			if "multi_type" not in entry:
 				entry["multi_type"] = {}
 			if "supports_blind_scan" not in entry:

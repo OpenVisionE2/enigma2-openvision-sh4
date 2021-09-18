@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-16 13:14+0430\n"
+"POT-Creation-Date: 2021-09-18 15:30+0430\n"
 "PO-Revision-Date: 2014-12-15 19:38-0000\n"
 "Last-Translator: Phenom <phenomxy@gmail.com>\n"
 "Language-Team: Muaitai <muaitai@gmail.com>\n"
@@ -999,10 +999,6 @@ msgstr[0] "%d tarefa está a decorrer em segundo plano!"
 msgstr[1] "%d tarefas estão a decorrer em segundo plano!"
 
 #, python-format
-msgid "%d kB"
-msgstr ""
-
-#, python-format
 msgid "%d kB/s"
 msgstr ""
 
@@ -1586,10 +1582,9 @@ msgstr ""
 msgid "50%"
 msgstr ""
 
-#
 #, fuzzy
 msgid "540 (default)"
-msgstr "padrão"
+msgstr "Definir como padrão"
 
 msgid "6"
 msgstr "6"
@@ -1664,66 +1659,36 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#
-#, fuzzy, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
-msgstr ""
-"Alguns ficheiros (%s) foram alterados depois da instalação.\n"
-"Deseja manter a sua configuração?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Uma gravação agendada terminou. Colocar o receptor em Standby?"
+
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Uma gravação agendada terminou. Desligar o receptor?"
 
 #
-#, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"Alguns ficheiros (%s) foram alterados depois da instalação.\n"
-"Deseja manter a sua configuração?"
+#, fuzzy, python-format
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "Alguns ficheiros (%s) foram alterados depois da instalação. Deseja manter a sua configuração?"
 
 msgid "A file from media is in use!"
 msgstr ""
 
 #, fuzzy
 msgid "A finished powertimer wants to reboot your receiver. Do that now?"
-msgstr ""
-"Uma gravação agendada terminou.\n"
-"Colocar o receptor em Standby?"
+msgstr "Deseja reiniciar o receptor?"
 
-#, fuzzy
 msgid ""
 "A finished powertimer wants to restart the user interface.\n"
 "Do that now?"
 msgstr ""
-"Uma gravação agendada terminou.\n"
-"Colocar o receptor em Standby?"
 
 #, fuzzy
 msgid "A finished powertimer wants to set your receiver to standby. Do that now?"
-msgstr ""
-"Uma gravação agendada terminou.\n"
-"Colocar o receptor em Standby?"
+msgstr "O temporizador deseja colocar o receptor em Standby. Colocar em Standby?"
 
 #, fuzzy
 msgid "A finished powertimer wants to shutdown your receiver. Do that now?"
-msgstr ""
-"Uma gravação agendada terminou.\n"
-"Desligar o receptor?"
-
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Uma gravação agendada terminou.\n"
-"Colocar o receptor em Standby?"
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Uma gravação agendada terminou.\n"
-"Desligar o receptor?"
+msgstr "O temporizador deseja desligar o receptor. Desligar agora?"
 
 #
 #, fuzzy
@@ -1734,9 +1699,9 @@ msgid "A highlight on the remote control image shows which button the help refer
 msgstr ""
 
 #
-#, fuzzy, python-format
+#, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "Uma gravação foi iniciada:\n"
@@ -1754,11 +1719,11 @@ msgstr ""
 "Uma gravação está a decorrer.\n"
 "O que deseja fazer?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
-msgstr "Uma gravação está em progresso. Por favor pare a gravação antes de efectuar uma pesquisa."
-
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
 msgstr ""
+
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
+msgstr "Uma gravação está em progresso. Por favor pare a gravação antes de efectuar uma pesquisa."
 
 #
 msgid "A repeating event is currently recording. What would you like to do?"
@@ -1783,19 +1748,11 @@ msgstr ""
 "\n"
 "Deseja desabilitar o segundo interface de rede?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"O temporizador deseja colocar o\n"
-"receptor em Standby. Colocar em Standby?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "O temporizador deseja colocar o receptor em Standby. Colocar em Standby?"
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"O temporizador deseja desligar o\n"
-"receptor. Desligar agora?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "O temporizador deseja desligar o receptor. Desligar agora?"
 
 #
 msgid "A small overview of the available icon states and actions."
@@ -1808,11 +1765,6 @@ msgid ""
 msgstr ""
 "Uma gravação agendada falhou!\n"
 "Desactivar a TV e tentar de novo?\n"
-
-#
-#, fuzzy
-msgid "A/V Setup"
-msgstr "Definições"
 
 #
 #, fuzzy
@@ -2272,7 +2224,8 @@ msgstr ""
 msgid "Allow 12bit"
 msgstr ""
 
-msgid "Allow quit movieplayer with exit"
+#, fuzzy
+msgid "Allow quitting movie player with exit"
 msgstr "Permitir que o movieplayer desligue ao sair"
 
 #, fuzzy
@@ -2688,6 +2641,11 @@ msgstr "Tamanho do passo de rotação do motor"
 
 #
 #, fuzzy
+msgid "Audio/Video Setup"
+msgstr "Definições de vídeo"
+
+#
+#, fuzzy
 msgid "Australia"
 msgstr "Italiano"
 
@@ -2713,7 +2671,7 @@ msgstr "Modo de criação"
 msgid "Auto"
 msgstr "Auto"
 
-msgid "Auto Diseqc"
+msgid "Auto DiSEqC"
 msgstr ""
 
 msgid "Auto EXIF Orientation rotation/flipping"
@@ -3121,8 +3079,10 @@ msgstr ""
 msgid "Boost green"
 msgstr "verde"
 
+#
+#, fuzzy
 msgid "Booster Control"
-msgstr ""
+msgstr "Tipo de controlo remoto"
 
 msgid "Boot ID"
 msgstr ""
@@ -3535,9 +3495,10 @@ msgstr ""
 msgid "Chamorro"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Change CPU speed settings"
-msgstr "Alterar as configurações de repetição e atraso?"
+msgstr "Definições de servidor DNS"
 
 #
 #, fuzzy
@@ -5803,9 +5764,10 @@ msgstr ""
 msgid "Do you really want to remove your bookmark of %s?"
 msgstr "Deseja mesmo remover o marcador %s?"
 
+#
 #, fuzzy
 msgid "Do you really want to restart the receiver now?"
-msgstr "Deseja reiniciar o receptor?"
+msgstr "Deseja mesmo eliminar %s?"
 
 #
 #, fuzzy, python-format
@@ -5983,6 +5945,10 @@ msgstr "Descarregando"
 #, fuzzy
 msgid "Downloading Image"
 msgstr "Descarregando"
+
+#
+msgid "Downloading a new packet list. Please wait..."
+msgstr "A tentar descarregar uma nova lista de pacotes. Por favor aguarde..."
 
 #
 msgid "Downloading plugin information. Please wait..."
@@ -7066,6 +7032,11 @@ msgstr "Restauro de fábrica"
 
 #
 #, fuzzy
+msgid "Factory Reset Setup"
+msgstr "Restauro de fábrica"
+
+#
+#, fuzzy
 msgid "Factory release"
 msgstr "Restauro de fábrica"
 
@@ -7974,6 +7945,16 @@ msgstr ""
 
 #
 msgid "Horizontal"
+msgstr "Horizontal"
+
+#
+#, fuzzy
+msgid "Horizontal icons"
+msgstr "Horizontal"
+
+#
+#, fuzzy
+msgid "Horizontal menu"
 msgstr "Horizontal"
 
 msgid "Horizontal turning speed"
@@ -9185,8 +9166,9 @@ msgstr ""
 msgid "Load playlist"
 msgstr "Carregar Lista de Reprodução"
 
+#, fuzzy
 msgid "Load unlinked user bouquets"
-msgstr ""
+msgstr "Favoritos"
 
 #
 #, fuzzy
@@ -10961,7 +10943,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Open channel list"
-msgstr "Instalar Lista de Canais"
+msgstr "Actualizar apenas Lista de Canais"
 
 #
 #, fuzzy
@@ -12379,10 +12361,8 @@ msgstr ""
 msgid "REC symbol in use"
 msgstr ""
 
-#
-#, fuzzy
-msgid "RF Output Setup"
-msgstr "Saída RF"
+msgid "RF Modulator Output Setup"
+msgstr ""
 
 #
 #, fuzzy
@@ -13220,8 +13200,10 @@ msgstr ""
 msgid "SH4"
 msgstr ""
 
+#
+#, fuzzy
 msgid "SH4 Booster Control"
-msgstr ""
+msgstr "Tipo de controlo remoto"
 
 #
 #, fuzzy
@@ -13918,6 +13900,9 @@ msgstr ""
 msgid "Select image"
 msgstr "Eliminar agendamento"
 
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr ""
+
 msgid "Select input device"
 msgstr "Seleccionar dispositivo de entrada"
 
@@ -14117,9 +14102,10 @@ msgstr ""
 msgid "Select your country. If not available select 'all'."
 msgstr ""
 
+#
 #, fuzzy
 msgid "Select your keymap"
-msgstr "Eliminar agendamento"
+msgstr "seleccionar entrada de menu"
 
 msgid "Select your provider and region. If not present in this list you will need to select one of the other 'service scan types'."
 msgstr ""
@@ -14987,7 +14973,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Show this plugin in plugin menu"
-msgstr "Mostrar leitor multimédia no menu principal"
+msgstr "Mostrar encriptação na barra informativa"
 
 msgid "Show time elapsed as positive"
 msgstr ""
@@ -15560,6 +15546,11 @@ msgstr ""
 msgid "Standard"
 msgstr "Standard"
 
+#
+#, fuzzy
+msgid "Standard menu"
+msgstr "Standard"
+
 msgid "Standart list"
 msgstr "Lista standart"
 
@@ -15893,6 +15884,7 @@ msgid "Subservice list"
 msgstr "Lista de sub-canais... "
 
 #
+#, fuzzy
 msgid "Subservice list..."
 msgstr "Lista de sub-canais... "
 
@@ -16176,7 +16168,7 @@ msgstr "Configuração da Lista de Vídeos"
 #
 #, fuzzy
 msgid "System options"
-msgstr "Guardar posição"
+msgstr "Informação"
 
 #, fuzzy
 msgid "System options configuration"
@@ -17343,10 +17335,6 @@ msgstr ""
 msgid "TrueType font (SD)"
 msgstr ""
 
-#
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "A tentar descarregar uma nova lista de pacotes. Por favor aguarde..."
-
 msgid "Tsonga"
 msgstr ""
 
@@ -17884,9 +17872,6 @@ msgstr ""
 msgid "Used service scan type"
 msgstr "Tipo usado na pesquisa de canais"
 
-msgid "User - bouquets"
-msgstr "Favoritos"
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -17914,6 +17899,9 @@ msgstr "Interface gráfica"
 #, fuzzy
 msgid "User Mode Setup"
 msgstr "Definido pelo utilizador"
+
+msgid "User bouquets"
+msgstr "Favoritos"
 
 #
 msgid "User defined"
@@ -18596,7 +18584,7 @@ msgstr "Quando activado, as legendas DVB serão exibidas em amarelo, em vez da c
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr ""
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Quando activado, é possível sair do reprodutor de vídeo com o botão EXIT."
 
 #, fuzzy
@@ -19108,7 +19096,7 @@ msgstr ""
 "Por favor escolha o que fazer a seguir."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
+msgid "Your internet connection is working (IP address: %s)"
 msgstr "A sua ligação à Internet está a funcionar correctamente.(IP: %s)"
 
 #
@@ -19529,9 +19517,6 @@ msgstr "filmes/drama"
 #
 msgid "config menu"
 msgstr "menu de configuração"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr ""
 
 #
 msgid "confirmed"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-16 13:14+0430\n"
+"POT-Creation-Date: 2021-09-18 15:30+0430\n"
 "PO-Revision-Date: 2021-07-31 17:00+0800\n"
 "Last-Translator: 孤独之剑 <haotzyy1970@yahoo.com>\n"
 "Language-Team: 孤独之剑 <haotzyy1970@yahoo.com>\n"
@@ -913,7 +913,7 @@ msgstr ""
 
 #, python-format
 msgid "%d GB"
-msgstr "%d GB"
+msgstr ""
 
 #, python-format
 msgid "%d KB"
@@ -980,10 +980,6 @@ msgid "%d job is running in the background!"
 msgid_plural "%d jobs are running in the background!"
 msgstr[0] "有 %d 个进程在后台运行!"
 msgstr[1] "有 %d 个进程在后台运行!"
-
-#, python-format
-msgid "%d kB"
-msgstr "%d kB"
 
 #, python-format
 msgid "%d kB/s"
@@ -1550,7 +1546,7 @@ msgstr ""
 
 #, fuzzy
 msgid "540 (default)"
-msgstr "默认"
+msgstr "设为默认"
 
 msgid "6"
 msgstr "6"
@@ -1620,64 +1616,35 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
-msgstr ""
-"配置文件(%s)已经变更.\n"
-"是否要保留所做更改?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "机顶盒待机定时器命令触发了是否确定现在进入待机?"
+
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "机顶盒关机定时器命令触发了是否确定现在关机?"
 
 #, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"配置文件(%s)在安装后被修改了.\n"
-"是否想要保留您的版本？"
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "配置文件(%s)已经变更. 是否要保留所做更改?"
 
 msgid "A file from media is in use!"
 msgstr "正在使用媒体中的文件!"
 
 #, fuzzy
 msgid "A finished powertimer wants to reboot your receiver. Do that now?"
-msgstr ""
-"机顶盒待机定时器命令触发了\n"
-"是否确定现在进入待机?"
+msgstr "是否重启机顶盒?"
 
-#, fuzzy
 msgid ""
 "A finished powertimer wants to restart the user interface.\n"
 "Do that now?"
 msgstr ""
-"机顶盒待机定时器命令触发了\n"
-"是否确定现在进入待机?"
 
 #, fuzzy
 msgid "A finished powertimer wants to set your receiver to standby. Do that now?"
-msgstr ""
-"机顶盒待机定时器命令触发了\n"
-"是否确定现在进入待机?"
+msgstr "睡眠定时器触发了待机命令是否确定现在就待机?"
 
 #, fuzzy
 msgid "A finished powertimer wants to shutdown your receiver. Do that now?"
-msgstr ""
-"机顶盒关机定时器命令触发了\n"
-"是否确定现在关机?"
-
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"机顶盒待机定时器命令触发了\n"
-"是否确定现在进入待机?"
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"机顶盒关机定时器命令触发了\n"
-"是否确定现在关机?"
+msgstr "睡眠定时器触发了关机命令是否确定现在就关机?"
 
 msgid "A graphical EPG for all services of a specific bouquet"
 msgstr "用于特定分组所有频道的图形化EPG"
@@ -1685,9 +1652,9 @@ msgstr "用于特定分组所有频道的图形化EPG"
 msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list lists the active buttons and whether the function requires a long press or SHIFT of the button(s)."
 msgstr ""
 
-#, fuzzy, python-format
+#, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "录制已经开始:\n"
@@ -1703,11 +1670,11 @@ msgstr ""
 "录制正在进行中.\n"
 "您想做什么?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
-msgstr "录制正在进行中. 扫描前请停止录制."
-
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
 msgstr "当前有录制正在进行.要测试DisEqc请先停止录制."
+
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
+msgstr "录制正在进行中. 扫描前请停止录制."
 
 msgid "A repeating event is currently recording. What would you like to do?"
 msgstr "正在重复当前录制的事件.你要做什么?"
@@ -1729,19 +1696,11 @@ msgstr ""
 "\n"
 "是否禁用第二个网卡?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"睡眠定时器触发了待机命令\n"
-"是否确定现在就待机?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "睡眠定时器触发了待机命令是否确定现在就待机?"
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"睡眠定时器触发了关机命令\n"
-"是否确定现在就关机?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "睡眠定时器触发了关机命令是否确定现在就关机?"
 
 msgid "A small overview of the available icon states and actions."
 msgstr "查看可用的图标状态和执行情况的小工具."
@@ -1752,10 +1711,6 @@ msgid ""
 msgstr ""
 "定时录制失败.\n"
 "禁用电视输出并重试?\n"
-
-#, fuzzy
-msgid "A/V Setup"
-msgstr "设置"
 
 msgid "A/V settings"
 msgstr "音/视频设置"
@@ -2139,8 +2094,8 @@ msgstr "允许10位"
 msgid "Allow 12bit"
 msgstr "允许12位"
 
-msgid "Allow quit movieplayer with exit"
-msgstr "允许使用ext推出电影播放器"
+msgid "Allow quitting movie player with exit"
+msgstr "允许退出电影播放器"
 
 msgid "Allow subtitle language to equal audio language"
 msgstr "允许字母语言匹配音轨语言"
@@ -2508,6 +2463,10 @@ msgstr "(%s)音轨语言"
 msgid "Audio volume step size"
 msgstr "音频音量设置"
 
+#, fuzzy
+msgid "Audio/Video Setup"
+msgstr "音频/视频"
+
 msgid "Australia"
 msgstr "澳大利亚"
 
@@ -2527,8 +2486,8 @@ msgstr "创作模式"
 msgid "Auto"
 msgstr "自动"
 
-msgid "Auto Diseqc"
-msgstr "自动Diseqc"
+msgid "Auto DiSEqC"
+msgstr "自动DiSEqC"
 
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "自动EXIF信息方向旋转／翻转"
@@ -2584,7 +2543,7 @@ msgstr "一直开着"
 
 #, fuzzy
 msgid "Auto(not available)"
-msgstr "不可用"
+msgstr "调谐器不可用."
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -2890,8 +2849,9 @@ msgstr "增加蓝色"
 msgid "Boost green"
 msgstr "加强绿色"
 
+#, fuzzy
 msgid "Booster Control"
-msgstr ""
+msgstr "遥控类型"
 
 msgid "Boot ID"
 msgstr ""
@@ -3297,7 +3257,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Change CPU speed settings"
-msgstr "配置重复和延迟设置?"
+msgstr "DNS设置"
 
 msgid "Change Language"
 msgstr "更改语言"
@@ -5285,7 +5245,7 @@ msgstr "是否删除 %s 书签?"
 
 #, fuzzy
 msgid "Do you really want to restart the receiver now?"
-msgstr "是否重启机顶盒?"
+msgstr "是否删除 %s?"
 
 #, python-format
 msgid "Do you really want to stop current event and delete timer %s?"
@@ -5442,6 +5402,9 @@ msgstr "下载"
 
 msgid "Downloading Image"
 msgstr "正在解压镜像文"
+
+msgid "Downloading a new packet list. Please wait..."
+msgstr "尝试下载新的软件包列表.请稍候..."
 
 msgid "Downloading plugin information. Please wait..."
 msgstr "正在下载插件列表,请稍候..."
@@ -6414,6 +6377,10 @@ msgid "Factory Reset"
 msgstr "出厂设置"
 
 #, fuzzy
+msgid "Factory Reset Setup"
+msgstr "出厂设置"
+
+#, fuzzy
 msgid "Factory release"
 msgstr "出厂设置"
 
@@ -7240,6 +7207,14 @@ msgid "Hops"
 msgstr ""
 
 msgid "Horizontal"
+msgstr "水平"
+
+#, fuzzy
+msgid "Horizontal icons"
+msgstr "水平"
+
+#, fuzzy
+msgid "Horizontal menu"
 msgstr "水平"
 
 msgid "Horizontal turning speed"
@@ -11099,9 +11074,8 @@ msgstr "同样用在待机模式"
 msgid "REC symbol in use"
 msgstr ""
 
-#, fuzzy
-msgid "RF Output Setup"
-msgstr "射频输出"
+msgid "RF Modulator Output Setup"
+msgstr ""
 
 #, fuzzy
 msgid "RGB"
@@ -11818,8 +11792,9 @@ msgstr ""
 msgid "SH4"
 msgstr ""
 
+#, fuzzy
 msgid "SH4 Booster Control"
-msgstr ""
+msgstr "遥控类型"
 
 #, fuzzy
 msgid "SH4 OSD Position setup"
@@ -12426,6 +12401,9 @@ msgstr "从DVB收发器或使用NTP从internet选择您希望接收机保持正�
 msgid "Select image"
 msgstr "删除镜像"
 
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr "配置使用何种解决方案来显示图片浏览器和电影播放器."
+
 msgid "Select input device"
 msgstr "输入设备"
 
@@ -12601,7 +12579,7 @@ msgstr "选择国家(地区).如果不可用,请选择'全部'."
 
 #, fuzzy
 msgid "Select your keymap"
-msgstr "删除镜像"
+msgstr "选择菜单项目"
 
 msgid "Select your provider and region. If not present in this list you will need to select one of the other 'service scan types'."
 msgstr "选择提供商和地区.如果不在该列表中,您将需要选择另一种‘服务扫描类型’."
@@ -13381,7 +13359,7 @@ msgstr "在频道选择屏幕的两行上显示频道信息.您可以在频道�
 
 #, fuzzy
 msgid "Show this plugin in plugin menu"
-msgstr "在主菜单上显示媒体播放器"
+msgstr "显示菜单或插件编号"
 
 msgid "Show time elapsed as positive"
 msgstr ""
@@ -13874,6 +13852,10 @@ msgstr "斯里兰卡"
 msgid "Standard"
 msgstr "标准"
 
+#, fuzzy
+msgid "Standard menu"
+msgstr "标准"
+
 msgid "Standart list"
 msgstr "标准列表"
 
@@ -14160,6 +14142,7 @@ msgstr "显示字幕服务选项"
 msgid "Subservice list"
 msgstr "子频道列表..."
 
+#, fuzzy
 msgid "Subservice list..."
 msgstr "子频道列表..."
 
@@ -14397,15 +14380,15 @@ msgstr "覆盖配置文件?"
 
 #, fuzzy
 msgid "System option configuration"
-msgstr "网络配置"
+msgstr "电影列表配置"
 
 #, fuzzy
 msgid "System options"
-msgstr "系统及调制"
+msgstr "信息"
 
 #, fuzzy
 msgid "System options configuration"
-msgstr "网络配置"
+msgstr "电影列表配置"
 
 msgid "T2MI PID"
 msgstr "节目映射表PID"
@@ -15468,9 +15451,6 @@ msgstr ""
 msgid "TrueType font (SD)"
 msgstr ""
 
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "尝试下载新的软件包列表.请稍候..."
-
 #, fuzzy
 msgid "Tsonga"
 msgstr "汤加"
@@ -15938,9 +15918,6 @@ msgstr ""
 msgid "Used service scan type"
 msgstr "按频道类型搜索"
 
-msgid "User - bouquets"
-msgstr "自定义组"
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -15963,6 +15940,9 @@ msgstr "用户界面"
 #, fuzzy
 msgid "User Mode Setup"
 msgstr "用户模式"
+
+msgid "User bouquets"
+msgstr "自定义组"
 
 msgid "User defined"
 msgstr "用户定义"
@@ -16573,7 +16553,7 @@ msgstr "一旦启用,将会使用黄色代替默认颜色来显示图形DVB字�
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr "一旦启用,http媒体流在服务端解扰.远程客户端不需要解扰."
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "一旦启用,有可能可以使用exit键退出电影播放器."
 
 msgid "When enabled, it will automatically play to the last saved radio service when switching to radio mode."
@@ -17065,8 +17045,8 @@ msgstr ""
 "请选择下一步做什么."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
-msgstr "互联网连接正常,ip地址为：%s"
+msgid "Your internet connection is working (IP address: %s)"
+msgstr "互联网连接正常,IP地址为：%s"
 
 msgid "Your network configuration has been activated."
 msgstr "您的网络配置已被激活."
@@ -17445,9 +17425,6 @@ msgstr "电影/戏剧"
 
 msgid "config menu"
 msgstr "配置菜单"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr "配置使用何种解决方案来显示图片浏览器和电影播放器"
 
 msgid "confirmed"
 msgstr "检测通过"

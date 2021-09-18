@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-16 13:14+0430\n"
+"POT-Creation-Date: 2021-09-18 15:30+0430\n"
 "PO-Revision-Date: 2020-05-16 18:44+0200\n"
 "Last-Translator: Baldur <bsveinsson@gmail.com>\n"
 "Language-Team: Polar Team/LT Team <baddi@oreind.is>\n"
@@ -1003,10 +1003,6 @@ msgstr[0] "%d verk eru í vinnslu í bakgrunni!"
 msgstr[1] "%d verk eru í vinnslu í bakgrunni!"
 
 #, python-format
-msgid "%d kB"
-msgstr ""
-
-#, python-format
 msgid "%d kB/s"
 msgstr ""
 
@@ -1685,23 +1681,16 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#
-#, fuzzy, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
 msgstr ""
-"Stillingaskrá (%s) er breytt síðan uppsetning var gerð.\n"
-"Viltu halda þinni útgáfu?"
+
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr ""
 
 #
-#, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"Stillingaskrá (%s) er breytt síðan uppsetning var gerð.\n"
-"Viltu halda þinni útgáfu?"
+#, fuzzy, python-format
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "Stillingaskrá (%s) er breytt síðan uppsetning var gerð. Viltu halda þinni útgáfu?"
 
 msgid "A file from media is in use!"
 msgstr ""
@@ -1720,16 +1709,6 @@ msgstr ""
 msgid "A finished powertimer wants to shutdown your receiver. Do that now?"
 msgstr ""
 
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-
 #
 #, fuzzy
 msgid "A graphical EPG for all services of a specific bouquet"
@@ -1739,9 +1718,9 @@ msgid "A highlight on the remote control image shows which button the help refer
 msgstr ""
 
 #
-#, fuzzy, python-format
+#, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "Upptaka hefur hafist:\n"
@@ -1760,10 +1739,10 @@ msgstr ""
 "Upptaka er nú í gangi.\n"
 "Hvað viltu núna gera?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
 msgstr ""
 
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
 msgstr ""
 
 #
@@ -1787,14 +1766,10 @@ msgstr ""
 "\n"
 "Viltu hætta að nota það?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
 msgstr ""
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
 msgstr ""
 
 #
@@ -1807,11 +1782,6 @@ msgid ""
 msgstr ""
 "Tímastillt upptaka mistókst!\n"
 "Hætta og reyna aftur?\n"
-
-#
-#, fuzzy
-msgid "A/V Setup"
-msgstr "Uppsetning"
 
 #
 #, fuzzy
@@ -2246,7 +2216,7 @@ msgstr ""
 msgid "Allow 12bit"
 msgstr ""
 
-msgid "Allow quit movieplayer with exit"
+msgid "Allow quitting movie player with exit"
 msgstr ""
 
 msgid "Allow subtitle language to equal audio language"
@@ -2634,6 +2604,11 @@ msgstr ""
 
 #
 #, fuzzy
+msgid "Audio/Video Setup"
+msgstr "Mynd uppsetning"
+
+#
+#, fuzzy
 msgid "Australia"
 msgstr "Ítalska"
 
@@ -2655,7 +2630,7 @@ msgstr "Höfunda hamur"
 msgid "Auto"
 msgstr "Sjálfvirkt"
 
-msgid "Auto Diseqc"
+msgid "Auto DiSEqC"
 msgstr ""
 
 msgid "Auto EXIF Orientation rotation/flipping"
@@ -3034,8 +3009,10 @@ msgstr ""
 msgid "Boost green"
 msgstr "grænn"
 
+#
+#, fuzzy
 msgid "Booster Control"
-msgstr ""
+msgstr "Gerð foreldrastýringar"
 
 msgid "Boot ID"
 msgstr ""
@@ -3473,8 +3450,10 @@ msgstr "Breyta skrefa stærð"
 msgid "Change timer"
 msgstr ""
 
+#
+#, fuzzy
 msgid "Change video port"
-msgstr ""
+msgstr "Uppsetning nafnaþjóns"
 
 msgid "Channel"
 msgstr "Rás"
@@ -5758,6 +5737,10 @@ msgstr "Hleð niður"
 msgid "Downloading Image"
 msgstr "Hleð niður"
 
+#
+msgid "Downloading a new packet list. Please wait..."
+msgstr "Reyni að hlaða niður nýjum pakka lista. Vinsamlega bíðið..."
+
 msgid "Downloading plugin information. Please wait..."
 msgstr "Hala niður íforrits upplýsingum. Vinsamlega bíðið..."
 
@@ -6815,6 +6798,11 @@ msgstr "Verksmiðju stilling"
 
 #
 #, fuzzy
+msgid "Factory Reset Setup"
+msgstr "Verksmiðju stilling"
+
+#
+#, fuzzy
 msgid "Factory release"
 msgstr "Verksmiðju stilling"
 
@@ -7718,6 +7706,16 @@ msgstr ""
 
 #
 msgid "Horizontal"
+msgstr "Lárétt"
+
+#
+#, fuzzy
+msgid "Horizontal icons"
+msgstr "Lárétt"
+
+#
+#, fuzzy
+msgid "Horizontal menu"
 msgstr "Lárétt"
 
 msgid "Horizontal turning speed"
@@ -12053,10 +12051,8 @@ msgstr ""
 msgid "REC symbol in use"
 msgstr ""
 
-#
-#, fuzzy
-msgid "RF Output Setup"
-msgstr "Loftnetsrás"
+msgid "RF Modulator Output Setup"
+msgstr ""
 
 #
 #, fuzzy
@@ -12882,8 +12878,10 @@ msgstr ""
 msgid "SH4"
 msgstr ""
 
+#
+#, fuzzy
 msgid "SH4 Booster Control"
-msgstr ""
+msgstr "Gerð foreldrastýringar"
 
 #
 #, fuzzy
@@ -13572,6 +13570,9 @@ msgstr ""
 msgid "Select image"
 msgstr "eyða skrá"
 
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr ""
+
 msgid "Select input device"
 msgstr "Veldu inntaks tæki"
 
@@ -13769,7 +13770,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Select your keymap"
-msgstr "eyða skrá"
+msgstr "veldu valmynda atriði"
 
 msgid "Select your provider and region. If not present in this list you will need to select one of the other 'service scan types'."
 msgstr ""
@@ -14621,8 +14622,9 @@ msgstr "Sýna útvarpsspilara..."
 msgid "Show the service information on two lines in the channel selection screen. You can choose between the current event description below the channel name, or the current event description next to the channel name, and the next event description on the second line."
 msgstr ""
 
+#, fuzzy
 msgid "Show this plugin in plugin menu"
-msgstr ""
+msgstr "Íforrita leit"
 
 msgid "Show time elapsed as positive"
 msgstr ""
@@ -15190,6 +15192,11 @@ msgstr ""
 msgid "Standard"
 msgstr "venjulegt"
 
+#
+#, fuzzy
+msgid "Standard menu"
+msgstr "venjulegt"
+
 msgid "Standart list"
 msgstr ""
 
@@ -15217,8 +15224,10 @@ msgstr "%d Volt á viftu í biðstöðu "
 msgid "Standby in %s"
 msgstr "Vifta í biðstöðu %d PWM"
 
+#
+#, fuzzy
 msgid "Standby saver frequency"
-msgstr ""
+msgstr "Biðstaða"
 
 #
 #, fuzzy
@@ -15518,6 +15527,7 @@ msgid "Subservice list"
 msgstr "Listi undirrása..."
 
 #
+#, fuzzy
 msgid "Subservice list..."
 msgstr "Listi undirrása..."
 
@@ -15806,7 +15816,7 @@ msgstr "Handvirk stilling"
 #
 #, fuzzy
 msgid "System options"
-msgstr "Vista staðsetningu"
+msgstr "Upplýsingar"
 
 #, fuzzy
 msgid "System options configuration"
@@ -16947,10 +16957,6 @@ msgstr ""
 msgid "TrueType font (SD)"
 msgstr ""
 
-#
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Reyni að hlaða niður nýjum pakka lista. Vinsamlega bíðið..."
-
 msgid "Tsonga"
 msgstr ""
 
@@ -17472,9 +17478,6 @@ msgstr ""
 msgid "Used service scan type"
 msgstr "Notuð leitunaraðferð"
 
-msgid "User - bouquets"
-msgstr ""
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -17502,6 +17505,9 @@ msgstr "Nota netkort"
 #, fuzzy
 msgid "User Mode Setup"
 msgstr "Stillt af notanda"
+
+msgid "User bouquets"
+msgstr ""
 
 #
 msgid "User defined"
@@ -18161,7 +18167,7 @@ msgstr ""
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr ""
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr ""
 
 msgid "When enabled, it will automatically play to the last saved radio service when switching to radio mode."
@@ -18648,7 +18654,7 @@ msgstr ""
 "Vinsamlega veldu hvað þú vilt gera næst."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
+msgid "Your internet connection is working (IP address: %s)"
 msgstr ""
 
 #
@@ -19051,9 +19057,6 @@ msgstr ""
 #
 msgid "config menu"
 msgstr "stillinga valmynd"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr ""
 
 #
 msgid "confirmed"
@@ -19865,7 +19868,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "set default"
-msgstr "Venjulegt"
+msgstr "Setja inn afrit"
 
 #
 #, fuzzy

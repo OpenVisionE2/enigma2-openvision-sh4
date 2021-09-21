@@ -250,7 +250,7 @@ void *start_loop (void *arg)
 	// ioctl(fpc, FRONTPANELSCROLLMODE, &scrollMode);
 
 	// display string
-	char str[] = "        OV";
+	char str[] = "OV";
 	int length = strlen(str);
 	char dispData[MAX_CHARS + 1];
 	int offset = 0;

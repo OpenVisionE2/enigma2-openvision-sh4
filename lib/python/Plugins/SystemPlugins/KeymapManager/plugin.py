@@ -9,11 +9,11 @@ from Components.ActionMap import ActionMap
 from Components.config import config
 from Components.MenuList import MenuList
 from Components.ActionMap import ActionMap
-from Tools.Directories import resolveFilename, SCOPE_SKIN, SCOPE_CURRENT_PLUGIN
+from Tools.Directories import resolveFilename, SCOPE_SKINS, SCOPE_PLUGIN
 from os import path as os_path, listdir
 
 VER = "0.3"
-KPATH = resolveFilename(SCOPE_SKIN)
+KPATH = resolveFilename(SCOPE_SKINS)
 
 # installs keymap_???.xml files found in KPATH
 
@@ -34,7 +34,7 @@ class KeymapSelector(Screen):
 			<ePixmap pixmap="div-h.png" position="0,175" zPosition="1" size="560,2" />
 			<widget render="Label" source= "text2" position="5, 190" size="550,24" halign="left" zPosition="5" transparent="1" foregroundColor="white" font="Regular;20"/>
 			<widget name="KeymapList" position="10,230" size="540,100" scrollbarMode="showOnDemand" />
-		</screen>""" % resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/KeymapManager/input-keyboard.png")
+		</screen>""" % resolveFilename(SCOPE_PLUGIN, "SystemPlugins/KeymapManager/input-keyboard.png")
 
 	def __init__(self, session):
 		self.skin = KeymapSelector.skin

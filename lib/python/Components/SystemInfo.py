@@ -307,6 +307,7 @@ SystemInfo["HasOfflineDecoding"] = True
 SystemInfo["MultiBootStartupDevice"] = getMultiBootStartupDevice()
 SystemInfo["canMode12"] = False
 SystemInfo["canMultiBoot"] = False
+SystemInfo["canDualBoot"] = False
 SystemInfo["canFlashWithOfgwrite"] = True
 SystemInfo["HDRSupport"] = fileAccess("/proc/stb/hdmi/hlg_support_choices") or fileCheck("/proc/stb/hdmi/hlg_support")
 SystemInfo["CanDownmixAC3"] = fileContains("/proc/stb/audio/ac3_choices", "downmix")

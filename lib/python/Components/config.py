@@ -1738,6 +1738,17 @@ class ConfigDirectory(ConfigText):
 		else:
 			return ConfigText.getMulti(self, selected)
 
+	def getValue(self):
+		if self.text == "":
+			return None
+		else:
+			return ConfigText.getValue(self)
+
+	def setValue(self, value):
+		if value is None:
+			value = ""
+		ConfigText.setValue(self, value)
+
 	def onSelect(self, session):
 		self.allmarked = (self.value != "")
 

@@ -13,11 +13,7 @@ typedef FTC_ImageCache FTC_Image_Cache;
 typedef FTC_ImageTypeRec FTC_Image_Desc;
 typedef FTC_SBitCache FTC_SBit_Cache;
 
-#ifdef HAVE_FREETYPE2
 typedef FT_UInt GlyphIndex;
-#else
-typedef FT_ULong GlyphIndex;
-#endif
 
 #include <string>
 #include <vector>

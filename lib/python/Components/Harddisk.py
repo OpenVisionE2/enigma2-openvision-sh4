@@ -1,5 +1,5 @@
 from fcntl import ioctl
-from os import listdir, major, minor, popen, rmdir, sep, stat, statvfs, system, unlink
+from os import listdir, major, minor, mkdir, popen, rmdir, sep, stat, statvfs, system, unlink
 from os.path import abspath, dirname, exists, ismount, join as pathjoin, normpath, realpath
 from re import search
 from time import sleep, time
@@ -282,6 +282,9 @@ class Harddisk:
 			h.write(zero)
 		h.close()
 
+	def createMovieDir(self):
+		mkdir(pathjoin(self.mount_path, 'movie'))
+
 	def createInitializeJob(self):
 		print("[Harddisk] Initializing storage device...")
 		job = Task.Job(_("Initializing storage device..."))
@@ -368,6 +371,11 @@ class Harddisk:
 		task = Task.ConditionTask(job, _("Waiting for mount"), timeoutCount=20)
 		task.check = self.mountDevice
 		task.weighting = 1
+
+		task = Task.PythonTask(job, _("Create directory") + ": movie")
+		task.work = self.createMovieDir
+		task.weighting = 1
+
 		return job
 
 	def initialize(self):

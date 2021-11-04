@@ -1151,7 +1151,7 @@ class ReceiverInformation(InformationBase):
 					boxRcType = _("evremote2 is present")
 			if boxRcType != rcType:
 				info.append(formatLine("P1", _("RC detected type"), boxRcType))
-		if config.hdmicec.enabled.value:
+		if BoxInfo.getItem("HasHDMI-CEC") and config.hdmicec.enabled.value:
 			info.append("")
 			info.append(formatLine("P1", _("HDMI-CEC address"), config.hdmicec.fixed_physical_address.value))
 		info.append("")

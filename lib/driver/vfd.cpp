@@ -53,6 +53,8 @@
  *                          display type and time mode.
  * 20210326 Audioniek       Set correct display width on spark with VFD.
  * 20210625 Audioniek       Kathrein UFS922 added.
+ * 20210922 Audioniek       Atemio AM 520 HD added.
+ * 20211105 Audioniek       Opticum HD 9600 Mini added.
  *
  ***************************************************************************/
 #include <stdarg.h>
@@ -189,6 +191,8 @@ evfd::evfd()
 	vfd_type = 19;
 #elif defined (ENABLE_OPT9600)
 	vfd_type = 20;
+#elif defined (ENABLE_OPT9600MINI)
+	vfd_type = 21;
 #else
 	vfd_type = -1;
 #endif
@@ -533,7 +537,10 @@ void *start_loop(void *arg)
 	 && !defined (ENABLE_VIP1_V1) \
 	 && !defined (ENABLE_VIP1_V2) \
 	 && !defined (ENABLE_VIP2) \
-	 && !defined (ENABLE_OPT9600)
+	 && !defined (ENABLE_OPT9600) \
+	 && !defined (ENABLE_OPT9600MINI) \
+	 && !defined (ENABLE_ATEMIO520) \
+	 && !defined (ENABLE_ATEMIO530)
 	// Set all blocked icons
 	for (int id = 0x10; id < 0x20; id++)
 	{
@@ -574,7 +581,10 @@ void *start_loop(void *arg)
  || defined (ENABLE_VIP1_V1) \
  || defined (ENABLE_VIP1_V2) \
  || defined (ENABLE_VIP2) \
- || defined (ENABLE_OPT9600)
+ || defined (ENABLE_OPT9600) \
+ || defined (ENABLE_OPT9600MINI) \
+ || defined (ENABLE_ATEMIO520) \
+ || defined (ENABLE_ATEMIO530)
 void evfd::vfd_write_string_scrollText(char *text)
 {
 	return;
@@ -979,7 +989,8 @@ void evfd::vfd_set_fan(int speed)
 	memset(&data, 0, sizeof(struct vfd_ioctl_data));
 
 #if defined (ENABLE_CUBEREVO) \
- || defined (ENABLE_CUBEREVO_9500HD)
+ || defined (ENABLE_CUBEREVO_9500HD) \
+ || defined (ENABLE_ADB_BOX)
 	if (speed)
 	{
 		data.start = 0x01;

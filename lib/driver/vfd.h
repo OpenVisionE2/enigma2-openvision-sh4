@@ -10,7 +10,10 @@
    || defined (ENABLE_HS7119) \
    || defined (ENABLE_SPARK) \
    || defined (ENABLE_CUBEREVO_MINI_FTA) \
-   || defined (ENABLE_CUBEREVO_250HD)
+   || defined (ENABLE_CUBEREVO_250HD) \
+   || defined (ENABLE_OPT9600MINI) \
+   || defined (ENABLE_ATEMIO520) \
+   || defined (ENABLE_ATEMIO530)
 	#define VFDLENGTH 4
 #elif defined (ENABLE_OCTAGON1008) \
    || defined (ENABLE_HS7420) \

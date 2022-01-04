@@ -22,7 +22,7 @@ from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Screens.ScreenSaver import InfoBarScreenSaver
 from Screens import Standby
-from Screens.ChoiceBox import ChoiceBox
+from Screens.ChoiceBox import ChoiceBox, OrderedChoiceBox
 from Screens.Dish import Dish
 from Screens.EventView import EventViewEPGSelect, EventViewSimple
 from Screens.InputBox import InputBox
@@ -44,6 +44,7 @@ from enigma import eTimer, eServiceCenter, eDVBServicePMTHandler, iServiceInform
 from time import time, localtime, strftime
 import os
 from os import sys
+from os.path import exists
 from bisect import insort
 import itertools
 import datetime
@@ -1306,7 +1307,7 @@ class InfoBarEPG:
 	def showEventInfoPlugins(self):
 		pluginlist = self.getEPGPluginList()
 		if pluginlist:
-			self.session.openWithCallback(self.EventInfoPluginChosen, ChoiceBox, title=_("Please choose an extension..."), list=pluginlist, skin_name="EPGExtensionsList", reorderConfig="eventinfo_order", windowTitle=_("Events info menu"))
+			self.session.openWithCallback(self.EventInfoPluginChosen, OrderedChoiceBox, text=_("Please choose an extension:"), list=pluginlist, order="eventInfoOrder", skinName="EPGExtensionsList", windowTitle=_("Events Info Menu"))
 		else:
 			self.openSingleServiceEPG()
 
@@ -2375,7 +2376,7 @@ class InfoBarExtensions:
 				else:
 					extensionsList.remove(extension)
 		list.extend([(x[0](), x) for x in extensionsList])
-		list and self.session.openWithCallback(self.extensionCallback, ChoiceBox, title=_("Please choose an extension..."), list=list, keys=keys, skin_name="ExtensionsList", reorderConfig="extension_order", windowTitle=_("Extensions menu"))
+		list and self.session.openWithCallback(self.extensionCallback, OrderedChoiceBox, text=_("Please choose an extension:"), list=list, keys=keys, order="extensionOrder", skinName="ExtensionsList", windowTitle=_("Extensions Menu"))
 
 	def extensionCallback(self, answer):
 		if answer is not None:
@@ -2921,7 +2922,7 @@ class InfoBarInstantRecord:
 		else:
 			common = ()
 		if self.isInstantRecordRunning():
-			title = _("A recording is currently running.\nWhat do you want to do?")
+			text = _("A recording is currently running.\nWhat do you want to do?")
 			list = common + \
 				((_("Change recording (duration)"), "changeduration"),
 				(_("Change recording (add time)"), "addrecordingtime"),
@@ -2937,7 +2938,7 @@ class InfoBarInstantRecord:
 				list += ((_("Stop timer recording"), "timer"),)
 			list += ((_("Do nothing"), "no"),)
 		else:
-			title = _("Start recording?")
+			text = _("Start recording?")
 			list = common
 			if self.isTimerRecordRunning():
 				list += ((_("Stop timer recording"), "timer"),)
@@ -2949,7 +2950,7 @@ class InfoBarInstantRecord:
 			if self.currentEventTime() > 0:
 				list += ((_("Save timeshift only for current event"), "timeshift_event"),)
 		if list:
-			self.session.openWithCallback(self.recordQuestionCallback, ChoiceBox, title=title, list=list)
+			self.session.openWithCallback(self.recordQuestionCallback, ChoiceBox, text=text, list=list)
 		else:
 			return 0
 
@@ -3047,7 +3048,7 @@ class InfoBarSubserviceSelection:
 					keys = ["red", "", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 					selection += 2
 				if tlist:
-					self.session.openWithCallback(self.subserviceSelected, ChoiceBox, title=_("Please select a sub service..."), list=tlist, selection=selection, keys=keys, skin_name="SubserviceSelection")
+					self.session.openWithCallback(self.subserviceSelected, ChoiceBox, text=_("Please select a sub service:"), list=tlist, selection=selection, keys=keys, skin_name="SubserviceSelection")
 				else:
 					self.session.open(MessageBox, _("No active subservices available."), MessageBox.TYPE_INFO, timeout=5, simple=True)
 
@@ -3830,7 +3831,6 @@ class InfoBarAspectSelection:
 		self["AspectSelectionAction"] = HelpableActionMap(self, ["InfobarAspectSelectionActions"], {
 			"aspectSelection": (self.ExGreen_toggleGreen, _("Aspect ratio list")),
 		}, prio=0, description=_("Aspect Ratio Actions"))
-
 		self["key_green"] = Boolean(True)
 		self["key_yellow"] = Boolean(True)
 		self["key_blue"] = Boolean(True)
@@ -3843,25 +3843,26 @@ class InfoBarAspectSelection:
 
 	def aspectSelection(self):
 		selection = 0
-		tlist = []
-		tlist.append((_("Subservice list..."), "subservice"))
-		tlist.append((_("Resolution"), "resolution"))
-		tlist.append((_("3D Modus"), "tdmodus"))
-		tlist.append(("--", ""))
-		tlist.append(("Letterbox", "letterbox"))
-		tlist.append(("PanScan", "panscan"))
-		tlist.append(("Non Linear", "non"))
-		tlist.append(("Bestfit", "bestfit"))
-
-		print("[InfoBarGenerics] Read /proc/stb/video/policy")
-		mode = open("/proc/stb/video/policy").read()[:-1]
-		print(mode)
-		for x in range(len(tlist)):
-			if tlist[x][1] == mode:
-				selection = x
-
+		aspectList = [
+			(_("Subservice list..."), "subservice"),
+			(_("Resolution"), "resolution"),
+			(_("3D Modus"), "tdmodus"),
+			("--", ""),
+			(_("4:3 Letterbox"), "letterbox"),
+			(_("4:3 PanScan"), "panscan"),
+			(_("Non Linear"), "non"),
+			(_("Bestfit"), "bestfit")
+		]
 		keys = ["green", "yellow", "blue", "", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-		self.session.openWithCallback(self.aspectSelected, ChoiceBox, title=_("Please select an aspect ratio..."), list=tlist, selection=selection, keys=keys)
+		print("[InfoBarGenerics] Read /proc/stb/video/policy")
+		aspect = open("/proc/stb/video/policy").read()[:-1]
+		selection = 0
+		print(aspect)
+		for item in range(len(aspectList)):
+			if aspectList[item][1] == aspect:
+				selection = item
+				break
+		self.session.openWithCallback(self.aspectSelected, ChoiceBox, text=_("Please select an aspect ratio:"), list=aspectList, keys=keys, selection=selection)
 
 	def aspectSelected(self, aspect):
 		if not aspect is None:

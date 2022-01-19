@@ -14,6 +14,18 @@ fi
 # write on vfd display
 echo "OV" > /dev/vfd
 
+# Function to determine if a BusyBox update has been flagged and do the update.
+# This code should be run just before a restart to ensure that any shell changes
+# do not impact running code.
+#
+function check_busybox_update {
+	if [ -e /etc/enigma2/.busybox_update_required ]; then
+		DEFERRED=`cat /etc/enigma2/.busybox_update_required`
+		rm /etc/enigma2/.busybox_update_required
+		${DEFERRED} 2>&1 | tee -a /home/root/opkgupgrade.log
+	fi
+}
+
 if [ -e @libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.pyo ] || [ -e @libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.py ]; then
 	cpufreq=`cat /etc/enigma2/settings | grep config.plugins.booster.normalfrequenz | cut -d "=" -f2`
 	case $cpufreq in
@@ -120,7 +132,6 @@ while : ; do
 		LD_PRELOAD="${LIBS}" ENIGMA_DEBUG_LVL="${DEBUG_LVL}" ENIGMA_DEBUG_TIME="${DEBUG_TIME}" "@bindir@/enigma2" >> "${FILE}" 2>&1
 	fi
 
-
 	# Enigma2 exit codes:
 	#
 	#  1 - halt
@@ -137,10 +148,12 @@ while : ; do
 	RET=$?
 	case ${RET} in
 		1)
+			check_busybox_update
 			/sbin/halt
 			;;
 		2)
 			[ -f /proc/stb/fp/force_restart ] && echo "1" > /proc/stb/fp/force_restart
+			check_busybox_update
 			/sbin/reboot
 			;;
 		3)
@@ -151,6 +164,7 @@ while : ; do
 			sleep 0.1;
 			/sbin/rmmod fp
 			/sbin/modprobe fp
+			check_busybox_update
 			/sbin/reboot
 			;;
 		5)
@@ -173,10 +187,6 @@ while : ; do
 			PREVUPD="0"
 			CURRUPD="999"
 			opkg update 2>&1 | tee /home/root/opkgupgrade.log
-			# check if we need to upgrade busybox first
-			if [ "$(opkg list-upgradable busybox)" != "" ]; then
-				opkg update busybox 2>&1 | tee -a /home/root/opkgupgrade.log
-			fi
 			# update all other packages
 			while [ "${CURRUPD}" -gt "0" ] && [ "${CURRUPD}" -ne "${PREVUPD}" ]; do
 				opkg upgrade "${DESTS}" 2>&1 | tee -a /home/root/opkgupgrade.log
@@ -184,6 +194,7 @@ while : ; do
 				CURRUPD=`opkg list-upgradable | wc -l`
 				echo "===> ${CURRUPD} PACKAGE(S) REMAINING" >> /home/root/opkupgrade.log
 			done
+			check_busybox_update
 			/sbin/reboot
 			;;
 		43)

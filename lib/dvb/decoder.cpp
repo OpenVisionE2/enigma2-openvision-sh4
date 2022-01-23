@@ -316,7 +316,7 @@ eDVBVideo::eDVBVideo(eDVBDemux *demux, int dev)
 #define VIDEO_STREAMTYPE_MPEG1 6
 #define VIDEO_STREAMTYPE_H265_HEVC 7
 #define VIDEO_STREAMTYPE_AVS 16
-#define VIDEO_STREAMTYPE_AVS2 17
+#define VIDEO_STREAMTYPE_AVS2 40
 
 int eDVBVideo::startPid(int pid, int type)
 {

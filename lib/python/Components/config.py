@@ -658,9 +658,6 @@ class ConfigDictionarySet(ConfigElement):
 			if callable(self.callback):
 				self.callback()
 
-	def getKeys(self):
-		return self.dir_pathes
-
 
 # This is the control, and base class, for location settings.
 #

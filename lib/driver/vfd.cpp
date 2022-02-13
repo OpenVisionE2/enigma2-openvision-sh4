@@ -55,6 +55,7 @@
  * 20210625 Audioniek       Kathrein UFS922 added.
  * 20210922 Audioniek       Atemio AM 520 HD added.
  * 20211105 Audioniek       Opticum HD 9600 Mini added.
+ * 20220127 Audioniek       Opticum HD 9600 Prima added.
  *
  ***************************************************************************/
 #include <stdarg.h>
@@ -189,7 +190,8 @@ evfd::evfd()
    || defined (ENABLE_FOREVER_9898HD) \
    || defined (ENABLE_PACE7241)
 	vfd_type = 19;
-#elif defined (ENABLE_OPT9600)
+#elif defined (ENABLE_OPT9600) \
+   || defined (ENABLE_OPT9600PRIMA)
 	vfd_type = 20;
 #elif defined (ENABLE_OPT9600MINI)
 	vfd_type = 21;
@@ -539,6 +541,7 @@ void *start_loop(void *arg)
 	 && !defined (ENABLE_VIP2) \
 	 && !defined (ENABLE_OPT9600) \
 	 && !defined (ENABLE_OPT9600MINI) \
+	 && !defined (ENABLE_OPT9600PRIMA) \
 	 && !defined (ENABLE_ATEMIO520) \
 	 && !defined (ENABLE_ATEMIO530)
 	// Set all blocked icons
@@ -583,6 +586,7 @@ void *start_loop(void *arg)
  || defined (ENABLE_VIP2) \
  || defined (ENABLE_OPT9600) \
  || defined (ENABLE_OPT9600MINI) \
+ || defined (ENABLE_OPT9600PRIMA) \
  || defined (ENABLE_ATEMIO520) \
  || defined (ENABLE_ATEMIO530)
 void evfd::vfd_write_string_scrollText(char *text)

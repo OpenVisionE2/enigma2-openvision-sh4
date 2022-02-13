@@ -23,7 +23,8 @@
    || defined (ENABLE_VIP1_V1) \
    || defined (ENABLE_VIP1_V2) \
    || defined (ENABLE_VIP2) \
-   || defined (ENABLE_OPT9600)
+   || defined (ENABLE_OPT9600) \
+   || defined (ENABLE_OPT9600PRIMA)
 	#define VFDLENGTH 8
 #elif defined (ENABLE_VITAMIN_HD5000)
 	#define VFDLENGTH 11

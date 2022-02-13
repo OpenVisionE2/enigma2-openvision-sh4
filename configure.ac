@@ -217,6 +217,14 @@ if test "$enable_opt9600mini" = "yes"; then
 	AC_DEFINE(ENABLE_OPT9600MINI, 1, [enable opt9600mini stuff])
 fi
 
+AC_ARG_ENABLE(opt9600prima,
+	[  --enable-opt9600prima        enable opt9600prima stuff],
+	[AC_DEFINE(ENABLE_OPT9600PRIMA, 1, [enable opt9600prima stuff])])
+AM_CONDITIONAL(ENABLE_OPT9600PRIMA, test "$enable_opt9600prima" = "yes")
+if test "$enable_opt9600prima" = "yes"; then
+	AC_DEFINE(ENABLE_OPT9600PRIMA, 1, [enable opt9600prima stuff])
+fi
+
 AC_ARG_ENABLE(hs7110,
 	[  --enable-hs7110            enable hs7110 stuff],
 	[AC_DEFINE(ENABLE_HS7110, 1, [enable hs7110 stuff])])

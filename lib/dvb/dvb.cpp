@@ -297,11 +297,11 @@ eDVBUsbAdapter::eDVBUsbAdapter(int nr)
 : eDVBAdapterLinux(nr)
 {
 	int file;
-	char type[8];
-	struct dvb_frontend_info fe_info;
+	char type[8] = {};
+	struct dvb_frontend_info fe_info = {};
 	int frontend = -1;
-	char filename[256];
-	char name[128] = {0};
+	char filename[256] = {};
+	char name[128] = {};
 	int vtunerid = nr - 1;
 
 	pumpThread = 0;
@@ -548,7 +548,7 @@ void *eDVBUsbAdapter::vtunerPump()
 		{
 			if (FD_ISSET(vtunerFd, &xset))
 			{
-				struct vtuner_message message;
+				struct vtuner_message message = {};
 				memset(message.pidlist, 0xff, sizeof(message.pidlist));
 				::ioctl(vtunerFd, VTUNER_GET_MESSAGE, &message);
 
@@ -590,7 +590,7 @@ void *eDVBUsbAdapter::vtunerPump()
 						}
 						else
 						{
-							struct dmx_pes_filter_params filter;
+							struct dmx_pes_filter_params filter = {};
 							filter.input = DMX_IN_FRONTEND;
 							filter.flags = 0;
 							filter.pid = message.pidlist[i];

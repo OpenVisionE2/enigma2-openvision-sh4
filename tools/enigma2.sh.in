@@ -49,11 +49,6 @@ if [ -e @libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.p
 	echo "Setting CPU clock speed to $cpufreq MHz (overclk=$overclk)"
 fi
 
-# LC_ALL available?
-if [ -z $LC_ALL ]; then
-	export LC_ALL=en_GB.utf8
-fi
-
 # Check for sundtek tuner helper lib.
 if [ -e /opt/lib/libmediaclient.so ]; then
 	LIBS="/opt/lib/libmediaclient.so @libdir@/libopen.so.0.0.0"

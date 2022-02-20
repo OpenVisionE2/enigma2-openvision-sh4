@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
-from config import config, ConfigSubsection, ConfigSlider, ConfigOnOff, ConfigEnableDisable
+from .config import config, ConfigSubsection, ConfigSlider, ConfigOnOff, ConfigEnableDisable
 from enigma import eQBOXSenseWheel
 from Components.SystemInfo import BoxInfo
 

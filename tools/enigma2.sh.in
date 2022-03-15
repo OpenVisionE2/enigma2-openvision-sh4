@@ -83,6 +83,9 @@ while : ; do
 		done
 	fi
 
+	# Help network when it won't come up!
+	/etc/init.d/networking restart &
+
 	# Hook to execute scripts always before enigma2 start.
 	if [ -x "@bindir@/enigma2_pre_start.sh" ]; then
 		"@bindir@/enigma2_pre_start.sh"

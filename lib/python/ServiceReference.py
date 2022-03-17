@@ -3,6 +3,7 @@
 from enigma import eServiceReference, eServiceReferenceDVB, eServiceCenter, getBestPlayableServiceReference
 import NavigationInstance
 from Components.SystemInfo import BoxInfo
+from six import PY2
 
 mediaservice = BoxInfo.getItem("mediaservice").replace('enigma2-plugin-systemplugins-', '')
 
@@ -85,7 +86,10 @@ def resolveAlternate(ref):
 
 
 def makeServiceQueryStr(serviceTypes):
-	return ' || '.join(map(lambda x: '(type == %d)' % x, serviceTypes))
+	if PY2:
+		return ' || '.join(map(lambda x: '(type == %d)' % x, serviceTypes))
+	else:
+		return ' || '.join(['(type == %d)' % x for x in serviceTypes])
 
 
 def serviceRefAppendPath(sref, path):

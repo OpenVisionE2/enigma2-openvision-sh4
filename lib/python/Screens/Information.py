@@ -593,7 +593,7 @@ class ImageInformation(InformationBase):
 			ovUrl = "https://raw.githubusercontent.com/OpenVisionE2/revision/master/new.conf"
 			try:
 				ovResponse = urlopen(ovUrl)
-				ovRevision = ovResponse.read().decode() if PY2 else ovResponse.read()
+				ovRevision = str(ovResponse.read().decode()).strip()
 				ovRevisionUpdate = ovRevision[1:]
 			except Exception as err:
 				ovRevisionUpdate = _("Requires internet connection")

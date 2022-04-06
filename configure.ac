@@ -801,6 +801,7 @@ lib/python/Plugins/SystemPlugins/VideoTune/meta/Makefile
 lib/python/Plugins/SystemPlugins/WirelessLan/Makefile
 lib/python/Plugins/SystemPlugins/WirelessLan/meta/Makefile
 lib/python/Tools/Makefile
+po/Makefile
 main/Makefile
 tools/Makefile
 tools/enigma2.sh

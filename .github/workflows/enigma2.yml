@@ -20,4 +20,5 @@ jobs:
     - name: compile enigma2 python
       run: |
         python -m compileall .
+        find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
         echo done!

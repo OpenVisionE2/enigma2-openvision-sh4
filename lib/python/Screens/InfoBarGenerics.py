@@ -38,7 +38,7 @@ from Screens.UnhandledKey import UnhandledKey
 from ServiceReference import ServiceReference, isPlayableForCur
 from Tools.ASCIItranslit import legacyEncode
 from Tools.Directories import fileExists, getRecordingFilename, moveFiles
-from Tools.Notifications import AddNotificationWithCallback, AddPopup, current_notifications, lock, notificationAdded, notifications, RemovePopup
+from Tools.Notifications import AddNotificationWithCallback, AddPopup, current_notifications, lock, notificationAdded, notifications, RemovePopup, AddNotification
 from keyids import KEYFLAGS, KEYIDS, KEYIDNAMES
 from Components.Console import Console
 from enigma import eTimer, eServiceCenter, eDVBServicePMTHandler, iServiceInformation, iPlayableService, eServiceReference, eEPGCache, eActionMap, getDesktop, eDVBDB
@@ -2052,7 +2052,13 @@ class InfoBarTimeshift():
 		if ts.isTimeshiftEnabled():
 			print("[InfoBarGenerics] timeshift already enabled?")
 		else:
-			if not ts.startTimeshift():
+			from os import statvfs
+			if config.usage.timeshift_path.value:
+				size = statvfs(config.usage.timeshift_path.value)
+				free = int((size.f_bfree * size.f_frsize) // (1024 * 1024))
+				if free <= 200:
+					return AddNotification(MessageBox, _("Free %d MB: Low space available for timeshift. Change device") % free, type=MessageBox.TYPE_ERROR, timeout=10)
+			if not ts.startTimeshift() and free > 200:
 				# we remove the "relative time" for now.
 				#self.pvrStateDialog["timeshift"].setRelative(time.time())
 
@@ -2195,7 +2201,7 @@ class InfoBarTimeshift():
 		if self.timeshiftEnabled() and config.usage.check_timeshift.value and self.timeshift_was_activated:
 			message = _("Stop timeshift?")
 			if not self.save_timeshift_file:
-				choice = [(_("Yes"), "stop"), (_("No"), "continue"), (_("Yes and save"), "save"), (_("Yes and save in movie dir"), "save_movie")]
+				choice = [(_("Yes"), "stop"), (_("No"), "continue"), (_("Yes and save in timeshift dir"), "save"), (_("Yes and save in movie dir"), "save_movie")]
 			else:
 				choice = [(_("Yes"), "stop"), (_("No"), "continue")]
 				message += "\n" + _("Reminder, you have chosen to save timeshift file.")

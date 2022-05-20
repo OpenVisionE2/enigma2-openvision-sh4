@@ -323,12 +323,8 @@ def InitUsageConfig():
 			config.usage.instantrec_path.setChoices(choiceList + [(savedValue, savedValue)], default="<default>")
 			config.usage.instantrec_path.value = savedValue
 	config.usage.instantrec_path.save()
-	if not exists(resolveFilename(SCOPE_TIMESHIFT)):
-		try:
-			mkdir(resolveFilename(SCOPE_TIMESHIFT), 0o755)
-		except:
-			pass
-	defaultValue = resolveFilename(SCOPE_TIMESHIFT)
+	SCOPE_USB_TIMESHIFT_RECORDINGS = "/media/usb/timeshift/recordings/"
+	defaultValue = resolveFilename(SCOPE_TIMESHIFT) if exists(resolveFilename(SCOPE_HDD)) else SCOPE_USB_TIMESHIFT_RECORDINGS
 	config.usage.timeshift_path = ConfigSelection(default=defaultValue, choices=[(defaultValue, defaultValue)])
 	config.usage.timeshift_path.load()
 	if config.usage.timeshift_path.saved_value:
@@ -336,6 +332,8 @@ def InitUsageConfig():
 		if savedValue and savedValue != defaultValue:
 			config.usage.timeshift_path.setChoices([(defaultValue, defaultValue), (savedValue, savedValue)], default=defaultValue)
 			config.usage.timeshift_path.value = savedValue
+	if not exists(config.usage.timeshift_path.value):
+		makedirs(config.usage.timeshift_path.value, 0o755) # Create Timeshift DefaultValue directorie and users Directories. PathStatus of Timeshift module values this directorie.
 	config.usage.timeshift_path.save()
 	config.usage.allowed_timeshift_paths = ConfigLocations(default=[resolveFilename(SCOPE_TIMESHIFT)])
 

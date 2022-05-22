@@ -675,10 +675,6 @@ from Components.EpgLoadSave import EpgCacheLoadCheck, EpgCacheSaveCheck
 EpgCacheSaveCheck()
 EpgCacheLoadCheck()
 
-if config.clientmode.enabled.value:
-	from Components.ChannelsImporter import autostart
-	autostart()
-
 # from enigma import dump_malloc_stats
 # timer = eTimer()
 # timer.callback.append(dump_malloc_stats)

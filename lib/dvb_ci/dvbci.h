@@ -7,6 +7,7 @@
 #include <lib/base/message.h>
 #include <lib/base/thread.h>
 #include <lib/service/iservice.h>
+#include <lib/base/thread.h>
 #include <lib/python/python.h>
 #include <set>
 #include <queue>

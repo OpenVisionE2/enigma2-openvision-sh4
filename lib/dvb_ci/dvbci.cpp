@@ -27,6 +27,7 @@
 
 #include <dvbsi++/ca_program_map_section.h>
 
+#include <linux/dvb/ca.h>
 
 eDVBCIInterfaces *eDVBCIInterfaces::instance = 0;
 
@@ -55,7 +56,7 @@ eDVBCIInterfaces::eDVBCIInterfaces()
 	{
 		path.str("");
 		path.clear();
-		path << "/dev/ci" << num_ci;
+		path << "/dev/dvb/adapter0/ci" << num_ci;
 
 		if(::access(path.str().c_str(), R_OK) < 0)
 			break;
@@ -1267,7 +1268,7 @@ void eDVBCISlot::openDevice()
 	plugged = true;
 	m_ci_version = versionUnknown;
 
-	sprintf(filename, "/dev/ci%d", slotid);
+	sprintf(filename, "/dev/dvb/adapter0/ci%d", slotid);
 
 //	possible_caids.insert(0x1702);
 //	possible_providers.insert(providerPair("PREMIERE", 0xC00000));
@@ -1299,14 +1300,7 @@ void eDVBCISlot::closeDevice()
 	close(fd);
 	fd = -1;
 	notifier->stop();
-#ifdef __sh__
-	mmi_active = false;
-	eDVBCI_UI::getInstance()->setAppName(getSlotID(), "");
-	eDVBCISession::deleteSessions(this);
-	eDVBCIInterfaces::getInstance()->ciRemoved(this);
-#else
 	data(eSocketNotifier::Priority);
-#endif
 	state = stateDisabled;
 }
 

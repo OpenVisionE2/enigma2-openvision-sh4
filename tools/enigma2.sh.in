@@ -26,7 +26,7 @@ function check_busybox_update {
 	fi
 }
 
-PYVER=`cat /usr/lib/enigma.info | grep python= | cut -d= -f2`
+PYVER=`sed -En 's|^python=(.+)$|\1|p' /usr/lib/enigma.info`
 
 if [ -e @libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.pyo ] || [ -e @libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.py ]; then
 	cpufreq=`cat /etc/enigma2/settings | grep config.plugins.booster.normalfrequenz | cut -d "=" -f2`

@@ -624,10 +624,10 @@ class ImageInformation(InformationBase):
 		info.append(formatLine("P1", _("Last update"), "%s-%s-%s" % (compileDate[:4], compileDate[4:6], compileDate[6:])))
 		info.append(formatLine("P1", _("Enigma2 (re)starts"), config.misc.startCounter.value))
 		info.append(formatLine("P1", _("Enigma2 debug level"), eGetEnigmaDebugLvl()))
-		if isPluginInstalled("ServiceApp") and config.plugins.serviceapp.servicemp3.replace.value or isPluginInstalled("ServiceApp") and BoxInfo.getItem("HiSilicon") and not config.plugins.serviceapp.servicemp3.replace.value:
+		if isPluginInstalled("ServiceApp") and config.plugins.serviceapp.servicemp3.replace.value:
 			mediaService = "ServiceApp"
-		elif BoxInfo.getItem("HiSilicon") and isPluginInstalled("ServiceHisilicon") and not isPluginInstalled("ServiceApp"):
-			mediaService = "ServiceHisilicon"
+		elif isPluginInstalled("Servicelibpl") and not isPluginInstalled("ServiceApp"):
+			mediaService = "Servicelibpl"
 		else:
 			mediaService = "ServiceMP3"
 		info.append(formatLine("P1", _("Media service player"), "%s") % mediaService)

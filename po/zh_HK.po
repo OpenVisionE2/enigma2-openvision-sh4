@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-22 21:29+0430\n"
+"POT-Creation-Date: 2022-07-05 20:41+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: 王彪 <satfan@163.com>\n"
 "Language-Team: 中國\n"
@@ -3046,10 +3046,6 @@ msgstr ""
 msgid "CH%s"
 msgstr ""
 
-#, fuzzy, python-format
-msgid "CI %s enabled"
-msgstr "允許"
-
 msgid "CI (Common Interface) Setup"
 msgstr ""
 
@@ -3067,6 +3063,10 @@ msgstr ""
 
 msgid "CI assignment"
 msgstr "CI-證書"
+
+#, fuzzy
+msgid "CI enabled"
+msgstr "允許"
 
 msgid "CI slot: "
 msgstr ""
@@ -3668,6 +3668,10 @@ msgstr "色彩"
 
 msgid "Combo"
 msgstr ""
+
+#, fuzzy
+msgid "Combo Tuner"
+msgstr "選擇調諧器"
 
 msgid "Comedy"
 msgstr ""
@@ -7458,6 +7462,9 @@ msgstr "匈牙利語"
 msgid "Hungary"
 msgstr "匈牙利語"
 
+msgid "Hybrid Tuner"
+msgstr ""
+
 #, fuzzy
 msgid "I do not want to perform any service scans"
 msgstr " 是否開始頻道掃描?"
@@ -7667,6 +7674,9 @@ msgid "Include ECM in http streams"
 msgstr ""
 
 msgid "Include EIT in http streams"
+msgstr ""
+
+msgid "Include SDT, BAT in http streams"
 msgstr ""
 
 msgid "Include action map data"
@@ -8803,7 +8813,7 @@ msgid "Media scanner"
 msgstr ""
 
 #, fuzzy
-msgid "Media service"
+msgid "Media service player"
 msgstr "媒體播放器"
 
 msgid "Medium is not a writeable DVD!"
@@ -9802,9 +9812,6 @@ msgstr "正在恢復"
 msgid "Not tested:"
 msgstr ""
 
-msgid "Note: when enabled, and you do want standby mode after wake up, set option 'Startup to Standby' as 'No, except Wakeup timer'."
-msgstr ""
-
 #, fuzzy
 msgid "Nothing"
 msgstr "什麼都不做"
@@ -9928,6 +9935,10 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "不可用"
 
+#, fuzzy
+msgid "OTT Model"
+msgstr "型號:"
+
 msgid "OVR"
 msgstr ""
 
@@ -10008,6 +10019,10 @@ msgstr ""
 
 msgid "Only on startup"
 msgstr ""
+
+#, fuzzy
+msgid "Only power off"
+msgstr "允許移動模式"
 
 msgid "Only select 'yes' if you are using a multiswich that requires a DiSEqC Port-A command signal. For all other setups select 'no'."
 msgstr ""
@@ -11441,6 +11456,11 @@ msgstr "正在錄製"
 #, fuzzy
 msgid "Recording Actions"
 msgstr "錄影位置"
+
+msgid ""
+"Recording IPTV with ServiceApp enabled or your set top box have HiSilicon chipset\n"
+"Timer ended"
+msgstr ""
 
 msgid "Recording Setup"
 msgstr ""
@@ -13799,6 +13819,10 @@ msgid "Single EPG"
 msgstr "單個-EPG"
 
 #, fuzzy
+msgid "Single Tuner"
+msgstr "單個"
+
+#, fuzzy
 msgid "Single line mode"
 msgstr "設定視頻模式"
 
@@ -14285,10 +14309,10 @@ msgstr "開始"
 msgid "Starts in a few seconds"
 msgstr "超時(秒)"
 
-msgid "Startup the set top box in standby"
+msgid "Startup the set top box in standby from deepstandby or from turn off."
 msgstr ""
 
-msgid "Startup to Standby"
+msgid "Startup to standby from deepstandby or power off"
 msgstr ""
 
 #, fuzzy
@@ -15860,6 +15884,10 @@ msgstr ""
 msgid "Twi"
 msgstr "2"
 
+#, fuzzy
+msgid "Twin Tuner"
+msgstr "調諧器"
+
 msgid "Two"
 msgstr "2"
 
@@ -16759,6 +16787,9 @@ msgstr ""
 msgid "When enabled, HDMI-CEC is enabled with standard configuration"
 msgstr ""
 
+msgid "When enabled, SDT, BAT data will be included in http streams."
+msgstr ""
+
 msgid "When enabled, a popup message will be shown when a movie has finished and the next one will start."
 msgstr ""
 
@@ -16967,6 +16998,9 @@ msgid "When enabled, your %s %s will select an AC3+ track (when available)."
 msgstr ""
 
 msgid "When enabled, your receiver will detect activity on the VCR SCART input."
+msgstr ""
+
+msgid "When it is enabled and you want to go to standby only from wake up timer, set \"Startup to standby from deepstandby or power off\" to \"No, except Wakeup timer\"."
 msgstr ""
 
 msgid "When nonzero, a recording will start earlier than the starting time indicated by the EPG."
@@ -17988,6 +18022,10 @@ msgstr "%d menit"
 #, fuzzy
 msgid "minutes"
 msgstr "%d menit"
+
+#, fuzzy
+msgid "module disabled"
+msgstr "不可用"
 
 msgid "month"
 msgstr "月份"

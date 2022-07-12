@@ -2313,7 +2313,7 @@ class InfoBarExtensions:
 		self.addExtension(extension=self.getOScamInfo, type=InfoBarExtensions.EXTENSION_LIST)
 
 	def getOSname(self):
-		return _("OScam Info")
+		return _("OScam Info") if config.misc.softcams.value == "oscam" else _("Ncam Info")
 
 	def getOScamInfo(self):
 		if BoxInfo.getItem("OScamInstalled") or BoxInfo.getItem("NCamInstalled"):

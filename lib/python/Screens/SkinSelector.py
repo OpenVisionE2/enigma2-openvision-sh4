@@ -100,7 +100,6 @@ class SkinSelector(Screen, HelpableScreen):
 		current = _("Current")
 		pending = _("Error in XML")
 		displayPicon = pathjoin(dirname(DEFAULT_DISPLAY_SKIN), "skin_display_picon.xml")
-		displayGrautec = pathjoin(dirname(DEFAULT_DISPLAY_SKIN), "skin_display_grautec.xml")
 		skinList = []
 		# Find and list the available skins...
 		for dir in [dir for dir in listdir(self.rootDir) if isdir(pathjoin(self.rootDir, dir))]:
@@ -140,8 +139,6 @@ class SkinSelector(Screen, HelpableScreen):
 						list = [DEFAULT_DISPLAY_SKIN.split(".")[0].split("/")[1], default, dir, skin, DEFAULT_DISPLAY_SKIN.split("/skin_")[1], preview]
 					elif skin == displayPicon:
 						list = [displayPicon.split(".")[0].split("/")[1], default, dir, skin, displayPicon.split("/skin_")[1], preview]
-					elif skin == displayGrautec:
-						list = [displayGrautec.split(".")[0].split("/")[1], default, dir, skin, displayGrautec.split("/skin_")[1], preview]
 					else:
 						list = [dir, "", dir, skin, resolution, preview]
 					if skin == self.current:

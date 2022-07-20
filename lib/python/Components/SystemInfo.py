@@ -232,7 +232,7 @@ BoxInfo.setItem("RemoteDelay", 700)
 
 BoxInfo.setItem("multiboot", 0 if BoxInfo.getItem("distro", "").lower() == "openvision" else 1, immutable=True)
 
-BoxInfo.setItem("OpenSSLVersion", getOpenSSLVersion(), immutable=True)
+BoxInfo.setItem("OpenSSLVersion", BoxInfo.getItem("openssl"), immutable=True)
 
 SystemInfo["CommonInterface"] = eDVBCIInterfaces.getInstance().getNumOfSlots()
 SystemInfo["CommonInterfaceCIDelay"] = fileCheck("/proc/stb/tsmux/rmx_delay")

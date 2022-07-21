@@ -5,8 +5,8 @@
 # is not currently tested in this code!)
 
 from hashlib import md5
-from os import R_OK, access, listdir, walk
-from os.path import exists as fileAccess, isdir, isfile, join as pathjoin
+from os import R_OK, access
+from os.path import exists as fileAccess, isfile, join as pathjoin
 from re import findall
 from subprocess import PIPE, Popen
 
@@ -214,17 +214,6 @@ def getModuleLayout():
 	return None
 
 
-def getOpenSSLVersion():
-	process = Popen(("/usr/bin/openssl", "version"), stdout=PIPE, stderr=PIPE, universal_newlines=True)
-	stdout, stderr = process.communicate()
-	if process.returncode == 0:
-		data = stdout.strip().split()
-		if len(data) > 1 and data[0] == "OpenSSL":
-			return data[1]
-	print("[About] Get OpenSSL version failed.")
-	return _("Unknown")
-
-
 model = BoxInfo.getItem("model")
 brand = BoxInfo.getItem("brand")
 displaytype = BoxInfo.getItem("displaytype")
@@ -242,8 +231,6 @@ BoxInfo.setItem("RemoteRepeat", 300)
 BoxInfo.setItem("RemoteDelay", 700)
 
 BoxInfo.setItem("multiboot", 0 if BoxInfo.getItem("distro", "").lower() == "openvision" else 1, immutable=True)
-
-BoxInfo.setItem("OpenSSLVersion", getOpenSSLVersion(), immutable=True)
 
 SystemInfo["CommonInterface"] = eDVBCIInterfaces.getInstance().getNumOfSlots()
 SystemInfo["CommonInterfaceCIDelay"] = fileCheck("/proc/stb/tsmux/rmx_delay")

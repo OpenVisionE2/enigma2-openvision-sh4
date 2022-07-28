@@ -25,7 +25,7 @@ class DownloadWithProgress:
 		self.requestHeader = {"User-agent": self.userAgent}
 		self.userHeader = kwargs.get('headers', None)
 		if self.userHeader is not None:
-			self.requestHeader = self.requestHeader | self.userHeader
+			self.requestHeader.update(self.userHeader)
 
 	def start(self):
 		request = Request(self.url, None, self.requestHeader)

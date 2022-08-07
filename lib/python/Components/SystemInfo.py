@@ -97,9 +97,9 @@ class BoxInformation:  # To maintain data integrity class variables should not b
 			value = list(data)
 		elif valueTest == "NONE":
 			value = None
-		elif valueTest in ("FALSE", "NO", "OFF", "DISABLED"):
+		elif valueTest in ("FALSE", "NO", "OFF", "DISABLED", "DISABLE"):
 			value = False
-		elif valueTest in ("TRUE", "YES", "ON", "ENABLED"):
+		elif valueTest in ("TRUE", "YES", "ON", "ENABLED", "ENABLE"):
 			value = True
 		elif value.isdigit() or (value[0:1] == "-" and value[1:].isdigit()):
 			value = int(value)

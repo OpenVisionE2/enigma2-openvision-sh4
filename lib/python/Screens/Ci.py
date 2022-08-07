@@ -17,11 +17,14 @@ forceNotShowCiMessages = False
 
 
 def setCIBitrate(configElement):
-	eDVBCI_UI.getInstance().setClockRate(configElement.slotid, eDVBCI_UI.rateNormal if configElement.value == "no" else eDVBCI_UI.rateHigh)
+	if not configElement.value:
+		eDVBCI_UI.getInstance().setClockRate(configElement.slotid, eDVBCI_UI.rateNormal)
+	else:
+		eDVBCI_UI.getInstance().setClockRate(configElement.slotid, eDVBCI_UI.rateHigh)
 
 
 def setCIEnabled(configElement):
-    eDVBCI_UI.getInstance().setEnabled(configElement.slotid, configElement.value)
+	eDVBCI_UI.getInstance().setEnabled(configElement.slotid, configElement.value)
 
 
 def setdvbCiDelay(configElement):
@@ -47,7 +50,7 @@ def InitCiConfig():
 			config.ci[slot].static_pin = ConfigPIN(default=0)
 			config.ci[slot].show_ci_messages = ConfigYesNo(default=True)
 			if BoxInfo.getItem("CI%dSupportsHighBitrates" % slot):
-				config.ci[slot].canHandleHighBitrates = ConfigYesNo(default=True)
+				config.ci[slot].canHandleHighBitrates = ConfigYesNo(default=False)
 				config.ci[slot].canHandleHighBitrates.slotid = slot
 				config.ci[slot].canHandleHighBitrates.addNotifier(setCIBitrate)
 			if BoxInfo.getItem("CI%dRelevantPidsRoutingSupport" % slot):
@@ -57,10 +60,7 @@ def InitCiConfig():
 		if BoxInfo.getItem("CommonInterfaceCIDelay"):
 			config.cimisc.dvbCiDelay = ConfigSelection(default="256", choices=[("16"), ("32"), ("64"), ("128"), ("256")])
 			config.cimisc.dvbCiDelay.addNotifier(setdvbCiDelay)
-		if BoxInfo.getItem("HaveCISSL"):
-			config.cimisc.civersion = ConfigSelection(default="ciplus1", choices=[("auto", _("Auto")), ("ciplus1", _("CI Plus 1.2")), ("ciplus2", _("CI Plus 1.3")), ("legacy", _("CI Legacy"))])
-		else:
-			config.cimisc.civersion = ConfigSelection(default="auto", choices=[("auto", _("Auto")), ("ciplus1", _("CI Plus 1.2")), ("ciplus2", _("CI Plus 1.3")), ("legacy", _("CI Legacy"))])
+		config.cimisc.civersion = ConfigSelection(default="auto", choices=[("auto", _("Auto")), ("ciplus1", _("CI Plus 1.2")), ("ciplus2", _("CI Plus 1.3")), ("legacy", _("CI Legacy"))])
 
 
 class MMIDialog(Screen):
@@ -296,17 +296,12 @@ class MMIDialog(Screen):
 
 	def ciStateChanged(self):
 		do_close = False
-		if self.action == 0:			#reset
-			do_close = True
-		if self.action == 1:			#init
+		if self.action == 0 or self.action == 1: #reset = 0, init = 1
 			do_close = True
 
 		#module still there ?
-		if self.handler.getState(self.slotid) != 2:
-			do_close = True
-
 		#mmi session still active ?
-		if self.handler.getMMIState(self.slotid) != 1:
+		if self.handler.getState(self.slotid) != 2 or self.handler.getMMIState(self.slotid) != 1:
 			do_close = True
 
 		if do_close:
@@ -501,12 +496,12 @@ class CiSelection(Screen):
 
 	def okbuttonClick(self):
 		cur = self["entries"].getCurrent()
-		if cur:
-			idx = self["entries"].getCurrentIndex()
-			entryData = self.entryData[idx]
-			action = entryData[0]
-			slot = entryData[1]
-			if action == 0: #reset
+		if cur and len(cur) > 2:
+			action = cur[2]
+			slot = cur[3]
+			if action == 3:
+				pass
+			elif action == 0: #reset
 				eDVBCI_UI.getInstance().setReset(slot)
 			elif action == 1: #init
 				eDVBCI_UI.getInstance().setInit(slot)

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2021-04-30 16:06+0200\n"
 "Last-Translator: kueken\n"
 "Language-Team: OpenPLi\n"
@@ -6676,7 +6676,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversion"
+msgstr "version"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7114,7 +7114,7 @@ msgstr "Weitere Optionen"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversion"
+msgstr "version"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7122,7 +7122,7 @@ msgstr "Rote Taste…"
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "GStreamer-Version:"
+msgstr "Kernel-Version: "
 
 msgid "GUI Skin"
 msgstr "GUI Skin"
@@ -7229,7 +7229,7 @@ msgstr "Gibraltar"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversion"
+msgstr "version"
 
 msgid "Go down the list"
 msgstr "Liste nach unten durchgehen"
@@ -10414,6 +10414,7 @@ msgstr "Status LED im Deep Standby"
 msgid "Operating LED status in standby mode"
 msgstr "Status LED im Standy"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Status LED im Betrieb"
 

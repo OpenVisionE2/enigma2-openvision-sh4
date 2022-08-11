@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2022-05-29 15:28+0300\n"
 "Last-Translator: Мартин Петков <marto74bg@yahoo.co.uk>\n"
 "Language-Team: Bulgarian\n"
@@ -6661,7 +6661,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Инверсия"
+msgstr "версия"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7098,7 +7098,7 @@ msgstr "Допълнителни опции"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Инверсия"
+msgstr "версия"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7106,7 +7106,7 @@ msgstr "Червен бутон..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Медиа плейър: GStreamer, версия "
+msgstr "Версия на ядрото: "
 
 msgid "GUI Skin"
 msgstr "GUI Скин"
@@ -7213,7 +7213,7 @@ msgstr "Гибралтар"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Инверсия"
+msgstr "версия"
 
 msgid "Go down the list"
 msgstr "Отидете в края списъка"
@@ -10389,6 +10389,7 @@ msgstr "LED статус при изключено състояние"
 msgid "Operating LED status in standby mode"
 msgstr "LED статус в режим готовност"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "LED статус когато приемника работи."
 
@@ -18268,6 +18269,7 @@ msgstr "експериментален филм/видео"
 msgid "extra wide"
 msgstr "екстра широк"
 
+#, fuzzy
 msgid "extrawide"
 msgstr "екстра широк"
 

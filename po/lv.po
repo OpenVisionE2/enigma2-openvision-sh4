@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2014-11-12 00:49+0200\n"
 "Last-Translator: Taapat <taapat@gmail.com>\n"
 "Language-Team: Taapat <taapat@gmail.com>\n"
@@ -6686,7 +6686,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversija"
+msgstr "versija"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7123,7 +7123,7 @@ msgstr "Papildus iestatījumi"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversija"
+msgstr "versija"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7131,7 +7131,7 @@ msgstr "Sarkanā poga..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Mediju atskaņotājs: GStreamer "
+msgstr "Kerneļa versija: "
 
 msgid "GUI Skin"
 msgstr "Noformējums"
@@ -7238,7 +7238,7 @@ msgstr "Gibraltārs"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversija"
+msgstr "versija"
 
 msgid "Go down the list"
 msgstr "Iet uz saraksta leju"
@@ -10419,6 +10419,7 @@ msgstr "LED izslēdzot"
 msgid "Operating LED status in standby mode"
 msgstr "LED gaidstāvē"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "LED darbojoties"
 
@@ -18315,6 +18316,7 @@ msgstr "eksperimentālās filmas/video"
 msgid "extra wide"
 msgstr "ļoti plašs"
 
+#, fuzzy
 msgid "extrawide"
 msgstr "ļoti plašs"
 

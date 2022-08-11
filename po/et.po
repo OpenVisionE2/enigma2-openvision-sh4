@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Openpli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2019-04-03 06:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: Raivo, Henkka, eesatfan, rimas, zeros\\n faas, sateks, valgekotkas, tigekala, rootsikunn\\n kain, i70, mustkass, pelmeen, Scott\\n <digi-tv.ee>\n"
@@ -6681,7 +6681,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversioon"
+msgstr "versioon"
 
 msgid "FHD"
 msgstr ""
@@ -7126,7 +7126,7 @@ msgstr "Täiendavad võimalused"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversioon"
+msgstr "versioon"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7134,7 +7134,7 @@ msgstr "Punane nupp..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "GStreameri versioon: "
+msgstr "Kernel: "
 
 #, fuzzy
 msgid "GUI Skin"
@@ -7242,7 +7242,7 @@ msgstr "Gibraltari"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversioon"
+msgstr "versioon"
 
 msgid "Go down the list"
 msgstr "Liigu nimekirjas alla"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi-enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2020-05-16 18:46+0200\n"
 "Last-Translator: Gringo <openpli@tiscali.it>\n"
 "Language-Team: www.linsat.net <spaeleus@croci.org>\n"
@@ -6677,7 +6677,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversione"
+msgstr "versione"
 
 msgid "FHD"
 msgstr ""
@@ -7117,7 +7117,7 @@ msgstr "Ulteriori opzioni"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversione"
+msgstr "versione"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7125,7 +7125,7 @@ msgstr "Tasto Rosso..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Versione GStreamer: "
+msgstr "Versione Kernel: "
 
 #, fuzzy
 msgid "GUI Skin"
@@ -7233,7 +7233,7 @@ msgstr "Gibilterra"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversione"
+msgstr "versione"
 
 msgid "Go down the list"
 msgstr "Scorrere l'elenco in giù"

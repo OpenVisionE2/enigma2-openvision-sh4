@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2017-01-18 16:38+0100\n"
 "Last-Translator: lupine <a_ecklon@hotmail.com>\n"
 "Language-Team: \n"
@@ -7282,10 +7282,9 @@ msgstr "FEC"
 msgid "FEC:"
 msgstr "FEC:"
 
-#
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Invertering"
+msgstr "version"
 
 msgid "FHD"
 msgstr ""
@@ -7776,10 +7775,9 @@ msgstr "Yderligere indstillinger"
 msgid "Further options"
 msgstr "Yderligere muligheder"
 
-#
 #, fuzzy
 msgid "GCC version"
-msgstr "Invertering"
+msgstr "version"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7904,10 +7902,9 @@ msgstr ""
 msgid "Gibraltar"
 msgstr ""
 
-#
 #, fuzzy
 msgid "Glibc version"
-msgstr "Invertering"
+msgstr "version"
 
 msgid "Go down the list"
 msgstr "Gå ned af listen"

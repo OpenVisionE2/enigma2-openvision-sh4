@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -6662,7 +6662,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Tersine çevir"
+msgstr "sürümü"
 
 msgid "FHD"
 msgstr ""
@@ -7110,7 +7110,7 @@ msgstr ""
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Tersine çevir"
+msgstr "sürümü"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7222,7 +7222,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Tersine çevir"
+msgstr "sürümü"
 
 msgid "Go down the list"
 msgstr "Listede aşağı git"

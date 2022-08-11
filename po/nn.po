@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2013-10-23 19:15+0100\n"
 "Last-Translator: andy1 <dmmm8000pvr@gmail.com>\n"
 "Language-Team: none\n"
@@ -6982,9 +6982,10 @@ msgstr ""
 msgid "FEC:"
 msgstr ""
 
+#
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Krenging"
+msgstr "versjon"
 
 msgid "FHD"
 msgstr ""
@@ -7445,9 +7446,10 @@ msgstr ""
 msgid "Further options"
 msgstr ""
 
+#
 #, fuzzy
 msgid "GCC version"
-msgstr "Krenging"
+msgstr "versjon"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7566,9 +7568,10 @@ msgstr ""
 msgid "Gibraltar"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Glibc version"
-msgstr "Krenging"
+msgstr "versjon"
 
 msgid "Go down the list"
 msgstr "Gå nedover listen"

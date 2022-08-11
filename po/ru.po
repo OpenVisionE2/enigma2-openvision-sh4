@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2021-05-24 17:48+0300\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
@@ -6684,7 +6684,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Инверсия"
+msgstr "версия"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7121,7 +7121,7 @@ msgstr "Дополнительные опции"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Инверсия"
+msgstr "версия"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7129,7 +7129,7 @@ msgstr "Красная кнопка..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Медиаплеер: GStreamer, версия "
+msgstr "Версия ядра: "
 
 msgid "GUI Skin"
 msgstr "Скин GUI"
@@ -7236,7 +7236,7 @@ msgstr "Gibraltar"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Инверсия"
+msgstr "версия"
 
 msgid "Go down the list"
 msgstr "Перейти вниз списка"
@@ -10421,6 +10421,7 @@ msgstr "Состояние LED в режиме глубокого ожидани
 msgid "Operating LED status in standby mode"
 msgstr "Состояние LED в режиме ожидания"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Состояние LED в режиме работы"
 
@@ -18318,6 +18319,7 @@ msgstr "экспериментальный фильм/видео"
 msgid "extra wide"
 msgstr "экстра широкий"
 
+#, fuzzy
 msgid "extrawide"
 msgstr "экстра широкий"
 

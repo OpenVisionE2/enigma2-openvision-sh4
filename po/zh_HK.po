@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: 王彪 <satfan@163.com>\n"
 "Language-Team: 中國\n"
@@ -6467,7 +6467,7 @@ msgstr ""
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "反向"
+msgstr "版本"
 
 msgid "FHD"
 msgstr ""
@@ -6896,14 +6896,13 @@ msgstr ""
 
 #, fuzzy
 msgid "GCC version"
-msgstr "反向"
+msgstr "版本"
 
 msgid "GREEN button"
 msgstr ""
 
-#, fuzzy
 msgid "GStreamer version"
-msgstr "新版本:"
+msgstr ""
 
 #, fuzzy
 msgid "GUI Skin"
@@ -7005,7 +7004,7 @@ msgstr "媒體庫"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "反向"
+msgstr "版本"
 
 msgid "Go down the list"
 msgstr ""
@@ -10497,7 +10496,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Player version"
-msgstr "反向"
+msgstr "版本"
 
 msgid "Please add titles to the compilation."
 msgstr "請添加標題."

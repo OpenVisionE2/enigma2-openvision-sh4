@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2022-04-02 17:25+0200\n"
 "Last-Translator: blzr <blzr@o2.pl>\n"
 "Language-Team: \n"
@@ -6578,7 +6578,7 @@ msgstr ""
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inwersja"
+msgstr "wersja"
 
 msgid "FHD"
 msgstr ""
@@ -7014,7 +7014,7 @@ msgstr "Opcje dodatkowe"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inwersja"
+msgstr "wersja"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7022,7 +7022,7 @@ msgstr "Czerwony..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Odtwarzacz mediów: gstreamer, wersja "
+msgstr "Wersja kernela: "
 
 msgid "GUI Skin"
 msgstr "Skórka GUI"
@@ -7129,7 +7129,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inwersja"
+msgstr "wersja"
 
 msgid "Go down the list"
 msgstr "Przejdź w dół listy"
@@ -10300,6 +10300,7 @@ msgstr "Status diody LED w 'deep standby'"
 msgid "Operating LED status in standby mode"
 msgstr "Status diody LED w trybie czuwania"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Status diody LED podczas pracy."
 

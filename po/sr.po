@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2011-04-14 00:02+0200\n"
 "Last-Translator: majevica <jovanovic@gmx.ch>\n"
 "Language-Team: veselin & majevica CRNABERZA <jovanovic@gmx.ch>\n"
@@ -7357,7 +7357,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inverzija"
+msgstr "verzija"
 
 msgid "FHD"
 msgstr ""
@@ -7839,7 +7839,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "GCC version"
-msgstr "Inverzija"
+msgstr "verzija"
 
 msgid "GREEN button"
 msgstr ""
@@ -7967,7 +7967,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inverzija"
+msgstr "verzija"
 
 msgid "Go down the list"
 msgstr ""

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2020-05-16 18:41+0200\n"
 "Last-Translator: jamu\n"
 "Language-Team: BoxFreak/jamu\n"
@@ -7184,10 +7184,9 @@ msgstr "FEC"
 msgid "FEC:"
 msgstr "FEC:"
 
-#
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversio"
+msgstr "versio"
 
 msgid "FHD"
 msgstr ""
@@ -7663,10 +7662,9 @@ msgstr ""
 msgid "Further options"
 msgstr ""
 
-#
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversio"
+msgstr "versio"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7674,7 +7672,7 @@ msgstr "Punainen näppäin..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "GStreamer versio:"
+msgstr "Kernelin versio:"
 
 #
 #, fuzzy
@@ -7787,10 +7785,9 @@ msgstr "Ghana"
 msgid "Gibraltar"
 msgstr "Gibraltar"
 
-#
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversio"
+msgstr "versio"
 
 msgid "Go down the list"
 msgstr "Mene luettelossa alaspäin"

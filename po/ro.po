@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2010-03-09 21:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: HDTV ROMANIA(superonic,costel_mbc,neutrin,otheitis,cipy_1982,neutrin,runcanion)\n"
@@ -6488,7 +6488,7 @@ msgstr ""
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversare"
+msgstr "versiune"
 
 msgid "FHD"
 msgstr ""
@@ -6917,7 +6917,7 @@ msgstr ""
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversare"
+msgstr "versiune"
 
 msgid "GREEN button"
 msgstr ""
@@ -7029,7 +7029,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversare"
+msgstr "versiune"
 
 msgid "Go down the list"
 msgstr ""

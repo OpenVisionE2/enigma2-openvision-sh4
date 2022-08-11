@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2021-02-19 14:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: Muzoss-VELEBRDO\n"
@@ -6550,7 +6550,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Инверзија"
+msgstr "верзија"
 
 msgid "FHD"
 msgstr "FHD"
@@ -6988,7 +6988,7 @@ msgstr "Понатамошни опции"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Инверзија"
+msgstr "верзија"
 
 #, fuzzy
 msgid "GREEN button"
@@ -6996,7 +6996,7 @@ msgstr "Црвено копче ..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Верзија за GStreamer: "
+msgstr "Верзија на Kernel: "
 
 msgid "GUI Skin"
 msgstr "GUI Скин"
@@ -7103,7 +7103,7 @@ msgstr "Гибралтар"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Инверзија"
+msgstr "верзија"
 
 msgid "Go down the list"
 msgstr "Движете се надолу по листот"
@@ -10285,6 +10285,7 @@ msgstr "LED-статус во Дееп Стандбај"
 msgid "Operating LED status in standby mode"
 msgstr "LED-статус во Стандбај"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "LED статус во функција."
 

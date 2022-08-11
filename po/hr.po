@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2022-03-28 16:33+0200\n"
 "Last-Translator: Željko <zdezmar2@gmail.com>\n"
 "Language-Team: Željko\n"
@@ -6697,7 +6697,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inverzija"
+msgstr "verzija"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7134,7 +7134,7 @@ msgstr "Dodatne mogućnosti"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inverzija"
+msgstr "verzija"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7142,7 +7142,7 @@ msgstr "Crvena tipka..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Media player: GStreamer, verzija "
+msgstr "Verzija kernela: "
 
 msgid "GUI Skin"
 msgstr "GUI skin"
@@ -7249,7 +7249,7 @@ msgstr "Gibraltar"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inverzija"
+msgstr "verzija"
 
 msgid "Go down the list"
 msgstr "Idite niz popis"
@@ -10434,6 +10434,7 @@ msgstr "Radni LED status u dubokom stanju čekanja"
 msgid "Operating LED status in standby mode"
 msgstr "Radni LED status u stanju čekanja"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Operativni LED status dok se izvodi."
 

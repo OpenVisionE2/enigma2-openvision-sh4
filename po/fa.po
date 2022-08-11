@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2018-02-14 16:51+0330\n"
 "Last-Translator: Persian Prince <persianprince@pe4k.com>\n"
 "Language-Team: Persian Professionals <persianpros@yahoo.com>\n"
@@ -6650,7 +6650,7 @@ msgstr ""
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "وارونگی"
+msgstr "نسخه"
 
 msgid "FHD"
 msgstr ""
@@ -7087,7 +7087,7 @@ msgstr ""
 
 #, fuzzy
 msgid "GCC version"
-msgstr "وارونگی"
+msgstr "نسخه"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7095,7 +7095,7 @@ msgstr "دکمه قرمز"
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "نسخه GStreamer: "
+msgstr "نسخه کرنل: "
 
 #, fuzzy
 msgid "GUI Skin"
@@ -7203,7 +7203,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "وارونگی"
+msgstr "نسخه"
 
 msgid "Go down the list"
 msgstr "برو پایین لیست"

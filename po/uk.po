@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2021-03-11 01:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: kvinto\n"
@@ -6684,7 +6684,7 @@ msgstr "ФЕК:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Інверсія"
+msgstr "версія"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7121,7 +7121,7 @@ msgstr "Додаткові опції"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Інверсія"
+msgstr "версія"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7129,7 +7129,7 @@ msgstr "Червона кнопка..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Медіа плеєр: GStreamer, версія "
+msgstr "Версія ядра: "
 
 msgid "GUI Skin"
 msgstr "Вибір Скіну"
@@ -7236,7 +7236,7 @@ msgstr "Гібралтар"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Інверсія"
+msgstr "версія"
 
 msgid "Go down the list"
 msgstr "Перейти вниз списку"
@@ -10420,6 +10420,7 @@ msgstr "Яскравість LED у режимі глибокого очікув
 msgid "Operating LED status in standby mode"
 msgstr "Яскравість LED у режимі очікування"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Індикатор LED під час роботи."
 
@@ -18320,8 +18321,9 @@ msgstr "експериментальний фільм/відео"
 msgid "extra wide"
 msgstr "дуже широкий"
 
+#, fuzzy
 msgid "extrawide"
-msgstr "надширокий"
+msgstr "дуже широкий"
 
 msgid "failed"
 msgstr "невдале"

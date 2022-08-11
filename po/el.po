@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLI Enigma2 Official Greek Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: MCelliotG <mcelliotg@gmail.com>\n"
 "Language-Team: MCelliotG <mcelliotg@gmail.com>\n"
@@ -6657,7 +6657,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Αναστροφή"
+msgstr "έκδοση"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7095,7 +7095,7 @@ msgstr "Περαιτέρω επιλογές"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Αναστροφή"
+msgstr "έκδοση"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7103,7 +7103,7 @@ msgstr "Κόκκινο κουμπί..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Αναπαραγωγός πολυμέσων: GStreamer, έκδοση "
+msgstr "Έκδοση kernel: "
 
 msgid "GUI Skin"
 msgstr "Θέμα διεπαφής χρήστη"
@@ -7210,7 +7210,7 @@ msgstr "Γιβραλτάρ"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Αναστροφή"
+msgstr "έκδοση"
 
 msgid "Go down the list"
 msgstr "Μετάβαση προς τα κάτω"
@@ -10392,6 +10392,7 @@ msgstr "Κατάσταση λειτουργίας LED κατά τη βαθιά �
 msgid "Operating LED status in standby mode"
 msgstr "Κατάσταση λειτουργίας LED κατά την αναμονή"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Κατάσταση λειτουργίας LED κατά την εκτέλεση."
 

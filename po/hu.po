@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2021-11-03 15:10+0100\n"
 "Last-Translator: mcfly82\n"
 "Language-Team: mcfly82 & wysless\n"
@@ -6660,7 +6660,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Invertálás"
+msgstr "verzió"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7098,7 +7098,7 @@ msgstr "További beállítások"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Invertálás"
+msgstr "verzió"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7106,7 +7106,7 @@ msgstr "Piros gomb..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Media player: GStreamer, verzió"
+msgstr "Kernel verzió: "
 
 msgid "GUI Skin"
 msgstr "Kezelőfelület kinézet"
@@ -7213,7 +7213,7 @@ msgstr "Gibraltár"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Invertálás"
+msgstr "verzió"
 
 msgid "Go down the list"
 msgstr "A listán lefelé"
@@ -10398,6 +10398,7 @@ msgstr "A működési LED állapota mély készenlét módban"
 msgid "Operating LED status in standby mode"
 msgstr "A működési LED állapota készenlét módban"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "A működési LED állapota bekapcsolt módban"
 

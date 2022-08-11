@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2022-06-19 18:41+0200\n"
 "Last-Translator: Oriol Pellicer <oriol@elsud.org>\n"
 "Language-Team: angelodos angelo2807@hotmail.com\n"
@@ -7257,10 +7257,9 @@ msgstr "FEC"
 msgid "FEC:"
 msgstr "FEC:"
 
-#
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversió"
+msgstr "versió"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7733,10 +7732,9 @@ msgstr "Altres opcions"
 msgid "Further options"
 msgstr "Altres opcions"
 
-#
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversió"
+msgstr "versió"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7745,7 +7743,7 @@ msgstr "Xarxa boto:"
 #
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Versió GStreamer"
+msgstr "Nova versió"
 
 #
 msgid "GUI Skin"
@@ -7859,10 +7857,9 @@ msgstr "Ghana"
 msgid "Gibraltar"
 msgstr "Gibraltar"
 
-#
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversió"
+msgstr "versió"
 
 msgid "Go down the list"
 msgstr "Baixeu a la llista"
@@ -11370,6 +11367,7 @@ msgstr "Funcionament de l’estat del LED en mode d’espera profunda"
 msgid "Operating LED status in standby mode"
 msgstr "Funcionament de l’estat del LED en mode d’espera"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Funcionament de l’estat del LED mentre s’executa."
 
@@ -20056,8 +20054,9 @@ msgstr "pel·lícula / vídeo experimental"
 msgid "extra wide"
 msgstr "molt ampli"
 
+#, fuzzy
 msgid "extrawide"
-msgstr "extra ample"
+msgstr "molt ampli"
 
 msgid "failed"
 msgstr "fracassat"

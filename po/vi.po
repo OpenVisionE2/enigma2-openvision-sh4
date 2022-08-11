@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2021-08-02 09:19+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -6647,7 +6647,7 @@ msgstr "FEC:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Nghịch đảo"
+msgstr "phiên bản"
 
 msgid "FHD"
 msgstr "FHD"
@@ -7085,7 +7085,7 @@ msgstr "Tùy chọn khác"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Nghịch đảo"
+msgstr "phiên bản"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7093,7 +7093,7 @@ msgstr "Nút màu đỏ ..."
 
 #, fuzzy
 msgid "GStreamer version"
-msgstr "Trình phát media: GStreamer, phiên bản "
+msgstr "Phiên bản hạt nhân: "
 
 msgid "GUI Skin"
 msgstr "GUI giao diện"
@@ -7200,7 +7200,7 @@ msgstr "Gibraltar"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Nghịch đảo"
+msgstr "phiên bản"
 
 msgid "Go down the list"
 msgstr "Đi xuống danh sách"
@@ -10379,6 +10379,7 @@ msgstr "Trạng thái đèn LED hoạt động ở chế độ chờ sâu"
 msgid "Operating LED status in standby mode"
 msgstr "Trạng thái đèn LED hoạt động ở chế độ chờ"
 
+#, fuzzy
 msgid "Operating LED status while running."
 msgstr "Trạng thái đèn LED hoạt động khi đang chạy."
 

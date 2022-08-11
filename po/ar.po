@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OBH enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2019-04-12 12:36+0300\n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -6900,7 +6900,7 @@ msgstr "معدل تصحيح الخطأ:"
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "عكـس"
+msgstr "إصدار"
 
 msgid "FHD"
 msgstr ""
@@ -7357,7 +7357,7 @@ msgstr "مزيد من التعليم"
 
 #, fuzzy
 msgid "GCC version"
-msgstr "عكـس"
+msgstr "إصدار"
 
 #, fuzzy
 msgid "GREEN button"
@@ -7474,7 +7474,7 @@ msgstr "جبل طارق"
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "عكـس"
+msgstr "إصدار"
 
 msgid "Go down the list"
 msgstr "الانتقال إلى أخر القائمة"

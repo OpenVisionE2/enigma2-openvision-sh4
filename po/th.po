@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1-En-Th\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-05 20:41+0430\n"
+"POT-Creation-Date: 2022-07-05 21:40+0430\n"
 "PO-Revision-Date: 2010-04-08 18:13+0700\n"
 "Last-Translator: Tony - Thaidreambox\n"
 "Language-Team: Tony @ Thai Dreambox <tonyboyth@gmail.com>\n"
@@ -6594,7 +6594,7 @@ msgstr ""
 
 #, fuzzy
 msgid "FFmpeg version"
-msgstr "Inversion"
+msgstr "รุ่น"
 
 msgid "FHD"
 msgstr ""
@@ -7023,7 +7023,7 @@ msgstr ""
 
 #, fuzzy
 msgid "GCC version"
-msgstr "Inversion"
+msgstr "รุ่น"
 
 msgid "GREEN button"
 msgstr ""
@@ -7135,7 +7135,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Glibc version"
-msgstr "Inversion"
+msgstr "รุ่น"
 
 msgid "Go down the list"
 msgstr ""

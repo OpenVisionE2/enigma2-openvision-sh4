@@ -605,7 +605,7 @@ class ImageInformation(InformationBase):
 		else:
 			ovRevisionUpdate = _("Disabled in configuration")
 		info.append(formatLine("P1", _("Latest revision on github"), ovRevisionUpdate))
-		info.append(formatLine("P1", _("OpenVision language"), BoxInfo.getItem("imglanguage")))
+		info.append(formatLine("P1", _("OpenVision type"), BoxInfo.getItem("imagetype")))
 		info.append(formatLine("P1", _("OpenVision module"), about.getVisionModule()))
 		info.append(formatLine("P1", _("Soft MultiBoot"), _("Yes") if BoxInfo.getItem("multiboot", False) else _("No")))
 		info.append(formatLine("P1", _("Flash type"), about.getFlashType()))
@@ -1056,7 +1056,7 @@ class ReceiverInformation(InformationBase):
 		if friendlyfamily != model:  # This shouldn't be here it is in Build.
 			info.append(formatLine("P1", _("Compatible to use on"), friendlyfamily))
 		procModel = getBoxProc()
-		if procModel != model:
+		if procModel != model and procModel != "unknown":
 			info.append(formatLine("P1", _("Proc model"), procModel))
 		resellerOEM = fileReadLine("/proc/stb/info/OEM", source=MODULE_NAME)
 		if resellerOEM:

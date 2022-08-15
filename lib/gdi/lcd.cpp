@@ -88,13 +88,13 @@ eDBoxLCD::eDBoxLCD()
 	inverted = 0;
 	lcd_type = 0;
 #ifndef NO_LCD
-	FILE *platform_file;
+	FILE *architecture_file;
 	FILE *fp_file;
 	snprintf(architecture_name, sizeof(architecture_name), "unknown");
-	if((platform_file = fopen("/etc/openvision/architecture", "r")) != NULL)
+	if((architecture_file = fopen("/etc/openvision/architecture", "r")) != NULL)
 	{
-		fgets(architecture_name, sizeof(architecture_name), platform_file);
-		fclose(platform_file);
+		fgets(architecture_name, sizeof(architecture_name), architecture_file);
+		fclose(architecture_file);
 	}
 	if((strcmp(architecture_name, "unknown") != 0))
 	{

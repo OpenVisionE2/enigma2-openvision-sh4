@@ -88,18 +88,17 @@ eDBoxLCD::eDBoxLCD()
 	inverted = 0;
 	lcd_type = 0;
 #ifndef NO_LCD
-	FILE *boxtype_file;
+	FILE *platform_file;
 	FILE *fp_file;
-	char fp_version[20];
-	snprintf(boxtype_name, sizeof(boxtype_name), "unknown");
-	if((boxtype_file = fopen("/etc/openvision/architecture", "r")) != NULL)
+	snprintf(architecture_name, sizeof(architecture_name), "unknown");
+	if((platform_file = fopen("/etc/openvision/architecture", "r")) != NULL)
 	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file);
+		fgets(architecture_name, sizeof(architecture_name), platform_file);
+		fclose(platform_file);
 	}
-	if((strcmp(boxtype_name, "unknown") != 0))
+	if((strcmp(architecture_name, "unknown") != 0))
 	{
-		if((strcmp(boxtype_name, "sh4\n") == 0))
+		if((strcmp(architecture_name, "sh4\n") == 0))
 		{
 				if((fp_file = fopen("/proc/stb/fp/version", "r")) != NULL)
 				{
@@ -177,7 +176,12 @@ eDBoxLCD::eDBoxLCD()
 		eDebug("[eLCD] xres=%d, yres=%d, bpp=%d lcd_type=%d", xres, yres, bpp, lcd_type);
 	}
 #endif
-	instance = this;
+	if (FILE * file = fopen("/proc/stb/lcd/right_half", "w"))
+	{
+		fprintf(file,"skin");
+		fclose(file);
+	}
+	instance=this;
 
 	setSize(xres, yres, bpp);
 #ifdef NO_LCD
@@ -217,7 +221,9 @@ int eDBoxLCD::setLCDContrast(int contrast)
 	}
 
 	if(ioctl(lcdfd, LCD_IOCTL_SRV, &contrast) < 0)
-		eDebug("[eLCD] can't set lcd contrast: %m");
+	{
+		eDebug("[eLCD] can't set lcd contrast");
+	}
 	close(fp);
 #endif
 	return(0);
@@ -229,7 +235,7 @@ int eDBoxLCD::setLCDBrightness(int brightness)
 	if (lcdfd < 0)
 		return(0);
 
-	eDebug("[eLCD] setLCDBrightness %d", brightness);
+	eTrace("[eLCD] setLCDBrightness %d", brightness);
 	FILE *f = fopen("/proc/stb/lcd/oled_brightness", "w");
 	if (!f)
 		f = fopen("/proc/stb/fp/oled_brightness", "w");
@@ -346,7 +352,9 @@ void eDBoxLCD::update()
 			write(lcdfd, raw, _stride * height);
 		}
 		else
+		{
 			write(lcdfd, _buffer, _stride * res.height());
+		}
 	}
 	else /* lcd_type == 1 */
 	{

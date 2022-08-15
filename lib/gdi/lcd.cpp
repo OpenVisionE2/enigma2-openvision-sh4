@@ -92,14 +92,14 @@ eDBoxLCD::eDBoxLCD()
 	FILE *fp_file;
 	char fp_version[20];
 	snprintf(boxtype_name, sizeof(boxtype_name), "unknown");
-	if((boxtype_file = fopen("/etc/openvision/model", "r")) != NULL)
+	if((boxtype_file = fopen("/etc/openvision/architecture", "r")) != NULL)
 	{
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 		fclose(boxtype_file);
 	}
 	if((strcmp(boxtype_name, "unknown") != 0))
 	{
-		if((strcmp(boxtype_name, "spark\n") == 0))
+		if((strcmp(boxtype_name, "sh4\n") == 0))
 		{
 				if((fp_file = fopen("/proc/stb/fp/version", "r")) != NULL)
 				{

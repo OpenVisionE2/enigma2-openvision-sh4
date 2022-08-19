@@ -88,22 +88,35 @@ eDBoxLCD::eDBoxLCD()
 	inverted = 0;
 	lcd_type = 0;
 #ifndef NO_LCD
-	lcdfd = open("/dev/dbox/oled0", O_RDWR);
+	FILE *fp_file;
+	if((fp_file = fopen("/proc/stb/fp/version", "r")) != NULL)
+	{
+		fgets(fp_version, sizeof(fp_version), fp_file);
+		fclose(fp_file);
+	}
+	if(strcmp(fp_version, "4\n") == 0)
+	{
+		lcdfd = open("/dev/null", O_RDWR);
+	}
+	else
+	{
+		lcdfd = open("/dev/dbox/oled0", O_RDWR);
+	}	
 	if (lcdfd < 0)
 	{
 		if (!access("/proc/stb/lcd/oled_brightness", W_OK) ||
 		    !access("/proc/stb/fp/oled_brightness", W_OK) )
 			lcd_type = 2;
 		lcdfd = open("/dev/dbox/lcd0", O_RDWR);
-	}
-	else
+	} else
+	{
+		eDebug("[eLCD] found OLED display!");
 		lcd_type = 1;
-
+	}
 	if (lcdfd < 0)
 		eDebug("[eLCD] No oled0 or lcd0 device found!");
 	else
 	{
-
 #ifndef LCD_IOCTL_ASC_MODE
 #define LCDSET                  0x1000
 #define LCD_IOCTL_ASC_MODE	(21|LCDSET)
@@ -139,8 +152,16 @@ eDBoxLCD::eDBoxLCD()
 		eDebug("[eLCD] xres=%d, yres=%d, bpp=%d lcd_type=%d", xres, yres, bpp, lcd_type);
 	}
 #endif
+	if (access("/proc/stb/lcd/right_half", F_OK) == 0)
+	{
+		FILE *right_file;
+		if (right_file = fopen("/proc/stb/lcd/right_half", "w"))
+		{
+			fprintf(right_file,"skin");
+			fclose(right_file);
+		}
+	}
 	instance = this;
-
 	setSize(xres, yres, bpp);
 #ifdef NO_LCD
 	vfd = new evfd;
@@ -169,17 +190,19 @@ int eDBoxLCD::setLCDContrast(int contrast)
 #define LCDSET                  0x1000
 #define	LCD_IOCTL_SRV			(10|LCDSET)
 #endif
-	eDebug("[eLCD] setLCDContrast %d", contrast);
+	eTrace("[eLCD] setLCDContrast %d", contrast);
 
 	int fp;
 	if((fp = open("/dev/dbox/fp0", O_RDWR)) < 0)
 	{
-		eDebug("[eLCD] can't open /dev/dbox/fp0: %m");
+		eDebug("[eLCD] can't open /dev/dbox/fp0");
 		return(-1);
 	}
 
 	if(ioctl(lcdfd, LCD_IOCTL_SRV, &contrast) < 0)
-		eDebug("[eLCD] can't set lcd contrast: %m");
+	{
+		eDebug("[eLCD] can't set lcd contrast");
+	}
 	close(fp);
 #endif
 	return(0);
@@ -191,14 +214,14 @@ int eDBoxLCD::setLCDBrightness(int brightness)
 	if (lcdfd < 0)
 		return(0);
 
-	eDebug("[eLCD] setLCDBrightness %d", brightness);
+	eTrace("[eLCD] setLCDBrightness %d", brightness);
 	FILE *f = fopen("/proc/stb/lcd/oled_brightness", "w");
 	if (!f)
 		f = fopen("/proc/stb/fp/oled_brightness", "w");
 	if (f)
 	{
 		if (fprintf(f, "%d", brightness) == 0)
-			eDebug("[eLCD] write /proc/stb/lcd|fp/oled_brightness failed: %m");
+			eDebug("[eLCD] write /proc/stb/lcd|fp/oled_brightness failed!");
 		fclose(f);
 	}
 	else
@@ -206,14 +229,14 @@ int eDBoxLCD::setLCDBrightness(int brightness)
 		int fp;
 		if ((fp = open("/dev/dbox/fp0", O_RDWR)) < 0)
 		{
-			eDebug("[eLCD] can't open /dev/dbox/fp0: %m");
+			eDebug("[eLCD] can't open /dev/dbox/fp0");
 			return(-1);
 		}
 #ifndef FP_IOCTL_LCD_DIMM
 #define FP_IOCTL_LCD_DIMM       3
 #endif
 		if (ioctl(fp, FP_IOCTL_LCD_DIMM, &brightness) < 0)
-			eDebug("[eLCD] can't set lcd brightness: %m");
+			eDebug("[eLCD] can't set lcd brightness");
 		close(fp);
 	}
 #endif
@@ -225,19 +248,19 @@ int eDBoxLCD::setLED(int value, int option)
 	switch(option)
 	{
 		case LED_BRIGHTNESS:
-			eDebug("setLEDNormalState %d", value);
+			eDebug("[eLCD] setLEDNormalState %d", value);
 			if(ioctl(lcdfd, LED_IOCTL_BRIGHTNESS_NORMAL, (unsigned char)value) < 0)
-				eDebug("[LED] can't set led brightness");
+				eDebug("[eLCD] can't set led brightness");
 			break;
 		case LED_DEEPSTANDBY:
-			eDebug("setLEDBlinkingTime %d", value);
+			eDebug("[eLCD] setLEDBlinkingTime %d", value);
 			if(ioctl(lcdfd, LED_IOCTL_BRIGHTNESS_DEEPSTANDBY, (unsigned char)value) < 0)
-				eDebug("[LED] can't set led deep standby");
+				eDebug("[eLCD] can't set led deep standby");
 			break;
 		case LED_BLINKINGTIME:
-			eDebug("setLEDBlinkingTime %d", value);
+			eDebug("[eLCD] setLEDBlinkingTime %d", value);
 			if(ioctl(lcdfd, LED_IOCTL_BLINKING_TIME, (unsigned char)value) < 0)
-				eDebug("[LED] can't set led blinking time");
+				eDebug("[eLCD] can't set led blinking time");
 			break;
 	}
 	return(0);
@@ -308,7 +331,9 @@ void eDBoxLCD::update()
 			write(lcdfd, raw, _stride * height);
 		}
 		else
+		{
 			write(lcdfd, _buffer, _stride * res.height());
+		}
 	}
 	else /* lcd_type == 1 */
 	{

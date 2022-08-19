@@ -48,6 +48,7 @@ protected:
 	int locked;
 	static eLCD *instance;
 	void setSize(int xres, int yres, int bpp);
+	char fp_version[20];
 #ifdef NO_LCD
 	evfd *vfd;
 #endif

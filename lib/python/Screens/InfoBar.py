@@ -4,7 +4,6 @@ from enigma import eServiceReference
 
 # workaround for required config entry dependencies.
 import Screens.MovieSelection
-
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 
@@ -150,7 +149,8 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 	def restartLastMovie(self):
 		service = enigma.eServiceReference(config.usage.last_movie_played.value)
 		if service:
-			if os.path.exists(service.getPath()):
+			from os.path import exists
+			if exists(service.getPath()):
 				from Components.ParentalControl import parentalControl
 				if parentalControl.isServicePlayable(service, self.openMoviePlayer):
 					self.openMoviePlayer(service)

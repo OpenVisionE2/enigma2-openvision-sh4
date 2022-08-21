@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os
+from os.path import isfile
 import struct
 import RecordTimer
 import Components.ParentalControl
@@ -120,7 +120,7 @@ class StandbyScreen(Screen):
 		print("[Standby] enter standby")
 		BoxInfo.setItem("StandbyState", True)
 
-		if os.path.exists("/usr/script/standby_enter.sh"):
+		if isfile("/usr/script/standby_enter.sh"):
 			Console().ePopen("/usr/script/standby_enter.sh")
 
 		self["actions"] = ActionMap(["StandbyActions"],
@@ -177,11 +177,12 @@ class StandbyScreen(Screen):
 		else:
 			self.avswitch.setInput("AUX")
 
-		try:
-			print("[Standby] Write to /proc/stb/hdmi/output")
-			open("/proc/stb/hdmi/output", "w").write("off")
-		except:
-			print("[Standby] Write to /proc/stb/hdmi/output failed.")
+		if isfile("/proc/stb/hdmi/output"):
+			try:
+				print("[Standby] Write to /proc/stb/hdmi/output")
+				open("/proc/stb/hdmi/output", "w").write("off")
+			except:
+				print("[Standby] Write to /proc/stb/hdmi/output failed.")
 
 		Console().ePopen("/bin/vdstandby -a &")
 
@@ -224,7 +225,7 @@ class StandbyScreen(Screen):
 		self.avswitch.setInput("ENCODER")
 		self.leaveMute()
 		Console().ePopen("/bin/vdstandby -d &")
-		if os.path.exists("/usr/script/standby_leave.sh"):
+		if isfile("/usr/script/standby_leave.sh"):
 			Console().ePopen("/usr/script/standby_leave.sh")
 		if config.usage.remote_fallback_import_standby.value and not config.clientmode.enabled.value:
 			ImportChannels()
@@ -241,14 +242,15 @@ class StandbyScreen(Screen):
 		BoxInfo.setItem("StandbyState", False)
 		self.close(True)
 
-		if os.path.exists("/usr/script/StandbyLeave.sh"):
+		if isfile("/usr/script/StandbyLeave.sh"):
 			Console().ePopen("/usr/script/StandbyLeave.sh")
 
-		try:
-			print("[Standby] Write to /proc/stb/hdmi/output")
-			open("/proc/stb/hdmi/output", "w").write("on")
-		except:
-			print("[Standby] Write to /proc/stb/hdmi/output failed.")
+		if isfile("/proc/stb/hdmi/output"):
+			try:
+				print("[Standby] Write to /proc/stb/hdmi/output")
+				open("/proc/stb/hdmi/output", "w").write("on")
+			except:
+				print("[Standby] Write to /proc/stb/hdmi/output failed.")
 
 	def setMute(self):
 		self.wasMuted = eDVBVolumecontrol.getInstance().isMuted()
@@ -423,7 +425,7 @@ class TryQuitMainloop(MessageBox):
 			if self.retval == QUIT_SHUTDOWN:
 				config.misc.DeepStandby.value = True
 				if not inStandby:
-					if os.path.exists("/usr/script/standby_enter.sh"):
+					if isfile("/usr/script/standby_enter.sh"):
 						Console().ePopen("/usr/script/standby_enter.sh")
 			elif not inStandby:
 				config.misc.RestartUI.value = True

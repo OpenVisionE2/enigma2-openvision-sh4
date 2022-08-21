@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from os import sys
-from os.path import exists
+from os.path import isfile
 from sys import maxsize
 from twisted.internet import threads
 
@@ -25,7 +25,7 @@ class dummyScreen(Screen):
 
 
 def IconCheck(session=None, **kwargs):
-	if exists("/proc/stb/lcd/symbol_network") or exists("/proc/stb/lcd/symbol_usb"):
+	if isfile("/proc/stb/lcd/symbol_network") or isfile("/proc/stb/lcd/symbol_usb"):
 		global networklinkpoller
 		networklinkpoller = IconCheckPoller()
 		networklinkpoller.start()
@@ -54,18 +54,18 @@ class IconCheckPoller:
 
 	def jobTask(self):
 		linkState = 0
-		if exists("/sys/class/net/wlan0/operstate"):
+		if isfile("/sys/class/net/wlan0/operstate"):
 			linkState = fileReadLine("/sys/class/net/wlan0/operstate")
 			if linkState != "down":
 				linkState = fileReadLine("/sys/class/net/wlan0/carrier")
-		elif exists("/sys/class/net/eth0/operstate"):
+		elif isfile("/sys/class/net/eth0/operstate"):
 			linkState = fileReadLine("/sys/class/net/eth0/operstate")
 			if linkState != "down":
 				linkState = fileReadLine("/sys/class/net/eth0/carrier")
 		linkState = linkState[:1]
-		if exists("/proc/stb/lcd/symbol_network") and config.lcd.mode.value == "1":
+		if isfile("/proc/stb/lcd/symbol_network") and config.lcd.mode.value == "1":
 			fileWriteLine("/proc/stb/lcd/symbol_network", linkState)
-		elif exists("/proc/stb/lcd/symbol_network") and config.lcd.mode.value == "0":
+		elif isfile("/proc/stb/lcd/symbol_network") and config.lcd.mode.value == "0":
 			fileWriteLine("/proc/stb/lcd/symbol_network", "0")
 		from six import PY2
 		if PY2:
@@ -76,7 +76,7 @@ class IconCheckPoller:
 				for dev in devices:
 					if dev.deviceClass != 9 and dev.deviceClass != 2 and dev.idVendor != 3034 and dev.idVendor > 0:
 						USBState = 1
-			if exists("/proc/stb/lcd/symbol_usb"):
+			if isfile("/proc/stb/lcd/symbol_usb"):
 				fileWriteLine("/proc/stb/lcd/symbol_usb", USBState)
 			self.timer.startLongTimer(30)
 
@@ -190,52 +190,52 @@ class LCD:
 		return eDBoxLCD.getInstance().isOled()
 
 	def setMode(self, value):
-		if exists("/proc/stb/lcd/show_symbols"):
+		if isfile("/proc/stb/lcd/show_symbols"):
 			print("[Lcd] setLCDMode='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/show_symbols", value)
 		if config.lcd.mode.value == "0":
 			BoxInfo.setItem("SeekStatePlay", False)
 			BoxInfo.setItem("StatePlayPause", False)
-			if exists("/proc/stb/lcd/symbol_hdd"):
+			if isfile("/proc/stb/lcd/symbol_hdd"):
 				fileWriteLine("/proc/stb/lcd/symbol_hdd", "0")
-			if exists("/proc/stb/lcd/symbol_hddprogress"):
+			if isfile("/proc/stb/lcd/symbol_hddprogress"):
 				fileWriteLine("/proc/stb/lcd/symbol_hddprogress", "0")
-			if exists("/proc/stb/lcd/symbol_network"):
+			if isfile("/proc/stb/lcd/symbol_network"):
 				fileWriteLine("/proc/stb/lcd/symbol_network", "0")
-			if exists("/proc/stb/lcd/symbol_signal"):
+			if isfile("/proc/stb/lcd/symbol_signal"):
 				fileWriteLine("/proc/stb/lcd/symbol_signal", "0")
-			if exists("/proc/stb/lcd/symbol_timeshift"):
+			if isfile("/proc/stb/lcd/symbol_timeshift"):
 				fileWriteLine("/proc/stb/lcd/symbol_timeshift", "0")
-			if exists("/proc/stb/lcd/symbol_tv"):
+			if isfile("/proc/stb/lcd/symbol_tv"):
 				fileWriteLine("/proc/stb/lcd/symbol_tv", "0")
-			if exists("/proc/stb/lcd/symbol_usb"):
+			if isfile("/proc/stb/lcd/symbol_usb"):
 				fileWriteLine("/proc/stb/lcd/symbol_usb", "0")
 
 	def setPower(self, value):
-		if exists("/proc/stb/power/vfd"):
+		if isfile("/proc/stb/power/vfd"):
 			print("[Lcd] setLCDPower='%s'." % value)
 			fileWriteLine("/proc/stb/power/vfd", value)
-		elif exists("/proc/stb/lcd/vfd"):
+		elif isfile("/proc/stb/lcd/vfd"):
 			print("[Lcd] setLCDPower='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/vfd", value)
 
 	def setShowoutputresolution(self, value):
-		if exists("/proc/stb/lcd/show_outputresolution"):
+		if isfile("/proc/stb/lcd/show_outputresolution"):
 			print("[Lcd] setLCDShowoutputresolution='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/show_outputresolution", value)
 
 	def setfblcddisplay(self, value):
-		if exists("/proc/stb/fb/sd_detach"):
+		if isfile("/proc/stb/fb/sd_detach"):
 			print("[Lcd] setfblcddisplay='%s'." % value)
 			fileWriteLine("/proc/stb/fb/sd_detach", value)
 
 	def setRepeat(self, value):
-		if exists("/proc/stb/lcd/scroll_repeats"):
+		if isfile("/proc/stb/lcd/scroll_repeats"):
 			print("[Lcd] setLCDRepeat='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/scroll_repeats", value)
 
 	def setScrollspeed(self, value):
-		if exists("/proc/stb/lcd/scroll_delay"):
+		if isfile("/proc/stb/lcd/scroll_delay"):
 			print("[Lcd] setLCDScrollspeed='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/scroll_delay", value)
 
@@ -324,31 +324,31 @@ def InitLcd():
 			ilcd.setLEDBlinkingTime(configElement.value)
 
 		def setPowerLEDstate(configElement):
-			if exists("/proc/stb/power/powerled"):
+			if isfile("/proc/stb/power/powerled"):
 				fileWriteLine("/proc/stb/power/powerled", configElement.value)
 
 		def setPowerLEDstate2(configElement):
-			if exists("/proc/stb/power/powerled2"):
+			if isfile("/proc/stb/power/powerled2"):
 				fileWriteLine("/proc/stb/power/powerled2", configElement.value)
 
 		def setPowerLEDstanbystate(configElement):
-			if exists("/proc/stb/power/standbyled"):
+			if isfile("/proc/stb/power/standbyled"):
 				fileWriteLine("/proc/stb/power/standbyled", configElement.value)
 
 		def setPowerLEDdeepstanbystate(configElement):
-			if exists("/proc/stb/power/suspendled"):
+			if isfile("/proc/stb/power/suspendled"):
 				fileWriteLine("/proc/stb/power/suspendled", configElement.value)
 
 		def setLedPowerColor(configElement):
-			if exists("/proc/stb/fp/ledpowercolor"):
+			if isfile("/proc/stb/fp/ledpowercolor"):
 				fileWriteLine("/proc/stb/fp/ledpowercolor", configElement.value)
 
 		def setLedStandbyColor(configElement):
-			if exists("/proc/stb/fp/ledstandbycolor"):
+			if isfile("/proc/stb/fp/ledstandbycolor"):
 				fileWriteLine("/proc/stb/fp/ledstandbycolor", configElement.value)
 
 		def setLedSuspendColor(configElement):
-			if exists("/proc/stb/fp/ledsuspendledcolor"):
+			if isfile("/proc/stb/fp/ledsuspendledcolor"):
 				fileWriteLine("/proc/stb/fp/ledsuspendledcolor", configElement.value)
 
 		config.usage.lcd_powerled = ConfigSelection(choices=[
@@ -496,7 +496,7 @@ def InitLcd():
 			config.usage.vfd_final_scroll_delay.addNotifier(final_scroll_delay, immediate_feedback=False)
 		else:
 			config.usage.vfd_final_scroll_delay = ConfigNothing()
-		if exists("/proc/stb/lcd/show_symbols"):
+		if isfile("/proc/stb/lcd/show_symbols"):
 			config.lcd.mode = ConfigSelection(choices=[
 				("0", _("No")),
 				("1", _("Yes"))
@@ -504,7 +504,7 @@ def InitLcd():
 			config.lcd.mode.addNotifier(setLCDmode)
 		else:
 			config.lcd.mode = ConfigNothing()
-		if exists("/proc/stb/power/vfd") or exists("/proc/stb/lcd/vfd"):
+		if isfile("/proc/stb/power/vfd") or isfile("/proc/stb/lcd/vfd"):
 			config.lcd.power = ConfigSelection(choices=[
 				("0", _("No")),
 				("1", _("Yes"))
@@ -512,7 +512,7 @@ def InitLcd():
 			config.lcd.power.addNotifier(setLCDpower)
 		else:
 			config.lcd.power = ConfigNothing()
-		if exists("/proc/stb/fb/sd_detach"):
+		if isfile("/proc/stb/fb/sd_detach"):
 			config.lcd.fblcddisplay = ConfigSelection(choices=[
 				("1", _("No")),
 				("0", _("Yes"))
@@ -520,7 +520,7 @@ def InitLcd():
 			config.lcd.fblcddisplay.addNotifier(setfblcddisplay)
 		else:
 			config.lcd.fblcddisplay = ConfigNothing()
-		if exists("/proc/stb/lcd/show_outputresolution"):
+		if isfile("/proc/stb/lcd/show_outputresolution"):
 			config.lcd.showoutputresolution = ConfigSelection(choices=[
 				("0", _("No")),
 				("1", _("Yes"))

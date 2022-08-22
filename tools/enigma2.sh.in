@@ -79,11 +79,8 @@ while : ; do
 		SEARCHDIRS="@sysconfdir@/enigma2/skin_common @sysconfdir@/enigma2 @datadir@/enigma2/skin_default @datadir@/enigma2"
 	fi
 	for DIR in $SEARCHDIRS; do
-		if [ -d "${DIR}" ] && [ -f "${DIR}/bootlogo.mp4" ] && [ -x "@bindir@/exteplayer3" ]; then
-			"@bindir@/exteplayer3" "${DIR}/bootlogo.mp4"
-			break
-		elif [ -d "${DIR}" ] && [ -f "${DIR}/bootlogo.mvi" ] && [ -x "@bindir@/showiframe" ]; then
-			"@bindir@/showiframe" "${DIR}/bootlogo.mvi"
+		if [ -d "${DIR}" ] && [ -f "${DIR}/backdrop.mvi" ] && [ -x "@bindir@/showiframe" ]; then
+			"@bindir@/showiframe" "${DIR}/backdrop.mvi"
 			break
 		fi
 	done

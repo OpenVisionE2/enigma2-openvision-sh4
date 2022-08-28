@@ -478,6 +478,12 @@ AC_ARG_WITH(e2rev,
 AC_SUBST(E2REV)
 AC_DEFINE_UNQUOTED(E2REV,"$E2REV",[enigma2 revision])
 
+AC_ARG_WITH(arch,
+	AS_HELP_STRING([--with-arch],[build for architecture, $withval]),
+	[ARCHITECTURE="$withval"],[ARCHITECTURE=""])
+AC_SUBST(ARCHITECTURE)
+AC_DEFINE_UNQUOTED(ARCHITECTURE,"$ARCHITECTURE",[architecture type])
+
 AC_ARG_WITH(nolcd,
 	AC_HELP_STRING([--with-nolcd], [disable ascii based lcd, yes or no]),
 	[[withnolcd=$withval]],

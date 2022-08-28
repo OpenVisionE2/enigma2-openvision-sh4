@@ -45,19 +45,23 @@ bindir = "/usr/bin"
 sbindir = "/usr/sbin"
 
 EXTRA_OECONF = "\
-	--enable-maintainer-mode --with-target=native --with-libsdl=no --with-boxtype=${MACHINE} \
+	--enable-maintainer-mode --with-target=native \
+	--enable-${MACHINE} --with-lcd \
+	--with-libsdl=no --with-boxtype=${MACHINE} \
 	--enable-dependency-tracking \
+	ac_cv_prog_c_openmp=-fopenmp \
+	${@get_crashaddr(d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
-	--with-boxbrand="${BOX_BRAND}" \
-	--with-stbplatform=${STB_PLATFORM} \
-	--with-e2rev=${SRCPV} \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "7segment 7seg", "--with-7segment" , "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "nolcd", "--with-nolcd" , "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "fcc", "--with-fcc" , "", d)} \
 	BUILD_SYS=${BUILD_SYS} \
 	HOST_SYS=${HOST_SYS} \
 	STAGING_INCDIR=${STAGING_INCDIR} \
 	STAGING_LIBDIR=${STAGING_LIBDIR} \
+	--with-boxbrand=${BOX_BRAND} \
+	--with-stbplatform=${STB_PLATFORM} \
+	--with-e2rev=${GITPKGV} \
+	${@bb.utils.contains("MACHINE_FEATURES", "fcc", "--with-fcc" , "", d)} \
+	--with-arch=${TARGET_ARCH} \
 	"
 
 do_install_append() {

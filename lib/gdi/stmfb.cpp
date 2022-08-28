@@ -20,7 +20,7 @@ int stmfb_accel_init(void)
 		perror("/dev/fb0");
 		return 1;
 	}
-	eDebug("STMFB accel interface available\n");
+	eDebug("[eSTMFB] stm accel interface available\n");
 	return 0;
 }
 
@@ -57,7 +57,7 @@ void stmfb_accel_blit(
 
 	if (ioctl(fb_fd, STMFBIO_BLT, &bltData ) < 0)
 	{
-		eDebug("Error ioctl FBIO_BLIT");
+		eDebug("[eSTMFB] Error ioctl FBIO_BLIT");
 	}
 }
 

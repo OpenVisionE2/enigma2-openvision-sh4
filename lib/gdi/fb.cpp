@@ -61,7 +61,7 @@ fbClass::fbClass(const char *fb)
 	// The first 1920x1080x4 bytes are reserved
 	// After that we can take 1280x720x4 bytes for our virtual framebuffer
 	available -= 1920*1080*4;
-	eDebug("%dk usable video mem", available/1024);
+	eDebug("[fb] %dk usable video mem", available/1024);
 	lfb=(unsigned char*)mmap(0, available, PROT_WRITE|PROT_READ, MAP_SHARED, fbFd, 1920*1080*4);
 	if (!lfb)
 	{

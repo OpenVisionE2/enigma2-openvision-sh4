@@ -2749,7 +2749,7 @@ class InfoBarInstantRecord:
 	def startInstantRecording(self, limitEvent=False):
 		begin = int(time())
 		end = begin + 3600      # dummy
-		name = "instant record"
+		name = _("Instant record")
 		info = {}
 
 		self.getProgramInfoAndEvent(info, name)
@@ -2861,7 +2861,7 @@ class InfoBarInstantRecord:
 			self.deleteRecording = True
 			self.stopAllCurrentRecordings(list)
 		elif answer[1] in ("indefinitely", "manualduration", "manualendtime", "event"):
-			self.startInstantRecording(limitEvent=answer[1] in ("event", "manualendtime") or False)
+			self.startInstantRecording(limitEvent=answer[1] in ("event") or False)
 			if answer[1] == "manualduration":
 				self.changeDuration(len(self.recording) - 1)
 			elif answer[1] == "manualendtime":

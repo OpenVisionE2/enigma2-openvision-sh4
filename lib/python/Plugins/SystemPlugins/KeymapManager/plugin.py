@@ -20,18 +20,18 @@ KPATH = resolveFilename(SCOPE_SKINS)
 class KeymapSelector(Screen):
 	skin = """
 		<screen position="center,center" size="560,340" name="KeymapManagerScreen" title="Keymap Manager" >
-			<ePixmap name="ButtonRed" pixmap="buttons/red.png" position="0,0" size="140,40" zPosition="4" transparent="1" alphatest="on"/>
-			<widget render="Label" source= "ButtonRedtext" position="0,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
-			<ePixmap name="ButtonGreen" pixmap="buttons/green.png" position="140,0" size="140,40" zPosition="4" transparent="1" alphatest="on"/>
-			<widget render="Label" source= "ButtonGreentext" position="140,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
-			<ePixmap name="ButtonYellow" pixmap="buttons/yellow.png" position="280,0" size="140,40" zPosition="4" transparent="1" alphatest="on"/>
-			<widget render="Label" source= "ButtonYellowtext" position="280,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
-			<ePixmap name="ButtonBlue" pixmap="buttons/blue.png" position="420,0" size="140,40" zPosition="4" transparent="1" alphatest="on"/>
-			<widget render="Label" source= "ButtonBluetext" position="420,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
-			<ePixmap name="icon" pixmap="%s" position="5,50" size="240,114" zPosition="4" transparent="1" alphatest="on"/>
-			<widget render="Label" source= "text1" position="255, 95" size="300,24" halign="left" zPosition="5" transparent="1" foregroundColor="white" font="Regular;20"/>
+			<ePixmap name="ButtonRed" pixmap="buttons/red.png" position="0,0" size="140,40" zPosition="4" transparent="1" alphaTest="on"/>
+			<widget render="Label" source= "ButtonRedtext" position="0,0" size="140,40" verticalAlignment="center" horizontalAlignment="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
+			<ePixmap name="ButtonGreen" pixmap="buttons/green.png" position="140,0" size="140,40" zPosition="4" transparent="1" alphaTest="on"/>
+			<widget render="Label" source= "ButtonGreentext" position="140,0" size="140,40" verticalAlignment="center" horizontalAlignment="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
+			<ePixmap name="ButtonYellow" pixmap="buttons/yellow.png" position="280,0" size="140,40" zPosition="4" transparent="1" alphaTest="on"/>
+			<widget render="Label" source= "ButtonYellowtext" position="280,0" size="140,40" verticalAlignment="center" horizontalAlignment="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
+			<ePixmap name="ButtonBlue" pixmap="buttons/blue.png" position="420,0" size="140,40" zPosition="4" transparent="1" alphaTest="on"/>
+			<widget render="Label" source= "ButtonBluetext" position="420,0" size="140,40" verticalAlignment="center" horizontalAlignment="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
+			<ePixmap name="icon" pixmap="%s" position="5,50" size="240,114" zPosition="4" transparent="1" alphaTest="on"/>
+			<widget render="Label" source= "text1" position="255, 95" size="300,24" horizontalAlignment="left" zPosition="5" transparent="1" foregroundColor="white" font="Regular;20"/>
 			<ePixmap pixmap="div-h.png" position="0,175" zPosition="1" size="560,2" />
-			<widget render="Label" source= "text2" position="5, 190" size="550,24" halign="left" zPosition="5" transparent="1" foregroundColor="white" font="Regular;20"/>
+			<widget render="Label" source= "text2" position="5, 190" size="550,24" horizontalAlignment="left" zPosition="5" transparent="1" foregroundColor="white" font="Regular;20"/>
 			<widget name="KeymapList" position="10,230" size="540,100" scrollbarMode="showOnDemand" />
 		</screen>""" % resolveFilename(SCOPE_PLUGIN, "SystemPlugins/KeymapManager/input-keyboard.png")
 

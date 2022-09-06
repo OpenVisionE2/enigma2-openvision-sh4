@@ -169,7 +169,7 @@ class ConfigOptions(Screen, ConfigListScreen):
 
 	skin = """
 	<screen name="dummy" title="Setup" position="fill" flags="wfNoBorder">
-		<eLabel text="System options configuration" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left" />
+		<eLabel text="System options configuration" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" verticalAlignment="center" horizontalAlignment="left" />
 	</screen>"""
 
 	def __init__(self, session):

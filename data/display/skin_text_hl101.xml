@@ -3,11 +3,11 @@
 <skin>
 <!-- main-->
 	<screen name="InfoBarSummary" position="0,0" size="132,1">
-		<widget source="session.CurrentService" render="Label" position="0,0" size="80,1" halign="left" noWrap="1">
+		<widget source="session.CurrentService" render="Label" position="0,0" size="80,1" horizontalAlignment="left" noWrap="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!--
-		<widget source="global.CurrentTime" render="Label" position="10,0" size="48,1" halign="right" valign="top" noWrap="1">
+		<widget source="global.CurrentTime" render="Label" position="10,0" size="48,1" horizontalAlignment="right" verticalAlignment="top" noWrap="1">
 			<convert type="ClockToText"></convert>
 		</widget>
 		-->
@@ -16,14 +16,14 @@
 
 <!-- channelselection-->
 	<screen name="ChannelSelection_summary" position="0,0" size="132,64">
-		<widget source="parent.ServiceEvent" render="Label" position="0,0" size="132,1" halign="left" noWrap="1" >
+		<widget source="parent.ServiceEvent" render="Label" position="0,0" size="132,1" horizontalAlignment="left" noWrap="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
 
 <!-- menus-->
 	<screen name="MenuSummary" position="0,0" size="16,1">
-		<widget source="parent.menu" render="Label" position="0,0" size="132,1" font="Regular;16" halign="left" valign="top">
+		<widget source="parent.menu" render="Label" position="0,0" size="132,1" font="Regular;16" horizontalAlignment="left" verticalAlignment="top">
 			<convert type="StringListSelection" />
 		</widget>
 	</screen>
@@ -40,7 +40,7 @@
 	</screen>
 
 	<screen name="MovieSelectionSummary" position="0,0" size="132,64">
-		<widget source="name" render="Label" position="0,0" size="124,32" font="Regular;16" halign="left" valign="top" />
+		<widget source="name" render="Label" position="0,0" size="124,32" font="Regular;16" horizontalAlignment="left" verticalAlignment="top" />
 	</screen>
 
 <!-- DVD -->
@@ -52,12 +52,12 @@
 
 <!-- setup-->
 	<screen name="SetupSummary" position="0,0" size="132,64">
-		<widget source="SetupEntry" render="Label" position="0,0" size="120,40" font="Regular;12" halign="left" />
+		<widget source="SetupEntry" render="Label" position="0,0" size="120,40" font="Regular;12" horizontalAlignment="left" />
 	</screen>
 
 <!-- misc-->
 	<screen name="SimpleSummary" position="0,0" size="132,64">
-		<widget source="parent.Title" render="Label" position="0,0" size="124,40" font="Regular;16" halign="center" valign="center" />
+		<widget source="parent.Title" render="Label" position="0,0" size="124,40" font="Regular;16" horizontalAlignment="center" verticalAlignment="center" />
 	</screen>
 
 	<screen name="WizardSummary" position="fill">
@@ -71,7 +71,7 @@
 
 <!-- standby -->
 	<screen name="StandbySummary" position="0,0" size="132,64">
-		<widget source="global.CurrentTime" render="Label" position="0,0" size="120,64" font="Regular;48" halign="center" valign="center">
+		<widget source="global.CurrentTime" render="Label" position="0,0" size="120,64" font="Regular;48" horizontalAlignment="center" verticalAlignment="center">
 			<convert type="ClockToText">Format:%H-%M-%S</convert>
 		</widget>
 	</screen>

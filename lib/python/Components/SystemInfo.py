@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
-# To improve performance while Enigma2 runs as root the Python method
-# fileAccess() from Directories.py is mapped to the Operating System
-# function exists().  If read access is actually required then move the
-# fileAccess import back to Directories.py.  (Note that write access
-# is not currently tested in this code!)
-
 from hashlib import md5
 from os import R_OK, access
-from os.path import exists as fileAccess, isfile, join as pathjoin
+from os.path import exists, isfile, join as pathjoin
 from re import findall
 from subprocess import PIPE, Popen
 
@@ -173,14 +167,14 @@ cmdline = {k: v.strip('"') for k, v in findall(r'(\S+)=(".*?"|\S+)', cmdline)}
 
 def getNumVideoDecoders():
 	numVideoDecoders = 0
-	while fileAccess("/dev/dvb/adapter0/video%d" % numVideoDecoders):
+	while exists("/dev/dvb/adapter0/video%d" % numVideoDecoders):
 		numVideoDecoders += 1
 	return numVideoDecoders
 
 
 def countFrontpanelLEDs():
-	numLeds = fileAccess("/proc/stb/fp/led_set_pattern") and 1 or 0
-	while fileAccess("/proc/stb/fp/led%d_pattern" % numLeds):
+	numLeds = exists("/proc/stb/fp/led_set_pattern") and 1 or 0
+	while exists("/proc/stb/fp/led%d_pattern" % numLeds):
 		numLeds += 1
 	return numLeds
 
@@ -192,7 +186,7 @@ def hassoftcaminstalled():
 
 def getBootdevice():
 	dev = ("root" in cmdline and cmdline["root"].startswith("/dev/")) and cmdline["root"][5:]
-	while dev and not fileAccess("/sys/block/%s" % dev):
+	while dev and not exists("/sys/block/%s" % dev):
 		dev = dev[:-1]
 	return dev
 
@@ -242,18 +236,18 @@ for cislot in range(BoxInfo.getItem("CommonInterface", 0)):
 	SystemInfo["CI%dRelevantPidsRoutingSupport" % cislot] = fileCheck("/proc/stb/tsmux/ci%d_relevant_pids_routing" % cislot)
 SystemInfo["HasSoftcamInstalled"] = hassoftcaminstalled()
 SystemInfo["NumVideoDecoders"] = getNumVideoDecoders()
-SystemInfo["Udev"] = not fileAccess("/dev/.devfsd")
+SystemInfo["Udev"] = not fileCheck("/dev/.devfsd")
 SystemInfo["PIPAvailable"] = BoxInfo.getItem("NumVideoDecoders", 0) > 1
 SystemInfo["CanMeasureFrontendInputPower"] = eDVBResourceManager.getInstance().canMeasureFrontendInputPower()
 SystemInfo["12V_Output"] = Misc_Options.getInstance().detected_12V_output()
 SystemInfo["ZapMode"] = fileCheck("/proc/stb/video/zapmode") or fileCheck("/proc/stb/video/zapping_mode")
 SystemInfo["NumFrontpanelLEDs"] = countFrontpanelLEDs()
-SystemInfo["FrontpanelDisplay"] = fileAccess("/dev/dbox/oled0") or fileAccess("/dev/dbox/lcd0")
+SystemInfo["FrontpanelDisplay"] = fileCheck("/dev/dbox/oled0") or fileCheck("/dev/dbox/lcd0")
 SystemInfo["LCDsymbol_circle_recording"] = fileCheck("/proc/stb/lcd/symbol_circle") or fileCheck("/proc/stb/lcd/symbol_recording")
 SystemInfo["LCDsymbol_timeshift"] = fileCheck("/proc/stb/lcd/symbol_timeshift")
 SystemInfo["LCDshow_symbols"] = fileCheck("/proc/stb/lcd/show_symbols")
 SystemInfo["LCDsymbol_hdd"] = fileCheck("/proc/stb/lcd/symbol_hdd")
-SystemInfo["FrontpanelDisplayGrayscale"] = fileAccess("/dev/dbox/oled0")
+SystemInfo["FrontpanelDisplayGrayscale"] = fileCheck("/dev/dbox/oled0")
 SystemInfo["DeepstandbySupport"] = model not in ("adb_box", "hl101", "vip1_v1")
 SystemInfo["Fan"] = fileCheck("/proc/stb/fp/fan")
 SystemInfo["FanPWM"] = BoxInfo.getItem("Fan") and fileCheck("/proc/stb/fp/fan_pwm")
@@ -267,7 +261,7 @@ SystemInfo["LedStandbyColor"] = fileCheck("/proc/stb/fp/ledstandbycolor")
 SystemInfo["LedSuspendColor"] = fileCheck("/proc/stb/fp/ledsuspendledcolor")
 SystemInfo["WakeOnLAN"] = fileCheck("/proc/stb/power/wol") or fileCheck("/proc/stb/fp/wol")
 SystemInfo["HasExternalPIP"] = fileCheck("/proc/stb/vmpeg/1/external")
-SystemInfo["VideoDestinationConfigurable"] = fileAccess("/proc/stb/vmpeg/0/dst_left")
+SystemInfo["VideoDestinationConfigurable"] = fileCheck("/proc/stb/vmpeg/0/dst_left")
 SystemInfo["hasPIPVisibleProc"] = fileCheck("/proc/stb/vmpeg/1/visible")
 SystemInfo["MaxPIPSize"] = (540, 432)
 SystemInfo["VFD_scroll_repeats"] = fileCheck("/proc/stb/lcd/scroll_repeats")
@@ -281,12 +275,12 @@ SystemInfo["HasFullHDSkinSupport"] = BoxInfo.getItem("fhdskin")
 SystemInfo["HasEMMC"] = BoxInfo.getItem("emmc")
 SystemInfo["HasMMC"] = BoxInfo.getItem("mmc") or "root" in cmdline and cmdline["root"].startswith("/dev/mmcblk") if isfile("/proc/cmdline") else "mmcblk" in mtdkernel
 SystemInfo["MMCEMMC"] = BoxInfo.getItem("HasMMC") or BoxInfo.getItem("HasEMMC")
-SystemInfo["HasTranscoding"] = BoxInfo.getItem("transcoding") or BoxInfo.getItem("multitranscoding") or fileAccess("/proc/stb/encoder/0") or fileCheck("/dev/bcm_enc0")
+SystemInfo["HasTranscoding"] = BoxInfo.getItem("transcoding") or BoxInfo.getItem("multitranscoding") or fileCheck("/proc/stb/encoder/0") or fileCheck("/dev/bcm_enc0")
 SystemInfo["HasH265Encoder"] = fileContains("/proc/stb/encoder/0/vcodec_choices", "h265")
 SystemInfo["CanNotDoSimultaneousTranscodeAndPIP"] = True
 SystemInfo["Has24hz"] = fileCheck("/proc/stb/video/videomode_24hz")
 SystemInfo["HasHDMI"] = BoxInfo.getItem("hdmi")
-SystemInfo["HasHDMI-CEC"] = BoxInfo.getItem("HasHDMI") and (fileAccess("/proc/stb/cec/send") or fileAccess("/proc/stb/hdmi/cec"))
+SystemInfo["HasHDMI-CEC"] = BoxInfo.getItem("HasHDMI") and (fileCheck("/proc/stb/cec/send") or fileCheck("/proc/stb/hdmi/cec"))
 SystemInfo["HasYPbPr"] = BoxInfo.getItem("yuv")
 SystemInfo["HasScart"] = BoxInfo.getItem("scart")
 SystemInfo["HasSVideo"] = BoxInfo.getItem("svideo")
@@ -301,15 +295,15 @@ SystemInfo["BootDevice"] = getBootdevice()
 SystemInfo["FbcTunerPowerAlwaysOn"] = False
 SystemInfo["HasPhysicalLoopthrough"] = ["Vuplus DVB-S NIM(AVL2108)", "GIGA DVB-S2 NIM (Internal)"]
 SystemInfo["HasFBCtuner"] = ["Vuplus DVB-C NIM(BCM3158)", "Vuplus DVB-C NIM(BCM3148)", "Vuplus DVB-S NIM(7376 FBC)", "Vuplus DVB-S NIM(45308X FBC)", "Vuplus DVB-S NIM(45208 FBC)", "DVB-S NIM(45208 FBC)", "DVB-S2X NIM(45308X FBC)", "DVB-S2 NIM(45308 FBC)", "DVB-C NIM(3128 FBC)", "BCM45208", "BCM45308X", "BCM3158"]
-SystemInfo["SmallFlash"] = BoxInfo.getItem("smallflash") and not BoxInfo.getItem("middleflash") or fileAccess("/etc/openvision/smallflash")
-SystemInfo["MiddleFlash"] = BoxInfo.getItem("middleflash") and not BoxInfo.getItem("smallflash") or fileAccess("/etc/openvision/middleflash")
+SystemInfo["SmallFlash"] = BoxInfo.getItem("smallflash") and not BoxInfo.getItem("middleflash") or fileCheck("/etc/openvision/smallflash")
+SystemInfo["MiddleFlash"] = BoxInfo.getItem("middleflash") and not BoxInfo.getItem("smallflash") or fileCheck("/etc/openvision/middleflash")
 SystemInfo["HaveCISSL"] = fileCheck("/etc/ssl/certs/customer.pem") and fileCheck("/etc/ssl/certs/device.pem")
 SystemInfo["CanChangeOsdAlpha"] = access("/proc/stb/video/alpha", R_OK) and True or False
-SystemInfo["ScalerSharpness"] = fileAccess("/proc/stb/vmpeg/0/pep_scaler_sharpness")
-SystemInfo["OScamInstalled"] = fileAccess("/usr/bin/oscam") or fileAccess("/usr/bin/oscam-emu") or fileAccess("/usr/bin/oscam-smod")
-SystemInfo["OScamIsActive"] = BoxInfo.getItem("OScamInstalled") and fileAccess("/tmp/.oscam/oscam.version")
-SystemInfo["NCamInstalled"] = fileAccess("/usr/bin/ncam")
-SystemInfo["NCamIsActive"] = BoxInfo.getItem("NCamInstalled") and fileAccess("/tmp/.ncam/ncam.version")
+SystemInfo["ScalerSharpness"] = fileCheck("/proc/stb/vmpeg/0/pep_scaler_sharpness")
+SystemInfo["OScamInstalled"] = fileCheck("/usr/bin/oscam") or fileCheck("/usr/bin/oscam-emu") or fileCheck("/usr/bin/oscam-smod")
+SystemInfo["OScamIsActive"] = BoxInfo.getItem("OScamInstalled") and fileCheck("/tmp/.oscam/oscam.version")
+SystemInfo["NCamInstalled"] = fileCheck("/usr/bin/ncam")
+SystemInfo["NCamIsActive"] = BoxInfo.getItem("NCamInstalled") and fileCheck("/tmp/.ncam/ncam.version")
 SystemInfo["OpenVisionModule"] = fileCheck("/proc/enigma/distro")
 SystemInfo["7segment"] = displaytype == "7segment" or "7seg" in displaytype
 SystemInfo["ConfigDisplay"] = BoxInfo.getItem("FrontpanelDisplay") and displaytype != "7segment" and "7seg" not in displaytype
@@ -325,33 +319,33 @@ SystemInfo["LCDSupport"] = False
 SystemInfo["LEDSupport"] = False
 SystemInfo["FCC"] = False
 SystemInfo["CanProc"] = BoxInfo.getItem("MMCEMMC")
-SystemInfo["CanAACTranscode"] = fileAccess("/proc/stb/audio/aac_transcode_choices")
+SystemInfo["CanAACTranscode"] = fileCheck("/proc/stb/audio/aac_transcode_choices")
 SystemInfo["CanAC3PlusTranscode"] = fileContains("/proc/stb/audio/ac3plus_choices", "force_ac3")
 SystemInfo["CanBTAudioDelay"] = fileCheck("/proc/stb/audio/btaudio_delay") or fileCheck("/proc/stb/audio/btaudio_delay_pcm")
 SystemInfo["CanBTAudio"] = fileCheck("/proc/stb/audio/btaudio")
 SystemInfo["CanDownmixAAC"] = fileContains("/proc/stb/audio/aac_choices", "downmix")
-SystemInfo["CanDownmixAACPlus"] = fileAccess("/proc/stb/audio/aacplus_choices")
+SystemInfo["CanDownmixAACPlus"] = fileCheck("/proc/stb/audio/aacplus_choices")
 SystemInfo["CanDownmixAC3"] = fileContains("/proc/stb/audio/ac3_choices", "downmix")
 SystemInfo["CanDownmixDTS"] = fileContains("/proc/stb/audio/dts_choices", "downmix")
-SystemInfo["CanDTSHD"] = fileAccess("/proc/stb/audio/dtshd_choices")
-SystemInfo["CanSyncMode"] = fileAccess("/proc/stb/video/sync_mode_choices")
-SystemInfo["CanWMAPRO"] = fileAccess("/proc/stb/audio/wmapro")
-SystemInfo["Has3DSpeaker"] = fileAccess("/proc/stb/audio/3d_surround_speaker_position_choices") or fileCheck("/proc/stb/audio/3d_surround_speaker_position")
-SystemInfo["Has3DSurround"] = fileAccess("/proc/stb/audio/3d_surround_choices") or fileCheck("/proc/stb/audio/3d_surround")
-SystemInfo["Has3DSurroundSoftLimiter"] = fileAccess("/proc/stb/audio/3dsurround_softlimiter_choices") or fileCheck("/proc/stb/audio/3dsurround_softlimiter")
-SystemInfo["Has3DSurroundSpeaker"] = fileAccess("/proc/stb/audio/3dsurround_choices") or fileCheck("/proc/stb/audio/3dsurround")
+SystemInfo["CanDTSHD"] = fileCheck("/proc/stb/audio/dtshd_choices")
+SystemInfo["CanSyncMode"] = fileCheck("/proc/stb/video/sync_mode_choices")
+SystemInfo["CanWMAPRO"] = fileCheck("/proc/stb/audio/wmapro")
+SystemInfo["Has3DSpeaker"] = fileCheck("/proc/stb/audio/3d_surround_speaker_position_choices") or fileCheck("/proc/stb/audio/3d_surround_speaker_position")
+SystemInfo["Has3DSurround"] = fileCheck("/proc/stb/audio/3d_surround_choices") or fileCheck("/proc/stb/audio/3d_surround")
+SystemInfo["Has3DSurroundSoftLimiter"] = fileCheck("/proc/stb/audio/3dsurround_softlimiter_choices") or fileCheck("/proc/stb/audio/3dsurround_softlimiter")
+SystemInfo["Has3DSurroundSpeaker"] = fileCheck("/proc/stb/audio/3dsurround_choices") or fileCheck("/proc/stb/audio/3dsurround")
 SystemInfo["HasAutoVolume"] = fileContains("/proc/stb/audio/avl_choices", "none") or fileContains("/proc/stb/audio/avl_choices", "hdmi") or fileCheck("/proc/stb/audio/avl")
-SystemInfo["HasAutoVolumeLevel"] = fileAccess("/proc/stb/audio/autovolumelevel_choices") or fileCheck("/proc/stb/audio/autovolumelevel")
+SystemInfo["HasAutoVolumeLevel"] = fileCheck("/proc/stb/audio/autovolumelevel_choices") or fileCheck("/proc/stb/audio/autovolumelevel")
 SystemInfo["HasBypassEdidChecking"] = fileCheck("/proc/stb/hdmi/bypass_edid_checking")
-SystemInfo["HasColordepthChoices"] = fileAccess("/proc/stb/video/hdmi_colordepth_choices")
+SystemInfo["HasColordepthChoices"] = fileCheck("/proc/stb/video/hdmi_colordepth_choices")
 SystemInfo["HasColordepth"] = fileCheck("/proc/stb/video/hdmi_colordepth")
-SystemInfo["HasColorimetryChoices"] = fileAccess("/proc/stb/video/hdmi_colorimetry_choices")
+SystemInfo["HasColorimetryChoices"] = fileCheck("/proc/stb/video/hdmi_colorimetry_choices")
 SystemInfo["HasColorimetry"] = fileCheck("/proc/stb/video/hdmi_colorimetry")
-SystemInfo["HasColorspaceChoices"] = fileAccess("/proc/stb/video/hdmi_colorspace_choices")
+SystemInfo["HasColorspaceChoices"] = fileCheck("/proc/stb/video/hdmi_colorspace_choices")
 SystemInfo["HasColorspace"] = fileCheck("/proc/stb/video/hdmi_colorspace")
 SystemInfo["HasColorspaceSimple"] = False
 SystemInfo["HasHDMIpreemphasis"] = fileCheck("/proc/stb/hdmi/preemphasis")
 SystemInfo["HasHdrType"] = fileCheck("/proc/stb/video/hdmi_hdrtype")
 SystemInfo["HasMultichannelPCM"] = fileCheck("/proc/stb/audio/multichannel_pcm")
 SystemInfo["HDMIAudioSource"] = fileCheck("/proc/stb/hdmi/audio_source")
-SystemInfo["HDRSupport"] = fileAccess("/proc/stb/hdmi/hlg_support_choices") or fileCheck("/proc/stb/hdmi/hlg_support")
+SystemInfo["HDRSupport"] = fileCheck("/proc/stb/hdmi/hlg_support_choices") or fileCheck("/proc/stb/hdmi/hlg_support")

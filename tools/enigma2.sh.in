@@ -154,7 +154,11 @@ while : ; do
 	case ${RET} in
 		1)
 			check_busybox_update
-			/sbin/halt
+			if [ -x "@bindir@/turnoff_power" ]; then
+				"@bindir@/turnoff_power"
+			else
+				/sbin/halt
+			fi
 			;;
 		2)
 			[ -f /proc/stb/fp/force_restart ] && echo "1" > /proc/stb/fp/force_restart

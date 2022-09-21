@@ -1155,7 +1155,7 @@ void eDVBDB::loadBouquet(const char *path)
 		}
 	}
 
-	eDebug("[eDVBDB] loading bouquet... %s", file_path.c_str());
+	eTrace("[eDVBDB] loading bouquet %s", file_path.c_str());
 	CFile fp(file_path, "rt");
 
 	if (fp)
@@ -1267,7 +1267,7 @@ void eDVBDB::loadBouquet(const char *path)
 		}
 		bouquet.flushChanges();
 	}
-	eDebug("[eDVBDB] %d entries in Bouquet %s", entries, bouquet_name.c_str());
+	eTrace("[eDVBDB] %d entries in Bouquet %s", entries, bouquet_name.c_str());
 }
 
 void eDVBDB::reloadBouquets()
@@ -1327,7 +1327,7 @@ void eDVBDB::setNumberingMode(bool numberingMode)
 
 int eDVBDB::renumberBouquet(eBouquet &bouquet, int startChannelNum)
 {
-	eDebug("[eDVBDB] Renumber %s, starting at %d", bouquet.m_bouquet_name.c_str(), startChannelNum);
+	eTrace("[eDVBDB] Renumber %s, starting at %d", bouquet.m_bouquet_name.c_str(), startChannelNum);
 	std::list<eServiceReference> &list = bouquet.m_services;
 	for (std::list<eServiceReference>::iterator it = list.begin(); it != list.end(); ++it)
 	{

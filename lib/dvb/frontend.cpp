@@ -2901,7 +2901,7 @@ RESULT eDVBFrontend::setVoltage(int voltage)
 		}
 	}
 
-	eDebug("[eDVBFrontend%d] setVoltage FE_ENABLE_HIGH_LNB_VOLTAGE %d FE_SET_VOLTAGE %d", m_dvbid, increased, vlt);
+	eTrace("[eDVBFrontend%d] setVoltage FE_ENABLE_HIGH_LNB_VOLTAGE %d FE_SET_VOLTAGE %d", m_dvbid, increased, vlt);
 	::ioctl(m_fd, FE_ENABLE_HIGH_LNB_VOLTAGE, increased);
 	return ::ioctl(m_fd, FE_SET_VOLTAGE, vlt);
 }

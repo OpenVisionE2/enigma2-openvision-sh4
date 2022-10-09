@@ -80,12 +80,11 @@ class VideoHardware:
 						ret = (16, 10)
 			elif is_auto:
 				try:
-					print("[Videomode] Read /proc/stb/vmpeg/0/aspect")
 					aspect_str = open("/proc/stb/vmpeg/0/aspect", "r").read()
 					if aspect_str == "1": # 4:3
 						ret = (4, 3)
 				except IOError:
-					pass
+					print("[Videomode] Read /proc/stb/vmpeg/0/aspect failed!")
 			else:  # 4:3
 				ret = (4, 3)
 		return ret
@@ -138,10 +137,9 @@ class VideoHardware:
 
 	def readAvailableModes(self):
 		try:
-			print("[Videomode] Read /proc/stb/video/videomode_choices")
 			modes = open("/proc/stb/video/videomode_choices").read()[:-1]
 		except IOError:
-			print("[Videomode] Read /proc/stb/video/videomode_choices failed.")
+			print("[Videomode] Read /proc/stb/video/videomode_choices failed!")
 			self.modes_available = []
 			return
 		self.modes_available = modes.split(' ')
@@ -149,18 +147,16 @@ class VideoHardware:
 	def readPreferredModes(self):
 		if config.av.edid_override.value == False:
 			try:
-				print("[Videomode] Read /proc/stb/video/videomode_edid")
 				modes = open("/proc/stb/video/videomode_edid").read()[:-1]
 				self.modes_preferred = modes.split(' ')
 				print("[Videomode] VideoHardware reading edid modes: ", self.modes_preferred)
 			except IOError:
-				print("[Videomode] Read /proc/stb/video/videomode_edid failed.")
+				print("[Videomode] Read /proc/stb/video/videomode_edid failed!")
 				try:
-					print("[Videomode] Read /proc/stb/video/videomode_preferred")
 					modes = open("/proc/stb/video/videomode_preferred").read()[:-1]
 					self.modes_preferred = modes.split(' ')
 				except IOError:
-					print("[Videomode] Read /proc/stb/video/videomode_preferred failed.")
+					print("[Videomode] Read /proc/stb/video/videomode_preferred failed!")
 					self.modes_preferred = self.modes_available
 
 			if len(self.modes_preferred) <= 1:
@@ -208,26 +204,23 @@ class VideoHardware:
 				mode_24 = mode_50
 
 		try:
-			print("[Videomode] Write to /proc/stb/video/videomode_50hz")
 			open("/proc/stb/video/videomode_50hz", "w").write(mode_50)
-			print("[Videomode] Write to /proc/stb/video/videomode_60hz")
-			open("/proc/stb/video/videomode_60hz", "w").write(mode_60)
 		except IOError:
-			print("[Videomode] Write to /proc/stb/video/videomode_50hz failed.")
-			print("[Videomode] Write to /proc/stb/video/videomode_60hz failed.")
+			print("[Videomode] Write to /proc/stb/video/videomode_50hz failed!")
 			try:
-				# fallback if no possibility to setup 50/60 hz mode
-				print("[Videomode] Write to /proc/stb/video/videomode")
+				# fallback if no possibility to setup 50 hz mode
 				open("/proc/stb/video/videomode", "w").write(mode_50)
 			except IOError:
-				print("[Videomode] Write to /proc/stb/video/videomode failed.")
-
+				print("[Videomode] Write to /proc/stb/video/videomode failed!")
+		try:
+			open("/proc/stb/video/videomode_60hz", "w").write(mode_60)
+		except IOError:
+			print("[Videomode] Write to /proc/stb/video/videomode_60hz failed!")
 		if BoxInfo.getItem("Has24hz"):
 			try:
-				print("[Videomode] Write to /proc/stb/video/videomode_24hz")
 				open("/proc/stb/video/videomode_24hz", "w").write(mode_24)
 			except IOError:
-				print("[Videomode] Write to /proc/stb/video/videomode_24hz failed.")
+				print("[Videomode] Write to /proc/stb/video/videomode_24hz failed!")
 
 		#call setResolution() with -1,-1 to read the new scrren dimesions without changing the framebuffer resolution
 		from enigma import gMainDC
@@ -375,43 +368,47 @@ class VideoHardware:
 
 		print("[Videomode] VideoHardware -> setting aspect, policy, policy2, wss", aspect, policy, policy2, wss)
 		try:
-			print("[Videomode] Write to /proc/stb/video/aspect")
 			open("/proc/stb/video/aspect", "w").write(aspect)
 		except IOError:
-			print("[Videomode] Write to /proc/stb/video/aspect failed.")
+			print("[Videomode] Write to /proc/stb/video/aspect failed!")
 		try:
-			print("[Videomode] Write to /proc/stb/video/policy")
 			open("/proc/stb/video/policy", "w").write(policy)
 		except IOError:
-			print("[Videomode] Write to /proc/stb/video/policy failed.")
+			print("[Videomode] Write to /proc/stb/video/policy failed!")
 		try:
-			print("[Videomode] Write to /proc/stb/denc/0/wss")
 			open("/proc/stb/denc/0/wss", "w").write(wss)
 		except IOError:
-			print("[Videomode] Write to /proc/stb/denc/0/wss failed.")
+			print("[Videomode] Write to /proc/stb/denc/0/wss failed!")
 		try:
-			print("[Videomode] Write to /proc/stb/video/policy2")
 			open("/proc/stb/video/policy2", "w").write(policy2)
 		except IOError:
-			print("[Videomode] Write to /proc/stb/video/policy2 failed.")
+			print("[Videomode] Write to /proc/stb/video/policy2 failed!")
 
 	def set3DMode(self, configElement):
-		print("[Videomode] Write to /proc/stb/video/3d_mode")
-		open("/proc/stb/video/3d_mode", "w").write(configElement.value)
+		try:
+			open("/proc/stb/video/3d_mode", "w").write(configElement.value)
+		except:
+			print("[Videomode] Write to /proc/stb/video/3d_mode failed!")
 
 	def setHDMIAudioSource(self, configElement):
-		print("[Videomode] Write to /proc/stb/hdmi/audio_source")
-		open("/proc/stb/hdmi/audio_source", "w").write(configElement.value)
+		try:
+			open("/proc/stb/hdmi/audio_source", "w").write(configElement.value)
+		except:
+			print("[Videomode] Write to /proc/stb/hdmi/audio_source failed!")
 
 	def setHDMIColor(self, configElement):
 		map = {"hdmi_rgb": 0, "hdmi_yuv": 1, "hdmi_422": 2}
-		print("[Videomode] Write to /proc/stb/avs/0/colorformat")
-		open("/proc/stb/avs/0/colorformat", "w").write(configElement.value)
+		try:
+			open("/proc/stb/avs/0/colorformat", "w").write(configElement.value)
+		except:
+			print("[Videomode] Write to /proc/stb/avs/0/colorformat failed!")
 
 	def setYUVColor(self, configElement):
 		map = {"yuv": 0}
-		print("[Videomode] Write to /proc/stb/avs/0/colorformat")
-		open("/proc/stb/avs/0/colorformat", "w").write(configElement.value)
+		try:
+			open("/proc/stb/avs/0/colorformat", "w").write(configElement.value)
+		except:
+			print("[Videomode] Write to /proc/stb/avs/0/colorformat failed!")
 
 	def updateColor(self, port):
 		print("[Videomode] VideoHardware updateColor: ", port)

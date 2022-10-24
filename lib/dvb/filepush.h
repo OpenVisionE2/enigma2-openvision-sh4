@@ -38,8 +38,13 @@ public:
 	void setStreamMode(int);
 	void setScatterGather(iFilePushScatterGather *);
 
+#if SIGCXX_MAJOR_VERSION == 3
+	enum { evtEOF, evtReadError, evtWriteError, evtUser, evtStopped };
+	sigc::signal<void(int)> m_event;
+#else
 	enum { evtEOF, evtReadError, evtWriteError, evtUser, evtStopped, evtFlush };
 	sigc::signal1<void,int> m_event;
+#endif
 
 		/* you can send private events if you want */
 	void sendEvent(int evt);
@@ -76,8 +81,13 @@ public:
 	void stop();
 	void start(int sourcefd);
 
+#if SIGCXX_MAJOR_VERSION == 3
+	enum { evtEOF, evtReadError, evtWriteError, evtUser, evtStopped };
+	sigc::signal<void(int)> m_event;
+#else
 	enum { evtEOF, evtReadError, evtWriteError, evtUser, evtStopped, evtRetune };
 	sigc::signal1<void,int> m_event;
+#endif
 
 	int getProtocol() { return m_protocol;}
 	void setProtocol(int i){ m_protocol = i;}

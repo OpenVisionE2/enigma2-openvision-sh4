@@ -190,7 +190,11 @@ RESULT eDVBDemux::flush()
 	return 0;
 }
 
+#if SIGCXX_MAJOR_VERSION == 3
+RESULT eDVBDemux::connectEvent(const sigc::slot<void(int)> &event, ePtr<eConnection> &conn)
+#else
 RESULT eDVBDemux::connectEvent(const sigc::slot1<void,int> &event, ePtr<eConnection> &conn)
+#endif
 {
 	conn = new eConnection(this, m_event.connect(event));
 	return 0;
@@ -301,7 +305,11 @@ RESULT eDVBSectionReader::stop()
 	return 0;
 }
 
+#if SIGCXX_MAJOR_VERSION == 3
+RESULT eDVBSectionReader::connectRead(const sigc::slot<void(const uint8_t*)> &r, ePtr<eConnection> &conn)
+#else
 RESULT eDVBSectionReader::connectRead(const sigc::slot1<void,const uint8_t*> &r, ePtr<eConnection> &conn)
+#endif
 {
 	conn = new eConnection(this, read.connect(r));
 	return 0;
@@ -407,7 +415,11 @@ RESULT eDVBPESReader::stop()
 	return 0;
 }
 
+#if SIGCXX_MAJOR_VERSION == 3
+RESULT eDVBPESReader::connectRead(const sigc::slot<void(const uint8_t*,int)> &r, ePtr<eConnection> &conn)
+#else
 RESULT eDVBPESReader::connectRead(const sigc::slot2<void,const uint8_t*,int> &r, ePtr<eConnection> &conn)
+#endif
 {
 	conn = new eConnection(this, m_read.connect(r));
 	return 0;
@@ -549,10 +561,14 @@ int eDVBRecordFileThread::asyncWrite(int len)
 	gettimeofday(&starttime, NULL);
 #endif
 
+#if SIGCXX_MAJOR_VERSION == 3
+	m_ts_parser.parseData(m_current_offset, m_buffer, len);
+#else
 	if(!getProtocol())
 		m_ts_parser.parseData(m_current_offset, m_buffer, len);
 	if (m_ts_parser.broken())
 		sendEvent(evtRetune);
+#endif
 
 #ifdef SHOW_WRITE_TIME
 	gettimeofday(&now, NULL);
@@ -972,7 +988,11 @@ RESULT eDVBTSRecorder::getFirstPTS(pts_t &pts)
 	return m_thread->getFirstPTS(pts);
 }
 
+#if SIGCXX_MAJOR_VERSION == 3
+RESULT eDVBTSRecorder::connectEvent(const sigc::slot<void(int)> &event, ePtr<eConnection> &conn)
+#else
 RESULT eDVBTSRecorder::connectEvent(const sigc::slot1<void,int> &event, ePtr<eConnection> &conn)
+#endif
 {
 	conn = new eConnection(this, m_event.connect(event));
 	return 0;
@@ -1021,8 +1041,10 @@ void eDVBTSRecorder::filepushEvent(int event)
 	case eFilePushThread::evtWriteError:
 		m_event(eventWriteError);
 		break;
+#if SIGCXX_MAJOR_VERSION == 2
 	case eFilePushThreadRecorder::evtRetune:
 		m_event(eventRetune);
 		break;
+#endif
 	}
 }

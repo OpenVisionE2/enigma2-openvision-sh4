@@ -34,6 +34,7 @@ from Tools.Directories import SCOPE_GUISKIN, fileReadLine, fileReadLines, fileWr
 from Tools.Geolocation import geolocation
 from Tools.LoadPixmap import LoadPixmap
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
+from Tools.OEMInfo import getOEMShowDisplayModel, getOEMShowDisplayBrand, getOEMShowModel
 
 MODULE_NAME = __name__.split(".")[-1]
 
@@ -42,9 +43,10 @@ MODULE_NAME = __name__.split(".")[-1]
 #servicesh4 = "/var/lib/opkg/info/enigma2-plugin-systemplugins-servicesh4.control"
 
 model = BoxInfo.getItem("model")
+vmodel = getOEMShowModel()
 platform = BoxInfo.getItem("platform")
-displaymodel = BoxInfo.getItem("displaymodel")
-displaybrand = BoxInfo.getItem("displaybrand")
+displaymodel = getOEMShowDisplayModel()
+displaybrand = getOEMShowDisplayBrand()
 rcname = BoxInfo.getItem("rcname")
 procType = getBoxProcType()
 procModel = getBoxProc()
@@ -63,7 +65,7 @@ INFO_COLOR = {
 
 def getBoxProcTypeName():
 	boxProcTypes = {
-		"00": _("OTT Model"),
+		"00": _("OTT"),
 		"10": _("Single Tuner"),
 		"11": _("Twin Tuner"),
 		"12": _("Combo Tuner"),
@@ -619,7 +621,7 @@ class ImageInformation(InformationBase):
 		if override:
 			info.append(formatLine("P1", _("Info file override"), _("Defined / Active")))
 		info.append(formatLine("P1", _("OpenVision version"), BoxInfo.getItem("imgversion")))
-		info.append(formatLine("P1", _("OpenVision revision"), "%s on %s" % (BoxInfo.getItem("imgrevision"), model)))
+		info.append(formatLine("P1", _("OpenVision revision"), "%s on %s" % (BoxInfo.getItem("imgrevision"), vmodel)))
 		if config.misc.OVupdatecheck.value:
 			ovUrl = "https://raw.githubusercontent.com/OpenVisionE2/revision/master/%s.conf" % ("old" if BoxInfo.getItem("oe") == "pyro" else "new")
 			try:
@@ -1104,10 +1106,11 @@ class ReceiverInformation(InformationBase):
 		adbVariant = fileReadLine("/proc/stb/info/adb_variant", source=MODULE_NAME)
 		if adbVariant:
 			info.append(formatLine("P1", _("ADB variant"), adbVariant))
-		info.append(formatLine("P1", _("Hardware type"), getBoxProcTypeName().split("-")[0])) if getBoxProcTypeName() != _("unknown") else ""
-		hwSerial = getHWSerial()
-		if hwSerial:
-			info.append(formatLine("P1", _("Hardware serial"), (hwSerial if hwSerial != "unknown" else about.getCPUSerial())))
+		info.append(formatLine("P1", _("Hardware type"), getBoxProcTypeName().split("-")[0])) if getBoxProcTypeName() != _("Unknown") else ""
+		hwSerial = getHWSerial() if getHWSerial() != "unknown" else None
+		cpuSerial = about.getCPUSerial() if about.getCPUSerial() != "unknown" else None
+		if hwSerial or cpuSerial:
+			info.append(formatLine("P1", _("Hardware serial"), (hwSerial if hwSerial else cpuSerial)))
 		hwRelease = fileReadLine("/proc/stb/info/release", source=MODULE_NAME)
 		if hwRelease:
 			info.append(formatLine("P1", _("Factory release"), hwRelease))

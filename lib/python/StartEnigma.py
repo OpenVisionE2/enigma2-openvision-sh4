@@ -308,6 +308,7 @@ def runScreen():
 	vol = VolumeControl(session)
 	profile("InitPowerKey")
 	power = PowerKey(session)
+	from Components.SystemInfo import BoxInfo
 	if BoxInfo.getItem("VFDSymbol"):
 		profile("VFDSymbols")
 		import Components.VfdSymbols
@@ -648,8 +649,9 @@ profile("AVSwitch")
 import Components.AVSwitch
 Components.AVSwitch.InitAVSwitch()
 
-profile("FanControl")
-from Components.FanControl import fancontrol
+if BoxInfo.getItem("Fan"):
+	profile("FanControl")
+	from Components.FanControl import fancontrol
 
 profile("RecordingConfig")
 import Components.RecordingConfig
@@ -675,15 +677,15 @@ profile("LCD")
 import Components.Lcd
 Components.Lcd.IconCheck()
 
-from Components.SystemInfo import BoxInfo
 if BoxInfo.getItem("RFmodSupport"):
 	profile("RFMod")
 	import Components.RFmod
 	Components.RFmod.InitRFmod()
 
-profile("CommonInterface")
-from Screens.Ci import CiHandler, InitCiConfig
-InitCiConfig()
+if BoxInfo.getItem("ci"):
+	profile("CommonInterface")
+	from Screens.Ci import CiHandler, InitCiConfig
+	InitCiConfig()
 
 profile("Init:LogManager")
 import Screens.LogManager

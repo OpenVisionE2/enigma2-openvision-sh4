@@ -649,7 +649,7 @@ profile("AVSwitch")
 import Components.AVSwitch
 Components.AVSwitch.InitAVSwitch()
 
-if BoxInfo.getItem("Fan"):
+if BoxInfo.getItem("fan"):
 	profile("FanControl")
 	from Components.FanControl import fancontrol
 

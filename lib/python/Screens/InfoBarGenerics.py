@@ -35,7 +35,7 @@ from Screens.TimeDateInput import TimeDateInput
 from Screens.UnhandledKey import UnhandledKey
 from ServiceReference import ServiceReference, isPlayableForCur
 from Tools.ASCIItranslit import legacyEncode
-from Tools.Directories import fileExists, getRecordingFilename, moveFiles
+from Tools.Directories import fileExists, getRecordingFilename, moveFiles, isPluginInstalled
 from Tools.Notifications import AddNotificationWithCallback, AddPopup, current_notifications, lock, notificationAdded, notifications, RemovePopup, AddNotification
 from keyids import KEYFLAGS, KEYIDS, KEYIDNAMES
 from Components.Console import Console
@@ -277,6 +277,15 @@ class SecondInfoBar(Screen):
 	def __init__(self, session, skinName):
 		Screen.__init__(self, session)
 		self.skinName = skinName
+		if isPluginInstalled("AutoTimer"):
+			self["key_yellow"] = Label()
+		self["key_blue"] = Label()
+		self.onShow.append(self.__Show)
+
+	def __Show(self):
+		if isPluginInstalled("AutoTimer"):
+			self["key_yellow"].setText(_("AutoTimer"))
+		self["key_blue"].setText(_("Extensions"))
 
 
 class InfoBarShowHide(InfoBarScreenSaver):
@@ -2408,7 +2417,6 @@ class InfoBarExtensions:
 		self.session.open(LogManager)
 
 	def importAutoTimerCurrentEvent(self):
-		from Tools.Directories import isPluginInstalled
 		if isPluginInstalled("AutoTimer"):
 			service = self.session.nav.getCurrentService()
 			event = service and service.info().getEvent(0)
@@ -2756,7 +2764,6 @@ class InfoBarInstantRecord:
 			if limitEvent:
 				end = info["end"]
 		else:
-			from Tools.Directories import isPluginInstalled
 			message = _("No event info found, recording indefinitely.")
 			if limitEvent and serviceref:
 				if serviceref.toString().startswith("1"):

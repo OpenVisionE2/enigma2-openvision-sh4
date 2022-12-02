@@ -3,7 +3,7 @@
 <skin>
 <!-- main-->
 	<screen name="InfoBarSummary" position="0,0" size="132,1">
-		<widget source="session.CurrentService" render="Label" position="0,0" size="80,1" horizontalAlignment="left" noWrap="1">
+		<widget source="session.CurrentService" render="Label" position="0,0" size="80,1" noWrap="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!--

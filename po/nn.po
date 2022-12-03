@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: 2013-10-23 19:15+0100\n"
 "Last-Translator: andy1 <dmmm8000pvr@gmail.com>\n"
 "Language-Team: none\n"
@@ -836,8 +836,32 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #, python-format
 msgid "%d KB"
@@ -869,6 +893,50 @@ msgid "%d Min"
 msgid_plural "%d Mins"
 msgstr[0] ""
 msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d minutt"
+msgstr[1] "%d minutter"
+
+#
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "måned"
+msgstr[1] "måned"
+
+#, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "År"
+msgstr[1] "År"
 
 #
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
@@ -2778,11 +2846,6 @@ msgid "Auto EXIF Orientation rotation/flipping"
 msgstr ""
 
 #
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Auto rens"
-
-#
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Auto oppdeling hvert ? minutter (0=aldri)"
 
@@ -2829,6 +2892,11 @@ msgstr "Ingen standby"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "utilgjengelig"
+
+#
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Tidtaker"
 
 #
 #, fuzzy, python-format
@@ -3078,9 +3146,10 @@ msgstr "Informasjon"
 msgid "Benchmark for"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Programvareadministrasjon"
+msgstr "Informasjon"
 
 msgid "Bengali"
 msgstr ""
@@ -3910,6 +3979,9 @@ msgstr ""
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
 msgstr ""
 
+msgid "Choose the option to correct invalid EPG data."
+msgstr ""
+
 msgid "Choose the order in which items are displayed in Help windows"
 msgstr ""
 
@@ -4666,9 +4738,10 @@ msgstr "Koblet til"
 msgid "Connected transcoding, limit - no PiP!"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Connection information"
-msgstr "Aktivitets informasjon for programtillegg"
+msgstr "Informasjon"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -4766,6 +4839,9 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Dansk"
+
+msgid "Correct invalid EPG data"
+msgstr ""
 
 msgid "Corsican"
 msgstr ""
@@ -5280,6 +5356,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #
@@ -5852,8 +5931,10 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr "Informasjon"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -7776,6 +7857,10 @@ msgstr "Fre"
 msgid "Friday"
 msgstr "Fredag"
 
+#, fuzzy
+msgid "From"
+msgstr "Fra:"
+
 msgid "From:"
 msgstr "Fra:"
 
@@ -7886,6 +7971,10 @@ msgstr "AC3 forsinkelse"
 
 msgid "General PCM delay"
 msgstr "PCM forsinkelse"
+
+#, fuzzy
+msgid "General audio delay"
+msgstr "AC3 forsinkelse"
 
 msgid "Generic"
 msgstr ""
@@ -8224,9 +8313,10 @@ msgstr "Disk"
 msgid "Harddisk Setup"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Hardware information"
-msgstr "Programvareadministrasjon"
+msgstr "Informasjon"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8547,6 +8637,9 @@ msgstr ""
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr ""
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8613,6 +8706,16 @@ msgstr "Image:"
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Sortere tid"
+
+#
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Slå av etter nåværende program"
 
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
 msgstr ""
@@ -10630,6 +10733,11 @@ msgstr "N/A"
 msgid "NCam Config info"
 msgstr ""
 
+#
+#, fuzzy
+msgid "NCam Info"
+msgstr "Info"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -10731,11 +10839,6 @@ msgstr ""
 #
 #, fuzzy
 msgid "Ncam ECM info"
-msgstr "Info"
-
-#
-#, fuzzy
-msgid "Ncam Info"
 msgstr "Info"
 
 #, fuzzy
@@ -11308,6 +11411,11 @@ msgstr ""
 msgid "OPKG clean mode"
 msgstr ""
 
+#
+#, fuzzy
+msgid "OSCam Info"
+msgstr "Info"
+
 msgid "OSD 3D setup"
 msgstr ""
 
@@ -11356,10 +11464,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "deaktivert"
 
-#
-#, fuzzy
-msgid "OTT Model"
-msgstr "Type"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -11464,8 +11570,10 @@ msgstr "Info"
 msgid "Open Vision Commit Info Setup"
 msgstr ""
 
+#
+#, fuzzy
 msgid "Open Vision information"
-msgstr ""
+msgstr "Informasjon"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -12687,9 +12795,10 @@ msgstr "Oppdaterer programvare"
 msgid "Process"
 msgstr "Prosess"
 
+#
 #, fuzzy
 msgid "Processor information"
-msgstr "Programvareadministrasjon"
+msgstr "Informasjon"
 
 msgid "Progress"
 msgstr "Framdrift"
@@ -13083,6 +13192,11 @@ msgstr ""
 
 msgid "Recording in progress"
 msgstr "Opptak pågår"
+
+#
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Tidtaker har blitt deaktivert:"
 
 msgid "Recording type"
 msgstr "Opptakstype"
@@ -15379,6 +15493,10 @@ msgstr "Vis info"
 msgid "Show media player on main menu"
 msgstr "Vis mediespiller på hovedmeny"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Vis ekstra informasjonslinje"
+
 msgid "Show menu or plugin numbers"
 msgstr ""
 
@@ -15546,9 +15664,10 @@ msgstr ""
 msgid "Show subtitle selection"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Show system information"
-msgstr "Programvareadministrasjon"
+msgstr "Informasjon"
 
 #
 #, fuzzy
@@ -15788,6 +15907,9 @@ msgstr "Hopp over ubrukte kanaler"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Hopp over internett tilkobling (automatisk pakke installasjon deaktiveres)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #, fuzzy
 msgid "Sleep Timer"
@@ -17063,15 +17185,6 @@ msgstr ""
 
 #
 #, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"Det trådløse LAN programtillegg er ikke installert!\n"
-"Vennligst installer det."
-
-#
-#, fuzzy
 msgid "The AutoTimer plugin is not installed."
 msgstr "Dette programtillegget er ikke installert."
 
@@ -17438,6 +17551,10 @@ msgstr ""
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Still inn ønsket lydforsinkelse for stereo lyd spor."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Still inn ønsket lydforsinkelse for stereo lyd spor."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -17960,7 +18077,7 @@ msgstr "Informasjon"
 #
 #, fuzzy
 msgid "Translation information"
-msgstr "Oversetting"
+msgstr "Informasjon"
 
 #
 msgid "Translation:"
@@ -18432,6 +18549,9 @@ msgid "Use best / Controlled by HDMI"
 msgstr ""
 
 msgid "Use circular LNB"
+msgstr ""
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
 msgstr ""
 
 #

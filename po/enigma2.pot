@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -799,8 +799,32 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #, python-format
 msgid "%d KB"
@@ -830,6 +854,48 @@ msgstr ""
 #, python-format
 msgid "%d Min"
 msgid_plural "%d Mins"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -2300,9 +2366,6 @@ msgstr ""
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr ""
 
-msgid "Auto Timers"
-msgstr ""
-
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr ""
 
@@ -2334,6 +2397,9 @@ msgid "Auto standby"
 msgstr ""
 
 msgid "Auto(not available)"
+msgstr ""
+
+msgid "AutoTimer"
 msgstr ""
 
 #, python-format
@@ -3949,6 +4015,9 @@ msgstr ""
 msgid "Dayname Year/MM/DD"
 msgstr ""
 
+msgid "Debug"
+msgstr ""
+
 msgid "Debug Logs"
 msgstr ""
 
@@ -5302,6 +5371,9 @@ msgstr ""
 msgid "Extension Actions"
 msgstr ""
 
+msgid "Extensions"
+msgstr ""
+
 msgid "Extensions Menu"
 msgstr ""
 
@@ -5695,6 +5767,9 @@ msgstr ""
 msgid "Friday"
 msgstr ""
 
+msgid "From"
+msgstr ""
+
 msgid "From:"
 msgstr ""
 
@@ -5782,6 +5857,9 @@ msgid "General BT audio delay"
 msgstr ""
 
 msgid "General PCM delay"
+msgstr ""
+
+msgid "General audio delay"
 msgstr ""
 
 msgid "Generic"
@@ -6339,6 +6417,12 @@ msgid ""
 msgstr ""
 
 msgid "Immediately restart selected devices."
+msgstr ""
+
+msgid "Import AutoTimer"
+msgstr ""
+
+msgid "Import autotimer in current event"
 msgstr ""
 
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -7697,6 +7781,9 @@ msgstr ""
 msgid "NCam Config info"
 msgstr ""
 
+msgid "NCam Info"
+msgstr ""
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -7766,9 +7853,6 @@ msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. O
 msgstr ""
 
 msgid "Ncam ECM info"
-msgstr ""
-
-msgid "Ncam Info"
 msgstr ""
 
 msgid "Ncam Info Setup"
@@ -8167,6 +8251,9 @@ msgstr ""
 msgid "ONID"
 msgstr ""
 
+msgid "OSCam Info"
+msgstr ""
+
 msgid "OSD 3D setup"
 msgstr ""
 
@@ -8198,7 +8285,7 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr ""
 
-msgid "OTT Model"
+msgid "OTT"
 msgstr ""
 
 msgid "OVR"
@@ -9381,6 +9468,9 @@ msgid "Recording Setup"
 msgstr ""
 
 msgid "Recording in progress"
+msgstr ""
+
+msgid "Recording time has been set."
 msgstr ""
 
 msgid "Recording type"
@@ -12077,11 +12167,6 @@ msgstr ""
 msgid "The '%s' log file contains no information."
 msgstr ""
 
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-
 msgid "The AutoTimer plugin is not installed."
 msgstr ""
 
@@ -12327,6 +12412,9 @@ msgid "This option can be useful for long HDMI cables."
 msgstr ""
 
 msgid "This option configures the general audio delay for BT speakers."
+msgstr ""
+
+msgid "This option configures the general audio delay."
 msgstr ""
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -13026,6 +13114,9 @@ msgid "Use best / Controlled by HDMI"
 msgstr ""
 
 msgid "Use circular LNB"
+msgstr ""
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
 msgstr ""
 
 msgid "Use defaults"
@@ -15246,6 +15337,9 @@ msgstr ""
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
 msgstr ""
 
+msgid "Choose the option to correct invalid EPG data."
+msgstr ""
+
 msgid "Choose the order in which items are displayed in Help windows"
 msgstr ""
 
@@ -15564,6 +15658,9 @@ msgid "Control LED can be turned on or off here."
 msgstr ""
 
 msgid "Control the animation speed of the button indicators in the Help screen. 'Disabled' turns off animation so that indicators jump between buttons."
+msgstr ""
+
+msgid "Correct invalid EPG data"
 msgstr ""
 
 msgid "Country for EPG event genre information"
@@ -15888,6 +15985,9 @@ msgid "If enabled, bookmarks will be updated with the new location when you move
 msgstr ""
 
 msgid "If set to 'Yes' the same commands will be sent to the TV for deep standby events as are sent during regular standby events."
+msgstr ""
+
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
 msgstr ""
 
 msgid "Ignore DVB-C namespace sub network"
@@ -16689,6 +16789,9 @@ msgid "Shows the icons when new/unseen, otherwise it will not show an icon."
 msgstr ""
 
 msgid "Shows the watched status of the movie."
+msgstr ""
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
 msgstr ""
 
 msgid "Slow motion speeds"
@@ -17695,6 +17798,9 @@ msgstr ""
 msgid "Service Scan"
 msgstr ""
 
+msgid "Show menu numbers"
+msgstr ""
+
 msgid "SimpleChannelSelection"
 msgstr ""
 
@@ -18075,9 +18181,6 @@ msgid "Event view"
 msgstr ""
 
 msgid "Event view menu"
-msgstr ""
-
-msgid "Extensions"
 msgstr ""
 
 msgid "Fastscan"

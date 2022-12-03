@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: 2021-02-19 14:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: Muzoss-VELEBRDO\n"
@@ -830,8 +830,32 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] "Клуч настани"
+msgstr[1] "Клуч настани"
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #, python-format
 msgid "%d KB"
@@ -863,6 +887,48 @@ msgid "%d Min"
 msgid_plural "%d Mins"
 msgstr[0] "%d MB"
 msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d минута"
+msgstr[1] "%d минути"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "%d MB"
+msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "Пиксели\n"
+msgstr[1] "Пиксели\n"
+
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d широк пиксел"
+msgstr[1] "%d pixels wide"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунди"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Година"
+msgstr[1] "Година"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -2680,10 +2746,6 @@ msgstr "Автоматски DiSEqC"
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Автоматско ротирање / превртување на ориентацијата EXIF"
 
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Автоматски флеш"
-
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Автоматска поделба во поглавја на секои x минути (0 = никогаш)"
 
@@ -2724,6 +2786,10 @@ msgstr "Не оди во стендбај"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "недостапно"
+
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Тајмер"
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -2952,7 +3018,7 @@ msgstr "Данска"
 
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Информации за управувач на софтвер"
+msgstr "Информации"
 
 msgid "Bengali"
 msgstr ""
@@ -3746,6 +3812,9 @@ msgstr ""
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
 msgstr ""
 
+msgid "Choose the option to correct invalid EPG data."
+msgstr ""
+
 msgid "Choose the order in which items are displayed in Help windows"
 msgstr ""
 
@@ -4450,7 +4519,7 @@ msgstr "Поврзано транскодирање, ограничување - 
 
 #, fuzzy
 msgid "Connection information"
-msgstr "Управување со Плагини: планирани активности"
+msgstr "Информации"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -4542,6 +4611,10 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Дански"
+
+#, fuzzy
+msgid "Correct invalid EPG data"
+msgstr "Зачувај ги поставките и податоците за EPG"
 
 msgid "Corsican"
 msgstr ""
@@ -5024,6 +5097,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -5546,8 +5622,9 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr "Информации"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -6540,7 +6617,7 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Грешка при запирање на стримот!"
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
@@ -7306,6 +7383,10 @@ msgstr "Пет"
 msgid "Friday"
 msgstr "Петок"
 
+#, fuzzy
+msgid "From"
+msgstr "Од:"
+
 msgid "From:"
 msgstr "Од:"
 
@@ -7416,6 +7497,10 @@ msgstr "Општо одложување на AC3"
 
 msgid "General PCM delay"
 msgstr "Општо одложување на PCM"
+
+#, fuzzy
+msgid "General audio delay"
+msgstr "Општо одложување на AC3"
 
 msgid "Generic"
 msgstr ""
@@ -7726,7 +7811,7 @@ msgstr "Поставки на хард диск"
 
 #, fuzzy
 msgid "Hardware information"
-msgstr "Информации за управувач на софтвер"
+msgstr "Информации"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8038,6 +8123,9 @@ msgstr "Ако е поставено на „да“, истите команд�
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Ако е избрано „Да“, вредноста на сигналот (SNR итн.) Се пресметува од API V3. Ова е стара верзија на API што сега е заменета."
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8106,6 +8194,14 @@ msgstr "Имиџ: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Сортирај според времето"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Во Стендбај по тековната програма"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -9936,6 +10032,10 @@ msgstr "N/A"
 msgid "NCam Config info"
 msgstr ""
 
+#, fuzzy
+msgid "NCam Info"
+msgstr "ECM инфо"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -10025,10 +10125,6 @@ msgstr ""
 #, fuzzy
 msgid "Ncam ECM info"
 msgstr "ECM инфо"
-
-#, fuzzy
-msgid "Ncam Info"
-msgstr "Инфо"
 
 #, fuzzy
 msgid "Ncam Info Setup"
@@ -10541,6 +10637,10 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#, fuzzy
+msgid "OSCam Info"
+msgstr "ECM инфо"
+
 msgid "OSD 3D setup"
 msgstr "OSD 3D поставување"
 
@@ -10585,9 +10685,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "принудно оневозможена"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Модел"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -10687,7 +10786,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Отворете ја избраната локација"
+msgstr "Информации"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -11818,7 +11917,7 @@ msgstr "Процес"
 
 #, fuzzy
 msgid "Processor information"
-msgstr "Информации за управувач на софтвер"
+msgstr "Информации"
 
 msgid "Progress"
 msgstr "Напредок"
@@ -12185,6 +12284,10 @@ msgstr "Поставки за снимање"
 
 msgid "Recording in progress"
 msgstr "Снимањето е во тек"
+
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Тајмерот за спиење е деактивиран."
 
 msgid "Recording type"
 msgstr "Вид на снимање"
@@ -14322,6 +14425,10 @@ msgstr "Покажи помош"
 msgid "Show media player on main menu"
 msgstr "Покажи медиа плеер на главното мени"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Покажи нумерирање на менито или плагините"
+
 msgid "Show menu or plugin numbers"
 msgstr "Покажи нумерирање на менито или плагините"
 
@@ -14484,7 +14591,7 @@ msgstr "Прикажи избор на превод"
 
 #, fuzzy
 msgid "Show system information"
-msgstr "Информации за управувач на софтвер"
+msgstr "Информации"
 
 #, fuzzy
 msgid "Show the TV player"
@@ -14698,6 +14805,9 @@ msgstr "Прескокни празни канали"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Прескокнете ја проверката на интернет-врска (оневозможува автоматско инсталирање на пакетот)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #, fuzzy
 msgid "Sleep Timer"
@@ -15869,14 +15979,6 @@ msgid "The '%s' log file contains no information."
 msgstr ""
 
 #, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"Плагинот за безжичен LAN не е инсталиран!\n"
-"Ве молам инсталирајте го."
-
-#, fuzzy
 msgid "The AutoTimer plugin is not installed."
 msgstr "Овој плагин не е инсталиран."
 
@@ -16245,6 +16347,10 @@ msgstr "Оваа опција може да биде корисна за дол�
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Поставете го општото аудио одложување на стерео звучните записи."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Поставете го општото аудио одложување на стерео звучните записи."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -16707,7 +16813,7 @@ msgstr "Информации"
 
 #, fuzzy
 msgid "Translation information"
-msgstr "Превод"
+msgstr "Информации"
 
 msgid "Translation:"
 msgstr "Превод:"
@@ -16962,6 +17068,7 @@ msgstr "Врати деинсталиција"
 msgid "Unencrypted"
 msgstr "Некриптирано"
 
+#, fuzzy
 msgid "Unexpected error while retreiving fallback tuner's timer information"
 msgstr "Неочекувана грешка при добивање на информации за тајмерот од резервниот приемник \""
 
@@ -17139,6 +17246,9 @@ msgstr "контролирана од HDMI"
 
 msgid "Use circular LNB"
 msgstr "Користете кружен LNB"
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #, fuzzy
 msgid "Use defaults"

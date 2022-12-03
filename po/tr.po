@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -950,8 +950,28 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+
+#, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] ""
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
 
 #, python-format
 msgid "%d KB"
@@ -982,6 +1002,41 @@ msgstr ""
 msgid "%d Min"
 msgid_plural "%d Mins"
 msgstr[0] ""
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d dakika"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "Ay"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "%d piksel genişliğinde"
+
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d piksel genişliğinde"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d saniye"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Yıl"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -2791,10 +2846,6 @@ msgstr ""
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Otomatik EXIF Oryantasyon Rotasyon/Çevirme"
 
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Otomatik"
-
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Otomatik bölümlere ayrılsın mı? Dakika (0=ayırma)"
 
@@ -2836,6 +2887,10 @@ msgstr "Beklemede değil"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "Kullanılamaz"
+
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Zamanlayıcı"
 
 #, fuzzy, python-format
 msgid "Autoinstalling %s"
@@ -3066,7 +3121,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Yazılım Yöneticisi bilgileri"
+msgstr "Bilgi"
 
 msgid "Bengali"
 msgstr ""
@@ -3838,6 +3893,9 @@ msgstr ""
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
 msgstr ""
 
+msgid "Choose the option to correct invalid EPG data."
+msgstr ""
+
 msgid "Choose the order in which items are displayed in Help windows"
 msgstr ""
 
@@ -4553,7 +4611,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Connection information"
-msgstr "Eklenti yönetimi aktivite bilgisi"
+msgstr "Bilgi"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -4644,6 +4702,9 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Danca"
+
+msgid "Correct invalid EPG data"
+msgstr ""
 
 msgid "Corsican"
 msgstr ""
@@ -5129,6 +5190,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -5656,8 +5720,9 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr "Bilgi"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -6654,11 +6719,11 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr ""
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
-msgstr ""
+msgstr "Yedek cihaz URL"
 
 #, python-format
 msgid ""
@@ -7424,6 +7489,10 @@ msgstr "Cuma"
 msgid "Friday"
 msgstr "Cuma"
 
+#, fuzzy
+msgid "From"
+msgstr "Gönderen:"
+
 msgid "From:"
 msgstr "Gönderen:"
 
@@ -7530,6 +7599,10 @@ msgstr "Genel AC3 gecikmesi"
 
 msgid "General PCM delay"
 msgstr "Genel PCM gecikmesi"
+
+#, fuzzy
+msgid "General audio delay"
+msgstr "Genel AC3 gecikmesi"
 
 msgid "Generic"
 msgstr ""
@@ -7850,7 +7923,7 @@ msgstr "Sabit Disk Kurulumu"
 
 #, fuzzy
 msgid "Hardware information"
-msgstr "Yazılım Yöneticisi bilgileri"
+msgstr "Bilgi"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8157,6 +8230,9 @@ msgstr ""
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr ""
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8223,6 +8299,14 @@ msgstr "Imaj: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Sıralama zamanı"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Geçerli olaydan sonra Uyku Moduna Geç"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -10053,6 +10137,10 @@ msgstr "N/A"
 msgid "NCam Config info"
 msgstr ""
 
+#, fuzzy
+msgid "NCam Info"
+msgstr "Bilgi"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -10140,10 +10228,6 @@ msgstr ""
 
 #, fuzzy
 msgid "Ncam ECM info"
-msgstr "Bilgi"
-
-#, fuzzy
-msgid "Ncam Info"
 msgstr "Bilgi"
 
 #, fuzzy
@@ -10663,6 +10747,10 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#, fuzzy
+msgid "OSCam Info"
+msgstr "Bilgi"
+
 msgid "OSD 3D setup"
 msgstr "3D OSD Ayarı"
 
@@ -10707,9 +10795,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "Devre dışı"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Tipi"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -10809,7 +10896,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Seçili konumu aç"
+msgstr "Bilgi"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -11948,7 +12035,7 @@ msgstr "İşlemler"
 
 #, fuzzy
 msgid "Processor information"
-msgstr "Yazılım Yöneticisi bilgileri"
+msgstr "Bilgi"
 
 msgid "Progress"
 msgstr "İlerleme"
@@ -12315,6 +12402,10 @@ msgstr "Kayıt Ayarları"
 
 msgid "Recording in progress"
 msgstr "Kayıt devam ediyor"
+
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Uyku zamanlayıcı kapatıldı."
 
 msgid "Recording type"
 msgstr "Kayıt tipi"
@@ -14461,6 +14552,10 @@ msgid "Show media player on main menu"
 msgstr "Ana menüde Media Player'ı gösterir"
 
 #, fuzzy
+msgid "Show menu numbers"
+msgstr "Olay bilgisi eklentilerini göster"
+
+#, fuzzy
 msgid "Show menu or plugin numbers"
 msgstr "Olay bilgisi eklentilerini göster"
 
@@ -14625,7 +14720,7 @@ msgstr "Altyazı seçimi"
 
 #, fuzzy
 msgid "Show system information"
-msgstr "Yazılım Yöneticisi bilgileri"
+msgstr "Bilgi"
 
 #, fuzzy
 msgid "Show the TV player"
@@ -14842,6 +14937,9 @@ msgstr "Boş kanalları atla"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Internet bağlantı kontrolünü atla. (otomatik paket yükleme devre dışı bırakır)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #, fuzzy
 msgid "Sleep Timer"
@@ -16030,14 +16128,6 @@ msgid "The '%s' log file contains no information."
 msgstr ""
 
 #, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"Kablosuz ağ (WLAN) eklentisi yüklenmemiş!\n"
-"Lütfen yükleyin."
-
-#, fuzzy
 msgid "The AutoTimer plugin is not installed."
 msgstr "Bu eklenti yüklü değil."
 
@@ -16408,6 +16498,10 @@ msgstr ""
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Stereo ses için genel ses gecikmesini yapılandırın."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Stereo ses için genel ses gecikmesini yapılandırın."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -16873,7 +16967,7 @@ msgstr "Bilgi"
 
 #, fuzzy
 msgid "Translation information"
-msgstr "Çeviri"
+msgstr "Bilgi"
 
 msgid "Translation:"
 msgstr "Çeviri:"
@@ -17315,6 +17409,9 @@ msgstr ""
 
 msgid "Use circular LNB"
 msgstr "Dairesel LNB kullan."
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #, fuzzy
 msgid "Use defaults"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: IMS <ims@openpli.org>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #
 msgid ""
@@ -968,8 +968,36 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, fuzzy, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] "Klíčové události"
+msgstr[1] "Klíčové události"
+msgstr[2] "Klíčové události"
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #, python-format
 msgid "%d KB"
@@ -1002,6 +1030,57 @@ msgid_plural "%d Mins"
 msgstr[0] "%d MB"
 msgstr[1] "%d MB"
 msgstr[2] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d minuta"
+msgstr[1] "%d minuty"
+msgstr[2] "%d minut"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "%d MB"
+msgstr[1] "%d MB"
+msgstr[2] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "Pixely\n"
+msgstr[1] "Pixely\n"
+msgstr[2] "Pixely\n"
+
+#
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d pixel široké"
+msgstr[1] "%d pixely široké"
+msgstr[2] "%d pixelů široké"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d sekunda"
+msgstr[1] "%d sekundy"
+msgstr[2] "%d sekund"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Rok"
+msgstr[1] "Rok"
+msgstr[2] "Rok"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -3050,11 +3129,6 @@ msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Orientace (rotace/převrácení) automaticky podle EXIF"
 
 #
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Pleťová barva"
-
-#
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Automaticky vytvořit kapitoly každých ? minut (0=žádné)"
 
@@ -3102,6 +3176,11 @@ msgstr "Neusínat"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "nedostupný"
+
+#
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Časovač"
 
 #
 #, python-format
@@ -3359,9 +3438,10 @@ msgstr "Informace"
 msgid "Benchmark for"
 msgstr "Dánsko"
 
+#
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Info správy software"
+msgstr " - info"
 
 msgid "Bengali"
 msgstr ""
@@ -3551,7 +3631,7 @@ msgstr "Datum vytvoření: "
 #
 #, fuzzy
 msgid "Build information for"
-msgstr "Informace"
+msgstr " - info"
 
 msgid "Bulgaria"
 msgstr "Bulharsko"
@@ -4225,6 +4305,9 @@ msgid "Choose the location where the EPG data will be stored when your %s %s is 
 msgstr ""
 
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
+msgstr ""
+
+msgid "Choose the option to correct invalid EPG data."
 msgstr ""
 
 msgid "Choose the order in which items are displayed in Help windows"
@@ -5004,7 +5087,7 @@ msgstr "Připojené překódování, omezení - bez PiP!"
 #
 #, fuzzy
 msgid "Connection information"
-msgstr "Informace o činnosti správce pluginů"
+msgstr " - info"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -5105,6 +5188,10 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Dánsky"
+
+#, fuzzy
+msgid "Correct invalid EPG data"
+msgstr "Uložit nastavení a EPG data"
 
 msgid "Corsican"
 msgstr ""
@@ -5391,7 +5478,7 @@ msgstr "Pozice"
 #
 #, fuzzy
 msgid "DVB information"
-msgstr "Informace"
+msgstr " - info"
 
 #
 msgid "DVB subtitle black transparency"
@@ -5635,6 +5722,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -6240,8 +6330,10 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr " - info"
 
 #
 #, fuzzy
@@ -7200,7 +7292,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Enigma2 information"
-msgstr "Informace"
+msgstr " - info"
 
 #, fuzzy
 msgid "Enigma2 revision"
@@ -7369,7 +7461,7 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Chyba při zrušení streamu!"
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
@@ -8223,6 +8315,10 @@ msgstr "Pá"
 msgid "Friday"
 msgstr "Pátek"
 
+#, fuzzy
+msgid "From"
+msgstr "Z:"
+
 msgid "From:"
 msgstr "Z:"
 
@@ -8342,6 +8438,11 @@ msgstr "Hlavní bluetooth audio zpoždění"
 msgid "General PCM delay"
 msgstr "Hlavní PCM zpoždění"
 
+#
+#, fuzzy
+msgid "General audio delay"
+msgstr "Hlavní bluetooth audio zpoždění"
+
 msgid "Generic"
 msgstr ""
 
@@ -8367,7 +8468,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Geolocation information cannot be retrieved, please try again later."
-msgstr "V současné době není možné získat aktuální seznam změn - prosím, zkuste to později"
+msgstr "V současné době není možné získat aktuální seznam změn - zkuste to, prosím, později."
 
 #
 #, fuzzy
@@ -8676,9 +8777,10 @@ msgstr "Pevný disk"
 msgid "Harddisk Setup"
 msgstr "Nastavení pevného disku"
 
+#
 #, fuzzy
 msgid "Hardware information"
-msgstr "Info správy software"
+msgstr " - info"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8703,7 +8805,7 @@ msgstr ""
 #
 #, fuzzy
 msgid "Help Screen Information"
-msgstr "Informace"
+msgstr " - info"
 
 msgid "Helps setting up your antenna"
 msgstr "Pomáhá nastavit Vaši anténu"
@@ -8932,9 +9034,8 @@ msgstr ""
 msgid "INS"
 msgstr "INS"
 
-#, fuzzy
 msgid "IP"
-msgstr "I"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP adresa"
@@ -9009,6 +9110,9 @@ msgstr "Při přechodu do hlubokého spánku se budou posílat stejné příkazy
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Pokud je nastaveno 'Ano', hodnoty signálu (SNR, atd.) budou počítány z API V3. To je stará verze rozhraní API, která byla již nahrazena."
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -9079,6 +9183,15 @@ msgstr "Image: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Setřídit dle času"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Standby po této události"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -10104,7 +10217,7 @@ msgstr "Přejít na zadané datum/čas"
 #
 #, fuzzy
 msgid "Local information"
-msgstr "Informace"
+msgstr " - info"
 
 #
 msgid "Local network"
@@ -10192,7 +10305,7 @@ msgstr "  Kontextová menu"
 #
 #, fuzzy
 msgid "Location information"
-msgstr "Informace"
+msgstr " - info"
 
 #
 #, fuzzy
@@ -11154,6 +11267,11 @@ msgstr "N/A"
 msgid "NCam Config info"
 msgstr ""
 
+#
+#, fuzzy
+msgid "NCam Info"
+msgstr "ECM Info"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -11258,11 +11376,6 @@ msgstr ""
 #, fuzzy
 msgid "Ncam ECM info"
 msgstr "ECM Info"
-
-#
-#, fuzzy
-msgid "Ncam Info"
-msgstr "Informace"
 
 #, fuzzy
 msgid "Ncam Info Setup"
@@ -11847,6 +11960,11 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#
+#, fuzzy
+msgid "OSCam Info"
+msgstr "ECM Info"
+
 msgid "OSD 3D setup"
 msgstr "OSD 3D nastavení"
 
@@ -11895,9 +12013,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "Zakázat vynucení"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Моdel"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -12007,9 +12124,10 @@ msgstr "Informace"
 msgid "Open Vision Commit Info Setup"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Otevřít zvolené umístění"
+msgstr " - info"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -13312,9 +13430,10 @@ msgstr "Aktualizace seznamu doplňků"
 msgid "Process"
 msgstr "Provést"
 
+#
 #, fuzzy
 msgid "Processor information"
-msgstr "Info správy software"
+msgstr " - info"
 
 #
 msgid "Progress"
@@ -13726,6 +13845,10 @@ msgstr "Nastavení nahrávání"
 #
 msgid "Recording in progress"
 msgstr "Probíhá nahrávání"
+
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Časovač vypnutí byl zrušen."
 
 msgid "Recording type"
 msgstr "Typ nahrávání"
@@ -16133,6 +16256,10 @@ msgstr "Nápověda"
 msgid "Show media player on main menu"
 msgstr "Zobrazovat Mediaplayer v hlavním menu"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Zobrazovat čísla v menu nebo pluginech"
+
 msgid "Show menu or plugin numbers"
 msgstr "Zobrazovat čísla v menu nebo pluginech"
 
@@ -16304,9 +16431,10 @@ msgstr "Zobrazit výběr podprogramů"
 msgid "Show subtitle selection"
 msgstr "Nastavení titulků"
 
+#
 #, fuzzy
 msgid "Show system information"
-msgstr "Info správy software"
+msgstr " - info"
 
 #
 #, fuzzy
@@ -16557,6 +16685,9 @@ msgstr "Přeskakovat prázdné programy"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Přeskočit test internetového připojení (zakáže automatickou instalaci balíčků)."
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #
 #, fuzzy
@@ -17647,7 +17778,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®8.8.2022"
+"®23.10.2022"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -17873,19 +18004,11 @@ msgstr ""
 
 #, fuzzy, python-format
 msgid "The %s commit logs can't be retrieved, please try again later."
-msgstr "V současné době není možné získat aktuální seznam změn - prosím, zkuste to později"
+msgstr "V současné době není možné získat aktuální seznam změn - zkuste to, prosím, později."
 
 #, python-format
 msgid "The '%s' log file contains no information."
 msgstr ""
-
-#, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"Plugin pro bezdrátovou LAN není nainstalován!\n"
-"Nainstalujte plugin."
 
 #
 #, fuzzy
@@ -18278,6 +18401,10 @@ msgstr "Nastavení může být užitečné pro dlouhé HDMI kabely."
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Nastavuje hlavní zpoždění zvuku pro bluetooth reproduktory."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Nastavuje hlavní zpoždění zvuku pro bluetooth reproduktory."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -18808,7 +18935,7 @@ msgstr "Informace"
 #
 #, fuzzy
 msgid "Translation information"
-msgstr "O překladu"
+msgstr " - info"
 
 #
 msgid "Translation:"
@@ -19097,6 +19224,7 @@ msgstr "Ponechat"
 msgid "Unencrypted"
 msgstr "Nezabezpečeno"
 
+#, fuzzy
 msgid "Unexpected error while retreiving fallback tuner's timer information"
 msgstr "Neočekávaná chyba při načítání informací o časovači záložního tuneru."
 
@@ -19294,6 +19422,9 @@ msgstr "použít nejlepší / řízeno pomocí HDMI"
 
 msgid "Use circular LNB"
 msgstr "Použít kruhový LNB"
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #
 #, fuzzy

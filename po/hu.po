@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: 2021-11-03 15:10+0100\n"
 "Last-Translator: mcfly82\n"
 "Language-Team: mcfly82 & wysless\n"
@@ -944,8 +944,32 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] "Gomb események"
+msgstr[1] "Gomb események"
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #, python-format
 msgid "%d KB"
@@ -977,6 +1001,48 @@ msgid "%d Min"
 msgid_plural "%d Mins"
 msgstr[0] "%d MB"
 msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d perc"
+msgstr[1] "%d perc"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "%d MB"
+msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "Pixel\n"
+msgstr[1] "Pixel\n"
+
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d pixel széles"
+msgstr[1] "%d pixel széles"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d másodperc"
+msgstr[1] "%d másodperc"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Év"
+msgstr[1] "Év"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -2798,10 +2864,6 @@ msgstr "Automatikus DiSEqC"
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Automatikus EXIF elrendezés forgatása/tükrözése"
 
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Auto-flash"
-
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Automatikus fejezet készítés ? percenként (0=soha)"
 
@@ -2842,6 +2904,10 @@ msgstr "Nincs kikapcsolás"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "nem elérhető"
+
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Időzítő"
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -3070,7 +3136,7 @@ msgstr "Dánia"
 
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Szoftverkezeló információ"
+msgstr "Információk"
 
 msgid "Bengali"
 msgstr ""
@@ -3864,6 +3930,9 @@ msgstr ""
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
 msgstr ""
 
+msgid "Choose the option to correct invalid EPG data."
+msgstr ""
+
 msgid "Choose the order in which items are displayed in Help windows"
 msgstr ""
 
@@ -4568,7 +4637,7 @@ msgstr "Csatlakoztatott transzkódolás limit - nincs kép a képben!"
 
 #, fuzzy
 msgid "Connection information"
-msgstr "Bővítménykezelő - végrehajtási információk"
+msgstr "Információk"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -4660,6 +4729,10 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Dán"
+
+#, fuzzy
+msgid "Correct invalid EPG data"
+msgstr "Beállítások és EPG adat mentése"
 
 msgid "Corsican"
 msgstr ""
@@ -5140,6 +5213,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -5662,8 +5738,9 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr "Információk"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -6650,7 +6727,7 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "A stream leállítása sikertelen!"
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
@@ -7416,6 +7493,10 @@ msgstr "Pén"
 msgid "Friday"
 msgstr "Péntek"
 
+#, fuzzy
+msgid "From"
+msgstr "Innen:"
+
 msgid "From:"
 msgstr "Innen:"
 
@@ -7526,6 +7607,10 @@ msgstr "Általános AC3 késleltetés"
 
 msgid "General PCM delay"
 msgstr "Általános PCM késleltetés"
+
+#, fuzzy
+msgid "General audio delay"
+msgstr "Általános AC3 késleltetés"
 
 msgid "Generic"
 msgstr ""
@@ -7836,7 +7921,7 @@ msgstr "Háttértár beállítások"
 
 #, fuzzy
 msgid "Hardware information"
-msgstr "Szoftverkezeló információ"
+msgstr "Információk"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8148,6 +8233,9 @@ msgstr "Ha 'igen'-re állítja, ugyanazokat a parancsokat küldi a TV-készülé
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "'Igen' beállítás esetén a jelszint értékek (SNR, stb.) az API V3-ból lesznek kiszámítva. Ez egy régebbi API verzió, amely már elavult."
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8216,6 +8304,14 @@ msgstr "Image: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Rendez: Idő"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Készenlét az aktuális műsor végén"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -10047,6 +10143,10 @@ msgstr "N/A"
 msgid "NCam Config info"
 msgstr ""
 
+#, fuzzy
+msgid "NCam Info"
+msgstr "ECM információ"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -10136,10 +10236,6 @@ msgstr ""
 #, fuzzy
 msgid "Ncam ECM info"
 msgstr "ECM információ"
-
-#, fuzzy
-msgid "Ncam Info"
-msgstr "Információ"
 
 #, fuzzy
 msgid "Ncam Info Setup"
@@ -10654,6 +10750,10 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#, fuzzy
+msgid "OSCam Info"
+msgstr "ECM információ"
+
 msgid "OSD 3D setup"
 msgstr "OSD 3D beállítások"
 
@@ -10698,9 +10798,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "kényszerített tiltás"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Modell"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -10800,7 +10899,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Helyválasztó megnyitása"
+msgstr "Információk"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -11932,7 +12031,7 @@ msgstr "Futtatás"
 
 #, fuzzy
 msgid "Processor information"
-msgstr "Szoftverkezeló információ"
+msgstr "Információk"
 
 msgid "Progress"
 msgstr "Folyamat"
@@ -12299,6 +12398,10 @@ msgstr "Felvétel beállítások"
 
 msgid "Recording in progress"
 msgstr "Felvétel folyamatban"
+
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Az elalvásidőzítő ki lett kapcsolva."
 
 msgid "Recording type"
 msgstr "Felvétel típusa"
@@ -14435,6 +14538,10 @@ msgstr "Súgó megjelenítése"
 msgid "Show media player on main menu"
 msgstr "Médialejátszó megjelenítése a főmenüben"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Menü vagy bővítmény számának mutatása"
+
 msgid "Show menu or plugin numbers"
 msgstr "Menü vagy bővítmény számának mutatása"
 
@@ -14596,7 +14703,7 @@ msgstr "Felirat kiválasztásának megjelenítése"
 
 #, fuzzy
 msgid "Show system information"
-msgstr "Szoftverkezeló információ"
+msgstr "Információk"
 
 #, fuzzy
 msgid "Show the TV player"
@@ -14810,6 +14917,9 @@ msgstr "Üres csatornák átugrása"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Internet-kapcsolat ellenőrzésének mellőzése (automatikus csomag-telepítés is tiltva lesz)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #, fuzzy
 msgid "Sleep Timer"
@@ -15989,14 +16099,6 @@ msgid "The '%s' log file contains no information."
 msgstr ""
 
 #, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"A vezeték nélküli bővítmény nincs telepítve!\n"
-"Kérem, telepítse."
-
-#, fuzzy
 msgid "The AutoTimer plugin is not installed."
 msgstr "A bővítmény nincs telepítve."
 
@@ -16372,6 +16474,10 @@ msgstr "Ez a lehetőség hosszú HDMI kábel használata esetén javasolt."
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "A sztereó hangsávok általános késleltetése."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "A sztereó hangsávok általános késleltetése."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -16834,7 +16940,7 @@ msgstr "Információk"
 
 #, fuzzy
 msgid "Translation information"
-msgstr "Fordítás"
+msgstr "Információk"
 
 msgid "Translation:"
 msgstr "Fordítás:"
@@ -17089,6 +17195,7 @@ msgstr "Eltávolítás visszavonása"
 msgid "Unencrypted"
 msgstr "Kódolatlan"
 
+#, fuzzy
 msgid "Unexpected error while retreiving fallback tuner's timer information"
 msgstr "Váratlan hiba történt a tartalék tuner időzítők letöltésekor"
 
@@ -17266,6 +17373,9 @@ msgstr "HDMI által vezérelve"
 
 msgid "Use circular LNB"
 msgstr "Körpoláros fej használata"
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #, fuzzy
 msgid "Use defaults"

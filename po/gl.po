@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: 2021-10-16 21:21+0200\n"
 "Last-Translator: Luis A. Martínez <luis.a.martinez@gmail.com>\n"
 "Language-Team: LAMS\n"
@@ -969,8 +969,32 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] "Eventos clave"
+msgstr[1] "Eventos clave"
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #, python-format
 msgid "%d KB"
@@ -1002,6 +1026,49 @@ msgid "%d Min"
 msgid_plural "%d Mins"
 msgstr[0] "%d MB"
 msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d minuto"
+msgstr[1] "%d minutos"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "%d MB"
+msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "Píxeles\n"
+msgstr[1] "Píxeles\n"
+
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d píxel de ancho"
+msgstr[1] "%d píxeles de ancho"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d segundo"
+msgstr[1] "%d segundos"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Ano"
+msgstr[1] "Ano"
 
 #
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
@@ -3000,11 +3067,6 @@ msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Orientación de rotación/volteo automática de EXIF"
 
 #
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Cor carne automática"
-
-#
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Dividir automaticamente en capítulos cada ? minutos (0=nunca)"
 
@@ -3051,6 +3113,11 @@ msgstr "Sen repouso"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "non dispoñible"
+
+#
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Temporizador"
 
 #
 #, python-format
@@ -3305,9 +3372,10 @@ msgstr "Información"
 msgid "Benchmark for"
 msgstr "Dinamarca"
 
+#
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Información do xestor de software"
+msgstr "Información"
 
 msgid "Bengali"
 msgstr ""
@@ -4163,6 +4231,9 @@ msgstr ""
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
 msgstr ""
 
+msgid "Choose the option to correct invalid EPG data."
+msgstr ""
+
 msgid "Choose the order in which items are displayed in Help windows"
 msgstr ""
 
@@ -4927,7 +4998,7 @@ msgstr "Transcodificación conectada, límite - sen PiP!"
 #
 #, fuzzy
 msgid "Connection information"
-msgstr "Información da actividade do xestor de complementos"
+msgstr "Información"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -5029,6 +5100,10 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Danés"
+
+#, fuzzy
+msgid "Correct invalid EPG data"
+msgstr "Gardar a configuración e os datos EPG"
 
 msgid "Corsican"
 msgstr ""
@@ -5551,6 +5626,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -6135,8 +6213,10 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr "Información"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -7232,7 +7312,7 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Erro deter fluxo!"
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
@@ -8073,6 +8153,10 @@ msgstr "Ven"
 msgid "Friday"
 msgstr "Venres"
 
+#, fuzzy
+msgid "From"
+msgstr "De:"
+
 msgid "From:"
 msgstr "De:"
 
@@ -8190,6 +8274,11 @@ msgstr "Retardo Xeral AC3"
 #
 msgid "General PCM delay"
 msgstr "Retardo Xeral PCM"
+
+#
+#, fuzzy
+msgid "General audio delay"
+msgstr "Retardo Xeral AC3"
 
 msgid "Generic"
 msgstr ""
@@ -8523,9 +8612,10 @@ msgstr "Disco duro"
 msgid "Harddisk Setup"
 msgstr "Configuración do disco duro"
 
+#
 #, fuzzy
 msgid "Hardware information"
-msgstr "Información do xestor de software"
+msgstr "Información"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8853,6 +8943,9 @@ msgstr "Se o estableces a ‘si’, envíanse ao TV os mesmos comandos dos event
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Se o estableces a ‘si’, os valores de sinal (SNR, etc.) calcularanse a partir da API V3. Esta é unha versión antiga da API que ven de ser substituída."
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8923,6 +9016,15 @@ msgstr "Imaxe: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Ordenar por data"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Repouso despois do evento actual"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -10964,6 +11066,10 @@ msgstr "N/A"
 msgid "NCam Config info"
 msgstr ""
 
+#, fuzzy
+msgid "NCam Info"
+msgstr "Información de ECM"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -11066,11 +11172,6 @@ msgstr ""
 #, fuzzy
 msgid "Ncam ECM info"
 msgstr "Información de ECM"
-
-#
-#, fuzzy
-msgid "Ncam Info"
-msgstr "Info"
 
 #, fuzzy
 msgid "Ncam Info Setup"
@@ -11640,6 +11741,10 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#, fuzzy
+msgid "OSCam Info"
+msgstr "Información de ECM"
+
 msgid "OSD 3D setup"
 msgstr "Configuración OSD 3D"
 
@@ -11686,9 +11791,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "forzar desactivación"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Modelo"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -11793,9 +11897,10 @@ msgstr "Info"
 msgid "Open Vision Commit Info Setup"
 msgstr ""
 
+#
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Abrir a localización seleccionada"
+msgstr "Información"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -13063,9 +13168,10 @@ msgstr "Actualización de lista de paquetes"
 msgid "Process"
 msgstr "Procesar"
 
+#
 #, fuzzy
 msgid "Processor information"
-msgstr "Información do xestor de software"
+msgstr "Información"
 
 msgid "Progress"
 msgstr "Progreso"
@@ -13467,6 +13573,11 @@ msgstr "Configuración da gravación"
 
 msgid "Recording in progress"
 msgstr "Gravación en progreso"
+
+#
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Cancelouse o temporizador de repouso."
 
 msgid "Recording type"
 msgstr "Tipo de gravación"
@@ -15823,6 +15934,10 @@ msgstr "Amosar axuda"
 msgid "Show media player on main menu"
 msgstr "Amosar reprodutor multimedia no menú principal"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Amosar números de menú ou complemento"
+
 msgid "Show menu or plugin numbers"
 msgstr "Amosar números de menú ou complemento"
 
@@ -15992,9 +16107,10 @@ msgstr "Amosar selección de subservizos"
 msgid "Show subtitle selection"
 msgstr "Amosar selección de subtítulos"
 
+#
 #, fuzzy
 msgid "Show system information"
-msgstr "Información do xestor de software"
+msgstr "Información"
 
 #
 #, fuzzy
@@ -16239,6 +16355,9 @@ msgstr "Omitir servizos baleiros"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Omitir comprobación de conexión a internet (desactiva a instalación automática de paquetes)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #
 #, fuzzy
@@ -17532,15 +17651,6 @@ msgstr ""
 
 #
 #, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"O complemento de rede sen fíos non está instalado!\n"
-"Por favor, instálao."
-
-#
-#, fuzzy
 msgid "The AutoTimer plugin is not installed."
 msgstr "Este complemento non está instalado."
 
@@ -17940,6 +18050,10 @@ msgstr "Esta opción pode ser útil para cables HDMI longos."
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Configurar o retardo das pistas de son estéreo."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Configurar o retardo das pistas de son estéreo."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -18465,7 +18579,7 @@ msgstr "Información"
 #
 #, fuzzy
 msgid "Translation information"
-msgstr "Tradución"
+msgstr "Información"
 
 #
 msgid "Translation:"
@@ -18747,6 +18861,7 @@ msgstr "Desfacer desinstalación"
 msgid "Unencrypted"
 msgstr "Sen cifrar"
 
+#, fuzzy
 msgid "Unexpected error while retreiving fallback tuner's timer information"
 msgstr "Erro inesperado ao recuperar a información do sintonizador de reserva"
 
@@ -18939,6 +19054,9 @@ msgstr "controlado por HDMI"
 
 msgid "Use circular LNB"
 msgstr "Usar LNB circular"
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #, fuzzy
 msgid "Use defaults"

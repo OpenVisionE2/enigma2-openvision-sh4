@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
-"PO-Revision-Date: 2022-07-06 01:01+0300\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
+"PO-Revision-Date: 2022-10-23 15:37+0300\n"
 "Last-Translator: Audronis <adga45@gmail.com>\n"
 "Language-Team: Adga (C) <adga45@gmail.com>\n"
 "Language: lt_LT\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.2\n"
 
 msgid ""
 "\n"
@@ -946,8 +946,36 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, fuzzy, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] "Pagrindiniai įvykiai"
+msgstr[1] "Pagrindiniai įvykiai"
+msgstr[2] "Pagrindiniai įvykiai"
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #, python-format
 msgid "%d KB"
@@ -980,6 +1008,55 @@ msgid_plural "%d Mins"
 msgstr[0] "%d MB"
 msgstr[1] "%d MB"
 msgstr[2] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d minutė"
+msgstr[1] "%d minutės"
+msgstr[2] "%d minučių"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "%d MB"
+msgstr[1] "%d MB"
+msgstr[2] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "Pikseliai\n"
+msgstr[1] "Pikseliai\n"
+msgstr[2] "Pikseliai\n"
+
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d pikselio pločio"
+msgstr[1] "%d pikselių pločio"
+msgstr[2] "%d pikselių pločio"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d sekundė"
+msgstr[1] "%d sekundės"
+msgstr[2] "%d sekundžių"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Metai"
+msgstr[1] "Metai"
+msgstr[2] "Metai"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -2821,10 +2898,6 @@ msgstr "Automatinis DiSEqC"
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Automatinis EXIF ​​orientacijos pasukimas/keitimas"
 
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Automatinis minkštinimas"
-
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Automatinis skyrių skaidymas kas ? minutę (0=niekada)"
 
@@ -2865,6 +2938,10 @@ msgstr "Nebudėti"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "nepasiekiamas"
+
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Laikmatis"
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -3093,7 +3170,7 @@ msgstr "Danija"
 
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Programinės įrangos valdymo informacija"
+msgstr " -informacija"
 
 msgid "Bengali"
 msgstr ""
@@ -3269,7 +3346,7 @@ msgstr "Sukūrimo data: "
 
 #, fuzzy
 msgid "Build information for"
-msgstr "Informacija"
+msgstr " -informacija"
 
 msgid "Bulgaria"
 msgstr "Bulgarija"
@@ -3884,6 +3961,9 @@ msgid "Choose the location where the EPG data will be stored when your %s %s is 
 msgstr ""
 
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
+msgstr ""
+
+msgid "Choose the option to correct invalid EPG data."
 msgstr ""
 
 msgid "Choose the order in which items are displayed in Help windows"
@@ -4589,7 +4669,7 @@ msgstr "Pajungtas perkodavimas. PiP negalimas!"
 
 #, fuzzy
 msgid "Connection information"
-msgstr "Priedų tvarkyklės aktyvumo informacija"
+msgstr " -informacija"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -4683,6 +4763,10 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Danų"
+
+#, fuzzy
+msgid "Correct invalid EPG data"
+msgstr "Išsaugokite parametrus ir EPG duomenis"
 
 msgid "Corsican"
 msgstr ""
@@ -4933,7 +5017,7 @@ msgstr "Subtitrų vieta"
 
 #, fuzzy
 msgid "DVB information"
-msgstr "Informacija"
+msgstr " -informacija"
 
 msgid "DVB subtitle black transparency"
 msgstr "DVB subtitrų juodos spalvos skaidrumas"
@@ -5164,6 +5248,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -5684,8 +5771,9 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr " -informacija"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -6517,7 +6605,7 @@ msgstr "Enigma derinimo lygis: %d\n"
 
 #, fuzzy
 msgid "Enigma2 information"
-msgstr "Informacija"
+msgstr " -informacija"
 
 #, fuzzy
 msgid "Enigma2 revision"
@@ -6676,7 +6764,7 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Srauto stabdymo klaida!"
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
@@ -7436,6 +7524,10 @@ msgstr "Pen"
 msgid "Friday"
 msgstr "Penktadienis"
 
+#, fuzzy
+msgid "From"
+msgstr "Nuo:"
+
 msgid "From:"
 msgstr "Nuo:"
 
@@ -7546,6 +7638,10 @@ msgstr "Bendras Bluetooth garso vėlavimas"
 msgid "General PCM delay"
 msgstr "Bendra PCM delsa"
 
+#, fuzzy
+msgid "General audio delay"
+msgstr "Bendras Bluetooth garso vėlavimas"
+
 msgid "Generic"
 msgstr ""
 
@@ -7568,7 +7664,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Geolocation information cannot be retrieved, please try again later."
-msgstr "Šiuo metu žurnalo parsiųsti nepavyko. Pamėginkite dar kartą vėliau"
+msgstr "Šiuo metu įsipareigojimų žurnalo negalima gauti - bandykite vėliau dar kartą."
 
 #, fuzzy
 msgid "Geolocation is not available."
@@ -7854,7 +7950,7 @@ msgstr "HDD valdymas"
 
 #, fuzzy
 msgid "Hardware information"
-msgstr "Programinės įrangos valdymo informacija"
+msgstr " -informacija"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -7878,7 +7974,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Help Screen Information"
-msgstr "Informacija"
+msgstr " -informacija"
 
 msgid "Helps setting up your antenna"
 msgstr "Padės jums suderinti anteną"
@@ -8165,6 +8261,9 @@ msgstr "Jei nustatyta į 'taip', į televizorių bus siunčiamos tos pačios kom
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Jei nustatyta \"taip\", signalo reikšmės (SNR ir t.t.) bus apskaičiuotos pagal API V3. Tai senoji API versija, kuri dabar buvo pakeista."
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8233,6 +8332,14 @@ msgstr "Atvaizdas: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Rūšiuoti pagal laiką"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Po šio įvykio pereiti į budėjimo režimą"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -9139,7 +9246,7 @@ msgstr "Į konkrečią datą/laiką"
 
 #, fuzzy
 msgid "Local information"
-msgstr "Informacija"
+msgstr " -informacija"
 
 msgid "Local network"
 msgstr "Vietinis tinklas"
@@ -9216,7 +9323,7 @@ msgstr "Apsaugoti kontekstinį meniu"
 
 #, fuzzy
 msgid "Location information"
-msgstr "Informacija"
+msgstr " -informacija"
 
 #, fuzzy
 msgid "LocationBox Actions"
@@ -10065,6 +10172,10 @@ msgstr "N/G"
 msgid "NCam Config info"
 msgstr ""
 
+#, fuzzy
+msgid "NCam Info"
+msgstr "ECM informacija"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -10154,10 +10265,6 @@ msgstr ""
 #, fuzzy
 msgid "Ncam ECM info"
 msgstr "ECM informacija"
-
-#, fuzzy
-msgid "Ncam Info"
-msgstr "Informacija"
 
 #, fuzzy
 msgid "Ncam Info Setup"
@@ -10670,6 +10777,10 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#, fuzzy
+msgid "OSCam Info"
+msgstr "ECM informacija"
+
 msgid "OSD 3D setup"
 msgstr "OSD 3D sąranka"
 
@@ -10714,9 +10825,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "priverstinai išjungta"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Modelis"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -10816,7 +10926,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Atidaryti vietos pasirinkimą"
+msgstr " -informacija"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -10923,7 +11033,7 @@ msgstr "LED būsenos veikimas laukimo režimu"
 
 #, fuzzy
 msgid "Operating LED status while running."
-msgstr "LED būsena veikimo metu."
+msgstr "LED būsena veikimo metu"
 
 msgid "Opkg"
 msgstr "Opkg"
@@ -11948,7 +12058,7 @@ msgstr "Procesas"
 
 #, fuzzy
 msgid "Processor information"
-msgstr "Programinės įrangos valdymo informacija"
+msgstr " -informacija"
 
 msgid "Progress"
 msgstr "Eiga"
@@ -12315,6 +12425,10 @@ msgstr "Įrašymo valdymas"
 
 msgid "Recording in progress"
 msgstr "Vyksta įrašymas"
+
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "Budėjimo laikmatis jau išjungtas."
 
 msgid "Recording type"
 msgstr "Įrašymo tipas"
@@ -14451,6 +14565,10 @@ msgstr "Rodyti pagalbą"
 msgid "Show media player on main menu"
 msgstr "Media grotuvą rodyti pagrindiniame meniu"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Rodyti meniu arba priedų numerius"
+
 msgid "Show menu or plugin numbers"
 msgstr "Rodyti meniu arba priedų numerius"
 
@@ -14612,7 +14730,7 @@ msgstr "Rodyti subtitrų pasirinkimą"
 
 #, fuzzy
 msgid "Show system information"
-msgstr "Programinės įrangos valdymo informacija"
+msgstr " -informacija"
 
 #, fuzzy
 msgid "Show the TV player"
@@ -14826,6 +14944,9 @@ msgstr "Praleisti tuščius kanalus"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Netikrinti interneto ryšio (išjungs automatinį paketų diegimą)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #, fuzzy
 msgid "Sleep Timer"
@@ -15782,7 +15903,7 @@ msgstr "Išsamiau apie priedą: "
 msgid "TRANSLATOR_INFO"
 msgstr ""
 "P&C Adga, adga45@gmail.com\n"
-"Pasvalys, 2022-07-06 versija"
+"Pasvalys, 2022-10-23 versija"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS failas per didelis 1 lygio ISO9660!"
@@ -15992,19 +16113,11 @@ msgstr ""
 
 #, fuzzy, python-format
 msgid "The %s commit logs can't be retrieved, please try again later."
-msgstr "Šiuo metu žurnalo parsiųsti nepavyko. Pamėginkite dar kartą vėliau"
+msgstr "Šiuo metu įsipareigojimų žurnalo negalima gauti - bandykite vėliau dar kartą."
 
 #, python-format
 msgid "The '%s' log file contains no information."
 msgstr ""
-
-#, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"Bevielio tinklo programa neįdiegta!\n"
-"Prašome įdiegti tai."
 
 #, fuzzy
 msgid "The AutoTimer plugin is not installed."
@@ -16382,6 +16495,10 @@ msgstr "Ši parinktis gali būti naudinga ilgiems HDMI laidams."
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Ši parinktis konfigūruoja bendrą bluetooth garsiakalbių garso uždelsimą."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Ši parinktis konfigūruoja bendrą bluetooth garsiakalbių garso uždelsimą."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -16844,7 +16961,7 @@ msgstr "Informacija"
 
 #, fuzzy
 msgid "Translation information"
-msgstr "Vertimas"
+msgstr " -informacija"
 
 msgid "Translation:"
 msgstr "Vertimas:"
@@ -17099,8 +17216,9 @@ msgstr "Anuliuoti išdiegimą"
 msgid "Unencrypted"
 msgstr "Nekoduotas"
 
+#, fuzzy
 msgid "Unexpected error while retreiving fallback tuner's timer information"
-msgstr "Netikėta klaida, nuskaitant atsarginio imtuvo laikmačio informaciją"
+msgstr "Netikėta klaida gaunant atsarginio imtuvo laikmačio informaciją"
 
 msgid "UnhandledKey"
 msgstr "Nepalaikomas mygtukas"
@@ -17277,6 +17395,9 @@ msgstr "naudoti geriausią / valdoma HDMI"
 
 msgid "Use circular LNB"
 msgstr "Naudoti apskritiminę LNB"
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #, fuzzy
 msgid "Use defaults"

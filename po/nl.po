@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 10:32+0330\n"
+"POT-Creation-Date: 2022-12-03 17:56+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: PLiteam <translators@openpli.org>\n"
@@ -945,8 +945,32 @@ msgid "%d DMIPS with %d cores"
 msgstr ""
 
 #, python-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d Digit"
+msgid_plural "%d Digits"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Event"
+msgid_plural "%d Events"
+msgstr[0] "Toetsaanslagen"
+msgstr[1] "Toetsaanslagen"
+
+#, python-format
 msgid "%d GB"
 msgstr ""
+
+#, python-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #, python-format
 msgid "%d KB"
@@ -978,6 +1002,48 @@ msgid "%d Min"
 msgid_plural "%d Mins"
 msgstr[0] "%d MB"
 msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] "%d minuut"
+msgstr[1] "%d minuten"
+
+#, fuzzy, python-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] "%d MB"
+msgstr[1] "%d MB"
+
+#, fuzzy, python-format
+msgid "%d Pixel"
+msgid_plural "%d Pixels"
+msgstr[0] "Pixels\n"
+msgstr[1] "Pixels\n"
+
+#, fuzzy, python-format
+msgid "%d Pixel wide"
+msgid_plural "%d Pixels wide"
+msgstr[0] "%d pixelbreedte"
+msgstr[1] "%d pixels breed"
+
+#, fuzzy, python-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] "%d seconde"
+msgstr[1] "%d seconden"
+
+#, python-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] "Jaar"
+msgstr[1] "Jaar"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -2807,10 +2873,6 @@ msgstr "Auto DiSEqC"
 msgid "Auto EXIF Orientation rotation/flipping"
 msgstr "Automatisch EXIF Oriëntatie rotatie/spiegeling"
 
-#, fuzzy
-msgid "Auto Timers"
-msgstr "Automatische huidskleurtint"
-
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Automatisch hoofdstuk splitsen elke ? min (0=nooit)"
 
@@ -2851,6 +2913,10 @@ msgstr "Geen stand-by"
 #, fuzzy
 msgid "Auto(not available)"
 msgstr "niet beschikbaar"
+
+#, fuzzy
+msgid "AutoTimer"
+msgstr "Timer"
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -3079,7 +3145,7 @@ msgstr "Denemarken"
 
 #, fuzzy
 msgid "Benchmark information"
-msgstr "Softwarebeheerinformatie"
+msgstr "Informatie"
 
 msgid "Bengali"
 msgstr ""
@@ -3881,6 +3947,9 @@ msgid "Choose the location where the EPG data will be stored when your %s %s is 
 msgstr ""
 
 msgid "Choose the name of the file that holds the EPG data when your %s %s is shut down. This can be handy to differentiate between several boxes."
+msgstr ""
+
+msgid "Choose the option to correct invalid EPG data."
 msgstr ""
 
 msgid "Choose the order in which items are displayed in Help windows"
@@ -4777,7 +4846,7 @@ msgstr "Verbonden transcoding, beperking - geen PIP!"
 
 #, fuzzy
 msgid "Connection information"
-msgstr "Pluginmanager achtergrondinformatie"
+msgstr "Informatie"
 
 msgid ""
 "Connection using supplied FTP parameters failed.\n"
@@ -4871,6 +4940,10 @@ msgstr ""
 #, fuzzy
 msgid "Cornish"
 msgstr "Deens"
+
+#, fuzzy
+msgid "Correct invalid EPG data"
+msgstr "Sla de instellingen plus EPG data op"
 
 msgid "Corsican"
 msgstr ""
@@ -5352,6 +5425,9 @@ msgid "Dayname Year/MM/D"
 msgstr ""
 
 msgid "Dayname Year/MM/DD"
+msgstr ""
+
+msgid "Debug"
 msgstr ""
 
 #, fuzzy
@@ -5872,8 +5948,9 @@ msgstr ""
 msgid "Display next system information screen"
 msgstr ""
 
+#, fuzzy
 msgid "Display oscam information."
-msgstr ""
+msgstr "Informatie"
 
 #, fuzzy
 msgid "Display previous commit log"
@@ -6877,7 +6954,7 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Fout stop de stream!"
 
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
@@ -7641,6 +7718,10 @@ msgstr "Vr"
 msgid "Friday"
 msgstr "Vrijdag"
 
+#, fuzzy
+msgid "From"
+msgstr "Van:"
+
 msgid "From:"
 msgstr "Van:"
 
@@ -7750,6 +7831,10 @@ msgstr "Algehele bluetooth geluids-vertraging"
 
 msgid "General PCM delay"
 msgstr "Algehele PCM vertraging"
+
+#, fuzzy
+msgid "General audio delay"
+msgstr "Algehele bluetooth geluids-vertraging"
 
 msgid "Generic"
 msgstr ""
@@ -8059,7 +8144,7 @@ msgstr "Instellen harde schijf"
 
 #, fuzzy
 msgid "Hardware information"
-msgstr "Softwarebeheerinformatie"
+msgstr "Informatie"
 
 #, fuzzy
 msgid "Hardware serial"
@@ -8373,6 +8458,9 @@ msgstr "Indien geactiveerd, dan zal een identiek signaal verstuurd worden by 'de
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Indien geactiveerd zullen de waardes (SNR, etc) worden berekend vanaf de API V3. Dit is de oude API versie die nu is vervangen."
 
+msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
+msgstr ""
+
 msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
 msgstr ""
 
@@ -8445,6 +8533,14 @@ msgstr "Image: "
 
 msgid "Immediately restart selected devices."
 msgstr ""
+
+#, fuzzy
+msgid "Import AutoTimer"
+msgstr "Sorteertijd"
+
+#, fuzzy
+msgid "Import autotimer in current event"
+msgstr "Stand-by na de huidige actie"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
@@ -10274,6 +10370,10 @@ msgstr "0.0 "
 msgid "NCam Config info"
 msgstr ""
 
+#, fuzzy
+msgid "NCam Info"
+msgstr "ECM info"
+
 msgid "NCam Info Main Menu"
 msgstr ""
 
@@ -10363,10 +10463,6 @@ msgstr ""
 #, fuzzy
 msgid "Ncam ECM info"
 msgstr "ECM info"
-
-#, fuzzy
-msgid "Ncam Info"
-msgstr "Informatie"
 
 #, fuzzy
 msgid "Ncam Info Setup"
@@ -10886,6 +10982,10 @@ msgstr "ONID"
 msgid "OPKG clean mode"
 msgstr ""
 
+#, fuzzy
+msgid "OSCam Info"
+msgstr "ECM info"
+
 msgid "OSD 3D setup"
 msgstr "OSD 3D instelling"
 
@@ -10930,9 +11030,8 @@ msgstr ""
 msgid "OScam webif disabled"
 msgstr "geforceerd uitgeschakeld"
 
-#, fuzzy
-msgid "OTT Model"
-msgstr "Model"
+msgid "OTT"
+msgstr ""
 
 msgid "OUT"
 msgstr ""
@@ -11032,7 +11131,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Open Vision information"
-msgstr "Open selectie locatie"
+msgstr "Informatie"
 
 msgid "Open Vision revision check"
 msgstr ""
@@ -12189,7 +12288,7 @@ msgstr "Proces"
 
 #, fuzzy
 msgid "Processor information"
-msgstr "Softwarebeheerinformatie"
+msgstr "Informatie"
 
 msgid "Progress"
 msgstr "Voortgang"
@@ -12556,6 +12655,10 @@ msgstr "Instellingen t.b.v. de opnames"
 
 msgid "Recording in progress"
 msgstr "Opnemen bezig"
+
+#, fuzzy
+msgid "Recording time has been set."
+msgstr "De slaaptimer is uitgeschakeld."
 
 msgid "Recording type"
 msgstr "Opnamesoort"
@@ -14707,6 +14810,10 @@ msgstr "Toon de help"
 msgid "Show media player on main menu"
 msgstr "Mediaplayer op hoofdmenu tonen"
 
+#, fuzzy
+msgid "Show menu numbers"
+msgstr "Toon telnummers in menu en plugins overzichten"
+
 msgid "Show menu or plugin numbers"
 msgstr "Toon telnummers in menu en plugins overzichten"
 
@@ -14868,7 +14975,7 @@ msgstr "Toon de selectie van de ondertitels"
 
 #, fuzzy
 msgid "Show system information"
-msgstr "Softwarebeheerinformatie"
+msgstr "Informatie"
 
 #, fuzzy
 msgid "Show the TV player"
@@ -15088,6 +15195,9 @@ msgstr "Sla de lege kanalen over"
 
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr "Sla deze over. (De automatische installatie van pakketten vervalt)"
+
+msgid "Skip jumping to live TV while timeshifting with plugins"
+msgstr ""
 
 #, fuzzy
 msgid "Sleep Timer"
@@ -16269,12 +16379,6 @@ msgid "The '%s' log file contains no information."
 msgstr ""
 
 #, fuzzy
-msgid ""
-"The AutoTimer plugin is not installed!\n"
-"Please install it."
-msgstr "De WiFi plugin is niet geïnstalleerd. Deze plugin eerst installeren aub."
-
-#, fuzzy
 msgid "The AutoTimer plugin is not installed."
 msgstr "Deze plugin is niet geïnstalleerd."
 
@@ -16665,6 +16769,10 @@ msgstr "Deze optie is vooral praktisch voor lange HDMI kabels omdat door het geb
 
 #, fuzzy
 msgid "This option configures the general audio delay for BT speakers."
+msgstr "Met deze optie stelt u de algemene audiovertraging in voor bluetooth-luidsprekers."
+
+#, fuzzy
+msgid "This option configures the general audio delay."
 msgstr "Met deze optie stelt u de algemene audiovertraging in voor bluetooth-luidsprekers."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -17127,7 +17235,7 @@ msgstr "Informatie"
 
 #, fuzzy
 msgid "Translation information"
-msgstr "Vertaling"
+msgstr "Informatie"
 
 msgid "Translation:"
 msgstr "Vertaling:"
@@ -17382,6 +17490,7 @@ msgstr "Herstel de de-installatie"
 msgid "Unencrypted"
 msgstr "Ongecodeerd"
 
+#, fuzzy
 msgid "Unexpected error while retreiving fallback tuner's timer information"
 msgstr "Onverwachte fout tijdens het ophalen van de timerinformatie van de Fallback tuner"
 
@@ -17562,6 +17671,9 @@ msgstr "gebruik de beste / gecontroleerd door HDMI"
 
 msgid "Use circular LNB"
 msgstr "Gebruik de circulaire LNB"
+
+msgid "Use config file /etc/\"inetd.conf\" in mode IPv6 compatible with IPv4."
+msgstr ""
 
 #, fuzzy
 msgid "Use defaults"

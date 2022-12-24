@@ -35,14 +35,12 @@ from Screens.TimeDateInput import TimeDateInput
 from Screens.UnhandledKey import UnhandledKey
 from ServiceReference import ServiceReference, isPlayableForCur
 from Tools.ASCIItranslit import legacyEncode
-from Tools.Directories import fileExists, getRecordingFilename, moveFiles, isPluginInstalled
+from Tools.Directories import fileExists, fileReadLines, fileReadLinesISO, getRecordingFilename, moveFiles, isPluginInstalled
 from Tools.Notifications import AddNotificationWithCallback, AddPopup, current_notifications, lock, notificationAdded, notifications, RemovePopup, AddNotification
 from keyids import KEYFLAGS, KEYIDS, KEYIDNAMES
 from Components.Console import Console
 from enigma import eTimer, eServiceCenter, eDVBServicePMTHandler, iServiceInformation, iPlayableService, eServiceReference, eEPGCache, eActionMap, getDesktop, eDVBDB
 from time import time, localtime, strftime
-import os
-from os import sys
 from os.path import isfile
 from bisect import insort
 import itertools
@@ -152,13 +150,14 @@ class subservice:
 
 def reload_subservice_groupslist(force=False):
 	if subservice.groupslist is None or force:
+		groupedservices = "/usr/share/enigma2/groupedservices" if isfile("/usr/share/enigma2/groupedservices") else "/etc/enigma2/groupedservices"
 		try:
-			groupedservices = "/etc/enigma2/groupedservices"
-			if not isfile(groupedservices):
-				groupedservices = "/usr/share/enigma2/groupedservices"
-			subservice.groupslist = [list(g) for k, g in itertools.groupby([line.split('#')[0].strip() for line in open(groupedservices).readlines()], lambda x:not x) if not k]
+			subservice.groupslist = [list(g) for k, g in itertools.groupby([line.split('#')[0].strip() for line in fileReadLines(groupedservices, source=MODULE_NAME)], lambda x:not x) if not k]
 		except:
-			subservice.groupslist = []
+			try:
+				subservice.groupslist = [list(g) for k, g in itertools.groupby([line.split('#')[0].strip() for line in fileReadLinesISO(groupedservices, source=MODULE_NAME)], lambda x:not x) if not k]
+			except:
+				subservice.groupslist = []
 
 
 reload_subservice_groupslist()

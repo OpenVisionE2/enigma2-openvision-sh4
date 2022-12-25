@@ -1722,6 +1722,8 @@ class ScanSimple(ConfigListScreen, Screen, CableTransponderSearchSupport, Terres
 			"menu": self.doCloseRecursive,
 			"red": self.keyCancel,
 			"green": self.keyGo,
+			"left": self.keyLeft,
+			"right": self.keyRight
 		}, -2)
 
 		self.session.postScanService = session.nav.getCurrentlyPlayingServiceOrGroup()

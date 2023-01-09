@@ -56,6 +56,7 @@
  * 20210922 Audioniek       Atemio AM 520 HD added.
  * 20211105 Audioniek       Opticum HD 9600 Mini added.
  * 20220127 Audioniek       Opticum HD 9600 Prima added.
+ * 20221104 Audioniek       Homecast HC8100 series added.
  *
  ***************************************************************************/
 #include <stdarg.h>
@@ -195,6 +196,8 @@ evfd::evfd()
 	vfd_type = 20;
 #elif defined (ENABLE_OPT9600MINI)
 	vfd_type = 21;
+#elif defined (ENABLE_HC8100)
+	vfd_type = 22;
 #else
 	vfd_type = -1;
 #endif
@@ -431,7 +434,8 @@ void *start_loop(void *arg)
 	 || defined (ENABLE_HL101) \
 	 || defined (ENABLE_VIP1_V1) \
 	 || defined (ENABLE_VIP1_V2) \
-	 || defined (ENABLE_VIP2)
+	 || defined (ENABLE_VIP2) \
+	 || defined (ENABLE_HC8100)
 	// Modulate brightness 3 times
 	for (int vloop = 0; vloop < 3 * 14; vloop++)
 	{
@@ -543,7 +547,8 @@ void *start_loop(void *arg)
 	 && !defined (ENABLE_OPT9600MINI) \
 	 && !defined (ENABLE_OPT9600PRIMA) \
 	 && !defined (ENABLE_ATEMIO520) \
-	 && !defined (ENABLE_ATEMIO530)
+	 && !defined (ENABLE_ATEMIO530) \
+	 && !defined (ENABLE_HC8100)
 	// Set all blocked icons
 	for (int id = 0x10; id < 0x20; id++)
 	{
@@ -588,7 +593,8 @@ void *start_loop(void *arg)
  || defined (ENABLE_OPT9600MINI) \
  || defined (ENABLE_OPT9600PRIMA) \
  || defined (ENABLE_ATEMIO520) \
- || defined (ENABLE_ATEMIO530)
+ || defined (ENABLE_ATEMIO530) \
+ || defined (ENABLE_HC8100)
 void evfd::vfd_write_string_scrollText(char *text)
 {
 	return;

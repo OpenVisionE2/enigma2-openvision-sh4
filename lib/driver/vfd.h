@@ -30,7 +30,8 @@
 	#define VFDLENGTH 11
 #elif defined (ENABLE_FORTIS_HDBOX) \
    || defined (ENABLE_ATEVIO7500) \
-   || defined (ENABLE_CUBEREVO)
+   || defined (ENABLE_CUBEREVO) \
+   || defined (ENABLE_HC8100)
 	#define VFDLENGTH 12
 #elif defined (ENABLE_CUBEREVO_9500HD)
 	#define VFDLENGTH 13

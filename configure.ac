@@ -105,20 +105,20 @@ if test "$enable_cuberevo" = "yes"; then
 	AC_DEFINE(ENABLE_CUBEREVO, 1, [enable cuberevo stuff])
 fi
 
-AC_ARG_ENABLE(cuberevo_2000hd,
-	[  --enable-cuberevo_2000hd            enable cuberevo_2000hd stuff],
-	[AC_DEFINE(ENABLE_CUBEREVO_2000HD, 1, [enable cuberevo_2000hd stuff])])
-AM_CONDITIONAL(ENABLE_CUBEREVO_2000HD, test "$enable_cuberevo_2000hd" = "yes")
-if test "$enable_cuberevo_2000hd" = "yes"; then
-	AC_DEFINE(ENABLE_CUBEREVO_2000HD, 1, [enable cuberevo_2000hd stuff])
-fi
-
 AC_ARG_ENABLE(cuberevo_250hd,
 	[  --enable-cuberevo_250hd            enable cuberevo_250hd stuff],
 	[AC_DEFINE(ENABLE_CUBEREVO_250HD, 1, [enable cuberevo_250hd stuff])])
 AM_CONDITIONAL(ENABLE_CUBEREVO_250HD, test "$enable_cuberevo_250hd" = "yes")
 if test "$enable_cuberevo_250hd" = "yes"; then
 	AC_DEFINE(ENABLE_CUBEREVO_250HD, 1, [enable cuberevo_250hd stuff])
+fi
+
+AC_ARG_ENABLE(cuberevo_2000hd,
+	[  --enable-cuberevo_2000hd            enable cuberevo_2000hd stuff],
+	[AC_DEFINE(ENABLE_CUBEREVO_2000HD, 1, [enable cuberevo_2000hd stuff])])
+AM_CONDITIONAL(ENABLE_CUBEREVO_2000HD, test "$enable_cuberevo_2000hd" = "yes")
+if test "$enable_cuberevo_2000hd" = "yes"; then
+	AC_DEFINE(ENABLE_CUBEREVO_2000HD, 1, [enable cuberevo_2000hd stuff])
 fi
 
 AC_ARG_ENABLE(cuberevo_3000hd,
@@ -193,36 +193,20 @@ if test "$enable_fortis_hdbox" = "yes"; then
 	AC_DEFINE(ENABLE_FORTIS_HDBOX, 1, [enable fortis_hdbox stuff])
 fi
 
+AC_ARG_ENABLE(hc8100,
+	[  --enable-hc8100            enable hc8100 stuff],
+	[AC_DEFINE(ENABLE_HC8100, 1, [enable hc8100 stuff])])
+AM_CONDITIONAL(ENABLE_HC8100, test "$enable_hc8100" = "yes")
+if test "$enable_hc8100" = "yes"; then
+	AC_DEFINE(ENABLE_HC8100, 1, [enable hc8100 stuff])
+fi
+
 AC_ARG_ENABLE(hl101,
 	[  --enable-hl101            enable hl101 stuff],
 	[AC_DEFINE(ENABLE_HL101, 1, [enable hl101 stuff])])
 AM_CONDITIONAL(ENABLE_HL101, test "$enable_hl101" = "yes")
 if test "$enable_hl101" = "yes"; then
 	AC_DEFINE(ENABLE_HL101, 1, [enable hl101 stuff])
-fi
-
-AC_ARG_ENABLE(opt9600,
-	[  --enable-opt9600            enable opt9600 stuff],
-	[AC_DEFINE(ENABLE_OPT9600, 1, [enable opt9600 stuff])])
-AM_CONDITIONAL(ENABLE_OPT9600, test "$enable_opt9600" = "yes")
-if test "$enable_opt9600" = "yes"; then
-	AC_DEFINE(ENABLE_OPT9600, 1, [enable opt9600 stuff])
-fi
-
-AC_ARG_ENABLE(opt9600mini,
-	[  --enable-opt9600mini        enable opt9600mini stuff],
-	[AC_DEFINE(ENABLE_OPT9600MINI, 1, [enable opt9600mini stuff])])
-AM_CONDITIONAL(ENABLE_OPT9600MINI, test "$enable_opt9600mini" = "yes")
-if test "$enable_opt9600mini" = "yes"; then
-	AC_DEFINE(ENABLE_OPT9600MINI, 1, [enable opt9600mini stuff])
-fi
-
-AC_ARG_ENABLE(opt9600prima,
-	[  --enable-opt9600prima        enable opt9600prima stuff],
-	[AC_DEFINE(ENABLE_OPT9600PRIMA, 1, [enable opt9600prima stuff])])
-AM_CONDITIONAL(ENABLE_OPT9600PRIMA, test "$enable_opt9600prima" = "yes")
-if test "$enable_opt9600prima" = "yes"; then
-	AC_DEFINE(ENABLE_OPT9600PRIMA, 1, [enable opt9600prima stuff])
 fi
 
 AC_ARG_ENABLE(hs7110,
@@ -303,6 +287,30 @@ AC_ARG_ENABLE(octagon1008,
 AM_CONDITIONAL(ENABLE_OCTAGON1008, test "$enable_octagon1008" = "yes")
 if test "$enable_octagon1008" = "yes"; then
 	AC_DEFINE(ENABLE_OCTAGON1008, 1, [enable octagon1008 stuff])
+fi
+
+AC_ARG_ENABLE(opt9600,
+	[  --enable-opt9600            enable opt9600 stuff],
+	[AC_DEFINE(ENABLE_OPT9600, 1, [enable opt9600 stuff])])
+AM_CONDITIONAL(ENABLE_OPT9600, test "$enable_opt9600" = "yes")
+if test "$enable_opt9600" = "yes"; then
+	AC_DEFINE(ENABLE_OPT9600, 1, [enable opt9600 stuff])
+fi
+
+AC_ARG_ENABLE(opt9600mini,
+	[  --enable-opt9600mini        enable opt9600mini stuff],
+	[AC_DEFINE(ENABLE_OPT9600MINI, 1, [enable opt9600mini stuff])])
+AM_CONDITIONAL(ENABLE_OPT9600MINI, test "$enable_opt9600mini" = "yes")
+if test "$enable_opt9600mini" = "yes"; then
+	AC_DEFINE(ENABLE_OPT9600MINI, 1, [enable opt9600mini stuff])
+fi
+
+AC_ARG_ENABLE(opt9600prima,
+	[  --enable-opt9600prima        enable opt9600prima stuff],
+	[AC_DEFINE(ENABLE_OPT9600PRIMA, 1, [enable opt9600prima stuff])])
+AM_CONDITIONAL(ENABLE_OPT9600PRIMA, test "$enable_opt9600prima" = "yes")
+if test "$enable_opt9600prima" = "yes"; then
+	AC_DEFINE(ENABLE_OPT9600PRIMA, 1, [enable opt9600prima stuff])
 fi
 
 AC_ARG_ENABLE(pace7241,

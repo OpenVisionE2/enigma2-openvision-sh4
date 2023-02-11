@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from Tools.Profile import profile
 from enigma import eServiceReference
-
+from Tools.Directories import isPluginInstalled
 # workaround for required config entry dependencies.
 import Screens.MovieSelection
 from Screens.Screen import Screen
@@ -56,10 +56,12 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 			"showTv": (self.showTv, _("Show the TV player")),
 			"toggleTvRadio": (self.toggleTvRadio, _("Toggle the TV and the radio player"))
 		}, prio=2, description=_("Live TV Actions"))
-
+		if isPluginInstalled("AutoTimer"):
+			from Components.Label import Label
+			self["key_yellow"] = Label()
+			self["key_yellow"].setText(_("AutoTimer"))
 		self.radioTV = 0
 		self.allowPiP = True
-
 		for x in HelpableScreen, \
 				InfoBarBase, InfoBarShowHide, \
 				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, \

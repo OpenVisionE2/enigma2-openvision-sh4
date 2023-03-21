@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import os
+from os import listdir, remove
+from os.path import basename, dirname, splitext, isfile, split
 import time
 from enigma import iPlayableService, eTimer, eServiceCenter, iServiceInformation, ePicLoad
 from ServiceReference import ServiceReference
@@ -521,7 +522,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 				if r is None:
 					return
 				text = r.getPath()
-				self["currenttext"].setText(os.path.basename(text))
+				self["currenttext"].setText(basename(text))
 
 		if self.currList == "playlist":
 			t = self.playlist.getSelection()
@@ -615,7 +616,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 		if choice[1] == "copydir":
 			self.copyDirectory(self.filelist.getSelection()[0])
 		elif choice[1] == "copyfiles":
-			self.copyDirectory(os.path.dirname(self.filelist.getSelection()[0].getPath()) + "/", recursive=False)
+			self.copyDirectory(dirname(self.filelist.getSelection()[0].getPath()) + "/", recursive=False)
 		elif choice[1] == "playlist":
 			self.switchToPlayList()
 		elif choice[1] == "filelist":
@@ -724,7 +725,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 		listpath = []
 		playlistdir = resolveFilename(SCOPE_PLAYLIST)
 		try:
-			for i in os.listdir(playlistdir):
+			for i in listdir(playlistdir):
 				listpath.append((i, playlistdir + i))
 		except IOError as e:
 			print("[MediaPlayer] Error while scanning subdirs ", e)
@@ -766,7 +767,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 	def deleteConfirmed(self, confirmed):
 		if confirmed:
 			try:
-				os.remove(self.delname)
+				remove(self.delname)
 			except OSError as e:
 				print("[MediaPlayer] delete failed:", e)
 				self.session.open(MessageBox, _("Delete failed!"), MessageBox.TYPE_ERROR)
@@ -927,7 +928,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 					self.copyDirectory(sel[0])
 				else:
 					# add files to playlist
-					self.copyDirectory(os.path.dirname(sel[0].getPath()) + "/", recursive=False)
+					self.copyDirectory(dirname(sel[0].getPath()) + "/", recursive=False)
 			if len(self.playlist) > 0:
 				self.changeEntry(0)
 
@@ -944,7 +945,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 				idx = self.playlist.getCurrentIndex()
 				currref = self.playlist.getServiceRefList()[idx]
 				text = self.getIdentifier(currref)
-				self.ext = os.path.splitext(text)[1].lower()
+				self.ext = splitext(text)[1].lower()
 				text = ">" + text
 				# FIXME: the information if the service contains video (and we should hide our window) should com from the service instead
 				if self.ext not in AUDIO_EXTENSIONS and not self.isAudioCD:
@@ -973,7 +974,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 				idx = self.playlist.getCurrentIndex()
 				currref = self.playlist.getServiceRefList()[idx]
 				text = currref.getPath()
-				ext = os.path.splitext(text)[1].lower()
+				ext = splitext(text)[1].lower()
 				if self.ext not in AUDIO_EXTENSIONS and not self.isAudioCD:
 					self.hideAndInfoBar()
 				else:
@@ -1028,7 +1029,7 @@ class MediaPlayer(Screen, InfoBarBase, InfoBarScreenSaver, InfoBarSeek, InfoBarA
 	def hotplugCB(self, dev, media_state):
 		if media_state == "audiocd" or media_state == "audiocdadd":
 			self.cdAudioTrackFiles = []
-			if os.path.isfile('/media/audiocd/cdplaylist.cdpls'):
+			if isfile('/media/audiocd/cdplaylist.cdpls'):
 				list = open("/media/audiocd/cdplaylist.cdpls")
 				if list:
 					self.isAudioCD = True
@@ -1218,7 +1219,7 @@ def filescan_open(list, session, **kwargs):
 
 def audioCD_open(list, session, **kwargs):
 	from enigma import eServiceReference
-	if os.path.isfile('/media/audiocd/cdplaylist.cdpls'):
+	if isfile('/media/audiocd/cdplaylist.cdpls'):
 		list = open("/media/audiocd/cdplaylist.cdpls")
 	else:
 		# to do : adding msgbox to inform user about failure of opening audiocd.
@@ -1237,7 +1238,7 @@ def audioCD_open(list, session, **kwargs):
 
 def audioCD_open_mn(session, **kwargs):
 	from enigma import eServiceReference
-	if os.path.isfile('/media/audiocd/cdplaylist.cdpls'):
+	if isfile('/media/audiocd/cdplaylist.cdpls'):
 		list = open("/media/audiocd/cdplaylist.cdpls")
 	else:
 		# to do : adding msgbox to inform user about failure of opening audiocd.
@@ -1266,7 +1267,7 @@ def movielist_open(list, session, **kwargs):
 	else:
 		stype = 4097
 	if InfoBar.instance:
-		path = os.path.split(f.path)[0]
+		path = split(f.path)[0]
 		if not path.endswith('/'):
 			path += '/'
 		config.movielist.last_videodir.value = path
@@ -1279,7 +1280,7 @@ def audiocdscan(menuid, **kwargs):
 	except Exception as e:
 		print("[Mediaplayer.plugin] no hotplug support", e)
 		return []
-	if menuid == "mainmenu" and AudiocdAdded() and os.path.isfile('/media/audiocd/cdplaylist.cdpls'):
+	if menuid == "mainmenu" and AudiocdAdded() and isfile('/media/audiocd/cdplaylist.cdpls'):
 		return [(_("Play audio-CD..."), audioCD_open_mn, "play_cd", 45)]
 	else:
 		return []

@@ -2,7 +2,6 @@
 from Components.config import config, ConfigSelection, ConfigSubDict, ConfigYesNo
 from Components.SystemInfo import BoxInfo
 from Tools.CList import CList
-from os import path
 
 has_scart = BoxInfo.getItem("scart")
 has_yuv = BoxInfo.getItem("yuv")

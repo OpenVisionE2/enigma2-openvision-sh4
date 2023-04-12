@@ -288,6 +288,8 @@ SystemInfo["HasScart"] = BoxInfo.getItem("scart")
 SystemInfo["HasSVideo"] = BoxInfo.getItem("svideo")
 SystemInfo["HasComposite"] = BoxInfo.getItem("rca")
 SystemInfo["HasOfflineDecoding"] = True
+SystemInfo["hasKexec"] = fileContains("/proc/cmdline", "kexec=1")
+SystemInfo["canKexec"] = False
 SystemInfo["MultiBootStartupDevice"] = getMultiBootStartupDevice()
 SystemInfo["canMode12"] = False
 SystemInfo["canMultiBoot"] = False

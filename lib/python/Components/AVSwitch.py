@@ -192,24 +192,14 @@ def InitAVSwitch():
 		config.av.bypass_edid_checking = ConfigNothing()
 
 	if BoxInfo.getItem("HasColorspace"):
-		if BoxInfo.getItem("HasColorspaceSimple"):
-			choices = [
-				("Edid(Auto)", _("Auto")),
-				("Hdmi_Rgb", _("RGB")),
-				("444", _("YCbCr444")),
-				("422", _("YCbCr422")),
-				("420", _("YCbCr420"))
-			]
-			default = "Edid(Auto)"
-		else:
-			choices = [
-				("auto", _("Auto")),
-				("rgb", _("RGB")),
-				("420", "420"),
-				("422", "422"),
-				("444", "444")
-			]
-			default = "auto"
+		choices = [
+			("auto", _("Auto")),
+			("rgb", _("RGB")),
+			("420", "420"),
+			("422", "422"),
+			("444", "444")
+		]
+		default = "auto"
 
 		def setHDMIColorspace(configElement):
 			open(BoxInfo.getItem("HasColorspace"), "w").write(configElement.value)

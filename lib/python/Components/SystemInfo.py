@@ -291,10 +291,9 @@ SystemInfo["HasOfflineDecoding"] = True
 SystemInfo["hasKexec"] = fileContains("/proc/cmdline", "kexec=1")
 SystemInfo["canKexec"] = False
 SystemInfo["MultiBootStartupDevice"] = getMultiBootStartupDevice()
-SystemInfo["canMode12"] = False
-SystemInfo["canMultiBoot"] = False
-SystemInfo["canDualBoot"] = False
-SystemInfo["canFlashWithOfgwrite"] = True
+SystemInfo["canMode12"] = "%s_4.boxmode" % model in cmdline and cmdline["%s_4.boxmode" % model] in ("1", "12") and "192M"
+SystemInfo["canMultiBoot"] = getMultiBootSlots()
+SystemInfo["canDualBoot"] = fileCheck("/dev/block/by-name/flag")
 SystemInfo["BootDevice"] = getBootdevice()
 SystemInfo["FbcTunerPowerAlwaysOn"] = False
 SystemInfo["HasPhysicalLoopthrough"] = ["Vuplus DVB-S NIM(AVL2108)", "GIGA DVB-S2 NIM (Internal)"]
@@ -318,9 +317,6 @@ SystemInfo["StandbyState"] = False
 SystemInfo["HasH9SD"] = False
 SystemInfo["HasSDnomount"] = False
 SystemInfo["canBackupEMC"] = False
-SystemInfo["RFmodSupport"] = model == "spark7162"
-SystemInfo["LCDSupport"] = False
-SystemInfo["LEDSupport"] = False
 SystemInfo["FCC"] = False
 SystemInfo["CanProc"] = BoxInfo.getItem("MMCEMMC")
 SystemInfo["CanAACTranscode"] = fileCheck("/proc/stb/audio/aac_transcode_choices")
@@ -348,9 +344,11 @@ SystemInfo["HasColorimetryChoices"] = fileCheck("/proc/stb/video/hdmi_colorimetr
 SystemInfo["HasColorimetry"] = fileCheck("/proc/stb/video/hdmi_colorimetry")
 SystemInfo["HasColorspaceChoices"] = fileCheck("/proc/stb/video/hdmi_colorspace_choices")
 SystemInfo["HasColorspace"] = fileCheck("/proc/stb/video/hdmi_colorspace")
-SystemInfo["HasColorspaceSimple"] = False
 SystemInfo["HasHDMIpreemphasis"] = fileCheck("/proc/stb/hdmi/preemphasis")
 SystemInfo["HasHdrType"] = fileCheck("/proc/stb/video/hdmi_hdrtype")
 SystemInfo["HasMultichannelPCM"] = fileCheck("/proc/stb/audio/multichannel_pcm")
 SystemInfo["HDMIAudioSource"] = fileCheck("/proc/stb/hdmi/audio_source")
 SystemInfo["HDRSupport"] = fileCheck("/proc/stb/hdmi/hlg_support_choices") or fileCheck("/proc/stb/hdmi/hlg_support")
+SystemInfo["RFmodSupport"] = model == "spark7162"
+SystemInfo["LCDSupport"] = False
+SystemInfo["LEDSupport"] = False

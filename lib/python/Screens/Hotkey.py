@@ -18,6 +18,8 @@ from Components.Label import Label
 from os import listdir
 from os.path import isdir, isfile
 
+HasSoftcamInstalled = BoxInfo.getItem("HasSoftcamInstalled")
+
 
 class hotkey:
 	functions = None
@@ -215,7 +217,7 @@ def getHotkeyFunctions():
 	if BoxInfo.getItem("HasHDMI-CEC"):
 		hotkey.functions.append((_("HDMI-CEC Source Active"), "Infobar/SourceActiveHdmiCec", "InfoBar"))
 		hotkey.functions.append((_("HDMI-CEC Source Inactive"), "Infobar/SourceInactiveHdmiCec", "InfoBar"))
-	if BoxInfo.getItem("HasSoftcamInstalled"):
+	if HasSoftcamInstalled:
 		hotkey.functions.append((_("Softcam Setup"), "SoftcamSetup", "Setup"))
 	hotkey.functions.append((_("HotKey Setup"), "Module/Screens.Hotkey/HotkeySetup", "Setup"))
 	hotkey.functions.append((_("Software update"), "Module/Screens.SoftwareUpdate/SoftwareUpdate", "Setup"))
@@ -697,7 +699,7 @@ class InfoBarHotkey():
 					print("[Hotkey] error during executing module %s, screen %s, %s" % (selected[1], selected[2], e))
 					import traceback
 					traceback.print_exc()
-			elif selected[0] == "SoftcamSetup" and BoxInfo.getItem("HasSoftcamInstalled"):
+			elif selected[0] == "SoftcamSetup" and HasSoftcamInstalled:
 				from Screens.SoftcamSetup import SoftcamSetup
 				self.session.open(SoftcamSetup)
 			elif selected[0] == "Setup":

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OBH enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-03 17:56+0330\n"
+"POT-Creation-Date: 2023-04-27 15:34+0330\n"
 "PO-Revision-Date: 2019-04-12 12:36+0300\n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -18,7 +18,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-" Do you want to switch to Android ?"
+" Do you want to switch to Android?"
 msgstr "هل تريد تشغيل الديفيدي الموجود فى السواقه؟"
 
 msgid ""
@@ -100,7 +100,7 @@ msgstr "التشفير:"
 
 #, fuzzy
 msgid "  Link mode:"
-msgstr "وضع الاختبار"
+msgstr "تثبيت الوحدة"
 
 #, fuzzy
 msgid "  Mode:"
@@ -1417,6 +1417,20 @@ msgstr ""
 msgid "%s"
 msgstr "CH%s"
 
+#, python-format
+msgid ""
+"%s\n"
+"\n"
+"If the DNS of other servers are still kept in the DHCP Router, to get the DNS from your Router, reboot receiver."
+msgstr ""
+
+#, python-format
+msgid ""
+"%s\n"
+"\n"
+"You can use the DNS provided by other servers in Static IP Router."
+msgstr ""
+
 #, fuzzy, python-format
 msgid ""
 "%s\n"
@@ -1451,6 +1465,16 @@ msgstr ""
 msgid "%s MHz"
 msgstr ""
 
+#, fuzzy, python-format
+msgid ""
+"%s connected successfully.\n"
+"Playable files found."
+msgstr "تم تغيير الرقم السري بنجاح."
+
+#, fuzzy, python-format
+msgid "%s connected successfully. No playable files on this medium found!"
+msgstr "لا يوجد ملفات للعرض على هذا الوسيط !"
+
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
 msgid "%s is no longer used. Should it be deleted?"
@@ -1473,11 +1497,11 @@ msgid "%s%s(Default: %s)"
 msgstr ""
 
 #, python-format
-msgid "%s: %s Free:%s Used:%s (%s%%)"
+msgid "%s: %s Free: %s Used: %s (%s%%)"
 msgstr ""
 
 #, python-format
-msgid "%s: %s Used:%s Free:%s"
+msgid "%s: %s Used: %s Free: %s"
 msgstr ""
 
 #, python-format
@@ -1492,16 +1516,32 @@ msgstr "التحديثات المتوفرة."
 msgid "%s?"
 msgstr ""
 
-#, fuzzy, python-format
-msgid "'%s' %d MB little space available"
-msgstr "التحديثات المتوفرة."
+#, python-format
+msgid ""
+"'%s' Storage device free size %d GB.\n"
+"%s"
+msgstr ""
 
 #, fuzzy, python-format
 msgid "'%s' contains %d file(s) and %d sub-directories.\n"
 msgstr "المجلد %s غير موجود."
 
+#, fuzzy, python-format
+msgid ""
+"'%s' does not exist.\n"
+"%s"
+msgstr "المجلد %s غير موجود."
+
 #, python-format
-msgid "'%s'= Internal Flash. It is not a storage device"
+msgid ""
+"'%s' is Internal Flash. It is not a storage device.\n"
+"%s"
+msgstr ""
+
+#, python-format
+msgid ""
+"'%s' not writeable.\n"
+"%s"
 msgstr ""
 
 msgid "'Handle standby from TV' has a higher priority than 'Handle input from TV'."
@@ -1510,6 +1550,10 @@ msgstr ""
 #, fuzzy
 msgid "( All readers)"
 msgstr "جميع الاعمار"
+
+#, python-format
+msgid "(Attention! There will be a restart after %d crashes.)"
+msgstr ""
 
 #, fuzzy
 msgid "(Radio)"
@@ -1596,13 +1640,6 @@ msgstr ""
 
 msgid "-9"
 msgstr ""
-
-msgid "-NO SERVICE\n"
-msgstr "-لا توجد قناة\n"
-
-#, python-format
-msgid "-SERVICE ERROR:%d\n"
-msgstr "-خطا في الخدمة:%d\n"
 
 #, fuzzy
 msgctxt "Hotkey help separator"
@@ -1931,7 +1968,7 @@ msgstr ""
 
 #, fuzzy
 msgid "540 (default)"
-msgstr "الإفتراضي"
+msgstr "تعيين افتراضي"
 
 msgid "55, 0, 50, 50"
 msgstr ""
@@ -2011,6 +2048,9 @@ msgstr ""
 msgid ":"
 msgstr ""
 
+msgid "< PREV NEXT >  Move"
+msgstr ""
+
 msgid "<Current movielist location>"
 msgstr "<موقع قائمة الافلام الحاليه>"
 
@@ -2022,9 +2062,6 @@ msgstr "<مكان المؤقت الأخير>"
 
 msgid "<unknown>"
 msgstr "<مجهول>"
-
-msgid "=NO STREAM\n"
-msgstr "= لا يوجد قنوات تدفق\n"
 
 #, python-format
 msgid "?%s-recursive?"
@@ -2049,6 +2086,10 @@ msgstr ""
 #, python-format
 msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
 msgstr "تم تعديل ملف التكوين ( %s) منذ تثبيته. هل تريد الاحتفاظ بتعديلاتك ؟"
+
+#, python-format
+msgid "A crash log was %s created in '%s'"
+msgstr ""
 
 msgid "A file from media is in use!"
 msgstr ""
@@ -2251,7 +2292,7 @@ msgstr "تفعيل البث الهجين [المفتاح الأحمر]"
 
 #, fuzzy
 msgid "Activate IPv6 configuration"
-msgstr "تنشيط التشكيل الحالي"
+msgstr "تنشيط تشكيل محول الشبكة"
 
 msgid "Activate Keymap now?"
 msgstr ""
@@ -2262,8 +2303,9 @@ msgstr "تفعيل صورة داخل صورة"
 msgid "Activate a way to send individual or specific internal HDMI-CEC commands from the command line."
 msgstr ""
 
+#, fuzzy
 msgid "Activate current configuration"
-msgstr "تنشيط التشكيل الحالي"
+msgstr "تنشيط تشكيل محول الشبكة"
 
 msgid "Activate network settings"
 msgstr "تفعيل إعدادات الشبكة"
@@ -2299,6 +2341,10 @@ msgstr "إضافة"
 msgid "Add / Delete bookmark"
 msgstr "إضافة علامة مرجعية"
 
+#, python-format
+msgid "Add 4 more Vu+ Multiboot USB slots after slot %s ?"
+msgstr ""
+
 #, fuzzy
 msgid "Add BISS CaID to service"
 msgstr "إضافة خدمة"
@@ -2311,11 +2357,15 @@ msgstr "إضافة علامة مرجعية"
 msgid "Add Timer"
 msgstr "أضف مؤقت"
 
+#, fuzzy
+msgid "Add USB slots"
+msgstr "جميع أنواع الدقة"
+
+msgid "Add USB slots (require receiver Vu+ 4k)"
+msgstr ""
+
 msgid "Add a mark"
 msgstr "أضف علامه"
-
-msgid "Add a nameserver entry"
-msgstr "إضافة أسم الخادم المدخل"
 
 #, fuzzy
 msgid "Add a new tag"
@@ -2363,6 +2413,9 @@ msgstr "إضافة ملف إلى قائمة التشغيل"
 msgid "Add files to playlist"
 msgstr "إضافة ملفات إلى قائمة التشغيل"
 
+msgid "Add legacy LEFT/RIGHT actions"
+msgstr ""
+
 msgid "Add marker"
 msgstr "إضافة علامة"
 
@@ -2379,11 +2432,12 @@ msgstr "إضافة تسجيل (أدخل مدة التسجيل)"
 msgid "Add recording (enter recording endtime)"
 msgstr "إضافة تسجيل(أدخل زمن إنتهاء التسجيل)"
 
-msgid "Add recording (indefinitely)"
-msgstr "أضف تسجيل (غير محدد المده)"
-
 msgid "Add recording (stop after current event)"
 msgstr "أضف تسجيل (وإيقاف بعد انتهاء البرنامج الحالى)"
+
+#, fuzzy
+msgid "Add recording set to (24 hours)"
+msgstr "إضافة تسجيل (أدخل مدة التسجيل)"
 
 msgid "Add service"
 msgstr "إضافة خدمة"
@@ -2530,10 +2584,6 @@ msgstr "محاذاة أسماء القنوات"
 msgid "All"
 msgstr "الكل"
 
-#, fuzzy
-msgid "All Services"
-msgstr "القنوات"
-
 msgid "All ages"
 msgstr "جميع الاعمار"
 
@@ -2601,7 +2651,7 @@ msgstr "إستخدم وحدة التحكم عن بعد للتلفزيون"
 msgid "Allows you to assign the selected function to this button."
 msgstr ""
 
-msgid "Allows you to enable/disable displaying icons on the frontpanel."
+msgid "Allows you to enable/disable displaying icons on the front panel."
 msgstr ""
 
 msgid "Allows you to hide the extensions of known file types."
@@ -2806,12 +2856,6 @@ msgstr ""
 
 #, fuzzy
 msgid "Are you sure you want to delete this log?\n"
-msgstr "هل أنت متأكد أنك تريد الخروج من هذه النافذه ؟"
-
-#, fuzzy
-msgid ""
-"Are you sure you want to delete this:\n"
-" "
 msgstr "هل أنت متأكد أنك تريد الخروج من هذه النافذه ؟"
 
 msgid "Are you sure you want to exit this wizard?"
@@ -3064,11 +3108,21 @@ msgstr "لا يوجد وضع استعداد"
 
 #, fuzzy
 msgid "Auto(not available)"
-msgstr "غير متوفر"
+msgstr "المؤالف غير متوفر."
 
 #, fuzzy
 msgid "AutoTimer"
 msgstr "المؤقت"
+
+msgid ""
+"AutoTimer is not installed\n"
+"Now (Press long)"
+msgstr ""
+
+msgid ""
+"AutoTimer is not installed\n"
+"Prime time (Press long)"
+msgstr ""
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -3240,9 +3294,6 @@ msgstr "بنغلاديش"
 msgid "Barbados"
 msgstr "بربادوس"
 
-msgid "Base transparency for teletext, more options available within teletext screen."
-msgstr ""
-
 msgid "Bashkir"
 msgstr ""
 
@@ -3393,8 +3444,9 @@ msgstr "تعزيز الأزرق"
 msgid "Boost green"
 msgstr "تعزيز الأخضر"
 
+#, fuzzy
 msgid "Booster Control"
-msgstr ""
+msgstr "نوع جهاز التحكم عن بعد"
 
 msgid "Boot ID"
 msgstr ""
@@ -3609,9 +3661,6 @@ msgstr "مهمة واجهة المستخدم"
 msgid "CI enabled"
 msgstr "تم التفعيل"
 
-msgid "CI slot: "
-msgstr ""
-
 msgid "CIFS/Samba"
 msgstr ""
 
@@ -3756,6 +3805,9 @@ msgstr "إختيار القناة"
 msgid "Cancel the action selection and exit"
 msgstr ""
 
+msgid "Cancel the image selection and exit"
+msgstr ""
+
 #, fuzzy
 msgid "Cancel the location selection"
 msgstr "إختيار القناة"
@@ -3855,7 +3907,7 @@ msgstr "أختار مسار الصوت"
 
 #, fuzzy
 msgid "Change CPU speed settings"
-msgstr "تغيير إعدادات التكرار والتاخير ؟"
+msgstr "هل تستخدم إعدادات جهاز الإدخال هذه؟"
 
 msgid "Change PIN Pressing [OK]"
 msgstr ""
@@ -3873,7 +3925,7 @@ msgstr "قنوات"
 
 #, fuzzy
 msgid "Change device settings"
-msgstr "إعدادات اسم الخادم"
+msgstr "هل تستخدم إعدادات جهاز الإدخال هذه؟"
 
 msgid "Change directory / Select bookmark"
 msgstr ""
@@ -3915,6 +3967,12 @@ msgstr "إختيار القناة"
 #, fuzzy
 msgid "Channel context menu"
 msgstr "سياق صفحة قائمة القنوات"
+
+msgid "Channel list is clean no characters to purge."
+msgstr ""
+
+msgid "Channel list was successfully purged."
+msgstr ""
 
 #, fuzzy
 msgid "Channel name"
@@ -4004,7 +4062,8 @@ msgstr "التحقق من نظام الملفات..."
 msgid "Checking filesystem..."
 msgstr "التحقق من نظام الملفات..."
 
-msgid "Checking the internet connection"
+#, fuzzy
+msgid "Checking the internet connection. Please wait..."
 msgstr "التحقق من إتصال الإنترنت"
 
 #, python-format
@@ -4205,8 +4264,8 @@ msgstr "تثبيت الوحدة"
 msgid ""
 "Client mode sets up this receiver to stream from another receiver. In this mode no local tuners will be available and channel lists, EPG, etc, will come from the remote receiver. All tuner settings will be cleared.\n"
 "\n"
-"Paths to search EPG and Channels on server:\n"
-"Internal Flash, HDD, USB.\n"
+"Paths to search EPG and/or Channels on server:\n"
+"Internal Flash or /media/hdd/.\n"
 "\n"
 "Server must have authentication disabled for streams http in MENU \"customize\". Set password if it is set on server."
 msgstr ""
@@ -4419,17 +4478,21 @@ msgstr ""
 msgid "Configure for how many minutes finished events should remain visible in the EPG. Useful when you need information about an event which has just finished, or has been delayed."
 msgstr "إعدادات كيفية إضافة العديد من الدقائق قبل إنتهاء الأحداث يجب أن تظل مرئية في دليل البرامج الإلكترونية. مفيدة عندما تحتاج إلى معلومات حول الحدث الذي انتهى لتوه، أو قد تأخر."
 
+#, fuzzy
 msgid "Configure front LED color during normal operations (this needs an enigma2 restart)."
-msgstr ""
+msgstr "قم بتشغیل لمبة الإضاءة في مقدمة الجهاز أثناء الاستعداد."
 
+#, fuzzy
 msgid "Configure front LED color during recording (this needs an enigma2 restart)."
-msgstr ""
+msgstr "قم بتشغیل لمبة الإضاءة في مقدمة الجهاز أثناء الاستعداد."
 
+#, fuzzy
 msgid "Configure front LED color during recording in standby (this needs an enigma2 restart)."
-msgstr ""
+msgstr "قم بتشغیل لمبة الإضاءة في مقدمة الجهاز أثناء الاستعداد."
 
+#, fuzzy
 msgid "Configure front LED color during standby (this needs an enigma2 restart)."
-msgstr ""
+msgstr "قم بتشغیل لمبة الإضاءة في مقدمة الجهاز أثناء الاستعداد."
 
 #, fuzzy
 msgid "Configure how many channels are shown in the selection list."
@@ -4441,6 +4504,12 @@ msgstr "إعدادات كيف يتم ترتيب أسماء ملفات التسج
 #, fuzzy
 msgid "Configure how the fan should operate"
 msgstr "تكوين الاختفاء التدريجي لشريط المعلومات"
+
+msgid "Configure how to show REC symbol in standby (this needs an enigma2 restart)."
+msgstr ""
+
+msgid "Configure how to show REC symbol in use (this needs an enigma2 restart)."
+msgstr ""
 
 msgid "Configure if and how crypto icons will be shown in the channel selection list."
 msgstr "إعدادات كيف سيتم عرض أيقونة التشفير في صفحة قائمة إختيار القنوات."
@@ -4476,9 +4545,6 @@ msgstr "إعدادات الترجمة الفرعية يجب تبديل بين و
 
 msgid "Configure interface"
 msgstr "تكوين الواجهه"
-
-msgid "Configure nameservers"
-msgstr "تكوين أسم الخادم"
 
 msgid "Configure on which devices the background delete option should be used."
 msgstr "تهيئة الأجهزة التي يجب استخدام خيار حذف الخلفية لها."
@@ -5037,10 +5103,6 @@ msgstr ""
 msgid "Cron Timers"
 msgstr "المؤقت"
 
-#, fuzzy
-msgid "Cron manager"
-msgstr "لا يوجد مدير مصادر"
-
 msgid "Cuba"
 msgstr "كوبا"
 
@@ -5169,6 +5231,14 @@ msgstr ""
 msgid "DLNA support"
 msgstr "دعم مشاركة الملفات على الشبكة المحلية"
 
+#, python-format
+msgid "DNS %d"
+msgstr ""
+
+#, fuzzy
+msgid "DNS server name"
+msgstr "أسم القناة"
+
 msgid "DTS"
 msgstr ""
 
@@ -5214,6 +5284,10 @@ msgid "DVB subtitle black transparency"
 msgstr "الترجمة الأساسية للقنوات بخلفية سوداء شفافة"
 
 msgid "DVB type"
+msgstr "نوع بث الفديو الرقمي من الستلايت"
+
+#, fuzzy
+msgid "DVB type:"
 msgstr "نوع بث الفديو الرقمي من الستلايت"
 
 msgid "DVB-C"
@@ -5352,6 +5426,9 @@ msgid "Day Mon-D"
 msgstr ""
 
 msgid "Day Mon-DD"
+msgstr ""
+
+msgid "Day of the month"
 msgstr ""
 
 msgid "Dayname D Month Year"
@@ -5659,6 +5736,10 @@ msgstr "حذف المؤقت"
 msgid "Delete logfile"
 msgstr "حذف الملف"
 
+#, python-format
+msgid "Delete or rename folder \"vuplus\" in path '%s' before initializing."
+msgstr ""
+
 msgid "Delete playlist entry"
 msgstr "حذف قائمة التشغيل المدخلة"
 
@@ -5710,6 +5791,9 @@ msgstr "حذف الملف"
 #, fuzzy
 msgid "Democratic Republic of the Congo"
 msgstr "الكونغو (جمهوريه-الديمقراطية)"
+
+msgid "Demod firmware version"
+msgstr ""
 
 msgid "Denmark"
 msgstr "الدنمارك"
@@ -5848,18 +5932,6 @@ msgstr "الدليل"
 
 #, python-format
 msgid "Directory %s does not exist."
-msgstr "المجلد %s غير موجود."
-
-#, fuzzy, python-format
-msgid "Directory '%s' does not exist!"
-msgstr "المجلد %s غير موجود."
-
-#, fuzzy, python-format
-msgid "Directory '%s' not writable!"
-msgstr "المجلد %s غير موجود."
-
-#, fuzzy, python-format
-msgid "Directory '%s' not writeable!"
 msgstr "المجلد %s غير موجود."
 
 #, fuzzy
@@ -6130,7 +6202,7 @@ msgstr "هل تريد فعلا حذف المرجعية %s?"
 
 #, fuzzy
 msgid "Do you really want to restart the receiver now?"
-msgstr "هل تريد أعاده تشغيل جهاز الاستقبال الخاص بك ؟"
+msgstr "هل تريد فعلا مسح %s?"
 
 #, fuzzy, python-format
 msgid "Do you really want to stop current event and delete timer %s?"
@@ -6170,6 +6242,12 @@ msgid ""
 "%s"
 msgstr "هل تريد فعلا تثبيت المجموعة:\n"
 
+#, fuzzy, python-format
+msgid "Do you want to install \"%s\" ?"
+msgstr ""
+"هل تريد تثبيت الإضافة:\n"
+" "
+
 #, fuzzy
 msgid "Do you want to install Plugins?"
 msgstr ""
@@ -6196,7 +6274,17 @@ msgstr "هل أنت متأكد أنك تريد الخروج من هذه النا
 msgid "Do you want to reboot your receiver?"
 msgstr "هل تريد أعاده تشغيل جهاز الاستقبال الخاص بك ؟"
 
+#, fuzzy, python-format
+msgid "Do you want to remove \"%s\" ?"
+msgstr "هل تريد فعلا حذف البلج إنز \"%s\"?"
+
 msgid "Do you want to remove the package:\n"
+msgstr "هل تريد فعلا حذف المجموعة:\n"
+
+#, fuzzy
+msgid ""
+"Do you want to remove this command or script?\n"
+"\n"
 msgstr "هل تريد فعلا حذف المجموعة:\n"
 
 msgid "Do you want to restore your settings?"
@@ -6411,9 +6499,9 @@ msgstr ""
 msgid "EPG filename"
 msgstr "اسم الملف"
 
-#, python-format
+#, fuzzy, python-format
 msgid "EPG imported successfully from %s"
-msgstr ""
+msgstr "تم تغيير الرقم السري بنجاح."
 
 msgid "EPG language selection 1"
 msgstr "إختيار لغة دليل البرامج الإلكترونية الأولى"
@@ -6441,7 +6529,7 @@ msgid "ERROR - failed to scan (%s)!"
 msgstr "خطأ - فشل البحث (%s)!"
 
 #, python-format
-msgid "ERROR downloading file %s"
+msgid "ERROR downloading file %s. Use button YELLOW in server \"Purge channel list\""
 msgstr ""
 
 msgid "East"
@@ -6456,8 +6544,9 @@ msgstr "الإكوادور"
 msgid "Edit"
 msgstr "تعديل"
 
+#, fuzzy
 msgid "Edit DNS"
-msgstr "تعديل أسم النطاق"
+msgstr "تعديل"
 
 #, fuzzy
 msgid "Edit Tags"
@@ -6605,6 +6694,10 @@ msgstr "تمكين دليل البرامج الإلكترونية بواسطة �
 msgid "Enable Virgin EPG"
 msgstr "تمكين دليل البرامج الإلكترونية لقنوات شركة فيرجن"
 
+#, fuzzy
+msgid "Enable Vu+ MultiBoot"
+msgstr "تمكين تعديل الباقة"
+
 msgid "Enable auto cable scan"
 msgstr "تفعيل البحث التلقائي لقنوات الكيبل"
 
@@ -6619,9 +6712,6 @@ msgstr "تفعيل البحث التلقائي السريع %s"
 #, fuzzy
 msgid "Enable auto telnet login:"
 msgstr "تفعيل البحث التلقائي لقنوات الكيبل"
-
-msgid "Enable blinking REC symbol on the LCD display"
-msgstr ""
 
 #, fuzzy
 msgid "Enable bluetooth audio"
@@ -6680,6 +6770,9 @@ msgstr "تمكين وضع التحريك للقنوات"
 msgid "Enable multiple bouquets"
 msgstr "تفعيل باقات متعدده"
 
+msgid "Enable new GStreamer 1.x playback"
+msgstr ""
+
 #, fuzzy
 msgid "Enable or disable IPv6"
 msgstr "تمكين جدول معلومات الحدث في دليل البرامج الإلكتروني"
@@ -6692,11 +6785,13 @@ msgid "Enable parental protection"
 msgstr "تمكين الحماية الأبوية"
 
 msgid ""
-"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally, e.g. tuner is occupied or service type is unavailable on the local tuner.\n"
+"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally, e.g. tuner is occupied or service type is unavailable on local tuner.\n"
 "\n"
-"You can use this receiver only in client mode using server channel list and EPG.\n"
+"You can use this receiver only in client mode using server channel list, timers and EPG.\n"
 "\n"
-"Set manual IP for importing EPG and Channels in 'Import remote receiver URL'."
+"If YELLOW button is available, it means that channel list include characters bad, e.g. \"+\", then list cannot be import from server.\n"
+"\n"
+"If you press YELLOW button then it will clean up list to remove these characters."
 msgstr ""
 
 #, fuzzy
@@ -6881,7 +6976,7 @@ msgstr "أعاده إدخال الرقم السري"
 msgid "Enter a new name for this device."
 msgstr "غير مغطاه هذه الخدمة متقطعة ومتذبذبة"
 
-msgid "Enter an URL where alternative images could be listed for FlashImage"
+msgid "Enter an URL where alternative images could be listed for FlashImage. Enter text 'all' for automatic access of many images."
 msgstr ""
 
 msgid "Enter if you are in the east or west hemisphere."
@@ -6996,9 +7091,6 @@ msgstr ""
 msgid ""
 "Error during unzipping image\n"
 "%s"
-msgstr ""
-
-msgid "Error in XML"
 msgstr ""
 
 #, fuzzy
@@ -7163,6 +7255,14 @@ msgstr "معالح التنفيذ:"
 msgid "Exif"
 msgstr "عن الصورة"
 
+msgid ""
+"Exist are debug or crash files.\n"
+"Space used:"
+msgstr ""
+
+msgid "Exist are no debug files or crash."
+msgstr ""
+
 msgid "Exit"
 msgstr "تسجيل الخروج"
 
@@ -7171,7 +7271,7 @@ msgstr "خروج من دليل البرامج الإلكترونية"
 
 #, fuzzy
 msgid "Exit IPv6 configuration"
-msgstr "الخروج من إعدادات أسم الخادم"
+msgstr "حماية التكوين"
 
 msgid "Exit editor"
 msgstr "خروج من المحرر"
@@ -7204,8 +7304,9 @@ msgstr "الخروج من قائمة الأفلام"
 msgid "Exit movie player?"
 msgstr "الخروج من مشغل الأفلام؟"
 
+#, fuzzy
 msgid "Exit nameserver configuration"
-msgstr "الخروج من إعدادات أسم الخادم"
+msgstr "الخروج من تهيئة محول الشبكة"
 
 msgid "Exit network interface list"
 msgstr "الخروج من قائمة واجهة الشبكة"
@@ -7565,6 +7666,10 @@ msgid "Feed disabled!"
 msgstr "تم التعطيل"
 
 #, fuzzy
+msgid "Feed not available. The AutoTimer plugin was not installed."
+msgstr "هذا البلج إنز غير مثبت."
+
+#, fuzzy
 msgid "Feed stable."
 msgstr "تفعيل"
 
@@ -7587,6 +7692,10 @@ msgstr "يبدو ان الملف مشغول. \n"
 
 msgid "File can not displayed - File not found"
 msgstr ""
+
+#, fuzzy, python-format
+msgid "File error %s"
+msgstr "إخفاء أخطاء التنقل"
 
 msgid ""
 "File oscam.conf/ncam.conf not found.\n"
@@ -7651,13 +7760,16 @@ msgstr ""
 msgid "Flash Image"
 msgstr "الشحن"
 
-#, fuzzy, python-format
-msgid "Flash directory '%s' not allowed!"
-msgstr "فشل إنشاء %s المجلد."
-
 #, fuzzy
 msgid "Flash type"
 msgstr "الشحن"
+
+msgid "FlashImage: Add USB STARTUP slots - No EXT4 USB attached."
+msgstr ""
+
+#, python-format
+msgid "FlashImage: Add USB STARTUP slots - USB (%s) only has %s free. At least 1GB is required."
+msgstr ""
 
 #, fuzzy
 msgid "Flashing"
@@ -7731,10 +7843,6 @@ msgstr "فرنسا"
 msgid "Free"
 msgstr ""
 
-#, python-format
-msgid "Free %d MB: Low space available for timeshift. Change device"
-msgstr ""
-
 msgid "Free flash"
 msgstr ""
 
@@ -7800,6 +7908,15 @@ msgstr ""
 
 msgid "Front Panel Display"
 msgstr ""
+
+#, fuzzy, python-format
+msgid ""
+"Front processor of your %s %s will be updated\n"
+"This may take a few minutes"
+msgstr ""
+"ستتم الترقية عبر المعالج الأمامي الخاص بك\n"
+"الرجاء الانتظار حتى يتم %s %s أعاده تشغيل جهازك\n"
+"هذا قد يستغرق بضع دقائق"
 
 #, fuzzy
 msgid "Front processor version"
@@ -7939,6 +8056,11 @@ msgstr "لا يمكن استرجاع سجل الالتزام في الوقت ا�
 #, fuzzy
 msgid "Geolocation is not available."
 msgstr "تغذية التحديث غير متوفرة."
+
+msgid ""
+"Geolocation is not available. There is no Internet.\n"
+"Press \"OK\" to continue wizard."
+msgstr ""
 
 msgid "Georgia"
 msgstr "جورجيا"
@@ -8472,6 +8594,10 @@ msgstr ""
 msgid "I do not want to perform any service scans"
 msgstr "هل تريد عمل بحث؟"
 
+#, fuzzy
+msgid "ID"
+msgstr "ثلاثي الابعاد"
+
 msgid "IDLE"
 msgstr ""
 
@@ -8541,6 +8667,12 @@ msgstr "الأيقونات"
 msgid "Ido"
 msgstr ""
 
+msgid "If 'never', will force restart despite that after 100 crashes."
+msgstr ""
+
+msgid "If 'never', will write crash log despite that for the first crash."
+msgstr ""
+
 msgid "If an action is user-configurable, its help entry will be flagged with a '(C)' suffix."
 msgstr ""
 
@@ -8553,6 +8685,9 @@ msgstr ""
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr ""
 
+msgid "If enabled, the new GStreamer 1.x playback engine will be used."
+msgstr ""
+
 msgid "If set to 'Yes' the same commands will be sent to the TV for deep standby events as are sent during regular standby events."
 msgstr ""
 
@@ -8562,7 +8697,7 @@ msgstr "إذا تم تعيينها على قيم إشارة 'نعم' (معدل �
 msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
 msgstr ""
 
-msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
+msgid "If the upper panel is active pressing GREEN or OK will change the current directory.  If the lower panel is active pressing GREEN or OK will select the current bookmark and exit."
 msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
@@ -8641,11 +8776,9 @@ msgstr "إضافة مؤقت تلقائي للحدث الحالي"
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
 msgstr ""
 
-msgid ""
-"Import channels and/or EPG from remote receiver URL or IP.\n"
-"\n"
-"Don't forget to manually set server IP."
-msgstr ""
+#, fuzzy
+msgid "Import channels and/or EPG from remote receiver URL or IP."
+msgstr "الريموت الإحتياطي من خلال الرابط على الرسيفر"
 
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted."
 msgstr ""
@@ -8657,6 +8790,10 @@ msgstr "الريموت الإحتياطي من خلال الرابط على ال
 #, fuzzy
 msgid "Import remote receiver URL"
 msgstr "الريموت الإحتياطي من خلال الرابط على الرسيفر"
+
+#, python-format
+msgid "Imported list with bouquet empty <n/a> %s file does not exist"
+msgstr ""
 
 msgid "In live view wait this many seconds after a numeric key press before assuming the required channel number has been entered. Default: 5 seconds. Setting zero will require confirmation with 'OK'. "
 msgstr ""
@@ -8680,9 +8817,6 @@ msgstr "لم يتم العثور علي الإضافات الجديدة"
 
 msgid "In progress"
 msgstr "جاري المعالجة"
-
-msgid "In the Standby record on the LCD display"
-msgstr ""
 
 msgid "Inactivity Sleeptimer"
 msgstr ""
@@ -8772,8 +8906,9 @@ msgstr "أندونيسيا"
 msgid "Inetd Recovery"
 msgstr ""
 
+#, fuzzy
 msgid "Inetd recovery"
-msgstr ""
+msgstr "جاري التسجيل السريع"
 
 msgid "Info"
 msgstr "معلومات"
@@ -8829,6 +8964,9 @@ msgstr "وقت ظهور شريط المعلومات"
 
 msgid "Init"
 msgstr "التهيئة"
+
+msgid "Init Vu+ MultiBoot"
+msgstr ""
 
 msgid "Initial fast forward speed"
 msgstr "أولوية التسريع إلى الامام"
@@ -8939,6 +9077,10 @@ msgid "Installing %s (%s)..."
 msgstr "تثبيت القنوات"
 
 #, fuzzy
+msgid "Installing AutoTimer"
+msgstr "نثبيت"
+
+#, fuzzy
 msgid "Installing Software..."
 msgstr "تثبيت القنوات"
 
@@ -8995,11 +9137,8 @@ msgid "Internal hdd only"
 msgstr "القرص الصلب الداخلي فقط"
 
 #, fuzzy
-msgid "Internet"
-msgstr "داخلية"
-
-msgid "Internet time (NTP)"
-msgstr ""
+msgid "Internet time"
+msgstr "وقت البدء"
 
 #, fuzzy
 msgid "Interval between keys when repeating (ms)"
@@ -9063,7 +9202,7 @@ msgstr "إسرائيل"
 msgid ""
 "It seems you did not see all the eight arrow heads. This means your TV has overscan enabled, and is not configured properly.\n"
 "\n"
-"Please refer to your TV's manual to find how you can disable overscan on your TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, ask other users at https://forum.openvision.tech\n"
+"Please refer to your TV's manual to find how you can disable overscan on your TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, ask other users.\n"
 "\n"
 msgstr ""
 
@@ -9278,8 +9417,9 @@ msgstr ""
 msgid "LED brightness during standby."
 msgstr ""
 
+#, fuzzy
 msgid "LED color during normal operations"
-msgstr ""
+msgstr "إيقاف جميع التسجيلات الحالية"
 
 #, fuzzy
 msgid "LED color during recording"
@@ -9758,6 +9898,10 @@ msgid ""
 "New MAC address is: "
 msgstr ""
 
+#, fuzzy
+msgid "MB"
+msgstr "B"
+
 msgid "MENU"
 msgstr ""
 
@@ -10089,9 +10233,6 @@ msgstr ""
 
 msgid "Mins Secs"
 msgstr ""
-
-msgid "Missing "
-msgstr "مفقود "
 
 #, fuzzy
 msgid "Mobile connection"
@@ -10544,9 +10685,6 @@ msgstr "لا"
 msgid "NOW"
 msgstr "لا"
 
-msgid "NTP Hostname"
-msgstr ""
-
 msgid "NTSC"
 msgstr "لجنة نظام التلفزيون الوطني"
 
@@ -10556,24 +10694,13 @@ msgstr "الاسم"
 msgid "Nameserver"
 msgstr "اسم الخادم"
 
-#, python-format
-msgid "Nameserver %d"
-msgstr "اسم الخادم %d"
-
-#, fuzzy
-msgid "Nameserver configuration"
-msgstr "الخروج من إعدادات أسم الخادم"
-
-msgid "Nameserver settings"
-msgstr "إعدادات اسم الخادم"
-
 #, fuzzy
 msgid "Nameserver setup"
-msgstr "إعدادات اسم الخادم"
+msgstr "اسم الخادم"
 
 #, fuzzy
 msgid "NameserverSetup"
-msgstr "إعدادات اسم الخادم"
+msgstr "اسم الخادم"
 
 msgid "Namespace & Orbital pos."
 msgstr ""
@@ -10781,9 +10908,6 @@ msgstr ""
 msgid "No ECMPids available (FTA Service)"
 msgstr "أرقام تعاريف القنوات المشفرة غير متوفر (للقنوات المفتوحة)"
 
-msgid "No HDD found or HDD not initialized!"
-msgstr "لا يوجد قرص صلب أو ان القرص الصلب غير مهيئ!"
-
 #, fuzzy
 msgid "No active subservices available."
 msgstr "لايوجد وصف متوفر."
@@ -10814,10 +10938,8 @@ msgstr "بدون تأخير"
 msgid "No description available."
 msgstr "لايوجد وصف متوفر."
 
-msgid "No displayable files on this medium found!"
-msgstr "لا يوجد ملفات للعرض على هذا الوسيط !"
-
-msgid "No event info found, recording indefinitely."
+#, fuzzy
+msgid "No event info found, recording set to (24 hours)"
 msgstr "لا يوجد معلومات عن الحدث, تسجيل إلى أجل غير مسمى."
 
 msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
@@ -10966,8 +11088,9 @@ msgstr ""
 msgid "Normal mode"
 msgstr "شكل التنقل"
 
+#, fuzzy
 msgid "Normal running frequency"
-msgstr ""
+msgstr "كل الترددات"
 
 #, fuzzy
 msgid "Normal speed"
@@ -11043,6 +11166,9 @@ msgstr "لا يعمل"
 msgid "Not tested:"
 msgstr "إختبار الشبكة: "
 
+msgid "Note: No button defined for this action!"
+msgstr ""
+
 #, fuzzy
 msgid "Nothing"
 msgstr "لا شئ"
@@ -11067,9 +11193,6 @@ msgstr ""
 msgctxt "now/next: 'now' event label"
 msgid "Now"
 msgstr "الان"
-
-msgid "Now (Press long)"
-msgstr ""
 
 #, fuzzy
 msgid "Now playing"
@@ -11129,10 +11252,6 @@ msgid "OMB Manager List"
 msgstr ""
 
 msgid "ONID"
-msgstr "معرف الشبكة الاصلي"
-
-#, fuzzy
-msgid "ONID:"
 msgstr "معرف الشبكة الاصلي"
 
 msgid "OPKG clean mode"
@@ -11285,7 +11404,15 @@ msgstr "حدد فقط 'نعم' إذا كنت تستخدم جهاز القسام 
 
 #, fuzzy
 msgid "Open Info"
-msgstr "معلومات"
+msgstr "معلومات تشفير الإيموهات"
+
+#, fuzzy
+msgid "Open Multi EPG"
+msgstr "دليل برنامح يومي متعدد"
+
+#, fuzzy
+msgid "Open Simple EPG"
+msgstr "دليل برنامج يومي واحد"
 
 msgid "Open Vision Commit Info Setup"
 msgstr ""
@@ -11334,18 +11461,10 @@ msgstr "فتح ضبط المؤالف "
 msgid "Open the movie list"
 msgstr "فتح قائمة الأفلام"
 
-#, fuzzy
-msgid "Open the multi service EPG view"
-msgstr "فتح قائمة الأفلام"
-
-#, fuzzy
-msgid "Open the single service EPG view"
-msgstr "عرض الإيقونات في قائمة القنوات"
-
-msgid "OpenDNS FamilyShield"
+msgid "OpenDNS"
 msgstr ""
 
-msgid "OpenDNS Home"
+msgid "OpenDNS-2"
 msgstr ""
 
 #, fuzzy
@@ -11396,8 +11515,9 @@ msgstr "إعدادات المؤالف"
 msgid "Operating LED status in deep standby mode"
 msgstr ""
 
+#, fuzzy
 msgid "Operating LED status in standby mode"
-msgstr ""
+msgstr "عرض في قائمة الإغلاق"
 
 msgid "Operating LED status while running."
 msgstr ""
@@ -11412,11 +11532,22 @@ msgstr "تعطيل المؤقت"
 msgid "Orange"
 msgstr ""
 
-msgid "Orb Pos:"
-msgstr ""
-
 msgid "Orbital position"
 msgstr "الموقع المداري"
+
+#, fuzzy
+msgid "Orbital position:"
+msgstr "الموقع المداري"
+
+msgid "Orde image per modes and slots (require receiver with mode slot 12)"
+msgstr ""
+
+#, fuzzy
+msgid "Order by modes"
+msgstr "حسب التاريخ"
+
+msgid "Order by slots"
+msgstr ""
 
 msgid "Ordinary"
 msgstr "العادي"
@@ -11608,6 +11739,13 @@ msgstr "إظهار خدمات الرقابة الأبوية"
 #, fuzzy
 msgid "Parental control setup"
 msgstr "الرقابة الأبوية"
+
+msgid "Partial"
+msgstr ""
+
+#, fuzzy
+msgid "Partial EPG"
+msgstr "دليل برنامح يومي متعدد"
 
 #, fuzzy
 msgid "Partition"
@@ -11841,11 +11979,12 @@ msgstr "من فضلك أختار من الملحقات..."
 msgid "Please choose reader"
 msgstr "من فضلك أختار من الملحقات..."
 
+#, fuzzy
 msgid ""
 "Please configure or verify your Nameservers by filling out the required values.\n"
 "When you are ready press OK to continue."
 msgstr ""
-"من فضلك فم بتكوين أو تأكد من أسم الخادم بوضع القيم المطلوبه.\n"
+"من فضلك قم بتكوين الإتصال بالانترنت بملأ القيم المطلوبه \n"
 "عندما تكون مستعد أضغط موافق للاستمرار."
 
 #, fuzzy
@@ -12077,6 +12216,9 @@ msgstr "تصفح البلج إنز"
 msgid "Plugin Browser Setup"
 msgstr "تصفح البلج إنز"
 
+msgid "Plugin EPGImport actived EPG import and woke up your receiver"
+msgstr ""
+
 msgid "Plugin browser"
 msgstr "تصفح البلج إنز"
 
@@ -12295,8 +12437,27 @@ msgstr ""
 msgid "Press EXIT to return to the help screen."
 msgstr "أضغط موافق لتغيير الأختيار."
 
+msgid ""
+"Press GREEN button to enable MultiBoot\n"
+"\n"
+"Will reboot within 10 seconds,\n"
+"unless you have eMMC slots to restore.\n"
+"Restoring eMMC slots can take from 1 -> 5 minutes per slot."
+msgstr ""
+
 msgid "Press INFO on your remote control for additional information."
 msgstr "اضغط مفتاح المعلومات من ريموت التحكم عن بعد للخيارات الإضافية."
+
+msgid "Press LEFT RIGHT OK or MENU to change path."
+msgstr ""
+
+#, python-format
+msgid ""
+"Press LEFT RIGHT OK or MENU to choose another server.\n"
+"\n"
+"Active server: %s\n"
+"DNS: %s"
+msgstr ""
 
 msgid "Press MENU on your remote control for additional options."
 msgstr "اضغط مفتاح القائمة من ريموت التحكم عن بعد للخيارات الإضافية."
@@ -12361,6 +12522,10 @@ msgstr "أضغط على مفتاح موافق لتحديد الاقمار الص
 msgid "Press OK to select/deselect a CAId."
 msgstr "إضغط موافق تحديد/إلغاء الكايد."
 
+#, fuzzy
+msgid "Press OK to show details."
+msgstr "أضغط موافق لتحرير الاعدادات."
+
 msgid "Press OK to toggle the selection"
 msgstr "أضغط موافق لتغيير الأختيار"
 
@@ -12378,7 +12543,7 @@ msgstr "أضغط موافق للحصول على تفاصيل أكثر %s"
 msgid "Press OK, save and exit..."
 msgstr "اضغط موافق، حفظ والخروج..."
 
-msgid "Press YELLOW button to set your schedule."
+msgid "Press YELLOW button if your time zone is not set or press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Press or select button and then press 'OK' for attach function."
@@ -12422,15 +12587,14 @@ msgstr "معاينة القائمة"
 msgid "Preview selected channel"
 msgstr "حذف القمر المختار"
 
+msgid "Previous saved timeshift has editing properties with plugin CutListEditor."
+msgstr ""
+
 msgid "Primary DNS"
 msgstr "أسم النطاق الاولي"
 
 #, fuzzy
 msgid "Prime time"
-msgstr "ساعة وقت الذروة"
-
-#, fuzzy
-msgid "Prime time (Press long)"
 msgstr "ساعة وقت الذروة"
 
 msgid "Priority"
@@ -12548,6 +12712,10 @@ msgstr ""
 msgid "Purge all but the current and permanent locales/languages.  Add the current locale/language if it is not installed.  Delete the current locale/language if it is installed."
 msgstr ""
 
+#, fuzzy
+msgid "Purge channel list"
+msgstr "لا توجد قائمة قنوات"
+
 msgid "Purge deleted user bouquets"
 msgstr "أزاله باقات المستخدم المحذوفة"
 
@@ -12571,6 +12739,9 @@ msgstr "وضع التلفزيون في وضع الاستعداد"
 msgid "Python %s benchmark"
 msgstr ""
 
+msgid "Python crash handler"
+msgstr ""
+
 msgid "Python frontend for /tmp/mmi.socket"
 msgstr "نهاية واجهة ملفات البايثون /tmp/mmi.socket"
 
@@ -12580,6 +12751,12 @@ msgstr "الإصدار:\t%s"
 
 msgid "Qatar"
 msgstr "قطر"
+
+msgid "Quad9 No Security"
+msgstr ""
+
+msgid "Quad9 Security"
+msgstr ""
 
 msgid "Quechua"
 msgstr ""
@@ -12622,6 +12799,9 @@ msgstr ""
 #, fuzzy
 msgid "RAM benchmark"
 msgstr "الدنمارك"
+
+msgid "RC Map"
+msgstr ""
 
 #, fuzzy
 msgid "RC default name"
@@ -12668,6 +12848,12 @@ msgstr "الزر الأحمر..."
 msgid "RF Modulator Output Setup"
 msgstr ""
 
+msgid "RFC 5905 hostname (SNTP - Simple Network Time Protocol)"
+msgstr ""
+
+msgid "RFC 868 hostname (rdate - Remote Date)"
+msgstr ""
+
 #, fuzzy
 msgid "RGB"
 msgstr "أحمر أخضر أزرق"
@@ -12711,10 +12897,6 @@ msgid "Reader Statistics"
 msgstr ""
 
 #, python-format
-msgid "Ready to install \"%s\" ?"
-msgstr ""
-
-#, python-format
 msgid "Ready to remove \"%s\" ?"
 msgstr ""
 
@@ -12733,20 +12915,23 @@ msgid "Really exit the subservices quickzap?"
 msgstr "هل تريد فعلا الخروج السريع من مقدم الخدمات؟"
 
 #, fuzzy
-msgid "Really perform a manufacturer reset now?"
+msgid "Really perform a manufacturer reset?"
 msgstr "حماية إعادة تعيين ضبط مصنع الشاشة"
 
-msgid "Really reboot now?"
+#, fuzzy
+msgid "Really reboot?"
 msgstr "هل تريد فعلا إعادة التشغيل الان ؟"
 
 #, fuzzy
-msgid "Really restart in debug mode now?"
+msgid "Really restart in debug mode?"
 msgstr "هل تريد فعلا إعادة التشغيل الان؟"
 
-msgid "Really restart now?"
+#, fuzzy
+msgid "Really restart?"
 msgstr "هل تريد فعلا إعادة التشغيل الان؟"
 
-msgid "Really shutdown now?"
+#, fuzzy
+msgid "Really shutdown?"
 msgstr "هل تريد فعلا الاغلاق الان؟"
 
 #, python-format
@@ -12754,11 +12939,11 @@ msgid "Really store at index %2d for current position?"
 msgstr "هل حقا تريد تخزين الفهرسة %2d عن الوضع الحالي؟"
 
 #, fuzzy
-msgid "Really update the front processor and reboot now?"
+msgid "Really update the front processor and reboot?"
 msgstr "حقا تريد ترقية الجهاز من مدخل المعالج الأمامي وإعادة التشغيل الأن؟"
 
 #, fuzzy
-msgid "Really update your settop box and reboot now?"
+msgid "Really update your STB and reboot?"
 msgstr "هل حقا تريد الترقية %s %s وإعادة التشغيل الأن؟"
 
 msgid "Rear"
@@ -12769,7 +12954,7 @@ msgstr "إعادة التشغيل"
 
 #, fuzzy
 msgid "Reboot receiver"
-msgstr "دليل الملفات"
+msgstr "جاري التسجيل السريع"
 
 #, fuzzy
 msgid "Recall to previous service"
@@ -12825,11 +13010,27 @@ msgstr "تسجيلات"
 msgid "Recording Setup"
 msgstr "نوع التسجيل"
 
+#, python-format
+msgid "Recording failed: Storage device free size %d GB."
+msgstr ""
+
 msgid "Recording in progress"
 msgstr "التسجيل قيد التشغيل"
 
+#, fuzzy, python-format
+msgid "Recording path is \"%s\""
+msgstr "تسجيلات"
+
 #, fuzzy
-msgid "Recording time has been set."
+msgid "Recording set to (24 hours)"
+msgstr "نوع التسجيل"
+
+#, fuzzy
+msgid "Recording timer has been set"
+msgstr "تسجيلات"
+
+#, fuzzy
+msgid "Recording timer was canceled"
 msgstr "تسجيلات"
 
 msgid "Recording type"
@@ -12854,6 +13055,10 @@ msgstr "تسجيل"
 #, fuzzy
 msgid "Recover inetd"
 msgstr "نوع التسجيل"
+
+#, fuzzy
+msgid "Recovery Mode"
+msgstr "يحددها المستخدم"
 
 msgid "Red"
 msgstr "أحمر"
@@ -12962,9 +13167,6 @@ msgstr "تأكيد الحذف"
 
 msgid "Remove a mark"
 msgstr "حذف علامه"
-
-msgid "Remove a nameserver entry"
-msgstr "حذف أسم الخادم المدخل"
 
 #, fuzzy
 msgid "Remove after this position"
@@ -13234,6 +13436,10 @@ msgid "Restart GUI now?"
 msgstr "هل تريد إعادة تشغيل الاينجما2 الان ؟"
 
 #, fuzzy
+msgid "Restart after x crashes"
+msgstr "إعادة الاختبار"
+
+#, fuzzy
 msgid "Restart both"
 msgstr "إعادة الاختبار"
 
@@ -13415,9 +13621,6 @@ msgstr "مواقع وخطوات النظام المتحرك:"
 msgid "Rotor turning speed"
 msgstr "سرعة تؤليف الموتور"
 
-msgid "Rotor: "
-msgstr "الدوران: "
-
 #, fuzzy
 msgid "Round start time on"
 msgstr "وقت البدء"
@@ -13426,8 +13629,9 @@ msgstr "وقت البدء"
 msgid "Routing request"
 msgstr "طلب المصدر"
 
-msgid "Run how often ?"
-msgstr ""
+#, fuzzy
+msgid "Run frequency"
+msgstr "كل الترددات"
 
 msgid "Run the BLUE action"
 msgstr ""
@@ -13508,8 +13712,9 @@ msgstr ""
 msgid "SH4"
 msgstr ""
 
+#, fuzzy
 msgid "SH4 Booster Control"
-msgstr ""
+msgstr "نوع جهاز التحكم عن بعد"
 
 #, fuzzy
 msgid "SH4 OSD Position setup"
@@ -13868,9 +14073,6 @@ msgstr "جاري البحث"
 msgid "Search east"
 msgstr "البحث شرقا"
 
-msgid "Search event in TMBD"
-msgstr ""
-
 msgid "Search west"
 msgstr "بحث غربا"
 
@@ -13946,6 +14148,10 @@ msgstr ""
 msgid "Seems internet connection down, Or TMBD Plugin not on feed."
 msgstr ""
 
+#, python-format
+msgid "Seems your receiver has a software problem. Since the last reboot it has occurred %d times.\n"
+msgstr ""
+
 msgid "Select"
 msgstr "تحديد"
 
@@ -13960,6 +14166,9 @@ msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) devi
 msgstr "حدد 'بدون كيبل' إذا استخدم هذا المؤالف جهازًا بدون كيبل. بالنسبة إلى جميع الإعدادات الأخرى ، حدد 'مؤالف أف بي سي تلقائي'."
 
 msgid "Select 'Yes' to enable editing of this device's settings. Selecting 'No' resets the devices settings to their default values."
+msgstr ""
+
+msgid "Select 'Yes' to enable use of the LEFT/RIGHT buttons to move PageUp/PageDown when the LEFT/RIGHT buttons are otherwise undefined. This provides legacy navigation for users who prefer it."
 msgstr ""
 
 msgid "Select 'Yes' to remove all keymap data. Selecting this option will remove all keymap override data and restore the default keymap definitions."
@@ -14164,12 +14373,29 @@ msgstr "حدد السرعة التي يجب ان يتحرك بها الطبق ب
 msgid "Select how the satellite dish is set up. i.e. fixed dish, single LNB, DiSEqC switch, positioner, etc."
 msgstr "حدد كيفية إعداد طبق القمر الصناعي. على سبيل المثال ، طبق ثابت ، لاقط منفرد ، التحكم بالدايزك، نظام الطبق المتحرك ، إلخ."
 
-msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet using NTP. Or use Auto, which will favour using NTP, but will fall back to transponder time when no internet connection is available."
+msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet. Or use Auto, which will favour using internet, but will fall back to transponder time when no internet connection is available."
 msgstr ""
 
 #, fuzzy
 msgid "Select image"
 msgstr "حذف المؤقت"
+
+#, fuzzy
+msgid "Select image and delete"
+msgstr "حذف المؤقت"
+
+msgid "Select image and press OK or GREEN button for reboot."
+msgstr ""
+
+#, fuzzy
+msgid "Select image and reboot"
+msgstr "حذف المؤقت"
+
+msgid "Select image or boot to Android image and press OK or GREEN button for reboot."
+msgstr ""
+
+msgid "Select image or boot to recovery menu and press OK or GREEN button for reboot."
+msgstr ""
 
 msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
 msgstr ""
@@ -14205,6 +14431,9 @@ msgstr "أختار القناة لإضافتها..."
 
 msgid "Select slot"
 msgstr "أختار الفتحة"
+
+msgid "Select slot image and press OK or GREEN button to reboot."
+msgstr ""
 
 #, fuzzy
 msgid "Select softcam"
@@ -14341,7 +14570,8 @@ msgstr "أختار مصدر الترقيه المراد تحريره."
 msgid "Select video input with up/down buttons"
 msgstr "أختار مدخل الفيديو بالزر الأعلى/الأسفل"
 
-msgid "Select video mode"
+#, fuzzy
+msgid "Select video mode."
 msgstr "أختار صيغة بث الفديو"
 
 msgid "Select whether your SCR device is externally powered."
@@ -14378,7 +14608,7 @@ msgstr "اختر بلدك. إذا لم يكن متاحًا ، فحدد 'الكل
 
 #, fuzzy
 msgid "Select your keymap"
-msgstr "حذف المؤقت"
+msgstr "أختار القائمة المدخلة"
 
 msgid "Select your provider and region. If not present in this list you will need to select one of the other 'service scan types'."
 msgstr "حدد مزود الخدمة والمنطقة. إذا لم تكن موجودة في هذه القائمة سوف تحتاج إلى تحديد واحد من الآخر ' أنواع البحث القناة '."
@@ -14444,6 +14674,10 @@ msgstr "الجزائر"
 #, fuzzy
 msgid "Serv.Name"
 msgstr "أسم القناة"
+
+#, python-format
+msgid "Server Error: %s %s is included in bouquets.tv and does not exist in channel list"
+msgstr ""
 
 #, python-format
 msgid "Server Info ( NCam-Version: %s )"
@@ -14644,6 +14878,10 @@ msgstr "أضبط وقت الإنتهاء"
 msgid "Set new MAC address"
 msgstr "التحكم في عناوين الإلكترونيات الاستهلاكية الحالية"
 
+#, fuzzy, python-format
+msgid "Set new value to \"Fallback remote receiver\" change URL %s"
+msgstr "الريموت الإحتياطي من خلال الرابط على الرسيفر"
+
 msgid "Set password if you have it set in section [webif] httppwd."
 msgstr ""
 
@@ -14759,6 +14997,9 @@ msgstr ""
 msgid "Settings"
 msgstr "إعدادات"
 
+msgid "Settings DNS Server"
+msgstr ""
+
 msgid "Setup"
 msgstr "الضبط"
 
@@ -14807,6 +15048,9 @@ msgstr ""
 
 msgid "Short filenames"
 msgstr "أسماء قصيرة"
+
+msgid "Should the crash counter be reset to prevent a restart?"
+msgstr ""
 
 #, fuzzy
 msgid "Show"
@@ -14933,6 +15177,9 @@ msgstr "عرض أرقام القنوات في قائمة إختيار القنو
 
 msgid "Show columns"
 msgstr "عرض الأعمدة"
+
+msgid "Show crash info on screen and write crash log for x times"
+msgstr ""
 
 msgid "Show crypto icons"
 msgstr "عرض أيقونة التشفير"
@@ -15180,6 +15427,10 @@ msgid "Show record indicator"
 msgstr "عرض مؤشر التسجيل"
 
 #, fuzzy
+msgid "Show samba in plugin browser"
+msgstr "عرض قائمة الأرقام"
+
+#, fuzzy
 msgid "Show satellites list"
 msgstr "عرض قائمة القنوات"
 
@@ -15197,6 +15448,10 @@ msgstr "عرض شريط المعلومات الثاني"
 msgid "Show second infobar"
 msgstr "عرض شريط المعلومات الثاني"
 
+#, fuzzy
+msgid "Show service event information"
+msgstr "عرض معلومات الحدث التفصيلية"
+
 msgid "Show service list"
 msgstr "عرض قائمة القنوات"
 
@@ -15210,10 +15465,6 @@ msgstr "عرض قائمة القنوات أو الافلام"
 #, fuzzy
 msgid "Show setup default value"
 msgstr "تعيين افتراضي"
-
-#, fuzzy
-msgid "Show sevice event information"
-msgstr "عرض معلومات الحدث التفصيلية"
 
 #, fuzzy
 msgid "Show single service EPG"
@@ -15257,7 +15508,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Show this plugin in plugin menu"
-msgstr "عرض مشغل الوسائط على القائمة الرئيسية"
+msgstr "عرض قائمة الأرقام"
 
 msgid "Show time elapsed as positive"
 msgstr ""
@@ -15672,6 +15923,10 @@ msgstr "المنفذ أ"
 msgid "Sort Trash by deletion time"
 msgstr ""
 
+#, fuzzy
+msgid "Sort bouquets alphabetic A-Z"
+msgstr "إلغاء تعديل الباقة"
+
 msgid "Sort by"
 msgstr "التصنيف بواسطة"
 
@@ -15740,9 +15995,6 @@ msgstr ""
 
 msgid "South Sudan"
 msgstr "جنوب السودان"
-
-msgid "Space used:"
-msgstr ""
 
 msgid "Spain"
 msgstr "أسبانيا"
@@ -15945,7 +16197,7 @@ msgstr ""
 msgid "State"
 msgstr "حاله البحث"
 
-msgid "Static IP or Custom"
+msgid "Static IP Router"
 msgstr ""
 
 msgid "Status"
@@ -16098,6 +16350,14 @@ msgstr ""
 msgid "Storage Information"
 msgstr "معلومات إدارة البرنامج التشغيلي"
 
+msgid "Storage device not available or not initialized."
+msgstr ""
+
+msgid ""
+"Storage device not available.\n"
+"Mount device or reboot system and try again."
+msgstr ""
+
 #, fuzzy
 msgid "Storage information"
 msgstr "معلومات إدارة البرنامج التشغيلي"
@@ -16116,14 +16376,6 @@ msgstr "التدفق"
 
 msgid "Stream request"
 msgstr "طلب البث"
-
-#, fuzzy
-msgid "Stream-tv"
-msgstr "التدفق"
-
-#, fuzzy
-msgid "Streaming"
-msgstr "التدفق"
 
 #, fuzzy
 msgid "Streaming Clients"
@@ -16412,7 +16664,7 @@ msgstr "حماية التكوين"
 
 #, fuzzy
 msgid "System options"
-msgstr "النظام والتحوير"
+msgstr "معلومات"
 
 #, fuzzy
 msgid "System options configuration"
@@ -16435,6 +16687,9 @@ msgstr ""
 msgid "TEXT"
 msgstr ""
 
+msgid "TEXT   Reset"
+msgstr ""
+
 msgid "TEXT button"
 msgstr ""
 
@@ -16446,12 +16701,12 @@ msgid "TMBD Details Plugin"
 msgstr "تفاصيل الإضافات: "
 
 #, fuzzy
-msgid "TMBD Not Installed"
-msgstr "تثبيت"
-
-#, fuzzy
 msgid "TMBD details for event"
 msgstr "تفاصيل الإضافات: "
+
+#, fuzzy
+msgid "TMBD not installed"
+msgstr "تثبيت"
 
 msgid "TRANSLATOR_INFO"
 msgstr "معلومات المترجم"
@@ -16460,10 +16715,6 @@ msgid "TS file is too large for ISO9660 level 1!"
 msgstr "ملف TS كبير جدا بالنسبة ISO9660 المستوى 1!"
 
 msgid "TSID"
-msgstr "إرسال معرف المحطة"
-
-#, fuzzy
-msgid "TSID:"
 msgstr "إرسال معرف المحطة"
 
 msgid "TUNING"
@@ -16575,9 +16826,6 @@ msgstr ""
 msgid "Teletext alpha"
 msgstr ""
 
-msgid "Teletext base visibility"
-msgstr ""
-
 #, fuzzy
 msgid "Teletext font and resolution"
 msgstr "حدد طريقه الفرز:"
@@ -16676,8 +16924,16 @@ msgid "The '%s' log file contains no information."
 msgstr ""
 
 #, fuzzy
-msgid "The AutoTimer plugin is not installed."
-msgstr "هذا البلج إنز غير مثبت."
+msgid "The AutoTimer plugin is installed."
+msgstr "هذا البلج إنز مثبت."
+
+#, fuzzy
+msgid ""
+"The AutoTimer plugin is not installed!\n"
+"Do you want to install it?"
+msgstr ""
+"لم يتم تثبيت بلج إنز الشبكة الاسلكية!\n"
+"الرجاء منك تثبيته."
 
 #, fuzzy
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a special format data DVD (which will not play in stand-alone DVD players) instead?"
@@ -16717,10 +16973,10 @@ msgstr ""
 msgid "The detailed information is intended for developers only."
 msgstr ""
 
-msgid "The following files were found..."
-msgstr "تم العثور على هذه الملفات..."
+msgid "The hostname or the IP address of the RFC 5905 server to synchronise the time with."
+msgstr ""
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of the RFC 868 server to synchronise the time with."
 msgstr ""
 
 msgid ""
@@ -17307,10 +17563,6 @@ msgid "Timer Overview"
 msgstr "نظرة عامة على المؤقت التلقائي"
 
 #, fuzzy
-msgid "Timer Selection"
-msgstr "إختيار المؤقت"
-
-#, fuzzy
 msgid "Timer edit"
 msgstr "قائمة المؤقت"
 
@@ -17370,11 +17622,18 @@ msgstr "التحكم الزمني في البث المباشر"
 msgid "Timeshift Setup"
 msgstr "التحكم الزمني في البث المباشر"
 
+#, python-format
+msgid "Timeshift failed: Storage device free size %d GB."
+msgstr ""
+
 msgid "Timeshift is running. Select an action.\n"
 msgstr "التحكم الزمني في البث المباشر قيد التشغيل. أختار الإنتقال إلى.\n"
 
 msgid "Timeshift location"
 msgstr "موقع ملفات التايم شفت"
+
+msgid "Timeshift not enough diskspace. Is device mounted?"
+msgstr ""
 
 msgid "Timeshift not possible!"
 msgstr "التحكم في البث المباشر مستحيل!"
@@ -17588,6 +17847,9 @@ msgstr ""
 msgid "TrueType font (SD)"
 msgstr ""
 
+msgid "Try to prevent reboots for software errors and maintain of the availability."
+msgstr ""
+
 msgid "Try to send repeated commands if not all commands are executed. (e.g. TV wakeup, but not switched to correct input.)"
 msgstr ""
 
@@ -17792,6 +18054,9 @@ msgstr "غير مغطاه هذه الخدمة متقطعة ومتذبذبة"
 
 msgid "Undefined"
 msgstr "غير معروف"
+
+msgid "Undo bouquets order alphabetic"
+msgstr ""
 
 msgid "Undo install"
 msgstr "تراجع عن التثبيت"
@@ -18038,9 +18303,6 @@ msgstr "من فضلك أستخدم زر السهم العلوي أو السفل�
 #, fuzzy
 msgid "Use the alternative screen"
 msgstr "تعديل البديل"
-
-msgid "Use the cursor keys to select an installed image then reboot."
-msgstr ""
 
 msgid ""
 "Use the deletion time to sort Trash directories.\n"
@@ -18391,6 +18653,22 @@ msgstr ""
 msgid "Volume up"
 msgstr ""
 
+msgid "Vu+ MultiBoot Initialisation - will reboot after 10 seconds."
+msgstr ""
+
+msgid ""
+"Vu+ MultiBoot Initialisation in progress\n"
+"\n"
+"Will reboot after restoring any eMMC slots\n"
+"This can take from 1 -> 5 minutes per slot."
+msgstr ""
+
+msgid "Vu+ MultiBoot Manager"
+msgstr ""
+
+msgid "VuKexec: Create Vu+ Multiboot environment - Unable to complete, Vu+ Multiboot files missing."
+msgstr ""
+
 msgid "W"
 msgstr "W"
 
@@ -18401,6 +18679,16 @@ msgstr "إتصال شبكة عبر الوايفاي"
 #, fuzzy
 msgid "WAN connection information"
 msgstr "إتصال شبكة عبر الوايفاي"
+
+#, python-format
+msgid ""
+"WARNING: The DNS were not saved in your settings.\n"
+"\n"
+"Active server: %s\n"
+"DNS Active: %s\n"
+"\n"
+"It is necessary to choose a server and save with GREEN button!."
+msgstr ""
 
 #, fuzzy
 msgid "WEP"
@@ -18492,6 +18780,9 @@ msgid ""
 "Warning!\n"
 "This is an option for advanced users.\n"
 "Really disable timer conflict detection?"
+msgstr ""
+
+msgid "Warning! This is the last crash before an automatic restart is performed.\n"
 msgstr ""
 
 msgid "Warning: FBC-C V1 tuner should be connected to the first slot to work correctly. Otherwise, only 2 out of 8 demodulators will be available when connected in the second slot. "
@@ -18604,12 +18895,6 @@ msgstr "الصحراء الغربية"
 
 msgid "Western Sahara"
 msgstr "الصحراء الغربية"
-
-msgid "What date of month ?"
-msgstr ""
-
-msgid "What day of week ?"
-msgstr ""
 
 msgid "What type of service scan do you want?"
 msgstr ""
@@ -18909,6 +19194,9 @@ msgstr ""
 msgid "When enabled, you will see python packages in plugin browser download section."
 msgstr ""
 
+msgid "When enabled, you will see samba packages in plugin browser download section."
+msgstr ""
+
 msgid "When enabled, you will see the available revision on github"
 msgstr ""
 
@@ -19056,15 +19344,6 @@ msgstr "غير معتمد"
 msgid "Xhosa"
 msgstr ""
 
-msgid "YCbCr420"
-msgstr ""
-
-msgid "YCbCr422"
-msgstr ""
-
-msgid "YCbCr444"
-msgstr ""
-
 msgid "YELLOW button"
 msgstr ""
 
@@ -19168,7 +19447,14 @@ msgstr ""
 "هل ترغب في حذفها\n"
 
 msgid ""
-"You are ready to add an event to automatic timer.\n"
+"You are ready to add current event to automatic timer.\n"
+"If there are no conflicts, once added you must enter menu:\n"
+"\n"
+"Timers > AutoTimers and search the event with green button."
+msgstr ""
+
+msgid ""
+"You are ready to add this event to automatic timer.\n"
 "If there are no conflicts, once added you must enter menu:\n"
 "\n"
 "Timers > AutoTimers and search the event with green button."
@@ -19228,8 +19514,7 @@ msgstr "لم تحدد قناة لتسجل منها."
 msgid "You have not selected any logs to delete."
 msgstr "من فضلك أختار من قائمة التشغيل العنصر المراد حذفه..."
 
-#, python-format
-msgid "You have not set manual IP for %s"
+msgid "You have not selected any logs to view."
 msgstr ""
 
 #, python-format
@@ -19237,6 +19522,9 @@ msgid "You have to wait %(min)d minutes, %(sec)d seconds!"
 msgstr ""
 
 msgid "You must set a root password in order to be able to use network services, such as FTP, telnet or ssh."
+msgstr ""
+
+msgid "You must set at least one command"
 msgstr ""
 
 #, python-format
@@ -19276,16 +19564,6 @@ msgstr "هذه المجموعه تزيد عن حجم وسيط ذو طبقه وا
 msgid "Your current collection will get lost!"
 msgstr "سوف تفقد المجموعة الحالية!"
 
-#, fuzzy, python-format
-msgid ""
-"Your frontprocessor will be updated\n"
-"Please wait until your %s %s reboots\n"
-"This may take a few minutes"
-msgstr ""
-"ستتم الترقية عبر المعالج الأمامي الخاص بك\n"
-"الرجاء الانتظار حتى يتم %s %s أعاده تشغيل جهازك\n"
-"هذا قد يستغرق بضع دقائق"
-
 msgid "Your hardware can detect CI mode itself or works only in legacy mode."
 msgstr ""
 
@@ -19300,7 +19578,10 @@ msgstr ""
 msgid "Your internet connection is working (IP address: %s)"
 msgstr "اتصال الانترنت الخاص بك يعمل (الايبي: %s)"
 
-msgid "Your local time has been set successfully. Press \"OK\" to continue wizard."
+msgid ""
+"Your local time has been set successfully. Settings has been saved.\n"
+"\n"
+"Press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Your network configuration has been activated."
@@ -19456,7 +19737,7 @@ msgstr "المؤقت"
 
 #, fuzzy
 msgid "ZeroTier setup"
-msgstr "إعدادات اسم الخادم"
+msgstr "ضبط الموتور"
 
 msgid "ZeroTierVPN"
 msgstr ""
@@ -19958,9 +20239,6 @@ msgid ""
 "activate now keymap \"%s\"?"
 msgstr ""
 
-msgid "invalid type"
-msgstr "نوع غير صالح"
-
 msgid "jazz"
 msgstr "الجاز"
 
@@ -20147,6 +20425,10 @@ msgstr "لم يتم العثور علي أجهزه تخزين"
 msgid "none"
 msgstr "لا شي"
 
+#, fuzzy
+msgid "not"
+msgstr "لا"
+
 msgid "not configured"
 msgstr "غير مكون"
 
@@ -20180,8 +20462,9 @@ msgstr "من الطبقة الثنائية أستخدم الوسط."
 msgid "of a SINGLE layer medium used."
 msgstr "من الطبقة الأحادية أستخدم الوسط."
 
+#, fuzzy
 msgid "off"
-msgstr "لا يعمـل"
+msgstr "لا يعمل"
 
 msgid "off or wpa2 on"
 msgstr "إغلاق أو تشغيل الدخول المحمي لشبكة الوايفاي الثاني"
@@ -20192,8 +20475,9 @@ msgstr "يوازن هو"
 msgid "omit"
 msgstr ""
 
+#, fuzzy
 msgid "on"
-msgstr "يعمل"
+msgstr "الاثنين"
 
 msgid "on READ ONLY medium."
 msgstr "قراءة الوسيط فقط."
@@ -20203,7 +20487,7 @@ msgstr "مره واحده"
 
 #, fuzzy
 msgid "open nameserver configuration"
-msgstr "فتح تكوين أسم الخادم"
+msgstr "التفعيل اليدوي"
 
 #, fuzzy
 msgid "original language"
@@ -20376,6 +20660,10 @@ msgid "skip forward"
 msgstr "تخطى للأمام"
 
 #, python-format
+msgid "slot%s %s - %s"
+msgstr ""
+
+#, python-format
 msgid "slot%s - %s"
 msgstr ""
 
@@ -20413,6 +20701,12 @@ msgstr ""
 
 #, python-format
 msgid "slot%s - %s, without backup"
+msgstr ""
+
+msgid "slot0 - Recovery mode image"
+msgstr ""
+
+msgid "slot0 - Recovery mode image (current)"
 msgstr ""
 
 #, fuzzy

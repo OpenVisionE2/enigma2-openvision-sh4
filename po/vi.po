@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-03 17:56+0330\n"
+"POT-Creation-Date: 2023-04-27 15:34+0330\n"
 "PO-Revision-Date: 2021-08-02 09:19+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -16,7 +16,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-" Do you want to switch to Android ?"
+" Do you want to switch to Android?"
 msgstr "Bạn có muốn chơi DVD trong ổ đĩa?"
 
 msgid ""
@@ -100,7 +100,7 @@ msgstr "Mã hóa:"
 
 #, fuzzy
 msgid "  Link mode:"
-msgstr "Chế độ danh sách"
+msgstr "mô-đun init"
 
 #, fuzzy
 msgid "  Mode:"
@@ -1262,6 +1262,20 @@ msgstr "CH%s"
 #, python-format
 msgid ""
 "%s\n"
+"\n"
+"If the DNS of other servers are still kept in the DHCP Router, to get the DNS from your Router, reboot receiver."
+msgstr ""
+
+#, python-format
+msgid ""
+"%s\n"
+"\n"
+"You can use the DNS provided by other servers in Static IP Router."
+msgstr ""
+
+#, python-format
+msgid ""
+"%s\n"
 "Do you still want to flash image\n"
 "%s?"
 msgstr ""
@@ -1299,6 +1313,16 @@ msgstr ""
 msgid "%s MHz"
 msgstr ""
 
+#, fuzzy, python-format
+msgid ""
+"%s connected successfully.\n"
+"Playable files found."
+msgstr "Mã PIN đã được thay đổi thành công."
+
+#, fuzzy, python-format
+msgid "%s connected successfully. No playable files on this medium found!"
+msgstr "Không tìm thấy tập tin nào trên phương tiện này!"
+
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
 msgid "%s is no longer used. Should it be deleted?"
@@ -1321,11 +1345,11 @@ msgid "%s%s(Default: %s)"
 msgstr ""
 
 #, python-format
-msgid "%s: %s Free:%s Used:%s (%s%%)"
+msgid "%s: %s Free: %s Used: %s (%s%%)"
 msgstr ""
 
 #, python-format
-msgid "%s: %s Used:%s Free:%s"
+msgid "%s: %s Used: %s Free: %s"
 msgstr ""
 
 #, python-format
@@ -1340,16 +1364,32 @@ msgstr "Không có bảng cập nhật có sẵn"
 msgid "%s?"
 msgstr ""
 
-#, fuzzy, python-format
-msgid "'%s' %d MB little space available"
-msgstr "%s gói cập nhật có sẵn"
+#, python-format
+msgid ""
+"'%s' Storage device free size %d GB.\n"
+"%s"
+msgstr ""
 
 #, fuzzy, python-format
 msgid "'%s' contains %d file(s) and %d sub-directories.\n"
 msgstr "Thư mục chứa %(file)s và %(subdir)s."
 
+#, fuzzy, python-format
+msgid ""
+"'%s' does not exist.\n"
+"%s"
+msgstr "Thư mục%s không tồn tại."
+
 #, python-format
-msgid "'%s'= Internal Flash. It is not a storage device"
+msgid ""
+"'%s' is Internal Flash. It is not a storage device.\n"
+"%s"
+msgstr ""
+
+#, python-format
+msgid ""
+"'%s' not writeable.\n"
+"%s"
 msgstr ""
 
 msgid "'Handle standby from TV' has a higher priority than 'Handle input from TV'."
@@ -1358,6 +1398,10 @@ msgstr ""
 #, fuzzy
 msgid "( All readers)"
 msgstr "Mọi lứa tuổi"
+
+#, python-format
+msgid "(Attention! There will be a restart after %d crashes.)"
+msgstr ""
 
 #, fuzzy
 msgid "(Radio)"
@@ -1446,13 +1490,6 @@ msgstr "8"
 #, fuzzy
 msgid "-9"
 msgstr "9"
-
-msgid "-NO SERVICE\n"
-msgstr "-KHÔNG DỊCH VỤ\n"
-
-#, python-format
-msgid "-SERVICE ERROR:%d\n"
-msgstr "-DỊCH VỤ KHÔNG CÓ: %d\n"
 
 #, fuzzy
 msgctxt "Hotkey help separator"
@@ -1773,7 +1810,7 @@ msgstr ""
 
 #, fuzzy
 msgid "540 (default)"
-msgstr "mặc định"
+msgstr "Đặt mặc định"
 
 msgid "55, 0, 50, 50"
 msgstr ""
@@ -1853,6 +1890,9 @@ msgstr ""
 msgid ":"
 msgstr ""
 
+msgid "< PREV NEXT >  Move"
+msgstr ""
+
 msgid "<Current movielist location>"
 msgstr "<Vị trí di chuyển hiện tại>"
 
@@ -1864,9 +1904,6 @@ msgstr "<Vị trí hẹn giờ cuối>"
 
 msgid "<unknown>"
 msgstr "<không rõ>"
-
-msgid "=NO STREAM\n"
-msgstr "= KHÔNG TRỰC TIẾP\n"
 
 #, python-format
 msgid "?%s-recursive?"
@@ -1891,6 +1928,10 @@ msgstr "Một bộ đếm thời gian hoàn thành muốn tắt người nhận 
 #, python-format
 msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
 msgstr "Một tệp cấu hình (%s) đã được sửa đổi kể từ khi được cài đặt. Bạn có muốn giữ sửa đổi của bạn?"
+
+#, python-format
+msgid "A crash log was %s created in '%s'"
+msgstr ""
 
 msgid "A file from media is in use!"
 msgstr "Một tập tin từ phương tiện truyền thông đang được sử dụng!"
@@ -2090,7 +2131,7 @@ msgstr "Kích hoạt HbbTV (Nút màu đỏ)"
 
 #, fuzzy
 msgid "Activate IPv6 configuration"
-msgstr "Kích hoạt cấu hình hiện tại"
+msgstr "kích hoạt cấu hình bộ điều hợp mạng"
 
 msgid "Activate Keymap now?"
 msgstr ""
@@ -2101,8 +2142,9 @@ msgstr "Kích hoạt hình ảnh trong hình ảnh"
 msgid "Activate a way to send individual or specific internal HDMI-CEC commands from the command line."
 msgstr ""
 
+#, fuzzy
 msgid "Activate current configuration"
-msgstr "Kích hoạt cấu hình hiện tại"
+msgstr "kích hoạt cấu hình bộ điều hợp mạng"
 
 msgid "Activate network settings"
 msgstr "Kích hoạt cài đặt mạng"
@@ -2137,6 +2179,10 @@ msgstr "Thêm vào"
 msgid "Add / Delete bookmark"
 msgstr "Thêm dấu trang"
 
+#, python-format
+msgid "Add 4 more Vu+ Multiboot USB slots after slot %s ?"
+msgstr ""
+
 #, fuzzy
 msgid "Add BISS CaID to service"
 msgstr "Thêm dịch vụ"
@@ -2149,11 +2195,15 @@ msgstr "Thêm dấu trang"
 msgid "Add Timer"
 msgstr "Thêm bộ đếm thời gian"
 
+#, fuzzy
+msgid "Add USB slots"
+msgstr "Tất cả các khe"
+
+msgid "Add USB slots (require receiver Vu+ 4k)"
+msgstr ""
+
 msgid "Add a mark"
 msgstr "Thêm một dấu"
-
-msgid "Add a nameserver entry"
-msgstr "Thêm một mục nhập máy chủ tên"
 
 #, fuzzy
 msgid "Add a new tag"
@@ -2201,6 +2251,9 @@ msgstr "Thêm tập tin vào danh sách phát"
 msgid "Add files to playlist"
 msgstr "Thêm tệp vào danh sách phát"
 
+msgid "Add legacy LEFT/RIGHT actions"
+msgstr ""
+
 msgid "Add marker"
 msgstr "Thêm điểm đánh dấu"
 
@@ -2217,11 +2270,12 @@ msgstr "Thêm ghi âm (nhập thời lượng ghi)"
 msgid "Add recording (enter recording endtime)"
 msgstr "Thêm ghi âm (nhập thời gian kết thúc ghi âm)"
 
-msgid "Add recording (indefinitely)"
-msgstr "Thêm ghi âm (vô thời hạn)"
-
 msgid "Add recording (stop after current event)"
 msgstr "Thêm ghi âm (dừng sau sự kiện hiện tại)"
+
+#, fuzzy
+msgid "Add recording set to (24 hours)"
+msgstr "Thêm ghi âm (nhập thời lượng ghi)"
 
 msgid "Add service"
 msgstr "Thêm dịch vụ"
@@ -2360,10 +2414,6 @@ msgstr "Sắp xếp tên dịch vụ"
 msgid "All"
 msgstr "Mọi lứa tuổi"
 
-#, fuzzy
-msgid "All Services"
-msgstr "Dịch vụ"
-
 msgid "All ages"
 msgstr "Mọi lứa tuổi"
 
@@ -2425,7 +2475,7 @@ msgstr "Cho phép sử dụng điều khiển từ xa của TV để điều khi
 msgid "Allows you to assign the selected function to this button."
 msgstr ""
 
-msgid "Allows you to enable/disable displaying icons on the frontpanel."
+msgid "Allows you to enable/disable displaying icons on the front panel."
 msgstr ""
 
 msgid "Allows you to hide the extensions of known file types."
@@ -2624,12 +2674,6 @@ msgstr ""
 msgid "Are you sure you want to delete this log?\n"
 msgstr "Bạn có chắc chắn muốn thoát khỏi thuật sĩ này?"
 
-#, fuzzy
-msgid ""
-"Are you sure you want to delete this:\n"
-" "
-msgstr "Bạn có chắc chắn muốn thoát khỏi thuật sĩ này?"
-
 msgid "Are you sure you want to exit this wizard?"
 msgstr "Bạn có chắc chắn muốn thoát khỏi thuật sĩ này?"
 
@@ -2754,8 +2798,9 @@ msgstr "Âm thanh PID"
 msgid "Audio PID%s, codec & lang"
 msgstr "Âm thanh PID%s, codec & lang"
 
+#, fuzzy
 msgid "Audio PID, codec & lang"
-msgstr "Âm thanh PID, codec & lang"
+msgstr "Âm thanh PID%s, codec & lang"
 
 msgid "Audio Source"
 msgstr ""
@@ -2872,11 +2917,21 @@ msgstr "Không có chế độ chờ"
 
 #, fuzzy
 msgid "Auto(not available)"
-msgstr "không có sẵn"
+msgstr "Bộ chỉnh không có sẵn."
 
 #, fuzzy
 msgid "AutoTimer"
 msgstr "Hẹn giờ"
+
+msgid ""
+"AutoTimer is not installed\n"
+"Now (Press long)"
+msgstr ""
+
+msgid ""
+"AutoTimer is not installed\n"
+"Prime time (Press long)"
+msgstr ""
 
 #, python-format
 msgid "Autoinstalling %s"
@@ -3041,9 +3096,6 @@ msgstr "Bangladesh"
 msgid "Barbados"
 msgstr "Barbados"
 
-msgid "Base transparency for teletext, more options available within teletext screen."
-msgstr ""
-
 msgid "Bashkir"
 msgstr ""
 
@@ -3192,8 +3244,9 @@ msgstr "Tăng màu xanh"
 msgid "Boost green"
 msgstr "Tăng màu xanh"
 
+#, fuzzy
 msgid "Booster Control"
-msgstr ""
+msgstr "Loại điều khiển từ xa"
 
 msgid "Boot ID"
 msgstr ""
@@ -3406,9 +3459,6 @@ msgstr "Phân công CI"
 msgid "CI enabled"
 msgstr "kích hoạt"
 
-msgid "CI slot: "
-msgstr "Khe CI: "
-
 msgid "CIFS/Samba"
 msgstr ""
 
@@ -3575,6 +3625,10 @@ msgid "Cancel the action selection and exit"
 msgstr "Hủy bỏ mọi thay đổi văn bản và thoát"
 
 #, fuzzy
+msgid "Cancel the image selection and exit"
+msgstr "Hủy bỏ mọi thay đổi văn bản và thoát"
+
+#, fuzzy
 msgid "Cancel the location selection"
 msgstr "Chọn kênh"
 
@@ -3669,7 +3723,7 @@ msgstr "Chọn bản nhạc"
 
 #, fuzzy
 msgid "Change CPU speed settings"
-msgstr "Thay đổi cài đặt lặp lại và trì hoãn?"
+msgstr "Sử dụng các cài đặt thiết bị đầu vào?"
 
 msgid "Change PIN Pressing [OK]"
 msgstr ""
@@ -3687,7 +3741,7 @@ msgstr "Kênh truyền hình"
 
 #, fuzzy
 msgid "Change device settings"
-msgstr "Cài đặt máy chủ tên"
+msgstr "Sử dụng các cài đặt thiết bị đầu vào?"
 
 msgid "Change directory / Select bookmark"
 msgstr ""
@@ -3727,6 +3781,12 @@ msgstr "Chọn kênh"
 
 msgid "Channel context menu"
 msgstr "Menu ngữ cảnh kênh"
+
+msgid "Channel list is clean no characters to purge."
+msgstr ""
+
+msgid "Channel list was successfully purged."
+msgstr ""
 
 #, fuzzy
 msgid "Channel name"
@@ -3810,7 +3870,8 @@ msgstr "Kiểm tra hệ thống tập tin ..."
 msgid "Checking filesystem..."
 msgstr "Kiểm tra hệ thống tập tin ..."
 
-msgid "Checking the internet connection"
+#, fuzzy
+msgid "Checking the internet connection. Please wait..."
 msgstr "Kiểm tra kết nối internet"
 
 #, python-format
@@ -4009,8 +4070,8 @@ msgstr "mô-đun init"
 msgid ""
 "Client mode sets up this receiver to stream from another receiver. In this mode no local tuners will be available and channel lists, EPG, etc, will come from the remote receiver. All tuner settings will be cleared.\n"
 "\n"
-"Paths to search EPG and Channels on server:\n"
-"Internal Flash, HDD, USB.\n"
+"Paths to search EPG and/or Channels on server:\n"
+"Internal Flash or /media/hdd/.\n"
 "\n"
 "Server must have authentication disabled for streams http in MENU \"customize\". Set password if it is set on server."
 msgstr ""
@@ -4211,17 +4272,21 @@ msgstr "Định cấu hình trong bao lâu infobar sẽ vẫn hiển thị sau k
 msgid "Configure for how many minutes finished events should remain visible in the EPG. Useful when you need information about an event which has just finished, or has been delayed."
 msgstr "Định cấu hình cho bao nhiêu phút sự kiện đã hoàn thành sẽ vẫn hiển thị trong EPG. Hữu ích khi bạn cần thông tin về một sự kiện vừa kết thúc hoặc đã bị trì hoãn."
 
+#, fuzzy
 msgid "Configure front LED color during normal operations (this needs an enigma2 restart)."
-msgstr ""
+msgstr "Bật đèn LED nguồn trong chế độ chờ."
 
+#, fuzzy
 msgid "Configure front LED color during recording (this needs an enigma2 restart)."
-msgstr ""
+msgstr "Bật đèn LED nguồn trong chế độ chờ."
 
+#, fuzzy
 msgid "Configure front LED color during recording in standby (this needs an enigma2 restart)."
-msgstr ""
+msgstr "Bật đèn LED nguồn trong chế độ chờ."
 
+#, fuzzy
 msgid "Configure front LED color during standby (this needs an enigma2 restart)."
-msgstr ""
+msgstr "Bật đèn LED nguồn trong chế độ chờ."
 
 msgid "Configure how many channels are shown in the selection list."
 msgstr "Định cấu hình có bao nhiêu kênh được hiển thị trong danh sách lựa chọn."
@@ -4231,6 +4296,12 @@ msgstr "Cấu hình cách ghi tên tập tin được xây dựng."
 
 msgid "Configure how the fan should operate"
 msgstr "Cấu hình cách quạt hoạt động"
+
+msgid "Configure how to show REC symbol in standby (this needs an enigma2 restart)."
+msgstr ""
+
+msgid "Configure how to show REC symbol in use (this needs an enigma2 restart)."
+msgstr ""
 
 msgid "Configure if and how crypto icons will be shown in the channel selection list."
 msgstr "Định cấu hình nếu và cách các biểu tượng tiền điện tử sẽ được hiển thị trong danh sách chọn kênh."
@@ -4262,9 +4333,6 @@ msgstr "Định cấu hình nếu phụ đề nên chuyển đổi giữa bình 
 
 msgid "Configure interface"
 msgstr "Cấu hình giao diện"
-
-msgid "Configure nameservers"
-msgstr "Cấu hình tên máy chủ"
 
 msgid "Configure on which devices the background delete option should be used."
 msgstr "Cấu hình trên thiết bị nào nên sử dụng tùy chọn xóa nền."
@@ -4787,10 +4855,6 @@ msgstr ""
 msgid "Cron Timers"
 msgstr "Hẹn giờ"
 
-#, fuzzy
-msgid "Cron manager"
-msgstr "không có người quản lý tài nguyên"
-
 msgid "Cuba"
 msgstr "Cuba"
 
@@ -4915,6 +4979,14 @@ msgstr ""
 msgid "DLNA support"
 msgstr "Hỗ trợ HLG"
 
+#, python-format
+msgid "DNS %d"
+msgstr ""
+
+#, fuzzy
+msgid "DNS server name"
+msgstr "Tên dịch vụ"
+
 msgid "DTS"
 msgstr ""
 
@@ -4959,6 +5031,10 @@ msgid "DVB subtitle black transparency"
 msgstr "Phụ đề màu đen trong suốt DVB"
 
 msgid "DVB type"
+msgstr "Loại DVB"
+
+#, fuzzy
+msgid "DVB type:"
 msgstr "Loại DVB"
 
 msgid "DVB-C"
@@ -5094,6 +5170,9 @@ msgid "Day Mon-D"
 msgstr ""
 
 msgid "Day Mon-DD"
+msgstr ""
+
+msgid "Day of the month"
 msgstr ""
 
 msgid "Dayname D Month Year"
@@ -5398,6 +5477,10 @@ msgstr "Xóa hình ảnh"
 msgid "Delete logfile"
 msgstr "Xóa tài liệu"
 
+#, python-format
+msgid "Delete or rename folder \"vuplus\" in path '%s' before initializing."
+msgstr ""
+
 msgid "Delete playlist entry"
 msgstr "Xóa mục nhập danh sách phát"
 
@@ -5449,6 +5532,9 @@ msgstr "Xóa tài liệu"
 #, fuzzy
 msgid "Democratic Republic of the Congo"
 msgstr "Congo (Cộng hòa Dân chủ)"
+
+msgid "Demod firmware version"
+msgstr ""
 
 msgid "Denmark"
 msgstr "Đan mạch"
@@ -5586,18 +5672,6 @@ msgstr "Danh mục"
 
 #, python-format
 msgid "Directory %s does not exist."
-msgstr "Thư mục%s không tồn tại."
-
-#, fuzzy, python-format
-msgid "Directory '%s' does not exist!"
-msgstr "Thư mục%s không tồn tại."
-
-#, fuzzy, python-format
-msgid "Directory '%s' not writable!"
-msgstr "Thư mục%s không tồn tại."
-
-#, fuzzy, python-format
-msgid "Directory '%s' not writeable!"
 msgstr "Thư mục%s không tồn tại."
 
 #, fuzzy
@@ -5862,7 +5936,7 @@ msgstr "Bạn có thực sự muốn xóa dấu trang của%s không?"
 
 #, fuzzy
 msgid "Do you really want to restart the receiver now?"
-msgstr "Bạn có muốn khởi động lại máy thu của bạn?"
+msgstr "Bạn có thực sự muốn xóa%s không?"
 
 #, python-format
 msgid "Do you really want to stop current event and delete timer %s?"
@@ -5902,6 +5976,10 @@ msgstr ""
 "Bạn có muốn flash hình ảnh\n"
 "%s"
 
+#, fuzzy, python-format
+msgid "Do you want to install \"%s\" ?"
+msgstr "Bạn có muốn cài đặt Plugin không?"
+
 msgid "Do you want to install Plugins?"
 msgstr "Bạn có muốn cài đặt Plugin không?"
 
@@ -5924,7 +6002,19 @@ msgstr "Bạn có muốn thoát khỏi thuật sĩ quét quá mức?"
 msgid "Do you want to reboot your receiver?"
 msgstr "Bạn có muốn khởi động lại máy thu của bạn?"
 
+#, fuzzy, python-format
+msgid "Do you want to remove \"%s\" ?"
+msgstr ""
+"Bạn có thực sự muốn loại bỏ\n"
+"plugin \"%s\"?"
+
 msgid "Do you want to remove the package:\n"
+msgstr "Bạn có muốn xóa gói:\n"
+
+#, fuzzy
+msgid ""
+"Do you want to remove this command or script?\n"
+"\n"
 msgstr "Bạn có muốn xóa gói:\n"
 
 msgid "Do you want to restore your settings?"
@@ -6125,9 +6215,9 @@ msgstr ""
 msgid "EPG filename"
 msgstr "tên tệp"
 
-#, python-format
+#, fuzzy, python-format
 msgid "EPG imported successfully from %s"
-msgstr ""
+msgstr "Mã PIN đã được thay đổi thành công."
 
 msgid "EPG language selection 1"
 msgstr "Lựa chọn ngôn ngữ EPG 1"
@@ -6152,9 +6242,9 @@ msgstr "EPG:"
 msgid "ERROR - failed to scan (%s)!"
 msgstr "LỖI - không quét được (%s)!"
 
-#, fuzzy, python-format
-msgid "ERROR downloading file %s"
-msgstr "LỖI tải xuống tệp%s"
+#, python-format
+msgid "ERROR downloading file %s. Use button YELLOW in server \"Purge channel list\""
+msgstr ""
 
 msgid "East"
 msgstr "Đông"
@@ -6168,8 +6258,9 @@ msgstr "Ecuador"
 msgid "Edit"
 msgstr "Chỉnh sửa"
 
+#, fuzzy
 msgid "Edit DNS"
-msgstr "Chỉnh sửa DNS"
+msgstr "Chỉnh sửa"
 
 #, fuzzy
 msgid "Edit Tags"
@@ -6304,6 +6395,10 @@ msgstr "Kích hoạt ViaSat EPG"
 msgid "Enable Virgin EPG"
 msgstr "Kích hoạt Virgin EPG"
 
+#, fuzzy
+msgid "Enable Vu+ MultiBoot"
+msgstr "Cho phép chỉnh sửa gói kênh"
+
 msgid "Enable auto cable scan"
 msgstr "Cho phép quét cáp tự động"
 
@@ -6317,9 +6412,6 @@ msgstr "Bật quét nhanh tự động cho%s"
 #, fuzzy
 msgid "Enable auto telnet login:"
 msgstr "Cho phép quét cáp tự động"
-
-msgid "Enable blinking REC symbol on the LCD display"
-msgstr ""
 
 #, fuzzy
 msgid "Enable bluetooth audio"
@@ -6376,6 +6468,9 @@ msgstr "Cho phép chế độ di chuyển"
 msgid "Enable multiple bouquets"
 msgstr "Cho phép nhiều gói kênh"
 
+msgid "Enable new GStreamer 1.x playback"
+msgstr ""
+
 #, fuzzy
 msgid "Enable or disable IPv6"
 msgstr "Bật hoặc tắt bằng HDMI-CEC."
@@ -6386,14 +6481,15 @@ msgstr "Bật hoặc tắt bằng HDMI-CEC."
 msgid "Enable parental protection"
 msgstr "Bật tính năng bảo vệ của phụ huynh"
 
-#, fuzzy
 msgid ""
-"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally, e.g. tuner is occupied or service type is unavailable on the local tuner.\n"
+"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally, e.g. tuner is occupied or service type is unavailable on local tuner.\n"
 "\n"
-"You can use this receiver only in client mode using server channel list and EPG.\n"
+"You can use this receiver only in client mode using server channel list, timers and EPG.\n"
 "\n"
-"Set manual IP for importing EPG and Channels in 'Import remote receiver URL'."
-msgstr "Cho phép máy thu enigma2 từ xa cố gắng điều chỉnh các dịch vụ không thể điều chỉnh cục bộ (ví dụ: bộ điều chỉnh bị chiếm dụng hoặc loại dịch vụ không khả dụng trên bộ điều chỉnh cục bộ. Chỉ định URL hoàn chỉnh bao gồm http:// và số cổng (thông thường ...:8001 ), ví dụ http://second_box:8001."
+"If YELLOW button is available, it means that channel list include characters bad, e.g. \"+\", then list cannot be import from server.\n"
+"\n"
+"If you press YELLOW button then it will clean up list to remove these characters."
+msgstr ""
 
 #, fuzzy
 msgid "Enable swap:"
@@ -6573,7 +6669,8 @@ msgstr "Nhập URL"
 msgid "Enter a new name for this device."
 msgstr "Khám phá đường nhấp nháy nhấp nháy cho dịch vụ này"
 
-msgid "Enter an URL where alternative images could be listed for FlashImage"
+#, fuzzy
+msgid "Enter an URL where alternative images could be listed for FlashImage. Enter text 'all' for automatic access of many images."
 msgstr "Nhập một URL nơi hình ảnh thay thế có thể được liệt kê cho FlashImage"
 
 msgid "Enter if you are in the east or west hemisphere."
@@ -6696,9 +6793,6 @@ msgid ""
 msgstr ""
 "Lỗi trong khi giải nén hình ảnh\n"
 "%s"
-
-msgid "Error in XML"
-msgstr ""
 
 msgid "Error stop stream!"
 msgstr "Lỗi dừng luồng!"
@@ -6862,6 +6956,14 @@ msgstr "Tiến độ thực hiện:"
 msgid "Exif"
 msgstr "Thoát"
 
+msgid ""
+"Exist are debug or crash files.\n"
+"Space used:"
+msgstr ""
+
+msgid "Exist are no debug files or crash."
+msgstr ""
+
 msgid "Exit"
 msgstr "Thoát"
 
@@ -6870,7 +6972,7 @@ msgstr "Thoát EPG"
 
 #, fuzzy
 msgid "Exit IPv6 configuration"
-msgstr "Thoát cấu hình máy chủ tên"
+msgstr "Cấu hình mạng"
 
 msgid "Exit editor"
 msgstr "Thoát biên tập"
@@ -6903,8 +7005,9 @@ msgstr "Thoát khỏi danh sách phim"
 msgid "Exit movie player?"
 msgstr "Thoát khỏi trình phát phim?"
 
+#, fuzzy
 msgid "Exit nameserver configuration"
-msgstr "Thoát cấu hình máy chủ tên"
+msgstr "thoát cấu hình bộ điều hợp mạng"
 
 msgid "Exit network interface list"
 msgstr "Thoát khỏi danh sách giao diện mạng"
@@ -7248,6 +7351,10 @@ msgid "Feed disabled!"
 msgstr "cho phép/không cho phép"
 
 #, fuzzy
+msgid "Feed not available. The AutoTimer plugin was not installed."
+msgstr "Plugin này chưa được cài đặt."
+
+#, fuzzy
 msgid "Feed stable."
 msgstr "không thể kiểm chứng"
 
@@ -7270,6 +7377,10 @@ msgstr "Tập tin có vẻ bận rộn.\n"
 
 msgid "File can not displayed - File not found"
 msgstr ""
+
+#, fuzzy, python-format
+msgid "File error %s"
+msgstr "có lỗi"
 
 msgid ""
 "File oscam.conf/ncam.conf not found.\n"
@@ -7332,13 +7443,16 @@ msgstr ""
 msgid "Flash Image"
 msgstr "Hình ảnh flash"
 
-#, fuzzy, python-format
-msgid "Flash directory '%s' not allowed!"
-msgstr "Tạo thư mục%s không thành công."
-
 #, fuzzy
 msgid "Flash type"
 msgstr "Hình ảnh flash"
+
+msgid "FlashImage: Add USB STARTUP slots - No EXT4 USB attached."
+msgstr ""
+
+#, python-format
+msgid "FlashImage: Add USB STARTUP slots - USB (%s) only has %s free. At least 1GB is required."
+msgstr ""
 
 #, fuzzy
 msgid "Flashing"
@@ -7413,10 +7527,6 @@ msgstr "Pháp"
 msgid "Free"
 msgstr ""
 
-#, python-format
-msgid "Free %d MB: Low space available for timeshift. Change device"
-msgstr ""
-
 msgid "Free flash"
 msgstr ""
 
@@ -7481,6 +7591,15 @@ msgstr ""
 
 msgid "Front Panel Display"
 msgstr ""
+
+#, fuzzy, python-format
+msgid ""
+"Front processor of your %s %s will be updated\n"
+"This may take a few minutes"
+msgstr ""
+"Bộ xử lý trước của chúng tôi sẽ được nâng cấp\n"
+"Vui lòng đợi cho đến khi người nhận của bạn khởi động lại\n"
+"Có thể sẽ mất vài phút"
 
 #, fuzzy
 msgid "Front processor version"
@@ -7615,6 +7734,11 @@ msgstr "Hiện tại không thể truy xuất nhật ký cam kết - vui lòng t
 #, fuzzy
 msgid "Geolocation is not available."
 msgstr "Cập nhật nguồn cấp dữ liệu không có sẵn."
+
+msgid ""
+"Geolocation is not available. There is no Internet.\n"
+"Press \"OK\" to continue wizard."
+msgstr ""
 
 msgid "Georgia"
 msgstr "Georgia"
@@ -8121,6 +8245,10 @@ msgstr ""
 msgid "I do not want to perform any service scans"
 msgstr "Tôi không muốn thực hiện bất kỳ quét dịch vụ nào"
 
+#, fuzzy
+msgid "ID"
+msgstr "D"
+
 msgid "IDLE"
 msgstr "IDLE"
 
@@ -8189,6 +8317,12 @@ msgstr "Biểu tượng"
 msgid "Ido"
 msgstr ""
 
+msgid "If 'never', will force restart despite that after 100 crashes."
+msgstr ""
+
+msgid "If 'never', will write crash log despite that for the first crash."
+msgstr ""
+
 msgid "If an action is user-configurable, its help entry will be flagged with a '(C)' suffix."
 msgstr ""
 
@@ -8202,6 +8336,9 @@ msgstr "Nếu được bật, nhật ký sẽ được lưu giữ về lưu lư�
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr "Nếu được bật, dấu trang sẽ được cập nhật với vị trí mới khi bạn di chuyển hoặc sao chép bản ghi."
 
+msgid "If enabled, the new GStreamer 1.x playback engine will be used."
+msgstr ""
+
 #, fuzzy
 msgid "If set to 'Yes' the same commands will be sent to the TV for deep standby events as are sent during regular standby events."
 msgstr "Nếu được đặt thành 'có', các lệnh tương tự sẽ được gửi đến TV cho các sự kiện chờ sâu, như được gửi trong các sự kiện chờ thông thường."
@@ -8212,7 +8349,7 @@ msgstr "Nếu được đặt thành giá trị tín hiệu 'có' (SNR, v.v.) s�
 msgid "If set to 'yes', allows you to use timeshift with alternative audio plugins."
 msgstr ""
 
-msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
+msgid "If the upper panel is active pressing GREEN or OK will change the current directory.  If the lower panel is active pressing GREEN or OK will select the current bookmark and exit."
 msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
@@ -8294,11 +8431,8 @@ msgid "Import channels and/or EPG from remote receiver URL also when the receive
 msgstr "Nhập kênh và / hoặc EPG từ URLmáy thu từ xa cũng khi máy thu thoát khỏi chế độ chờ"
 
 #, fuzzy
-msgid ""
-"Import channels and/or EPG from remote receiver URL or IP.\n"
-"\n"
-"Don't forget to manually set server IP."
-msgstr "Nhập kênh và / hoặc EPG từ URL máy thu từ xa khi máy thu hoặc enigma2 được khởi động lại"
+msgid "Import channels and/or EPG from remote receiver URL or IP."
+msgstr "Nhập kênh và / hoặc EPG từ URL máy thu từ xa khi máy thu được khởi động"
 
 #, fuzzy
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted."
@@ -8309,6 +8443,10 @@ msgstr "Nhập từ URL máy thu từ xa"
 
 msgid "Import remote receiver URL"
 msgstr "Nhập URL máy thu từ xa"
+
+#, python-format
+msgid "Imported list with bouquet empty <n/a> %s file does not exist"
+msgstr ""
 
 msgid "In live view wait this many seconds after a numeric key press before assuming the required channel number has been entered. Default: 5 seconds. Setting zero will require confirmation with 'OK'. "
 msgstr ""
@@ -8330,9 +8468,6 @@ msgstr "chỉ trong plugin"
 
 msgid "In progress"
 msgstr "Trong tiến trình"
-
-msgid "In the Standby record on the LCD display"
-msgstr ""
 
 msgid "Inactivity Sleeptimer"
 msgstr "Không hoạt động Sleeptimer"
@@ -8365,8 +8500,9 @@ msgstr "Bao gồm ECM trong luồng http"
 msgid "Include EIT in http streams"
 msgstr "Bao gồm thuế TNDN trong các luồng http"
 
+#, fuzzy
 msgid "Include EPG data"
-msgstr ""
+msgstr "Lưu cài đặt và dữ liệu EPG"
 
 #, fuzzy
 msgid "Include SDT, BAT in http streams"
@@ -8420,8 +8556,9 @@ msgstr "Tiếng Indonesia"
 msgid "Inetd Recovery"
 msgstr ""
 
+#, fuzzy
 msgid "Inetd recovery"
-msgstr ""
+msgstr "Ghi âm tức thì"
 
 msgid "Info"
 msgstr "Thông tin"
@@ -8475,6 +8612,9 @@ msgstr "Hết thời gian chờ thanh thông tin"
 
 msgid "Init"
 msgstr "Trong đó"
+
+msgid "Init Vu+ MultiBoot"
+msgstr ""
 
 msgid "Initial fast forward speed"
 msgstr "Tốc độ chuyển tiếp nhanh ban đầu"
@@ -8580,6 +8720,10 @@ msgid "Installing %s (%s)..."
 msgstr "Cài đặt phần mềm."
 
 #, fuzzy
+msgid "Installing AutoTimer"
+msgstr "Đang Cài đặt"
+
+#, fuzzy
 msgid "Installing Software..."
 msgstr "Cài đặt phần mềm."
 
@@ -8635,11 +8779,7 @@ msgid "Internal hdd only"
 msgstr "Chỉ hdd nội bộ"
 
 #, fuzzy
-msgid "Internet"
-msgstr "Nội bộ"
-
-#, fuzzy
-msgid "Internet time (NTP)"
+msgid "Internet time"
 msgstr "Mạng (ntp)"
 
 #, fuzzy
@@ -8704,7 +8844,7 @@ msgstr "Ixraen"
 msgid ""
 "It seems you did not see all the eight arrow heads. This means your TV has overscan enabled, and is not configured properly.\n"
 "\n"
-"Please refer to your TV's manual to find how you can disable overscan on your TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, ask other users at https://forum.openvision.tech\n"
+"Please refer to your TV's manual to find how you can disable overscan on your TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, ask other users.\n"
 "\n"
 msgstr ""
 "Có vẻ như bạn không nhìn thấy tất cả tám đầu mũi tên. Điều này có nghĩa là TV của bạn đã bật quá mức và không được định cấu hình đúng.\n"
@@ -8918,8 +9058,9 @@ msgstr ""
 msgid "LED brightness during standby."
 msgstr ""
 
+#, fuzzy
 msgid "LED color during normal operations"
-msgstr ""
+msgstr "Luôn bao gồm ECM trong bản ghi"
 
 #, fuzzy
 msgid "LED color during recording"
@@ -9381,6 +9522,10 @@ msgid ""
 "New MAC address is: "
 msgstr ""
 
+#, fuzzy
+msgid "MB"
+msgstr "B"
+
 msgid "MENU"
 msgstr ""
 
@@ -9705,9 +9850,6 @@ msgstr ""
 
 msgid "Mins Secs"
 msgstr ""
-
-msgid "Missing "
-msgstr "Còn thiếu "
 
 #, fuzzy
 msgid "Mobile connection"
@@ -10150,9 +10292,6 @@ msgstr "KHÔNG"
 msgid "NOW"
 msgstr "HIỆN NAY"
 
-msgid "NTP Hostname"
-msgstr "Tên máy chủ NTP"
-
 msgid "NTSC"
 msgstr "NTSC"
 
@@ -10162,23 +10301,13 @@ msgstr "Tên"
 msgid "Nameserver"
 msgstr "Tên máy chủ"
 
-#, python-format
-msgid "Nameserver %d"
-msgstr "Máy chủ tên %d"
-
 #, fuzzy
-msgid "Nameserver configuration"
-msgstr "Thoát cấu hình máy chủ tên"
-
-msgid "Nameserver settings"
-msgstr "Cài đặt máy chủ tên"
-
 msgid "Nameserver setup"
-msgstr "Thiết lập máy chủ tên"
+msgstr "Tên máy chủ"
 
 #, fuzzy
 msgid "NameserverSetup"
-msgstr "Thiết lập máy chủ tên"
+msgstr "Tên máy chủ"
 
 msgid "Namespace & Orbital pos."
 msgstr "Không gian tên & quỹ đạo pos."
@@ -10379,9 +10508,6 @@ msgstr ""
 msgid "No ECMPids available (FTA Service)"
 msgstr "Không có ECMPids (Dịch vụ FTA)"
 
-msgid "No HDD found or HDD not initialized!"
-msgstr "Không tìm thấy ổ cứng hoặc ổ cứng không được khởi tạo!"
-
 msgid "No active subservices available."
 msgstr "Không có dịch vụ phụ hoạt động có sẵn."
 
@@ -10410,10 +10536,8 @@ msgstr "Không chậm trễ"
 msgid "No description available."
 msgstr "Không có mô tả."
 
-msgid "No displayable files on this medium found!"
-msgstr "Không tìm thấy tập tin nào trên phương tiện này!"
-
-msgid "No event info found, recording indefinitely."
+#, fuzzy
+msgid "No event info found, recording set to (24 hours)"
 msgstr "Không tìm thấy thông tin sự kiện, ghi lại vô thời hạn."
 
 msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
@@ -10554,8 +10678,9 @@ msgstr ""
 msgid "Normal mode"
 msgstr "Chế độ bình thường"
 
+#, fuzzy
 msgid "Normal running frequency"
-msgstr ""
+msgstr "Tất cả tần số"
 
 #, fuzzy
 msgid "Normal speed"
@@ -10629,6 +10754,9 @@ msgstr "không chạy"
 msgid "Not tested:"
 msgstr "Không được kiểm tra:"
 
+msgid "Note: No button defined for this action!"
+msgstr ""
+
 #, fuzzy
 msgid "Nothing"
 msgstr "Không làm gì cả"
@@ -10653,9 +10781,6 @@ msgstr ""
 msgctxt "now/next: 'now' event label"
 msgid "Now"
 msgstr "Hiện nay"
-
-msgid "Now (Press long)"
-msgstr ""
 
 msgid "Now playing"
 msgstr "Đang chơi"
@@ -10711,10 +10836,6 @@ msgid "OMB Manager List"
 msgstr ""
 
 msgid "ONID"
-msgstr "ONID"
-
-#, fuzzy
-msgid "ONID:"
 msgstr "ONID"
 
 msgid "OPKG clean mode"
@@ -10862,7 +10983,15 @@ msgstr "Chỉ chọn 'có' nếu bạn đang sử dụng đa tín hiệu yêu c�
 
 #, fuzzy
 msgid "Open Info"
-msgstr "Thông tin"
+msgstr "Thông tin ECM"
+
+#, fuzzy
+msgid "Open Multi EPG"
+msgstr "Đa EPG"
+
+#, fuzzy
+msgid "Open Simple EPG"
+msgstr "EPG đơn"
 
 msgid "Open Vision Commit Info Setup"
 msgstr ""
@@ -10909,18 +11038,10 @@ msgstr "Mở bộ chỉnh cài đặt "
 msgid "Open the movie list"
 msgstr "Mở danh sách phim"
 
-#, fuzzy
-msgid "Open the multi service EPG view"
-msgstr "Mở danh sách phim"
-
-#, fuzzy
-msgid "Open the single service EPG view"
-msgstr "Hiển thị EPG dịch vụ duy nhất"
-
-msgid "OpenDNS FamilyShield"
+msgid "OpenDNS"
 msgstr ""
 
-msgid "OpenDNS Home"
+msgid "OpenDNS-2"
 msgstr ""
 
 #, fuzzy
@@ -10971,8 +11092,9 @@ msgstr "Cấu hình bộ chỉnh"
 msgid "Operating LED status in deep standby mode"
 msgstr "Trạng thái đèn LED hoạt động ở chế độ chờ sâu"
 
+#, fuzzy
 msgid "Operating LED status in standby mode"
-msgstr "Trạng thái đèn LED hoạt động ở chế độ chờ"
+msgstr "Trạng thái đèn LED hoạt động ở chế độ chờ sâu"
 
 #, fuzzy
 msgid "Operating LED status while running."
@@ -10987,11 +11109,22 @@ msgstr "Tùy chọn tắt hẹn giờ"
 msgid "Orange"
 msgstr ""
 
-msgid "Orb Pos:"
-msgstr ""
-
 msgid "Orbital position"
 msgstr "Vị trí quỹ đạo"
+
+#, fuzzy
+msgid "Orbital position:"
+msgstr "Vị trí quỹ đạo"
+
+msgid "Orde image per modes and slots (require receiver with mode slot 12)"
+msgstr ""
+
+#, fuzzy
+msgid "Order by modes"
+msgstr "đảo ngược theo ngày"
+
+msgid "Order by slots"
+msgstr ""
 
 msgid "Ordinary"
 msgstr "Bình thường"
@@ -11175,6 +11308,13 @@ msgstr "Biên tập dịch vụ kiểm soát của phụ huynh"
 
 msgid "Parental control setup"
 msgstr "Thiết lập kiểm soát của cha mẹ"
+
+msgid "Partial"
+msgstr ""
+
+#, fuzzy
+msgid "Partial EPG"
+msgstr "Đa EPG"
 
 #, fuzzy
 msgid "Partition"
@@ -11404,11 +11544,12 @@ msgstr "Vui lòng chọn một phần mở rộng ..."
 msgid "Please choose reader"
 msgstr "Vui lòng chọn một phần mở rộng ..."
 
+#, fuzzy
 msgid ""
 "Please configure or verify your Nameservers by filling out the required values.\n"
 "When you are ready press OK to continue."
 msgstr ""
-"Vui lòng định cấu hình hoặc xác minh Máy chủ tên của bạn bằng cách điền vào các giá trị bắt buộc.\n"
+"Vui lòng định cấu hình kết nối internet của bạn bằng cách điền vào các giá trị cần thiết.\n"
 "Khi bạn đã sẵn sàng nhấn OK để tiếp tục."
 
 msgid "Please configure the fallback tuner setup"
@@ -11637,6 +11778,9 @@ msgstr "Trình duyệt Plugin"
 msgid "Plugin Browser Setup"
 msgstr "Trình duyệt Plugin"
 
+msgid "Plugin EPGImport actived EPG import and woke up your receiver"
+msgstr ""
+
 msgid "Plugin browser"
 msgstr "Trình duyệt plugin"
 
@@ -11852,8 +11996,27 @@ msgstr "Nhấn 'OK' để xóa mục hoặc <> để thay đổi thứ tự ho�
 msgid "Press EXIT to return to the help screen."
 msgstr "Nhấn OK để chuyển đổi lựa chọn."
 
+msgid ""
+"Press GREEN button to enable MultiBoot\n"
+"\n"
+"Will reboot within 10 seconds,\n"
+"unless you have eMMC slots to restore.\n"
+"Restoring eMMC slots can take from 1 -> 5 minutes per slot."
+msgstr ""
+
 msgid "Press INFO on your remote control for additional information."
 msgstr "Nhấn INFO trên điều khiển từ xa để biết thêm thông tin."
+
+msgid "Press LEFT RIGHT OK or MENU to change path."
+msgstr ""
+
+#, python-format
+msgid ""
+"Press LEFT RIGHT OK or MENU to choose another server.\n"
+"\n"
+"Active server: %s\n"
+"DNS: %s"
+msgstr ""
 
 msgid "Press MENU on your remote control for additional options."
 msgstr "Nhấn MENU trên điều khiển từ xa của bạn để có thêm tùy chọn."
@@ -11917,6 +12080,10 @@ msgstr "Nhấn OK để chọn vệ tinh"
 msgid "Press OK to select/deselect a CAId."
 msgstr "Nhấn OK để chọn / bỏ chọn CAId."
 
+#, fuzzy
+msgid "Press OK to show details."
+msgstr "Nhấn OK để chỉnh sửa cài đặt."
+
 msgid "Press OK to toggle the selection"
 msgstr "Nhấn OK để chuyển đổi lựa chọn"
 
@@ -11934,7 +12101,7 @@ msgstr "Nhấn OK để biết thêm chi tiết cho%s"
 msgid "Press OK, save and exit..."
 msgstr "Nhấn OK, lưu và thoát ..."
 
-msgid "Press YELLOW button to set your schedule."
+msgid "Press YELLOW button if your time zone is not set or press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Press or select button and then press 'OK' for attach function."
@@ -11975,14 +12142,13 @@ msgstr "Menu xem trước"
 msgid "Preview selected channel"
 msgstr "Xem trước kênh đã chọn"
 
+msgid "Previous saved timeshift has editing properties with plugin CutListEditor."
+msgstr ""
+
 msgid "Primary DNS"
 msgstr "DNS chính"
 
 msgid "Prime time"
-msgstr "Giờ chính"
-
-#, fuzzy
-msgid "Prime time (Press long)"
 msgstr "Giờ chính"
 
 msgid "Priority"
@@ -12097,6 +12263,10 @@ msgstr ""
 msgid "Purge all but the current and permanent locales/languages.  Add the current locale/language if it is not installed.  Delete the current locale/language if it is installed."
 msgstr ""
 
+#, fuzzy
+msgid "Purge channel list"
+msgstr "không có danh sách kênh"
+
 msgid "Purge deleted user bouquets"
 msgstr "Thanh lọc người dùng đã xóa"
 
@@ -12120,6 +12290,9 @@ msgstr "Đặt máy thu ở chế độ chờ"
 msgid "Python %s benchmark"
 msgstr ""
 
+msgid "Python crash handler"
+msgstr ""
+
 msgid "Python frontend for /tmp/mmi.socket"
 msgstr "Giao diện trăn cho /tmp/mmi.socket"
 
@@ -12129,6 +12302,12 @@ msgstr "Phiên bản Python: "
 
 msgid "Qatar"
 msgstr "Qatar"
+
+msgid "Quad9 No Security"
+msgstr ""
+
+msgid "Quad9 Security"
+msgstr ""
 
 msgid "Quechua"
 msgstr ""
@@ -12171,6 +12350,9 @@ msgstr ""
 #, fuzzy
 msgid "RAM benchmark"
 msgstr "Đan mạch"
+
+msgid "RC Map"
+msgstr ""
 
 #, fuzzy
 msgid "RC default name"
@@ -12216,6 +12398,12 @@ msgstr "Nút màu đỏ ..."
 msgid "RF Modulator Output Setup"
 msgstr ""
 
+msgid "RFC 5905 hostname (SNTP - Simple Network Time Protocol)"
+msgstr ""
+
+msgid "RFC 868 hostname (rdate - Remote Date)"
+msgstr ""
+
 #, fuzzy
 msgid "RGB"
 msgstr "RGB"
@@ -12258,10 +12446,6 @@ msgstr ""
 msgid "Reader Statistics"
 msgstr ""
 
-#, fuzzy, python-format
-msgid "Ready to install \"%s\" ?"
-msgstr "Tự động cài đặt %s"
-
 #, python-format
 msgid "Ready to remove \"%s\" ?"
 msgstr ""
@@ -12279,19 +12463,24 @@ msgstr "Thực sự xóa bộ tính giờ thực hiện?"
 msgid "Really exit the subservices quickzap?"
 msgstr "Thực sự thoát khỏi dịch vụ phụ quickzap?"
 
-msgid "Really perform a manufacturer reset now?"
+#, fuzzy
+msgid "Really perform a manufacturer reset?"
 msgstr "Thực sự thực hiện thiết lập lại nhà sản xuất ngay bây giờ?"
 
-msgid "Really reboot now?"
+#, fuzzy
+msgid "Really reboot?"
 msgstr "Thực sự khởi động lại bây giờ?"
 
-msgid "Really restart in debug mode now?"
+#, fuzzy
+msgid "Really restart in debug mode?"
 msgstr "Thực sự khởi động lại trong chế độ gỡ lỗi bây giờ?"
 
-msgid "Really restart now?"
+#, fuzzy
+msgid "Really restart?"
 msgstr "Thực sự khởi động lại bây giờ?"
 
-msgid "Really shutdown now?"
+#, fuzzy
+msgid "Really shutdown?"
 msgstr "Thực sự tắt máy bây giờ?"
 
 #, python-format
@@ -12299,10 +12488,11 @@ msgid "Really store at index %2d for current position?"
 msgstr "Thực sự lưu trữ ở chỉ số %2d cho vị trí hiện tại?"
 
 #, fuzzy
-msgid "Really update the front processor and reboot now?"
+msgid "Really update the front processor and reboot?"
 msgstr "Thực sự nâng cấp bộ xử lý trước và khởi động lại bây giờ?"
 
-msgid "Really update your settop box and reboot now?"
+#, fuzzy
+msgid "Really update your STB and reboot?"
 msgstr "Thực sự nâng cấp hộp giải quyết của bạn và khởi động lại bây giờ?"
 
 msgid "Rear"
@@ -12313,7 +12503,7 @@ msgstr "Khởi động lại"
 
 #, fuzzy
 msgid "Reboot receiver"
-msgstr "Thư mục gốc"
+msgstr "Ghi âm tức thì"
 
 msgid "Recall to previous service"
 msgstr "Nhớ lại dịch vụ trước"
@@ -12366,11 +12556,27 @@ msgstr "Đường dẫn ghi âm"
 msgid "Recording Setup"
 msgstr "Thiết lập ghi âm"
 
+#, python-format
+msgid "Recording failed: Storage device free size %d GB."
+msgstr ""
+
 msgid "Recording in progress"
 msgstr "Đang ghi"
 
+#, fuzzy, python-format
+msgid "Recording path is \"%s\""
+msgstr "Đường dẫn ghi âm"
+
 #, fuzzy
-msgid "Recording time has been set."
+msgid "Recording set to (24 hours)"
+msgstr "Thiết lập ghi âm"
+
+#, fuzzy
+msgid "Recording timer has been set"
+msgstr "Đồng hồ ngủ đã bị vô hiệu hóa."
+
+#, fuzzy
+msgid "Recording timer was canceled"
 msgstr "Đồng hồ ngủ đã bị vô hiệu hóa."
 
 msgid "Recording type"
@@ -12395,6 +12601,10 @@ msgstr "Ghi lại"
 #, fuzzy
 msgid "Recover inetd"
 msgstr "Thiết lập ghi âm"
+
+#, fuzzy
+msgid "Recovery Mode"
+msgstr "Chế độ người dùng"
 
 msgid "Red"
 msgstr "Màu đỏ"
@@ -12498,9 +12708,6 @@ msgstr "Cấu hình SleepTimer"
 
 msgid "Remove a mark"
 msgstr "Xóa một dấu"
-
-msgid "Remove a nameserver entry"
-msgstr "Xóa một mục nhập máy chủ tên"
 
 #, fuzzy
 msgid "Remove after this position"
@@ -12769,6 +12976,10 @@ msgstr "Khởi động lại GUI bây giờ?"
 msgid "Restart GUI now?"
 msgstr "Khởi động lại GUI bây giờ?"
 
+#, fuzzy
+msgid "Restart after x crashes"
+msgstr "Khởi động lại softcam"
+
 msgid "Restart both"
 msgstr "Khởi động lại cả hai"
 
@@ -12938,9 +13149,6 @@ msgstr "Vị trí bước rôto:"
 msgid "Rotor turning speed"
 msgstr "Tốc độ quay của rôto"
 
-msgid "Rotor: "
-msgstr "Cánh quạt: "
-
 msgid "Round start time on"
 msgstr "Thời gian bắt đầu vòng"
 
@@ -12948,8 +13156,9 @@ msgstr "Thời gian bắt đầu vòng"
 msgid "Routing request"
 msgstr "Yêu cầu nguồn"
 
-msgid "Run how often ?"
-msgstr ""
+#, fuzzy
+msgid "Run frequency"
+msgstr "Tất cả tần số"
 
 msgid "Run the BLUE action"
 msgstr ""
@@ -13030,8 +13239,9 @@ msgstr ""
 msgid "SH4"
 msgstr ""
 
+#, fuzzy
 msgid "SH4 Booster Control"
-msgstr ""
+msgstr "Loại điều khiển từ xa"
 
 #, fuzzy
 msgid "SH4 OSD Position setup"
@@ -13356,9 +13566,6 @@ msgstr "Tìm kiếm"
 msgid "Search east"
 msgstr "Tìm kiếm phía đông"
 
-msgid "Search event in TMBD"
-msgstr ""
-
 msgid "Search west"
 msgstr "Tìm kiếm về phía tây"
 
@@ -13435,6 +13642,10 @@ msgstr ""
 msgid "Seems internet connection down, Or TMBD Plugin not on feed."
 msgstr ""
 
+#, python-format
+msgid "Seems your receiver has a software problem. Since the last reboot it has occurred %d times.\n"
+msgstr ""
+
 msgid "Select"
 msgstr "Lựa chọn"
 
@@ -13448,6 +13659,9 @@ msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) devi
 msgstr "Chọn 'FBC SCR' nếu bộ chỉnh này sẽ kết nối với thiết bị SCR (Unicable / JESS). Đối với tất cả các thiết lập khác, chọn 'FBC tự động'."
 
 msgid "Select 'Yes' to enable editing of this device's settings. Selecting 'No' resets the devices settings to their default values."
+msgstr ""
+
+msgid "Select 'Yes' to enable use of the LEFT/RIGHT buttons to move PageUp/PageDown when the LEFT/RIGHT buttons are otherwise undefined. This provides legacy navigation for users who prefer it."
 msgstr ""
 
 msgid "Select 'Yes' to remove all keymap data. Selecting this option will remove all keymap override data and restore the default keymap definitions."
@@ -13643,12 +13857,30 @@ msgstr "Chọn cách nhanh chóng các chảo nên di chuyển giữa các vệ 
 msgid "Select how the satellite dish is set up. i.e. fixed dish, single LNB, DiSEqC switch, positioner, etc."
 msgstr "Chọn cách thiết lập đĩa vệ tinh. tức là đĩa cố định, LNB đơn, công tắc DiSEqC, bộ định vị, v.v."
 
-msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet using NTP. Or use Auto, which will favour using NTP, but will fall back to transponder time when no internet connection is available."
+#, fuzzy
+msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet. Or use Auto, which will favour using internet, but will fall back to transponder time when no internet connection is available."
 msgstr "Chọn cách bạn muốn bộ thu của mình giữ đúng thời gian, từ bộ phát đáp DVB hoặc từ internet bằng NTP. Hoặc sử dụng Tự động, sẽ ưu tiên sử dụng NTP, nhưng sẽ lùi về thời gian của bộ phát đáp khi không có kết nối internet."
 
 #, fuzzy
 msgid "Select image"
 msgstr "Xóa hình ảnh"
+
+#, fuzzy
+msgid "Select image and delete"
+msgstr "Xóa hình ảnh"
+
+msgid "Select image and press OK or GREEN button for reboot."
+msgstr ""
+
+#, fuzzy
+msgid "Select image and reboot"
+msgstr "Xóa hình ảnh"
+
+msgid "Select image or boot to Android image and press OK or GREEN button for reboot."
+msgstr ""
+
+msgid "Select image or boot to recovery menu and press OK or GREEN button for reboot."
+msgstr ""
 
 msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
 msgstr "Cấu hình trong đó hình ảnh độ phân giải được hiển thị với trình xem ảnh và trình phát phim."
@@ -13684,6 +13916,9 @@ msgstr "Chọn dịch vụ để thêm ..."
 
 msgid "Select slot"
 msgstr "Chọn vị trí"
+
+msgid "Select slot image and press OK or GREEN button to reboot."
+msgstr ""
 
 #, fuzzy
 msgid "Select softcam"
@@ -13808,7 +14043,8 @@ msgstr "Chọn nguồn nâng cấp để chỉnh sửa"
 msgid "Select video input with up/down buttons"
 msgstr "Chọn đầu vào video với các nút lên / xuống"
 
-msgid "Select video mode"
+#, fuzzy
+msgid "Select video mode."
 msgstr "Chọn chế độ video"
 
 msgid "Select whether your SCR device is externally powered."
@@ -13843,7 +14079,7 @@ msgstr "Chọn đất nước của bạn. Nếu không có sẵn, chọn 'tất
 
 #, fuzzy
 msgid "Select your keymap"
-msgstr "Xóa hình ảnh"
+msgstr "chọn mục nhập"
 
 msgid "Select your provider and region. If not present in this list you will need to select one of the other 'service scan types'."
 msgstr "Chọn nhà cung cấp và khu vực của bạn. Nếu không có trong danh sách này, bạn sẽ cần chọn một trong các loại 'dịch vụ quét' khác."
@@ -13907,6 +14143,10 @@ msgstr "An gê ri"
 #, fuzzy
 msgid "Serv.Name"
 msgstr "Tên dịch vụ"
+
+#, python-format
+msgid "Server Error: %s %s is included in bouquets.tv and does not exist in channel list"
+msgstr ""
 
 #, python-format
 msgid "Server Info ( NCam-Version: %s )"
@@ -14095,6 +14335,10 @@ msgstr "Đặt thời gian kết thúc"
 msgid "Set new MAC address"
 msgstr "Địa chỉ CEC hiện tại"
 
+#, fuzzy, python-format
+msgid "Set new value to \"Fallback remote receiver\" change URL %s"
+msgstr "Dự phòng URL nhận từ xa"
+
 msgid "Set password if you have it set in section [webif] httppwd."
 msgstr ""
 
@@ -14208,6 +14452,9 @@ msgstr ""
 msgid "Settings"
 msgstr "Cài đặt"
 
+msgid "Settings DNS Server"
+msgstr ""
+
 msgid "Setup"
 msgstr "Thiết lập"
 
@@ -14255,6 +14502,9 @@ msgstr ""
 
 msgid "Short filenames"
 msgstr "Tên tập tin ngắn"
+
+msgid "Should the crash counter be reset to prevent a restart?"
+msgstr ""
 
 msgid "Show"
 msgstr "Đưa ra cho xem"
@@ -14374,6 +14624,9 @@ msgstr "Hiển thị số kênh trong lựa chọn kênh"
 
 msgid "Show columns"
 msgstr "Hiển thị cột"
+
+msgid "Show crash info on screen and write crash log for x times"
+msgstr ""
 
 msgid "Show crypto icons"
 msgstr "Hiển thị biểu tượng điện tử"
@@ -14616,6 +14869,10 @@ msgstr "Hiển thị biểu tượng đồng hồ kỷ lục"
 msgid "Show record indicator"
 msgstr "Hiển thị chỉ số hồ sơ"
 
+#, fuzzy
+msgid "Show samba in plugin browser"
+msgstr "Hiển thị số menu hoặc số plugin"
+
 msgid "Show satellites list"
 msgstr "Hiển thị danh sách vệ tinh"
 
@@ -14631,6 +14888,10 @@ msgstr "Hiển thị InfoBar thứ hai"
 msgid "Show second infobar"
 msgstr "Hiển thị thông tin thứ hai"
 
+#, fuzzy
+msgid "Show service event information"
+msgstr "Hiển thị thông tin chi tiết sự kiện"
+
 msgid "Show service list"
 msgstr "Hiển thị danh sách dịch vụ"
 
@@ -14643,10 +14904,6 @@ msgstr "Hiển thị người phục vụ hoặc phim"
 #, fuzzy
 msgid "Show setup default value"
 msgstr "Đặt mặc định"
-
-#, fuzzy
-msgid "Show sevice event information"
-msgstr "Hiển thị thông tin chi tiết sự kiện"
 
 msgid "Show single service EPG"
 msgstr "Hiển thị EPG dịch vụ duy nhất"
@@ -14686,7 +14943,7 @@ msgstr "Hiển thị thông tin dịch vụ trên hai dòng trong màn hình ch�
 
 #, fuzzy
 msgid "Show this plugin in plugin menu"
-msgstr "Hiển thị trình phát đa phương tiện trên menu chính"
+msgstr "Hiển thị số menu hoặc số plugin"
 
 msgid "Show time elapsed as positive"
 msgstr ""
@@ -15088,6 +15345,10 @@ msgstr "Sắp xếp A-Z"
 msgid "Sort Trash by deletion time"
 msgstr ""
 
+#, fuzzy
+msgid "Sort bouquets alphabetic A-Z"
+msgstr "Hủy bỏ gói kênh"
+
 msgid "Sort by"
 msgstr "Sắp xếp theo"
 
@@ -15153,9 +15414,6 @@ msgstr ""
 
 msgid "South Sudan"
 msgstr "Phía nam Sudan"
-
-msgid "Space used:"
-msgstr ""
 
 msgid "Spain"
 msgstr "Tây Ban Nha"
@@ -15356,7 +15614,7 @@ msgstr ""
 msgid "State"
 msgstr "Trạng thái quét"
 
-msgid "Static IP or Custom"
+msgid "Static IP Router"
 msgstr ""
 
 msgid "Status"
@@ -15503,6 +15761,14 @@ msgstr ""
 msgid "Storage Information"
 msgstr "Thông tin về phần mềm"
 
+msgid "Storage device not available or not initialized."
+msgstr ""
+
+msgid ""
+"Storage device not available.\n"
+"Mount device or reboot system and try again."
+msgstr ""
+
 #, fuzzy
 msgid "Storage information"
 msgstr "Thông tin về phần mềm"
@@ -15521,14 +15787,6 @@ msgstr "Suối"
 
 msgid "Stream request"
 msgstr "Yêu cầu truyền phát"
-
-#, fuzzy
-msgid "Stream-tv"
-msgstr "Suối"
-
-#, fuzzy
-msgid "Streaming"
-msgstr "Suối"
 
 #, fuzzy
 msgid "Streaming Clients"
@@ -15551,6 +15809,7 @@ msgstr "Hiển thị lựa chọn dịch vụ phụ"
 msgid "Subservice list"
 msgstr "Danh sách dịch vụ phụ ..."
 
+#, fuzzy
 msgid "Subservice list..."
 msgstr "Danh sách dịch vụ phụ ..."
 
@@ -15800,15 +16059,15 @@ msgstr "Ghi đè tập tin cấu hình?"
 
 #, fuzzy
 msgid "System option configuration"
-msgstr "Cấu hình mạng"
+msgstr "Cấu hình danh sách phim"
 
 #, fuzzy
 msgid "System options"
-msgstr "Hệ thống & điều chế"
+msgstr "Thông tin"
 
 #, fuzzy
 msgid "System options configuration"
-msgstr "Cấu hình mạng"
+msgstr "Cấu hình danh sách phim"
 
 msgid "T2MI PID"
 msgstr "T2MI PID"
@@ -15825,6 +16084,9 @@ msgstr "Chế độ RAW T2MI"
 msgid "TEXT"
 msgstr "TEXT"
 
+msgid "TEXT   Reset"
+msgstr ""
+
 msgid "TEXT button"
 msgstr ""
 
@@ -15836,12 +16098,12 @@ msgid "TMBD Details Plugin"
 msgstr "Chi tiết cho plugin: "
 
 #, fuzzy
-msgid "TMBD Not Installed"
-msgstr "Chưa cài đặt"
-
-#, fuzzy
 msgid "TMBD details for event"
 msgstr "Chi tiết cho plugin: "
+
+#, fuzzy
+msgid "TMBD not installed"
+msgstr "Chưa cài đặt"
 
 msgid "TRANSLATOR_INFO"
 msgstr "THÔNG TIN TRUYỀN THÔNG (QUỐC OAI BMT)"
@@ -15850,10 +16112,6 @@ msgid "TS file is too large for ISO9660 level 1!"
 msgstr "Tệp TS quá lớn so với ISO9660 cấp 1!"
 
 msgid "TSID"
-msgstr "TSID"
-
-#, fuzzy
-msgid "TSID:"
 msgstr "TSID"
 
 msgid "TUNING"
@@ -15964,9 +16222,6 @@ msgstr ""
 msgid "Teletext alpha"
 msgstr ""
 
-msgid "Teletext base visibility"
-msgstr ""
-
 #, fuzzy
 msgid "Teletext font and resolution"
 msgstr "Chọn độ phân giải ngang:"
@@ -16061,8 +16316,16 @@ msgid "The '%s' log file contains no information."
 msgstr ""
 
 #, fuzzy
-msgid "The AutoTimer plugin is not installed."
-msgstr "Plugin này chưa được cài đặt."
+msgid "The AutoTimer plugin is installed."
+msgstr "Plugin này được cài đặt."
+
+#, fuzzy
+msgid ""
+"The AutoTimer plugin is not installed!\n"
+"Do you want to install it?"
+msgstr ""
+"Plugin LAN không dây chưa được cài đặt!\n"
+"Vui lòng cài đặt nó."
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a special format data DVD (which will not play in stand-alone DVD players) instead?"
 msgstr "Chuẩn DVD không hỗ trợ luồng video H.264 (HDTV). Bạn có muốn tạo một DVD dữ liệu định dạng đặc biệt (thay vào đó sẽ không phát trong các đầu DVD độc lập) không?"
@@ -16101,10 +16364,12 @@ msgstr "Lệnh đánh thức từ chế độ chờ sẽ được gửi nhiều 
 msgid "The detailed information is intended for developers only."
 msgstr ""
 
-msgid "The following files were found..."
-msgstr "Các tập tin sau đã được tìm thấy ..."
+#, fuzzy
+msgid "The hostname or the IP address of the RFC 5905 server to synchronise the time with."
+msgstr "Tên máy chủ hoặc địa chỉ IP của máy chủ NTP để đồng bộ hóa thời gian với."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+#, fuzzy
+msgid "The hostname or the IP address of the RFC 868 server to synchronise the time with."
 msgstr "Tên máy chủ hoặc địa chỉ IP của máy chủ NTP để đồng bộ hóa thời gian với."
 
 msgid ""
@@ -16678,10 +16943,6 @@ msgstr "Nhật ký hẹn giờ"
 msgid "Timer Overview"
 msgstr "Tổng quan về bộ đếm thời gian"
 
-#, fuzzy
-msgid "Timer Selection"
-msgstr "Lựa chọn hẹn giờ"
-
 msgid "Timer edit"
 msgstr "Chỉnh sửa hẹn giờ"
 
@@ -16737,11 +16998,18 @@ msgstr "Timeshift trực tiếp"
 msgid "Timeshift Setup"
 msgstr "Timeshift trực tiếp"
 
+#, python-format
+msgid "Timeshift failed: Storage device free size %d GB."
+msgstr ""
+
 msgid "Timeshift is running. Select an action.\n"
 msgstr "Timeshift đang chạy. Chọn một hành động.\n"
 
 msgid "Timeshift location"
 msgstr "Địa điểm hẹn giờ"
+
+msgid "Timeshift not enough diskspace. Is device mounted?"
+msgstr ""
 
 msgid "Timeshift not possible!"
 msgstr "Timeshift không thể!"
@@ -16948,6 +17216,9 @@ msgstr ""
 msgid "TrueType font (SD)"
 msgstr ""
 
+msgid "Try to prevent reboots for software errors and maintain of the availability."
+msgstr ""
+
 msgid "Try to send repeated commands if not all commands are executed. (e.g. TV wakeup, but not switched to correct input.)"
 msgstr ""
 
@@ -17044,6 +17315,7 @@ msgstr "Quần đảo Turks và Caicos"
 msgid "Turn on the control LED."
 msgstr "Bật đèn LED nguồn."
 
+#, fuzzy
 msgid "Turn on the power LED."
 msgstr "Bật đèn LED nguồn."
 
@@ -17147,6 +17419,9 @@ msgstr "Khám phá đường nhấp nháy nhấp nháy cho dịch vụ này"
 
 msgid "Undefined"
 msgstr "Chưa xác định"
+
+msgid "Undo bouquets order alphabetic"
+msgstr ""
 
 msgid "Undo install"
 msgstr "Hoàn tác cài đặt"
@@ -17387,9 +17662,6 @@ msgstr "Vui lòng sử dụng các phím LÊN và XUỐNG để chọn ngôn ng�
 #, fuzzy
 msgid "Use the alternative screen"
 msgstr "Chỉnh sửa thay thế"
-
-msgid "Use the cursor keys to select an installed image then reboot."
-msgstr ""
 
 msgid ""
 "Use the deletion time to sort Trash directories.\n"
@@ -17731,6 +18003,22 @@ msgstr "Các phím âm lượng trên điều khiển từ xa của đầu thu s
 msgid "Volume up"
 msgstr "Tăng âm lượng"
 
+msgid "Vu+ MultiBoot Initialisation - will reboot after 10 seconds."
+msgstr ""
+
+msgid ""
+"Vu+ MultiBoot Initialisation in progress\n"
+"\n"
+"Will reboot after restoring any eMMC slots\n"
+"This can take from 1 -> 5 minutes per slot."
+msgstr ""
+
+msgid "Vu+ MultiBoot Manager"
+msgstr ""
+
+msgid "VuKexec: Create Vu+ Multiboot environment - Unable to complete, Vu+ Multiboot files missing."
+msgstr ""
+
 msgid "W"
 msgstr "W"
 
@@ -17741,6 +18029,16 @@ msgstr "Kết nối mạng WLAN"
 #, fuzzy
 msgid "WAN connection information"
 msgstr "Kết nối mạng WLAN"
+
+#, python-format
+msgid ""
+"WARNING: The DNS were not saved in your settings.\n"
+"\n"
+"Active server: %s\n"
+"DNS Active: %s\n"
+"\n"
+"It is necessary to choose a server and save with GREEN button!."
+msgstr ""
 
 #, fuzzy
 msgid "WEP"
@@ -17834,6 +18132,9 @@ msgstr ""
 "Cảnh báo!\n"
 "Đây là một tùy chọn cho người dùng nâng cao.\n"
 "Thực sự vô hiệu hóa phát hiện xung đột hẹn giờ?"
+
+msgid "Warning! This is the last crash before an automatic restart is performed.\n"
+msgstr ""
 
 msgid "Warning: FBC-C V1 tuner should be connected to the first slot to work correctly. Otherwise, only 2 out of 8 demodulators will be available when connected in the second slot. "
 msgstr ""
@@ -17944,12 +18245,6 @@ msgstr "Phía tây Sahara"
 
 msgid "Western Sahara"
 msgstr "Phía tây Sahara"
-
-msgid "What date of month ?"
-msgstr ""
-
-msgid "What day of week ?"
-msgstr ""
 
 msgid "What type of service scan do you want?"
 msgstr "Bạn muốn loại dịch vụ quét nào?"
@@ -18226,6 +18521,9 @@ msgstr ""
 msgid "When enabled, you will see python packages in plugin browser download section."
 msgstr ""
 
+msgid "When enabled, you will see samba packages in plugin browser download section."
+msgstr ""
+
 msgid "When enabled, you will see the available revision on github"
 msgstr ""
 
@@ -18377,15 +18675,6 @@ msgstr "không được hỗ trợ"
 msgid "Xhosa"
 msgstr ""
 
-msgid "YCbCr420"
-msgstr ""
-
-msgid "YCbCr422"
-msgstr ""
-
-msgid "YCbCr444"
-msgstr ""
-
 msgid "YELLOW button"
 msgstr ""
 
@@ -18482,7 +18771,14 @@ msgstr ""
 "\"%s\"?"
 
 msgid ""
-"You are ready to add an event to automatic timer.\n"
+"You are ready to add current event to automatic timer.\n"
+"If there are no conflicts, once added you must enter menu:\n"
+"\n"
+"Timers > AutoTimers and search the event with green button."
+msgstr ""
+
+msgid ""
+"You are ready to add this event to automatic timer.\n"
 "If there are no conflicts, once added you must enter menu:\n"
 "\n"
 "Timers > AutoTimers and search the event with green button."
@@ -18554,8 +18850,7 @@ msgstr "Bạn đã không chọn một kênh để ghi lại."
 msgid "You have not selected any logs to delete."
 msgstr "Vui lòng chọn danh sách phát để xóa ..."
 
-#, python-format
-msgid "You have not set manual IP for %s"
+msgid "You have not selected any logs to view."
 msgstr ""
 
 #, python-format
@@ -18563,6 +18858,9 @@ msgid "You have to wait %(min)d minutes, %(sec)d seconds!"
 msgstr ""
 
 msgid "You must set a root password in order to be able to use network services, such as FTP, telnet or ssh."
+msgstr ""
+
+msgid "You must set at least one command"
 msgstr ""
 
 #, python-format
@@ -18602,16 +18900,6 @@ msgstr "Bộ sưu tập của bạn vượt quá kích thước của một phư
 msgid "Your current collection will get lost!"
 msgstr "Bộ sưu tập hiện tại của bạn sẽ bị mất!"
 
-#, fuzzy, python-format
-msgid ""
-"Your frontprocessor will be updated\n"
-"Please wait until your %s %s reboots\n"
-"This may take a few minutes"
-msgstr ""
-"Bộ xử lý trước của chúng tôi sẽ được nâng cấp\n"
-"Vui lòng đợi cho đến khi người nhận của bạn khởi động lại\n"
-"Có thể sẽ mất vài phút"
-
 msgid "Your hardware can detect CI mode itself or works only in legacy mode."
 msgstr ""
 
@@ -18626,7 +18914,10 @@ msgstr ""
 msgid "Your internet connection is working (IP address: %s)"
 msgstr "Kết nối internet của bạn đang hoạt động (IP: %s)"
 
-msgid "Your local time has been set successfully. Press \"OK\" to continue wizard."
+msgid ""
+"Your local time has been set successfully. Settings has been saved.\n"
+"\n"
+"Press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Your network configuration has been activated."
@@ -18777,7 +19068,7 @@ msgstr "Nhật ký hẹn giờ"
 
 #, fuzzy
 msgid "ZeroTier setup"
-msgstr "Thiết lập máy chủ tên"
+msgstr "Thiết lập định vị"
 
 msgid "ZeroTierVPN"
 msgstr ""
@@ -19266,9 +19557,6 @@ msgid ""
 "activate now keymap \"%s\"?"
 msgstr ""
 
-msgid "invalid type"
-msgstr "loại không hợp lệ"
-
 msgid "jazz"
 msgstr "nhạc jazz"
 
@@ -19448,6 +19736,10 @@ msgstr "không tìm thấy thiết bị lưu trữ"
 msgid "none"
 msgstr "không"
 
+#, fuzzy
+msgid "not"
+msgstr "không"
+
 msgid "not configured"
 msgstr "không được cấu hình"
 
@@ -19479,8 +19771,9 @@ msgstr "của một môi trường lớp DUAL được sử dụng."
 msgid "of a SINGLE layer medium used."
 msgstr "của một phương tiện lớp SINGLE được sử dụng."
 
+#, fuzzy
 msgid "off"
-msgstr "tắt"
+msgstr "Tắt"
 
 msgid "off or wpa2 on"
 msgstr "tắt hoặc wpa2 trên"
@@ -19491,8 +19784,9 @@ msgstr "bù là"
 msgid "omit"
 msgstr ""
 
+#, fuzzy
 msgid "on"
-msgstr "trên"
+msgstr "Thứ hai"
 
 msgid "on READ ONLY medium."
 msgstr "trên phương tiện ĐỌC CHỈ."
@@ -19500,8 +19794,9 @@ msgstr "trên phương tiện ĐỌC CHỈ."
 msgid "once"
 msgstr "một lần"
 
+#, fuzzy
 msgid "open nameserver configuration"
-msgstr "mở cấu hình máy chủ tên"
+msgstr "Cấu hình bộ chỉnh"
 
 #, fuzzy
 msgid "original language"
@@ -19667,6 +19962,10 @@ msgstr "bỏ qua lạc hậu"
 msgid "skip forward"
 msgstr "bỏ qua"
 
+#, fuzzy, python-format
+msgid "slot%s %s - %s"
+msgstr "vị trí%s -%s"
+
 #, python-format
 msgid "slot%s - %s"
 msgstr "vị trí%s -%s"
@@ -19706,6 +20005,14 @@ msgstr "vị trí%s -%s, có bản sao lưu"
 #, python-format
 msgid "slot%s - %s, without backup"
 msgstr "vị trí%s -%s, không cần sao lưu"
+
+#, fuzzy
+msgid "slot0 - Recovery mode image"
+msgstr "Menu khởi động vào Recovery"
+
+#, fuzzy
+msgid "slot0 - Recovery mode image (current)"
+msgstr "vị trí%s -%s chế độ 1 (hình ảnh hiện tại)"
 
 #, fuzzy
 msgid "soap/melodrama/folkloric"

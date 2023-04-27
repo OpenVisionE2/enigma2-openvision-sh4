@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-03 17:56+0330\n"
+"POT-Creation-Date: 2023-04-27 15:34+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 msgid ""
 "\n"
-" Do you want to switch to Android ?"
+" Do you want to switch to Android?"
 msgstr ""
 
 msgid ""
@@ -1140,6 +1140,20 @@ msgstr ""
 #, python-format
 msgid ""
 "%s\n"
+"\n"
+"If the DNS of other servers are still kept in the DHCP Router, to get the DNS from your Router, reboot receiver."
+msgstr ""
+
+#, python-format
+msgid ""
+"%s\n"
+"\n"
+"You can use the DNS provided by other servers in Static IP Router."
+msgstr ""
+
+#, python-format
+msgid ""
+"%s\n"
 "Do you still want to flash image\n"
 "%s?"
 msgstr ""
@@ -1171,6 +1185,16 @@ msgstr ""
 msgid "%s MHz"
 msgstr ""
 
+#, python-format
+msgid ""
+"%s connected successfully.\n"
+"Playable files found."
+msgstr ""
+
+#, python-format
+msgid "%s connected successfully. No playable files on this medium found!"
+msgstr ""
+
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
 msgid "%s is no longer used. Should it be deleted?"
@@ -1193,11 +1217,11 @@ msgid "%s%s(Default: %s)"
 msgstr ""
 
 #, python-format
-msgid "%s: %s Free:%s Used:%s (%s%%)"
+msgid "%s: %s Free: %s Used: %s (%s%%)"
 msgstr ""
 
 #, python-format
-msgid "%s: %s Used:%s Free:%s"
+msgid "%s: %s Used: %s Free: %s"
 msgstr ""
 
 #, python-format
@@ -1213,7 +1237,9 @@ msgid "%s?"
 msgstr ""
 
 #, python-format
-msgid "'%s' %d MB little space available"
+msgid ""
+"'%s' Storage device free size %d GB.\n"
+"%s"
 msgstr ""
 
 #, python-format
@@ -1221,10 +1247,28 @@ msgid "'%s' contains %d file(s) and %d sub-directories.\n"
 msgstr ""
 
 #, python-format
-msgid "'%s'= Internal Flash. It is not a storage device"
+msgid ""
+"'%s' does not exist.\n"
+"%s"
+msgstr ""
+
+#, python-format
+msgid ""
+"'%s' is Internal Flash. It is not a storage device.\n"
+"%s"
+msgstr ""
+
+#, python-format
+msgid ""
+"'%s' not writeable.\n"
+"%s"
 msgstr ""
 
 msgid "( All readers)"
+msgstr ""
+
+#, python-format
+msgid "(Attention! There will be a restart after %d crashes.)"
 msgstr ""
 
 msgid "(Radio)"
@@ -1299,13 +1343,6 @@ msgid "-8"
 msgstr ""
 
 msgid "-9"
-msgstr ""
-
-msgid "-NO SERVICE\n"
-msgstr ""
-
-#, python-format
-msgid "-SERVICE ERROR:%d\n"
 msgstr ""
 
 msgctxt "Hotkey help separator"
@@ -1567,6 +1604,9 @@ msgstr ""
 msgid "90%"
 msgstr ""
 
+msgid "< PREV NEXT >  Move"
+msgstr ""
+
 msgid "<Current movielist location>"
 msgstr ""
 
@@ -1577,9 +1617,6 @@ msgid "<Last timer location>"
 msgstr ""
 
 msgid "<unknown>"
-msgstr ""
-
-msgid "=NO STREAM\n"
 msgstr ""
 
 #, python-format
@@ -1604,6 +1641,10 @@ msgstr ""
 
 #, python-format
 msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr ""
+
+#, python-format
+msgid "A crash log was %s created in '%s'"
 msgstr ""
 
 msgid "A file from media is in use!"
@@ -1804,6 +1845,10 @@ msgstr ""
 msgid "Add / Delete bookmark"
 msgstr ""
 
+#, python-format
+msgid "Add 4 more Vu+ Multiboot USB slots after slot %s ?"
+msgstr ""
+
 msgid "Add BISS CaID to service"
 msgstr ""
 
@@ -1813,10 +1858,13 @@ msgstr ""
 msgid "Add Timer"
 msgstr ""
 
-msgid "Add a mark"
+msgid "Add USB slots"
 msgstr ""
 
-msgid "Add a nameserver entry"
+msgid "Add USB slots (require receiver Vu+ 4k)"
+msgstr ""
+
+msgid "Add a mark"
 msgstr ""
 
 msgid "Add a new tag"
@@ -1877,10 +1925,10 @@ msgstr ""
 msgid "Add recording (enter recording endtime)"
 msgstr ""
 
-msgid "Add recording (indefinitely)"
+msgid "Add recording (stop after current event)"
 msgstr ""
 
-msgid "Add recording (stop after current event)"
+msgid "Add recording set to (24 hours)"
 msgstr ""
 
 msgid "Add service"
@@ -2005,9 +2053,6 @@ msgid "Alignment of service names"
 msgstr ""
 
 msgid "All"
-msgstr ""
-
-msgid "All Services"
 msgstr ""
 
 msgid "All ages"
@@ -2194,11 +2239,6 @@ msgid "Are you sure you want to delete the EPG data from:\n"
 msgstr ""
 
 msgid "Are you sure you want to delete this log?\n"
-msgstr ""
-
-msgid ""
-"Are you sure you want to delete this:\n"
-" "
 msgstr ""
 
 msgid "Are you sure you want to exit this wizard?"
@@ -2402,6 +2442,16 @@ msgstr ""
 msgid "AutoTimer"
 msgstr ""
 
+msgid ""
+"AutoTimer is not installed\n"
+"Now (Press long)"
+msgstr ""
+
+msgid ""
+"AutoTimer is not installed\n"
+"Prime time (Press long)"
+msgstr ""
+
 #, python-format
 msgid "Autoinstalling %s"
 msgstr ""
@@ -2517,9 +2567,6 @@ msgid "Bangladesh"
 msgstr ""
 
 msgid "Barbados"
-msgstr ""
-
-msgid "Base transparency for teletext, more options available within teletext screen."
 msgstr ""
 
 msgid "Bashkir"
@@ -2828,9 +2875,6 @@ msgstr ""
 msgid "CI enabled"
 msgstr ""
 
-msgid "CI slot: "
-msgstr ""
-
 msgid "CPU"
 msgstr ""
 
@@ -2951,6 +2995,9 @@ msgid "Cancel execution?"
 msgstr ""
 
 msgid "Cancel the action selection and exit"
+msgstr ""
+
+msgid "Cancel the image selection and exit"
 msgstr ""
 
 msgid "Cancel the location selection"
@@ -3077,6 +3124,12 @@ msgid "Channel Info"
 msgstr ""
 
 msgid "Channel context menu"
+msgstr ""
+
+msgid "Channel list is clean no characters to purge."
+msgstr ""
+
+msgid "Channel list was successfully purged."
 msgstr ""
 
 msgid "Channel name"
@@ -3271,8 +3324,8 @@ msgstr ""
 msgid ""
 "Client mode sets up this receiver to stream from another receiver. In this mode no local tuners will be available and channel lists, EPG, etc, will come from the remote receiver. All tuner settings will be cleared.\n"
 "\n"
-"Paths to search EPG and Channels on server:\n"
-"Internal Flash, HDD, USB.\n"
+"Paths to search EPG and/or Channels on server:\n"
+"Internal Flash or /media/hdd/.\n"
 "\n"
 "Server must have authentication disabled for streams http in MENU \"customize\". Set password if it is set on server."
 msgstr ""
@@ -3431,9 +3484,6 @@ msgid "Configure DVB-T"
 msgstr ""
 
 msgid "Configure if the HDMI EDID checking should be bypassed as this might solve issue with some TVs."
-msgstr ""
-
-msgid "Configure nameservers"
 msgstr ""
 
 msgid "Configure the aspect ratio of the screen."
@@ -3673,9 +3723,6 @@ msgstr ""
 msgid "Cron Manager"
 msgstr ""
 
-msgid "Cron manager"
-msgstr ""
-
 msgid "Cuba"
 msgstr ""
 
@@ -3766,6 +3813,13 @@ msgstr ""
 msgid "DLNA support"
 msgstr ""
 
+#, python-format
+msgid "DNS %d"
+msgstr ""
+
+msgid "DNS server name"
+msgstr ""
+
 msgid "DTS"
 msgstr ""
 
@@ -3797,6 +3851,9 @@ msgid "DVB Subtitles PID & lang"
 msgstr ""
 
 msgid "DVB type"
+msgstr ""
+
+msgid "DVB type:"
 msgstr ""
 
 msgid "DVB-C"
@@ -3923,6 +3980,9 @@ msgid "Day Mon-D"
 msgstr ""
 
 msgid "Day Mon-DD"
+msgstr ""
+
+msgid "Day of the month"
 msgstr ""
 
 msgid "Dayname D Month Year"
@@ -4170,6 +4230,10 @@ msgstr ""
 msgid "Delete logfile"
 msgstr ""
 
+#, python-format
+msgid "Delete or rename folder \"vuplus\" in path '%s' before initializing."
+msgstr ""
+
 msgid "Delete playlist entry"
 msgstr ""
 
@@ -4214,6 +4278,9 @@ msgid "Deleting files"
 msgstr ""
 
 msgid "Democratic Republic of the Congo"
+msgstr ""
+
+msgid "Demod firmware version"
 msgstr ""
 
 msgid "Denmark"
@@ -4316,18 +4383,6 @@ msgstr ""
 
 #, python-format
 msgid "Directory %s does not exist."
-msgstr ""
-
-#, python-format
-msgid "Directory '%s' does not exist!"
-msgstr ""
-
-#, python-format
-msgid "Directory '%s' not writable!"
-msgstr ""
-
-#, python-format
-msgid "Directory '%s' not writeable!"
 msgstr ""
 
 msgid "Directory Actions"
@@ -4570,6 +4625,10 @@ msgid ""
 "%s"
 msgstr ""
 
+#, python-format
+msgid "Do you want to install \"%s\" ?"
+msgstr ""
+
 msgid "Do you want to install the package:\n"
 msgstr ""
 
@@ -4589,7 +4648,16 @@ msgstr ""
 msgid "Do you want to reboot your receiver?"
 msgstr ""
 
+#, python-format
+msgid "Do you want to remove \"%s\" ?"
+msgstr ""
+
 msgid "Do you want to remove the package:\n"
+msgstr ""
+
+msgid ""
+"Do you want to remove this command or script?\n"
+"\n"
 msgstr ""
 
 msgid "Do you want to restore your settings?"
@@ -4769,7 +4837,7 @@ msgid "ERROR - failed to scan (%s)!"
 msgstr ""
 
 #, python-format
-msgid "ERROR downloading file %s"
+msgid "ERROR downloading file %s. Use button YELLOW in server \"Purge channel list\""
 msgstr ""
 
 msgid "East"
@@ -4924,11 +4992,13 @@ msgid "Enable parental protection"
 msgstr ""
 
 msgid ""
-"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally, e.g. tuner is occupied or service type is unavailable on the local tuner.\n"
+"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally, e.g. tuner is occupied or service type is unavailable on local tuner.\n"
 "\n"
-"You can use this receiver only in client mode using server channel list and EPG.\n"
+"You can use this receiver only in client mode using server channel list, timers and EPG.\n"
 "\n"
-"Set manual IP for importing EPG and Channels in 'Import remote receiver URL'."
+"If YELLOW button is available, it means that channel list include characters bad, e.g. \"+\", then list cannot be import from server.\n"
+"\n"
+"If you press YELLOW button then it will clean up list to remove these characters."
 msgstr ""
 
 msgid "Enable swap:"
@@ -5160,9 +5230,6 @@ msgid ""
 "%s"
 msgstr ""
 
-msgid "Error in XML"
-msgstr ""
-
 msgid "Error stop stream!"
 msgstr ""
 
@@ -5288,6 +5355,14 @@ msgid "Execution progress:"
 msgstr ""
 
 msgid "Exif"
+msgstr ""
+
+msgid ""
+"Exist are debug or crash files.\n"
+"Space used:"
+msgstr ""
+
+msgid "Exist are no debug files or crash."
 msgstr ""
 
 msgid "Exit"
@@ -5580,6 +5655,9 @@ msgstr ""
 msgid "Feed disabled!"
 msgstr ""
 
+msgid "Feed not available. The AutoTimer plugin was not installed."
+msgstr ""
+
 msgid "Feed stable."
 msgstr ""
 
@@ -5596,6 +5674,10 @@ msgid "File appears to be busy.\n"
 msgstr ""
 
 msgid "File can not displayed - File not found"
+msgstr ""
+
+#, python-format
+msgid "File error %s"
 msgstr ""
 
 msgid ""
@@ -5648,11 +5730,14 @@ msgstr ""
 msgid "Flash Image"
 msgstr ""
 
-#, python-format
-msgid "Flash directory '%s' not allowed!"
+msgid "Flash type"
 msgstr ""
 
-msgid "Flash type"
+msgid "FlashImage: Add USB STARTUP slots - No EXT4 USB attached."
+msgstr ""
+
+#, python-format
+msgid "FlashImage: Add USB STARTUP slots - USB (%s) only has %s free. At least 1GB is required."
 msgstr ""
 
 msgid "Flashing"
@@ -5710,10 +5795,6 @@ msgid "France"
 msgstr ""
 
 msgid "Free"
-msgstr ""
-
-#, python-format
-msgid "Free %d MB: Low space available for timeshift. Change device"
 msgstr ""
 
 msgid "Free flash"
@@ -5774,6 +5855,12 @@ msgid "From:"
 msgstr ""
 
 msgid "Front"
+msgstr ""
+
+#, python-format
+msgid ""
+"Front processor of your %s %s will be updated\n"
+"This may take a few minutes"
 msgstr ""
 
 msgid "Front processor version"
@@ -5881,6 +5968,11 @@ msgid "Geolocation information cannot be retrieved, please try again later."
 msgstr ""
 
 msgid "Geolocation is not available."
+msgstr ""
+
+msgid ""
+"Geolocation is not available. There is no Internet.\n"
+"Press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Georgia"
@@ -6317,6 +6409,9 @@ msgstr ""
 msgid "I do not want to perform any service scans"
 msgstr ""
 
+msgid "ID"
+msgstr ""
+
 msgid "IDLE"
 msgstr ""
 
@@ -6374,7 +6469,7 @@ msgstr ""
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr ""
 
-msgid "If the upper panel is active pressing OK will change the current directory.  If the lower panel is active pressing OK will select the current bookmark and exit."
+msgid "If the upper panel is active pressing GREEN or OK will change the current directory.  If the lower panel is active pressing GREEN or OK will select the current bookmark and exit."
 msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
@@ -6428,10 +6523,7 @@ msgstr ""
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby."
 msgstr ""
 
-msgid ""
-"Import channels and/or EPG from remote receiver URL or IP.\n"
-"\n"
-"Don't forget to manually set server IP."
+msgid "Import channels and/or EPG from remote receiver URL or IP."
 msgstr ""
 
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted."
@@ -6441,6 +6533,10 @@ msgid "Import from remote receiver URL"
 msgstr ""
 
 msgid "Import remote receiver URL"
+msgstr ""
+
+#, python-format
+msgid "Imported list with bouquet empty <n/a> %s file does not exist"
 msgstr ""
 
 msgid "In menu and plugins"
@@ -6530,6 +6626,9 @@ msgstr ""
 msgid "Init"
 msgstr ""
 
+msgid "Init Vu+ MultiBoot"
+msgstr ""
+
 msgid "Initial lock ratio"
 msgstr ""
 
@@ -6606,6 +6705,9 @@ msgstr ""
 msgid "Installing %s (%s)..."
 msgstr ""
 
+msgid "Installing AutoTimer"
+msgstr ""
+
 msgid "Installing TMBD"
 msgstr ""
 
@@ -6643,10 +6745,7 @@ msgstr ""
 msgid "Internal hdd only"
 msgstr ""
 
-msgid "Internet"
-msgstr ""
-
-msgid "Internet time (NTP)"
+msgid "Internet time"
 msgstr ""
 
 msgid "Interval between keys when repeating (ms)"
@@ -6706,7 +6805,7 @@ msgstr ""
 msgid ""
 "It seems you did not see all the eight arrow heads. This means your TV has overscan enabled, and is not configured properly.\n"
 "\n"
-"Please refer to your TV's manual to find how you can disable overscan on your TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, ask other users at https://forum.openvision.tech\n"
+"Please refer to your TV's manual to find how you can disable overscan on your TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, ask other users.\n"
 "\n"
 msgstr ""
 
@@ -7200,6 +7299,9 @@ msgid ""
 "New MAC address is: "
 msgstr ""
 
+msgid "MB"
+msgstr ""
+
 msgid "MENU"
 msgstr ""
 
@@ -7441,9 +7543,6 @@ msgid "Mins"
 msgstr ""
 
 msgid "Mins Secs"
-msgstr ""
-
-msgid "Missing "
 msgstr ""
 
 msgid "Mobile connection"
@@ -7806,9 +7905,6 @@ msgstr ""
 msgid "NO"
 msgstr ""
 
-msgid "NTP Hostname"
-msgstr ""
-
 msgid "NTSC"
 msgstr ""
 
@@ -7816,16 +7912,6 @@ msgid "Name"
 msgstr ""
 
 msgid "Nameserver"
-msgstr ""
-
-#, python-format
-msgid "Nameserver %d"
-msgstr ""
-
-msgid "Nameserver configuration"
-msgstr ""
-
-msgid "Nameserver settings"
 msgstr ""
 
 msgid "Namespace & Orbital pos."
@@ -7987,9 +8073,6 @@ msgstr ""
 msgid "No ECMPids available (FTA Service)"
 msgstr ""
 
-msgid "No HDD found or HDD not initialized!"
-msgstr ""
-
 msgid "No active subservices available."
 msgstr ""
 
@@ -8016,10 +8099,7 @@ msgstr ""
 msgid "No description available."
 msgstr ""
 
-msgid "No displayable files on this medium found!"
-msgstr ""
-
-msgid "No event info found, recording indefinitely."
+msgid "No event info found, recording set to (24 hours)"
 msgstr ""
 
 msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
@@ -8209,6 +8289,9 @@ msgstr ""
 msgid "Not tested:"
 msgstr ""
 
+msgid "Note: No button defined for this action!"
+msgstr ""
+
 msgid "Nothing"
 msgstr ""
 
@@ -8228,9 +8311,6 @@ msgstr ""
 
 msgctxt "now/next: 'now' event label"
 msgid "Now"
-msgstr ""
-
-msgid "Now (Press long)"
 msgstr ""
 
 msgid "Now you can change the position of the lower and right side. Press blue button to switch..."
@@ -8366,6 +8446,12 @@ msgstr ""
 msgid "Open Info"
 msgstr ""
 
+msgid "Open Multi EPG"
+msgstr ""
+
+msgid "Open Simple EPG"
+msgstr ""
+
 msgid "Open channel list"
 msgstr ""
 
@@ -8396,16 +8482,10 @@ msgstr ""
 msgid "Open the movie list"
 msgstr ""
 
-msgid "Open the multi service EPG view"
+msgid "OpenDNS"
 msgstr ""
 
-msgid "Open the single service EPG view"
-msgstr ""
-
-msgid "OpenDNS FamilyShield"
-msgstr ""
-
-msgid "OpenDNS Home"
+msgid "OpenDNS-2"
 msgstr ""
 
 msgid "OpenSSL version"
@@ -8451,6 +8531,18 @@ msgid "Orange"
 msgstr ""
 
 msgid "Orbital position"
+msgstr ""
+
+msgid "Orbital position:"
+msgstr ""
+
+msgid "Orde image per modes and slots (require receiver with mode slot 12)"
+msgstr ""
+
+msgid "Order by modes"
+msgstr ""
+
+msgid "Order by slots"
 msgstr ""
 
 msgid "Ordinary"
@@ -8602,6 +8694,12 @@ msgid "Parental control"
 msgstr ""
 
 msgid "Parental control setup"
+msgstr ""
+
+msgid "Partial"
+msgstr ""
+
+msgid "Partial EPG"
 msgstr ""
 
 msgid "Partition"
@@ -8918,6 +9016,9 @@ msgstr ""
 msgid "Plugin Browser"
 msgstr ""
 
+msgid "Plugin EPGImport actived EPG import and woke up your receiver"
+msgstr ""
+
 msgid "Plugin browser"
 msgstr ""
 
@@ -9038,7 +9139,26 @@ msgstr ""
 msgid "Press EXIT to return to the help screen."
 msgstr ""
 
+msgid ""
+"Press GREEN button to enable MultiBoot\n"
+"\n"
+"Will reboot within 10 seconds,\n"
+"unless you have eMMC slots to restore.\n"
+"Restoring eMMC slots can take from 1 -> 5 minutes per slot."
+msgstr ""
+
 msgid "Press INFO on your remote control for additional information."
+msgstr ""
+
+msgid "Press LEFT RIGHT OK or MENU to change path."
+msgstr ""
+
+#, python-format
+msgid ""
+"Press LEFT RIGHT OK or MENU to choose another server.\n"
+"\n"
+"Active server: %s\n"
+"DNS: %s"
 msgstr ""
 
 msgid "Press MENU on your remote control for additional options."
@@ -9097,6 +9217,9 @@ msgstr ""
 msgid "Press OK to select/deselect a CAId."
 msgstr ""
 
+msgid "Press OK to show details."
+msgstr ""
+
 msgid "Press OK to toggle the selection"
 msgstr ""
 
@@ -9114,7 +9237,7 @@ msgstr ""
 msgid "Press OK, save and exit..."
 msgstr ""
 
-msgid "Press YELLOW button to set your schedule."
+msgid "Press YELLOW button if your time zone is not set or press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Press or select button and then press 'OK' for attach function."
@@ -9151,13 +9274,13 @@ msgstr ""
 msgid "Preview selected channel"
 msgstr ""
 
+msgid "Previous saved timeshift has editing properties with plugin CutListEditor."
+msgstr ""
+
 msgid "Primary DNS"
 msgstr ""
 
 msgid "Prime time"
-msgstr ""
-
-msgid "Prime time (Press long)"
 msgstr ""
 
 msgid "Priority"
@@ -9265,6 +9388,9 @@ msgstr ""
 msgid "Purge all but the current and permanent locales/languages.  Add the current locale/language if it is not installed.  Delete the current locale/language if it is installed."
 msgstr ""
 
+msgid "Purge channel list"
+msgstr ""
+
 msgid "Purge deleted user bouquets"
 msgstr ""
 
@@ -9288,6 +9414,12 @@ msgid "Python version"
 msgstr ""
 
 msgid "Qatar"
+msgstr ""
+
+msgid "Quad9 No Security"
+msgstr ""
+
+msgid "Quad9 Security"
 msgstr ""
 
 msgid "Quechua"
@@ -9323,6 +9455,9 @@ msgstr ""
 msgid "RAM benchmark"
 msgstr ""
 
+msgid "RC Map"
+msgstr ""
+
 msgid "RC default name"
 msgstr ""
 
@@ -9345,6 +9480,12 @@ msgid "REC"
 msgstr ""
 
 msgid "REC symbol"
+msgstr ""
+
+msgid "RFC 5905 hostname (SNTP - Simple Network Time Protocol)"
+msgstr ""
+
+msgid "RFC 868 hostname (rdate - Remote Date)"
 msgstr ""
 
 msgid "RGB"
@@ -9376,10 +9517,6 @@ msgid "Reader Statistics"
 msgstr ""
 
 #, python-format
-msgid "Ready to install \"%s\" ?"
-msgstr ""
-
-#, python-format
 msgid "Ready to remove \"%s\" ?"
 msgstr ""
 
@@ -9395,29 +9532,29 @@ msgstr ""
 msgid "Really exit the subservices quickzap?"
 msgstr ""
 
-msgid "Really perform a manufacturer reset now?"
+msgid "Really perform a manufacturer reset?"
 msgstr ""
 
-msgid "Really reboot now?"
+msgid "Really reboot?"
 msgstr ""
 
-msgid "Really restart in debug mode now?"
+msgid "Really restart in debug mode?"
 msgstr ""
 
-msgid "Really restart now?"
+msgid "Really restart?"
 msgstr ""
 
-msgid "Really shutdown now?"
+msgid "Really shutdown?"
 msgstr ""
 
 #, python-format
 msgid "Really store at index %2d for current position?"
 msgstr ""
 
-msgid "Really update the front processor and reboot now?"
+msgid "Really update the front processor and reboot?"
 msgstr ""
 
-msgid "Really update your settop box and reboot now?"
+msgid "Really update your STB and reboot?"
 msgstr ""
 
 msgid "Rear"
@@ -9467,10 +9604,24 @@ msgstr ""
 msgid "Recording Setup"
 msgstr ""
 
+#, python-format
+msgid "Recording failed: Storage device free size %d GB."
+msgstr ""
+
 msgid "Recording in progress"
 msgstr ""
 
-msgid "Recording time has been set."
+#, python-format
+msgid "Recording path is \"%s\""
+msgstr ""
+
+msgid "Recording set to (24 hours)"
+msgstr ""
+
+msgid "Recording timer has been set"
+msgstr ""
+
+msgid "Recording timer was canceled"
 msgstr ""
 
 msgid "Recording type"
@@ -9489,6 +9640,9 @@ msgid "Recover"
 msgstr ""
 
 msgid "Recover inetd"
+msgstr ""
+
+msgid "Recovery Mode"
 msgstr ""
 
 msgid "Red"
@@ -9570,9 +9724,6 @@ msgid "Remove Confirmation"
 msgstr ""
 
 msgid "Remove a mark"
-msgstr ""
-
-msgid "Remove a nameserver entry"
 msgstr ""
 
 msgid "Remove after this position"
@@ -9923,16 +10074,13 @@ msgstr ""
 msgid "Rotor turning speed"
 msgstr ""
 
-msgid "Rotor: "
-msgstr ""
-
 msgid "Round start time on"
 msgstr ""
 
 msgid "Routing request"
 msgstr ""
 
-msgid "Run how often ?"
+msgid "Run frequency"
 msgstr ""
 
 msgid "Run the BLUE action"
@@ -10274,9 +10422,6 @@ msgstr ""
 msgid "Search east"
 msgstr ""
 
-msgid "Search event in TMBD"
-msgstr ""
-
 msgid "Search west"
 msgstr ""
 
@@ -10341,6 +10486,10 @@ msgid "Seems a background update check is in progress, please wait a few minutes
 msgstr ""
 
 msgid "Seems internet connection down, Or TMBD Plugin not on feed."
+msgstr ""
+
+#, python-format
+msgid "Seems your receiver has a software problem. Since the last reboot it has occurred %d times.\n"
 msgstr ""
 
 msgid "Select"
@@ -10518,6 +10667,21 @@ msgstr ""
 msgid "Select image"
 msgstr ""
 
+msgid "Select image and delete"
+msgstr ""
+
+msgid "Select image and press OK or GREEN button for reboot."
+msgstr ""
+
+msgid "Select image and reboot"
+msgstr ""
+
+msgid "Select image or boot to Android image and press OK or GREEN button for reboot."
+msgstr ""
+
+msgid "Select image or boot to recovery menu and press OK or GREEN button for reboot."
+msgstr ""
+
 msgid "Select input device"
 msgstr ""
 
@@ -10540,6 +10704,9 @@ msgid "Select service to add..."
 msgstr ""
 
 msgid "Select slot"
+msgstr ""
+
+msgid "Select slot image and press OK or GREEN button to reboot."
 msgstr ""
 
 msgid "Select sort method:"
@@ -10725,6 +10892,10 @@ msgid "Serv.Name"
 msgstr ""
 
 #, python-format
+msgid "Server Error: %s %s is included in bouquets.tv and does not exist in channel list"
+msgstr ""
+
+#, python-format
 msgid "Server Info ( NCam-Version: %s )"
 msgstr ""
 
@@ -10867,6 +11038,10 @@ msgstr ""
 msgid "Set local time"
 msgstr ""
 
+#, python-format
+msgid "Set new value to \"Fallback remote receiver\" change URL %s"
+msgstr ""
+
 msgid "Set persistent PIN code"
 msgstr ""
 
@@ -10927,6 +11102,9 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+msgid "Settings DNS Server"
+msgstr ""
+
 msgid "Setup"
 msgstr ""
 
@@ -10968,6 +11146,9 @@ msgid "Shona"
 msgstr ""
 
 msgid "Short filenames"
+msgstr ""
+
+msgid "Should the crash counter be reset to prevent a restart?"
 msgstr ""
 
 msgid "Show"
@@ -11108,13 +11289,13 @@ msgstr ""
 msgid "Show second InfoBar"
 msgstr ""
 
+msgid "Show service event information"
+msgstr ""
+
 msgid "Show service list"
 msgstr ""
 
 msgid "Show servicelist or movies"
-msgstr ""
-
-msgid "Show sevice event information"
 msgstr ""
 
 msgid "Show single service EPG"
@@ -11437,6 +11618,9 @@ msgstr ""
 msgid "Sort A-Z"
 msgstr ""
 
+msgid "Sort bouquets alphabetic A-Z"
+msgstr ""
+
 msgid "Sort by"
 msgstr ""
 
@@ -11478,9 +11662,6 @@ msgid "South Ndebele"
 msgstr ""
 
 msgid "South Sudan"
-msgstr ""
-
-msgid "Space used:"
 msgstr ""
 
 msgid "Spain"
@@ -11651,7 +11832,7 @@ msgstr ""
 msgid "State"
 msgstr ""
 
-msgid "Static IP or Custom"
+msgid "Static IP Router"
 msgstr ""
 
 msgid "Status"
@@ -11780,6 +11961,14 @@ msgstr ""
 msgid "Storage Information"
 msgstr ""
 
+msgid "Storage device not available or not initialized."
+msgstr ""
+
+msgid ""
+"Storage device not available.\n"
+"Mount device or reboot system and try again."
+msgstr ""
+
 msgid "Storage information"
 msgstr ""
 
@@ -11796,12 +11985,6 @@ msgid "Stream"
 msgstr ""
 
 msgid "Stream request"
-msgstr ""
-
-msgid "Stream-tv"
-msgstr ""
-
-msgid "Streaming"
 msgstr ""
 
 msgid "Streaming clients info"
@@ -12028,13 +12211,16 @@ msgstr ""
 msgid "TEXT"
 msgstr ""
 
+msgid "TEXT   Reset"
+msgstr ""
+
 msgid "TMBD Details"
 msgstr ""
 
-msgid "TMBD Not Installed"
+msgid "TMBD details for event"
 msgstr ""
 
-msgid "TMBD details for event"
+msgid "TMBD not installed"
 msgstr ""
 
 msgid "TRANSLATOR_INFO"
@@ -12103,9 +12289,6 @@ msgstr ""
 msgid "Teletext Actions"
 msgstr ""
 
-msgid "Teletext base visibility"
-msgstr ""
-
 msgid "Telnet interface"
 msgstr ""
 
@@ -12167,7 +12350,12 @@ msgstr ""
 msgid "The '%s' log file contains no information."
 msgstr ""
 
-msgid "The AutoTimer plugin is not installed."
+msgid "The AutoTimer plugin is installed."
+msgstr ""
+
+msgid ""
+"The AutoTimer plugin is not installed!\n"
+"Do you want to install it?"
 msgstr ""
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a special format data DVD (which will not play in stand-alone DVD players) instead?"
@@ -12197,9 +12385,6 @@ msgid ""
 msgstr ""
 
 msgid "The detailed information is intended for developers only."
-msgstr ""
-
-msgid "The following files were found..."
 msgstr ""
 
 msgid ""
@@ -12622,7 +12807,14 @@ msgstr ""
 msgid "Timeshift Actions"
 msgstr ""
 
+#, python-format
+msgid "Timeshift failed: Storage device free size %d GB."
+msgstr ""
+
 msgid "Timeshift is running. Select an action.\n"
+msgstr ""
+
+msgid "Timeshift not enough diskspace. Is device mounted?"
 msgstr ""
 
 msgid "Timeshift not possible!"
@@ -12974,6 +13166,9 @@ msgstr ""
 msgid "Undefined"
 msgstr ""
 
+msgid "Undo bouquets order alphabetic"
+msgstr ""
+
 msgid "Undo install"
 msgstr ""
 
@@ -13147,9 +13342,6 @@ msgid "Use power measurement"
 msgstr ""
 
 msgid "Use the UP and DOWN buttons to select your locale/language then press the OK button to continue."
-msgstr ""
-
-msgid "Use the cursor keys to select an installed image then reboot."
 msgstr ""
 
 msgid "Use the network wizard to configure selected network adapter"
@@ -13397,6 +13589,22 @@ msgstr ""
 msgid "Volume up"
 msgstr ""
 
+msgid "Vu+ MultiBoot Initialisation - will reboot after 10 seconds."
+msgstr ""
+
+msgid ""
+"Vu+ MultiBoot Initialisation in progress\n"
+"\n"
+"Will reboot after restoring any eMMC slots\n"
+"This can take from 1 -> 5 minutes per slot."
+msgstr ""
+
+msgid "Vu+ MultiBoot Manager"
+msgstr ""
+
+msgid "VuKexec: Create Vu+ Multiboot environment - Unable to complete, Vu+ Multiboot files missing."
+msgstr ""
+
 msgid "W"
 msgstr ""
 
@@ -13404,6 +13612,16 @@ msgid "WAN Geolocation"
 msgstr ""
 
 msgid "WAN connection information"
+msgstr ""
+
+#, python-format
+msgid ""
+"WARNING: The DNS were not saved in your settings.\n"
+"\n"
+"Active server: %s\n"
+"DNS Active: %s\n"
+"\n"
+"It is necessary to choose a server and save with GREEN button!."
 msgstr ""
 
 msgid "WEP"
@@ -13478,6 +13696,9 @@ msgid ""
 "Really disable timer conflict detection?"
 msgstr ""
 
+msgid "Warning! This is the last crash before an automatic restart is performed.\n"
+msgstr ""
+
 msgid "Warning: FBC-C V1 tuner should be connected to the first slot to work correctly. Otherwise, only 2 out of 8 demodulators will be available when connected in the second slot. "
 msgstr ""
 
@@ -13542,12 +13763,6 @@ msgid "Western Frisian"
 msgstr ""
 
 msgid "Western Sahara"
-msgstr ""
-
-msgid "What date of month ?"
-msgstr ""
-
-msgid "What day of week ?"
 msgstr ""
 
 msgid "What would you like to do?"
@@ -13650,15 +13865,6 @@ msgstr ""
 msgid "Xhosa"
 msgstr ""
 
-msgid "YCbCr420"
-msgstr ""
-
-msgid "YCbCr422"
-msgstr ""
-
-msgid "YCbCr444"
-msgstr ""
-
 msgid "YES"
 msgstr ""
 
@@ -13739,7 +13945,14 @@ msgid ""
 msgstr ""
 
 msgid ""
-"You are ready to add an event to automatic timer.\n"
+"You are ready to add current event to automatic timer.\n"
+"If there are no conflicts, once added you must enter menu:\n"
+"\n"
+"Timers > AutoTimers and search the event with green button."
+msgstr ""
+
+msgid ""
+"You are ready to add this event to automatic timer.\n"
 "If there are no conflicts, once added you must enter menu:\n"
 "\n"
 "Timers > AutoTimers and search the event with green button."
@@ -13793,8 +14006,7 @@ msgstr ""
 msgid "You have not selected any logs to delete."
 msgstr ""
 
-#, python-format
-msgid "You have not set manual IP for %s"
+msgid "You have not selected any logs to view."
 msgstr ""
 
 #, python-format
@@ -13802,6 +14014,9 @@ msgid "You have to wait %(min)d minutes, %(sec)d seconds!"
 msgstr ""
 
 msgid "You must set a root password in order to be able to use network services, such as FTP, telnet or ssh."
+msgstr ""
+
+msgid "You must set at least one command"
 msgstr ""
 
 #, python-format
@@ -13831,13 +14046,6 @@ msgstr ""
 msgid "Your current collection will get lost!"
 msgstr ""
 
-#, python-format
-msgid ""
-"Your frontprocessor will be updated\n"
-"Please wait until your %s %s reboots\n"
-"This may take a few minutes"
-msgstr ""
-
 msgid "Your hardware can detect CI mode itself or works only in legacy mode."
 msgstr ""
 
@@ -13845,7 +14053,10 @@ msgstr ""
 msgid "Your internet connection is working (IP address: %s)"
 msgstr ""
 
-msgid "Your local time has been set successfully. Press \"OK\" to continue wizard."
+msgid ""
+"Your local time has been set successfully. Settings has been saved.\n"
+"\n"
+"Press \"OK\" to continue wizard."
 msgstr ""
 
 msgid "Your network configuration has been activated."
@@ -14398,9 +14609,6 @@ msgid ""
 "activate now keymap \"%s\"?"
 msgstr ""
 
-msgid "invalid type"
-msgstr ""
-
 msgid "jazz"
 msgstr ""
 
@@ -14567,6 +14775,9 @@ msgid "no storage devices found"
 msgstr ""
 
 msgid "none"
+msgstr ""
+
+msgid "not"
 msgstr ""
 
 msgid "not configured"
@@ -14774,6 +14985,10 @@ msgid "skip forward"
 msgstr ""
 
 #, python-format
+msgid "slot%s %s - %s"
+msgstr ""
+
+#, python-format
 msgid "slot%s - %s"
 msgstr ""
 
@@ -14811,6 +15026,12 @@ msgstr ""
 
 #, python-format
 msgid "slot%s - %s, without backup"
+msgstr ""
+
+msgid "slot0 - Recovery mode image"
+msgstr ""
+
+msgid "slot0 - Recovery mode image (current)"
 msgstr ""
 
 msgid "soap/melodrama/folkloric"
@@ -15023,113 +15244,6 @@ msgstr ""
 msgid "zapped"
 msgstr ""
 
-msgid "Configure interface"
-msgstr ""
-
-msgid "Configure your network again"
-msgstr ""
-
-msgid "List available networks"
-msgstr ""
-
-msgid "Manual configuration"
-msgstr ""
-
-msgid ""
-"Please configure or verify your Nameservers by filling out the required values.\n"
-"When you are ready press OK to continue."
-msgstr ""
-
-msgid ""
-"Please configure your internet connection by filling out the required values.\n"
-"When you are ready press OK to continue."
-msgstr ""
-
-msgid "Please follow the instructions on the TV"
-msgstr ""
-
-msgid ""
-"Please select the network interface that you want to use for your internet connection.\n"
-"\n"
-"Please press OK to continue."
-msgstr ""
-
-msgid ""
-"Please select the wireless network that you want to connect to.\n"
-"\n"
-"Please press OK to continue."
-msgstr ""
-
-msgid "Select wireless network"
-msgstr ""
-
-msgid ""
-"Thank you for using the wizard.\n"
-"Please press OK to continue."
-msgstr ""
-
-msgid ""
-"The wireless LAN plugin is not installed!\n"
-"Please install it and choose what you want to do next."
-msgstr ""
-
-msgid ""
-"Welcome.\n"
-"\n"
-"If you want to connect your receiver to the Internet, this wizard will guide you through the basic network setup of your receiver.\n"
-"\n"
-"Press OK to start configuring your network"
-msgstr ""
-
-msgid "Wireless network connection setup"
-msgstr ""
-
-msgid "Wireless network connection setup."
-msgstr ""
-
-msgid ""
-"Your internet connection is not working!\n"
-"Please choose what you want to do next."
-msgstr ""
-
-msgid ""
-"Your receiver is now ready to use.\n"
-"\n"
-"Your internet connection is working now.\n"
-"\n"
-"Please press OK to continue."
-msgstr ""
-
-msgid ""
-"Your wireless LAN internet connection could not be started!\n"
-"Have you attached your USB WLAN Stick?\n"
-"\n"
-"Please choose what you want to do next."
-msgstr ""
-
-msgid "Refresh rate selection."
-msgstr ""
-
-msgid "Select refresh rate"
-msgstr ""
-
-msgid "Select video input with up/down buttons"
-msgstr ""
-
-msgid "Select video mode"
-msgstr ""
-
-msgid ""
-"Video input selection\n"
-"\n"
-"Please press OK if you can see this page on your TV (or select a different input port).\n"
-"\n"
-"The next input port will be automatically probed in 20 seconds."
-msgstr ""
-
-msgid "Video mode selection."
-msgstr ""
-
 msgid "2678400000"
 msgstr ""
 
@@ -15143,6 +15257,673 @@ msgid "false"
 msgstr ""
 
 msgid "true"
+msgstr ""
+
+msgid " packages selected."
+msgstr ""
+
+msgid "%"
+msgstr ""
+
+msgid "-"
+msgstr ""
+
+msgid "0, 0"
+msgstr ""
+
+msgid "0, 0, 1000, 50"
+msgstr ""
+
+msgid "0, 0, 450, 45"
+msgstr ""
+
+msgid "0, 0, 450, 50"
+msgstr ""
+
+msgid "0, 0, 900, 39"
+msgstr ""
+
+msgid "0, 0, 900, 42"
+msgstr ""
+
+msgid "0, 10, 300, 50, 400, 10, 500, 50"
+msgstr ""
+
+msgid "0, 12, 30, 38"
+msgstr ""
+
+msgid "0, 42, 900, 30"
+msgstr ""
+
+msgid "1, 1"
+msgstr ""
+
+msgid "10, 0, 50, 50"
+msgstr ""
+
+msgid "10, 2, 1410, 45"
+msgstr ""
+
+msgid "10, 2, 64, 50"
+msgstr ""
+
+msgid "10, 4, 30, 30"
+msgstr ""
+
+msgid "125, 3, 1000, 50"
+msgstr ""
+
+msgid "15, 4, 30, 30"
+msgstr ""
+
+msgid "180, 1, 45"
+msgstr ""
+
+msgid "180, 43, 34"
+msgstr ""
+
+msgid "2, 0, 30, 30"
+msgstr ""
+
+msgid "30, 285, 45, 300, 30, 25"
+msgstr ""
+
+msgid "4, 4"
+msgstr ""
+
+msgid "40, 0, 1200, 50, 10, 12, 50, 50"
+msgstr ""
+
+msgid "45, 4, 30, 30"
+msgstr ""
+
+msgid "450, 0, 1000, 45"
+msgstr ""
+
+msgid "5, 0, 1400, 50"
+msgstr ""
+
+msgid "5, 13, 50, 50"
+msgstr ""
+
+msgid "5, 15, 25, 24"
+msgstr ""
+
+msgid "55, 0, 50, 50"
+msgstr ""
+
+msgid "55, 2, 1000, 45"
+msgstr ""
+
+msgid "62, 0, 1200, 38"
+msgstr ""
+
+msgid "65, 2, 1000, 50"
+msgstr ""
+
+msgid "68, 4, 1000, 40"
+msgstr ""
+
+msgid "68, 4, 1000, 50"
+msgstr ""
+
+msgid "68, 68"
+msgstr ""
+
+msgid "7, 4, 52, 50"
+msgstr ""
+
+msgid "85, 0, 1300, 50"
+msgstr ""
+
+msgid "90, 1, 45"
+msgstr ""
+
+msgid "90, 3, 1000, 32"
+msgstr ""
+
+msgid "90, 43, 34"
+msgstr ""
+
+msgid ":"
+msgstr ""
+
+msgid "AGC"
+msgstr ""
+
+msgid "Backup is running"
+msgstr ""
+
+msgid "CI Assignment"
+msgstr ""
+
+msgid "CIHelper Setup"
+msgstr ""
+
+msgid "CIconfigMenu"
+msgstr ""
+
+msgid "CIselectMainMenu"
+msgstr ""
+
+msgid "Change pin code"
+msgstr ""
+
+msgid "Channel Selection"
+msgstr ""
+
+msgid "ChannelSelectionRadio"
+msgstr ""
+
+msgid "ChapterZap"
+msgstr ""
+
+msgid "CutListEditor"
+msgstr ""
+
+msgid "DVD File Browser"
+msgstr ""
+
+msgid "Devices"
+msgstr ""
+
+msgid "Directorybrowser"
+msgstr ""
+
+msgid "Dish"
+msgstr ""
+
+msgid "Downloadable plugins"
+msgstr ""
+
+msgid "ECMInfo"
+msgstr ""
+
+msgid "EPG Search"
+msgstr ""
+
+msgid "EPG Selection"
+msgstr ""
+
+msgid "Eventview"
+msgstr ""
+
+msgid "ExtraMessageBox"
+msgstr ""
+
+msgid "Fast Scan"
+msgstr ""
+
+msgid "File Commander - File/Directory Information"
+msgstr ""
+
+msgid "HDMI CEC setup"
+msgstr ""
+
+msgid "Harddisk"
+msgstr ""
+
+msgid "HiSilicon Setup"
+msgstr ""
+
+msgid "Humidity:"
+msgstr ""
+
+msgid "IN"
+msgstr ""
+
+msgid "InfoBar"
+msgstr ""
+
+msgid "Installing Software..."
+msgstr ""
+
+msgid "JobView"
+msgstr ""
+
+msgid "LOCK"
+msgstr ""
+
+msgid "Language Wizard"
+msgstr ""
+
+msgid "Locale/Language Wizard"
+msgstr ""
+
+msgid "Location Box"
+msgstr ""
+
+msgid "MORE"
+msgstr ""
+
+msgid "MPHelp"
+msgstr ""
+
+msgid "Mainmenu"
+msgstr ""
+
+msgid "MediaPlayer"
+msgstr ""
+
+msgid "MemoryInfo"
+msgstr ""
+
+msgid "Movie Browser Configuration"
+msgstr ""
+
+msgid "MovieMenu"
+msgstr ""
+
+msgid "Movielist menu"
+msgstr ""
+
+msgid "Mute"
+msgstr ""
+
+msgid "NOW"
+msgstr ""
+
+msgid "NameserverSetup"
+msgstr ""
+
+msgid "Network Wizard"
+msgstr ""
+
+msgid "Network test..."
+msgstr ""
+
+msgid "NetworkAdapterSelection"
+msgstr ""
+
+msgid "OE_Background, OE_Foreground, OE_Blue, OE_Blue, OE_Orange"
+msgstr ""
+
+msgid "OMB Manager About"
+msgstr ""
+
+msgid "OMB Manager Install"
+msgstr ""
+
+msgid "OMB Manager List"
+msgstr ""
+
+msgid "OUT"
+msgstr ""
+
+msgid "Open Vision Commit Info Setup"
+msgstr ""
+
+msgid "OpenWebif Configuration"
+msgstr ""
+
+msgid "PE Speed Up"
+msgstr ""
+
+msgid "Parental control services Editor"
+msgstr ""
+
+msgid "PiPZap"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "QuickMenu - Open Vision Panel"
+msgstr ""
+
+msgid "Reception Settings"
+msgstr ""
+
+msgid "Regular; 28"
+msgstr ""
+
+msgid "RestartNetwork"
+msgstr ""
+
+msgid "Restore is running"
+msgstr ""
+
+msgid "RestorePlugins"
+msgstr ""
+
+msgid "Root Change Password"
+msgstr ""
+
+msgid "SNR"
+msgstr ""
+
+msgid "Scan IP"
+msgstr ""
+
+msgid "Select HDD"
+msgstr ""
+
+msgid "Select Sats Entry"
+msgstr ""
+
+msgid "Select a movie"
+msgstr ""
+
+msgid "SelectBouquet"
+msgstr ""
+
+msgid "Service Scan"
+msgstr ""
+
+msgid "Show menu numbers"
+msgstr ""
+
+msgid "SimpleChannelSelection"
+msgstr ""
+
+msgid "Sleep Timer"
+msgstr ""
+
+msgid "SlimChannelSelection"
+msgstr ""
+
+msgid "SoftwareManager information"
+msgstr ""
+
+msgid "Start Wizard"
+msgstr ""
+
+msgid "Subtitle settings"
+msgstr ""
+
+msgid "TMBD Details Plugin"
+msgstr ""
+
+msgid "Time/Date Input"
+msgstr ""
+
+msgid "TimerEdit"
+msgstr ""
+
+msgid "Timeshift Live"
+msgstr ""
+
+msgid "TimeshiftState"
+msgstr ""
+
+msgid "Video Wizard"
+msgstr ""
+
+msgid "VideoMode"
+msgstr ""
+
+msgid "Volume"
+msgstr ""
+
+msgid "Weather Forecast"
+msgstr ""
+
+msgid "Weather Plugin"
+msgstr ""
+
+msgid "Welcome..."
+msgstr ""
+
+msgid "Wireless Network State"
+msgstr ""
+
+msgid "YT Trailer-List"
+msgstr ""
+
+msgid "Zapear-PiP"
+msgstr ""
+
+msgid "[OK]  ="
+msgstr ""
+
+msgid "easyCIconfigMenu"
+msgstr ""
+
+msgid "white, white, cyan, magenta"
+msgstr ""
+
+msgid "x"
+msgstr ""
+
+msgid "Check the internet connection"
+msgstr ""
+
+msgid "Check the internet connection again"
+msgstr ""
+
+msgid "Checking the internet connection. Please wait..."
+msgstr ""
+
+msgid "Do you want to install Plugins?"
+msgstr ""
+
+msgid "Exit the wizard"
+msgstr ""
+
+msgid "Please configure the fallback tuner setup"
+msgstr ""
+
+msgid "Please connect your %s %s (kernel %s) to the internet"
+msgstr ""
+
+msgid "Please set up tuner A"
+msgstr ""
+
+msgid "Please set up tuner B"
+msgstr ""
+
+msgid "Please set up tuner C"
+msgstr ""
+
+msgid "Please set up tuner D"
+msgstr ""
+
+msgid "Please set up tuner E"
+msgstr ""
+
+msgid "Please set up tuner F"
+msgstr ""
+
+msgid "Please set up tuner G"
+msgstr ""
+
+msgid "Please set up tuner H"
+msgstr ""
+
+msgid "Please set up tuner I"
+msgstr ""
+
+msgid "Please set up tuner J"
+msgstr ""
+
+msgid "Please set up tuner Q"
+msgstr ""
+
+msgid "Please set up tuner R"
+msgstr ""
+
+msgid "Please setup the following basic configs!"
+msgstr ""
+
+msgid "Skip internet connection check (disables automatic package installation)"
+msgstr ""
+
+msgid "Speed up the performance"
+msgstr ""
+
+msgid ""
+"Thank you for using the wizard. Your %s %s (kernel %s) is now ready for use.\n"
+"Press OK to start using Open Vision %s-%s"
+msgstr ""
+
+msgid ""
+"Use the up/down keys on your remote control to select an option. After that, press OK.\n"
+"We detected your RC as %s (type %s id %s)"
+msgstr ""
+
+msgid "Use the wizard to set up basic features"
+msgstr ""
+
+msgid ""
+"Welcome to Open Vision %s-%s\n"
+"This start wizard will guide you through the basic setup of your %s %s (kernel %s).\n"
+"Press the OK button on your remote control to move to the next step."
+msgstr ""
+
+msgid "What type of service scan do you want?"
+msgstr ""
+
+msgid "Your %s %s (kernel %s) does not have an internet connection"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Automatic scan"
+msgstr ""
+
+msgid "BER"
+msgstr ""
+
+msgid "Benchmark information"
+msgstr ""
+
+msgid "C"
+msgstr ""
+
+msgid "Channellist menu"
+msgstr ""
+
+msgid "Command execution..."
+msgstr ""
+
+msgid "Commit info"
+msgstr ""
+
+msgid "D"
+msgstr ""
+
+msgid "DVB information"
+msgstr ""
+
+msgid "EPG selection"
+msgstr ""
+
+msgid "Event view"
+msgstr ""
+
+msgid "Event view menu"
+msgstr ""
+
+msgid "Fastscan"
+msgstr ""
+
+msgid "Geolocation"
+msgstr ""
+
+msgid "IPv6 setup"
+msgstr ""
+
+msgid "Index"
+msgstr ""
+
+msgid "Info bar"
+msgstr ""
+
+msgid "Installing software..."
+msgstr ""
+
+msgid "MAC address setup"
+msgstr ""
+
+msgid "Manual scan"
+msgstr ""
+
+msgid "Message..."
+msgstr ""
+
+msgid "Nameserver setup"
+msgstr ""
+
+msgid "Network configuration..."
+msgstr ""
+
+msgid "Network setup"
+msgstr ""
+
+msgid "Now playing"
+msgstr ""
+
+msgid "NumberZapPicon"
+msgstr ""
+
+msgid "OSD settings"
+msgstr ""
+
+msgid "Open Vision information"
+msgstr ""
+
+msgid "PIN code needed"
+msgstr ""
+
+msgid "Parental control services editor"
+msgstr ""
+
+msgid "PiP setup"
+msgstr ""
+
+msgid "Reception settings"
+msgstr ""
+
+msgid "Seek"
+msgstr ""
+
+msgid "Select a bouquet"
+msgstr ""
+
+msgid "Select a tuner"
+msgstr ""
+
+msgid "Timer edit"
+msgstr ""
+
+msgid "Timer entry"
+msgstr ""
+
+msgid "Timer log"
+msgstr ""
+
+msgid "Timeshift"
+msgstr ""
+
+msgid "Translation:"
+msgstr ""
+
+msgid "Troubleshoot"
+msgstr ""
+
+msgid "UnhandledKey"
+msgstr ""
+
+msgid "Virtual keyboard"
+msgstr ""
+
+msgid "help..."
+msgstr ""
+
+msgid "DVD"
+msgstr ""
+
+msgid "PLAY"
+msgstr ""
+
+msgid "PLUGINS"
+msgstr ""
+
+msgid "SCAN"
+msgstr ""
+
+msgid "SETUP"
 msgstr ""
 
 msgid "'Handle standby from TV' has a higher priority than 'Handle input from TV'."
@@ -15161,6 +15942,9 @@ msgid "Activate the configured network settings."
 msgstr ""
 
 msgid "Adaptive date display allows recent dates to be displayed as 'Today' or 'Yesterday'.  It hides the year for recordings made this year.  It hides the day of the week for recordings made in previous years."
+msgstr ""
+
+msgid "Add legacy LEFT/RIGHT actions"
 msgstr ""
 
 msgid "Adjust the horizontal position of the letters used for teletext."
@@ -15187,7 +15971,7 @@ msgstr ""
 msgid "Allows you to assign the selected function to this button."
 msgstr ""
 
-msgid "Allows you to enable/disable displaying icons on the frontpanel."
+msgid "Allows you to enable/disable displaying icons on the front panel."
 msgstr ""
 
 msgid "Allows you to hide the extensions of known file types."
@@ -15392,6 +16176,12 @@ msgid "Configure how recording filenames are constructed."
 msgstr ""
 
 msgid "Configure how the fan should operate"
+msgstr ""
+
+msgid "Configure how to show REC symbol in standby (this needs an enigma2 restart)."
+msgstr ""
+
+msgid "Configure how to show REC symbol in use (this needs an enigma2 restart)."
 msgstr ""
 
 msgid "Configure if and how crypto icons will be shown in the channel selection list."
@@ -15807,9 +16597,6 @@ msgstr ""
 msgid "Enable Virgin EPG"
 msgstr ""
 
-msgid "Enable blinking REC symbol on the LCD display"
-msgstr ""
-
 msgid "Enable bouquet selection in multi-EPG"
 msgstr ""
 
@@ -15826,6 +16613,9 @@ msgid "Enable infobar fade-out"
 msgstr ""
 
 msgid "Enable multiple bouquets"
+msgstr ""
+
+msgid "Enable new GStreamer 1.x playback"
 msgstr ""
 
 msgid "Enable or disable using HDMI-CEC."
@@ -15873,7 +16663,7 @@ msgstr ""
 msgid "Enabled, screens Clients, Servers and Log are updated on time interval."
 msgstr ""
 
-msgid "Enter an URL where alternative images could be listed for FlashImage"
+msgid "Enter an URL where alternative images could be listed for FlashImage. Enter text 'all' for automatic access of many images."
 msgstr ""
 
 msgid "Even if TV has another input active"
@@ -15975,6 +16765,12 @@ msgstr ""
 msgid "Hide zap errors"
 msgstr ""
 
+msgid "If 'never', will force restart despite that after 100 crashes."
+msgstr ""
+
+msgid "If 'never', will write crash log despite that for the first crash."
+msgstr ""
+
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr ""
 
@@ -15982,6 +16778,9 @@ msgid "If enabled, a log will be kept of CEC protocol traffic. The log files are
 msgstr ""
 
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
+msgstr ""
+
+msgid "If enabled, the new GStreamer 1.x playback engine will be used."
 msgstr ""
 
 msgid "If set to 'Yes' the same commands will be sent to the TV for deep standby events as are sent during regular standby events."
@@ -16003,9 +16802,6 @@ msgid "Ignore unexpectedly wakeup and stay in standby"
 msgstr ""
 
 msgid "In live view wait this many seconds after a numeric key press before assuming the required channel number has been entered. Default: 5 seconds. Setting zero will require confirmation with 'OK'. "
-msgstr ""
-
-msgid "In the Standby record on the LCD display"
 msgstr ""
 
 msgid "Include AIT in http streams"
@@ -16362,6 +17158,9 @@ msgstr ""
 msgid "Put your AV Receiver in standby"
 msgstr ""
 
+msgid "Python crash handler"
+msgstr ""
+
 msgid "RADIO button"
 msgstr ""
 
@@ -16428,6 +17227,9 @@ msgstr ""
 msgid "Reset the selected devices and save changes of your config when the GREEN button is pressed."
 msgstr ""
 
+msgid "Restart after x crashes"
+msgstr ""
+
 msgid "Rewind speeds"
 msgstr ""
 
@@ -16458,6 +17260,9 @@ msgstr ""
 msgid "Scrolling speed (software renderer)"
 msgstr ""
 
+msgid "Select 'Yes' to enable use of the LEFT/RIGHT buttons to move PageUp/PageDown when the LEFT/RIGHT buttons are otherwise undefined. This provides legacy navigation for users who prefer it."
+msgstr ""
+
 msgid "Select a cardserver from the available list."
 msgstr ""
 
@@ -16470,7 +17275,7 @@ msgstr ""
 msgid "Select char for replacing newlines in EPG."
 msgstr ""
 
-msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet using NTP. Or use Auto, which will favour using NTP, but will fall back to transponder time when no internet connection is available."
+msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet. Or use Auto, which will favour using internet, but will fall back to transponder time when no internet connection is available."
 msgstr ""
 
 msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
@@ -16623,6 +17428,9 @@ msgstr ""
 msgid "Show columns"
 msgstr ""
 
+msgid "Show crash info on screen and write crash log for x times"
+msgstr ""
+
 msgid "Show crypto icons"
 msgstr ""
 
@@ -16732,6 +17540,9 @@ msgid "Show python in plugin browser"
 msgstr ""
 
 msgid "Show record indicator"
+msgstr ""
+
+msgid "Show samba in plugin browser"
 msgstr ""
 
 msgid "Show screen path"
@@ -16929,7 +17740,10 @@ msgstr ""
 msgid "The command to wake from standby will be sent multiple times."
 msgstr ""
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of the RFC 5905 server to synchronise the time with."
+msgstr ""
+
+msgid "The hostname or the IP address of the RFC 868 server to synchronise the time with."
 msgstr ""
 
 msgid "The speed of the fan when your %s %s is in normal use."
@@ -17026,6 +17840,9 @@ msgid "Timeshift Setup"
 msgstr ""
 
 msgid "Timeshift location"
+msgstr ""
+
+msgid "Try to prevent reboots for software errors and maintain of the availability."
 msgstr ""
 
 msgid "Try to send repeated commands if not all commands are executed. (e.g. TV wakeup, but not switched to correct input.)"
@@ -17360,6 +18177,9 @@ msgstr ""
 msgid "When enabled, you will see python packages in plugin browser download section."
 msgstr ""
 
+msgid "When enabled, you will see samba packages in plugin browser download section."
+msgstr ""
+
 msgid "When enabled, you will see the available revision on github"
 msgstr ""
 
@@ -17441,550 +18261,6 @@ msgstr ""
 msgid "http(s) stream start delay"
 msgstr ""
 
-msgid " packages selected."
-msgstr ""
-
-msgid "%"
-msgstr ""
-
-msgid "-"
-msgstr ""
-
-msgid "0, 0"
-msgstr ""
-
-msgid "0, 0, 1000, 50"
-msgstr ""
-
-msgid "0, 0, 450, 45"
-msgstr ""
-
-msgid "0, 0, 450, 50"
-msgstr ""
-
-msgid "0, 0, 900, 39"
-msgstr ""
-
-msgid "0, 0, 900, 42"
-msgstr ""
-
-msgid "0, 10, 300, 50, 400, 10, 500, 50"
-msgstr ""
-
-msgid "0, 12, 30, 38"
-msgstr ""
-
-msgid "0, 42, 900, 30"
-msgstr ""
-
-msgid "1, 1"
-msgstr ""
-
-msgid "10, 0, 50, 50"
-msgstr ""
-
-msgid "10, 2, 1410, 45"
-msgstr ""
-
-msgid "10, 2, 64, 50"
-msgstr ""
-
-msgid "10, 4, 30, 30"
-msgstr ""
-
-msgid "125, 3, 1000, 50"
-msgstr ""
-
-msgid "15, 4, 30, 30"
-msgstr ""
-
-msgid "180, 1, 45"
-msgstr ""
-
-msgid "180, 43, 34"
-msgstr ""
-
-msgid "2, 0, 30, 30"
-msgstr ""
-
-msgid "30, 285, 45, 300, 30, 25"
-msgstr ""
-
-msgid "4, 4"
-msgstr ""
-
-msgid "40, 0, 1200, 50, 10, 12, 50, 50"
-msgstr ""
-
-msgid "45, 4, 30, 30"
-msgstr ""
-
-msgid "450, 0, 1000, 45"
-msgstr ""
-
-msgid "5, 0, 1400, 50"
-msgstr ""
-
-msgid "5, 13, 50, 50"
-msgstr ""
-
-msgid "5, 15, 25, 24"
-msgstr ""
-
-msgid "55, 0, 50, 50"
-msgstr ""
-
-msgid "55, 2, 1000, 45"
-msgstr ""
-
-msgid "62, 0, 1200, 38"
-msgstr ""
-
-msgid "65, 2, 1000, 50"
-msgstr ""
-
-msgid "68, 4, 1000, 40"
-msgstr ""
-
-msgid "68, 4, 1000, 50"
-msgstr ""
-
-msgid "68, 68"
-msgstr ""
-
-msgid "7, 4, 52, 50"
-msgstr ""
-
-msgid "85, 0, 1300, 50"
-msgstr ""
-
-msgid "90, 1, 45"
-msgstr ""
-
-msgid "90, 3, 1000, 32"
-msgstr ""
-
-msgid "90, 43, 34"
-msgstr ""
-
-msgid ":"
-msgstr ""
-
-msgid "AGC"
-msgstr ""
-
-msgid "Backup is running"
-msgstr ""
-
-msgid "CI Assignment"
-msgstr ""
-
-msgid "CIHelper Setup"
-msgstr ""
-
-msgid "CIconfigMenu"
-msgstr ""
-
-msgid "CIselectMainMenu"
-msgstr ""
-
-msgid "Change pin code"
-msgstr ""
-
-msgid "Channel Selection"
-msgstr ""
-
-msgid "ChannelSelectionRadio"
-msgstr ""
-
-msgid "ChapterZap"
-msgstr ""
-
-msgid "CutListEditor"
-msgstr ""
-
-msgid "DVD File Browser"
-msgstr ""
-
-msgid "Devices"
-msgstr ""
-
-msgid "Directorybrowser"
-msgstr ""
-
-msgid "Dish"
-msgstr ""
-
-msgid "Downloadable plugins"
-msgstr ""
-
-msgid "ECMInfo"
-msgstr ""
-
-msgid "EPG Search"
-msgstr ""
-
-msgid "EPG Selection"
-msgstr ""
-
-msgid "Eventview"
-msgstr ""
-
-msgid "ExtraMessageBox"
-msgstr ""
-
-msgid "Fast Scan"
-msgstr ""
-
-msgid "File Commander - File/Directory Information"
-msgstr ""
-
-msgid "HDMI CEC setup"
-msgstr ""
-
-msgid "Harddisk"
-msgstr ""
-
-msgid "HiSilicon Setup"
-msgstr ""
-
-msgid "Humidity:"
-msgstr ""
-
-msgid "IN"
-msgstr ""
-
-msgid "InfoBar"
-msgstr ""
-
-msgid "Installing Software..."
-msgstr ""
-
-msgid "JobView"
-msgstr ""
-
-msgid "LOCK"
-msgstr ""
-
-msgid "Language Wizard"
-msgstr ""
-
-msgid "Locale/Language Wizard"
-msgstr ""
-
-msgid "Location Box"
-msgstr ""
-
-msgid "MORE"
-msgstr ""
-
-msgid "MPHelp"
-msgstr ""
-
-msgid "Mainmenu"
-msgstr ""
-
-msgid "MediaPlayer"
-msgstr ""
-
-msgid "MemoryInfo"
-msgstr ""
-
-msgid "Movie Browser Configuration"
-msgstr ""
-
-msgid "MovieMenu"
-msgstr ""
-
-msgid "Movielist menu"
-msgstr ""
-
-msgid "Mute"
-msgstr ""
-
-msgid "NOW"
-msgstr ""
-
-msgid "NameserverSetup"
-msgstr ""
-
-msgid "Network Wizard"
-msgstr ""
-
-msgid "Network test..."
-msgstr ""
-
-msgid "NetworkAdapterSelection"
-msgstr ""
-
-msgid "OE_Background, OE_Foreground, OE_Blue, OE_Blue, OE_Orange"
-msgstr ""
-
-msgid "OMB Manager About"
-msgstr ""
-
-msgid "OMB Manager Install"
-msgstr ""
-
-msgid "OMB Manager List"
-msgstr ""
-
-msgid "ONID:"
-msgstr ""
-
-msgid "OUT"
-msgstr ""
-
-msgid "Open Vision Commit Info Setup"
-msgstr ""
-
-msgid "OpenWebif Configuration"
-msgstr ""
-
-msgid "Orb Pos:"
-msgstr ""
-
-msgid "PE Speed Up"
-msgstr ""
-
-msgid "Parental control services Editor"
-msgstr ""
-
-msgid "PiPZap"
-msgstr ""
-
-msgid "Preferences"
-msgstr ""
-
-msgid "QuickMenu - Open Vision Panel"
-msgstr ""
-
-msgid "Reception Settings"
-msgstr ""
-
-msgid "Regular; 28"
-msgstr ""
-
-msgid "RestartNetwork"
-msgstr ""
-
-msgid "Restore is running"
-msgstr ""
-
-msgid "RestorePlugins"
-msgstr ""
-
-msgid "Root Change Password"
-msgstr ""
-
-msgid "SNR"
-msgstr ""
-
-msgid "Scan IP"
-msgstr ""
-
-msgid "Select HDD"
-msgstr ""
-
-msgid "Select Sats Entry"
-msgstr ""
-
-msgid "Select a movie"
-msgstr ""
-
-msgid "SelectBouquet"
-msgstr ""
-
-msgid "Service Scan"
-msgstr ""
-
-msgid "Show menu numbers"
-msgstr ""
-
-msgid "SimpleChannelSelection"
-msgstr ""
-
-msgid "Sleep Timer"
-msgstr ""
-
-msgid "SlimChannelSelection"
-msgstr ""
-
-msgid "SoftwareManager information"
-msgstr ""
-
-msgid "Start Wizard"
-msgstr ""
-
-msgid "Subtitle settings"
-msgstr ""
-
-msgid "TMBD Details Plugin"
-msgstr ""
-
-msgid "TSID:"
-msgstr ""
-
-msgid "Time/Date Input"
-msgstr ""
-
-msgid "Timer Selection"
-msgstr ""
-
-msgid "TimerEdit"
-msgstr ""
-
-msgid "Timeshift Live"
-msgstr ""
-
-msgid "TimeshiftState"
-msgstr ""
-
-msgid "Video Wizard"
-msgstr ""
-
-msgid "VideoMode"
-msgstr ""
-
-msgid "Volume"
-msgstr ""
-
-msgid "Weather Forecast"
-msgstr ""
-
-msgid "Weather Plugin"
-msgstr ""
-
-msgid "Welcome..."
-msgstr ""
-
-msgid "Wireless Network State"
-msgstr ""
-
-msgid "YT Trailer-List"
-msgstr ""
-
-msgid "Zapear-PiP"
-msgstr ""
-
-msgid "[OK]  ="
-msgstr ""
-
-msgid "easyCIconfigMenu"
-msgstr ""
-
-msgid "white, white, cyan, magenta"
-msgstr ""
-
-msgid "x"
-msgstr ""
-
-msgid "DVD"
-msgstr ""
-
-msgid "PLAY"
-msgstr ""
-
-msgid "PLUGINS"
-msgstr ""
-
-msgid "SCAN"
-msgstr ""
-
-msgid "SETUP"
-msgstr ""
-
-msgid "Check the internet connection"
-msgstr ""
-
-msgid "Check the internet connection again"
-msgstr ""
-
-msgid "Checking the internet connection"
-msgstr ""
-
-msgid "Do you want to install Plugins?"
-msgstr ""
-
-msgid "Exit the wizard"
-msgstr ""
-
-msgid "Please configure the fallback tuner setup"
-msgstr ""
-
-msgid "Please connect your %s %s (kernel %s) to the internet"
-msgstr ""
-
-msgid "Please set up tuner A"
-msgstr ""
-
-msgid "Please set up tuner B"
-msgstr ""
-
-msgid "Please set up tuner C"
-msgstr ""
-
-msgid "Please set up tuner D"
-msgstr ""
-
-msgid "Please set up tuner E"
-msgstr ""
-
-msgid "Please set up tuner F"
-msgstr ""
-
-msgid "Please set up tuner G"
-msgstr ""
-
-msgid "Please set up tuner H"
-msgstr ""
-
-msgid "Please set up tuner I"
-msgstr ""
-
-msgid "Please set up tuner J"
-msgstr ""
-
-msgid "Please set up tuner Q"
-msgstr ""
-
-msgid "Please set up tuner R"
-msgstr ""
-
-msgid "Please setup the following basic configs!"
-msgstr ""
-
-msgid "Skip internet connection check (disables automatic package installation)"
-msgstr ""
-
-msgid "Speed up the performance"
-msgstr ""
-
-msgid ""
-"Thank you for using the wizard. Your %s %s (kernel %s) is now ready for use.\n"
-"Press OK to start using Open Vision %s-%s"
-msgstr ""
-
-msgid ""
-"Use the up/down keys on your remote control to select an option. After that, press OK.\n"
-"We detected your RC as %s (type %s id %s)"
-msgstr ""
-
-msgid "Use the wizard to set up basic features"
-msgstr ""
-
-msgid ""
-"Welcome to Open Vision %s-%s\n"
-"This start wizard will guide you through the basic setup of your %s %s (kernel %s).\n"
-"Press the OK button on your remote control to move to the next step."
-msgstr ""
-
-msgid "What type of service scan do you want?"
-msgstr ""
-
-msgid "Your %s %s (kernel %s) does not have an internet connection"
-msgstr ""
-
 msgid "AFP"
 msgstr ""
 
@@ -18012,6 +18288,9 @@ msgstr ""
 msgid "Device"
 msgstr ""
 
+msgid "Enable Vu+ MultiBoot"
+msgstr ""
+
 msgid "FTP"
 msgstr ""
 
@@ -18022,9 +18301,6 @@ msgid "Filesystem Check"
 msgstr ""
 
 msgid "Front Panel Display"
-msgstr ""
-
-msgid "Geolocation"
 msgstr ""
 
 msgid "Images"
@@ -18144,134 +18420,109 @@ msgstr ""
 msgid "uShare"
 msgstr ""
 
-msgid "About"
+msgid "Configure interface"
 msgstr ""
 
-msgid "Automatic scan"
+msgid "Configure your network again"
 msgstr ""
 
-msgid "BER"
+msgid "List available networks"
 msgstr ""
 
-msgid "Benchmark information"
+msgid "Manual configuration"
 msgstr ""
 
-msgid "C"
+msgid ""
+"Please configure or verify your Nameservers by filling out the required values.\n"
+"When you are ready press OK to continue."
 msgstr ""
 
-msgid "Channellist menu"
+msgid ""
+"Please configure your internet connection by filling out the required values.\n"
+"When you are ready press OK to continue."
 msgstr ""
 
-msgid "Command execution..."
+msgid "Please follow the instructions on the TV"
 msgstr ""
 
-msgid "Commit info"
+msgid ""
+"Please select the network interface that you want to use for your internet connection.\n"
+"\n"
+"Please press OK to continue."
 msgstr ""
 
-msgid "D"
+msgid ""
+"Please select the wireless network that you want to connect to.\n"
+"\n"
+"Please press OK to continue."
 msgstr ""
 
-msgid "DVB information"
+msgid "Select wireless network"
 msgstr ""
 
-msgid "EPG selection"
+msgid ""
+"Thank you for using the wizard.\n"
+"Please press OK to continue."
 msgstr ""
 
-msgid "Event view"
+msgid ""
+"The wireless LAN plugin is not installed!\n"
+"Please install it and choose what you want to do next."
 msgstr ""
 
-msgid "Event view menu"
+msgid ""
+"Welcome.\n"
+"\n"
+"If you want to connect your receiver to the Internet, this wizard will guide you through the basic network setup of your receiver.\n"
+"\n"
+"Press OK to start configuring your network"
 msgstr ""
 
-msgid "Fastscan"
+msgid "Wireless network connection setup"
 msgstr ""
 
-msgid "IPv6 setup"
+msgid "Wireless network connection setup."
 msgstr ""
 
-msgid "Index"
+msgid ""
+"Your internet connection is not working!\n"
+"Please choose what you want to do next."
 msgstr ""
 
-msgid "Info bar"
+msgid ""
+"Your receiver is now ready to use.\n"
+"\n"
+"Your internet connection is working now.\n"
+"\n"
+"Please press OK to continue."
 msgstr ""
 
-msgid "Installing software..."
+msgid ""
+"Your wireless LAN internet connection could not be started!\n"
+"Have you attached your USB WLAN Stick?\n"
+"\n"
+"Please choose what you want to do next."
 msgstr ""
 
-msgid "MAC address setup"
+msgid "Refresh rate selection."
 msgstr ""
 
-msgid "Manual scan"
+msgid "Select refresh rate"
 msgstr ""
 
-msgid "Message..."
+msgid "Select video input with up/down buttons"
 msgstr ""
 
-msgid "Nameserver setup"
+msgid "Select video mode."
 msgstr ""
 
-msgid "Network configuration..."
+msgid ""
+"Video input selection\n"
+"\n"
+"Please press OK if you can see this page on your TV (or select a different input port).\n"
+"\n"
+"The next input port will be automatically probed in 20 seconds."
 msgstr ""
 
-msgid "Network setup"
-msgstr ""
-
-msgid "Now playing"
-msgstr ""
-
-msgid "NumberZapPicon"
-msgstr ""
-
-msgid "OSD settings"
-msgstr ""
-
-msgid "Open Vision information"
-msgstr ""
-
-msgid "PIN code needed"
-msgstr ""
-
-msgid "Parental control services editor"
-msgstr ""
-
-msgid "PiP setup"
-msgstr ""
-
-msgid "Reception settings"
-msgstr ""
-
-msgid "Seek"
-msgstr ""
-
-msgid "Select a bouquet"
-msgstr ""
-
-msgid "Select a tuner"
-msgstr ""
-
-msgid "Timer edit"
-msgstr ""
-
-msgid "Timer entry"
-msgstr ""
-
-msgid "Timer log"
-msgstr ""
-
-msgid "Timeshift"
-msgstr ""
-
-msgid "Translation:"
-msgstr ""
-
-msgid "Troubleshoot"
-msgstr ""
-
-msgid "UnhandledKey"
-msgstr ""
-
-msgid "Virtual keyboard"
-msgstr ""
-
-msgid "help..."
+msgid "Video mode selection."
 msgstr ""

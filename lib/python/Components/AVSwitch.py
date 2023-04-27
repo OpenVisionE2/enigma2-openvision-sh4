@@ -268,7 +268,7 @@ def InitAVSwitch():
 				with open(HasHdrType, "w") as hdmihdrtype:
 					hdmihdrtype.write(configElement.value)
 			except (IOError, OSError):
-				pass
+				print("[AVSwitch] Write to /proc/stb/video/hdmi_hdrtype failed!")
 		config.av.hdmihdrtype = ConfigSelection(choices={
 			"auto": _("Auto"),
 			"dolby": _("Dolby"),
@@ -343,7 +343,7 @@ def InitAVSwitch():
 					hdmi_audio_source.write(configElement.value)
 					hdmi_audio_source.close()
 			except (IOError, OSError):
-				pass
+				print("[AVSwitch] Write to /proc/stb/hdmi/audio_source failed!")
 		config.av.hdmi_audio_source.addNotifier(setAudioSource)
 	else:
 		config.av.hdmi_audio_source = ConfigNothing()
@@ -362,7 +362,7 @@ def InitAVSwitch():
 					syncmode.write(configElement.value)
 					syncmode.close()
 			except (IOError, OSError):
-				pass
+				print("[AVSwitch] Write to /proc/stb/video/sync_mode_choices failed!")
 		config.av.sync_mode.addNotifier(setSyncMode)
 	else:
 		config.av.sync_mode = ConfigNothing()

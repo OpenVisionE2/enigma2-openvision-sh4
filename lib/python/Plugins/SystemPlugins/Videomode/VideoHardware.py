@@ -165,7 +165,6 @@ class VideoHardware:
 		else:
 			self.modes_preferred = self.modes_available
 			print("[Videomode] VideoHardware reading preferred modes override, using all video modes")
-
 		self.last_modes_preferred = self.modes_preferred
 
 	# check if a high-level mode with a given rate is available.
@@ -192,12 +191,23 @@ class VideoHardware:
 
 		mode_50 = modes.get(50)
 		mode_60 = modes.get(60)
+		mode_30 = modes.get(30)
+		mode_25 = modes.get(25)
 		mode_24 = modes.get(24)
 
 		if mode_50 is None or force == 60:
 			mode_50 = mode_60
 		if mode_60 is None or force == 50:
 			mode_60 = mode_50
+
+		if mode_30 is None or force:
+			mode_30 = mode_60
+			if force == 50:
+				mode_30 = mode_50
+		if mode_25 is None or force:
+			mode_25 = mode_60
+			if force == 50:
+				mode_25 = mode_50
 		if mode_24 is None or force:
 			mode_24 = mode_60
 			if force == 50:
@@ -286,11 +296,9 @@ class VideoHardware:
 			for (mode, rates) in modes:
 				ratelist = []
 				for rate in rates:
-					if rate in ("auto"):
-						if Has24hz:
-							ratelist.append((rate, mode == "2160p30" and "auto (25Hz 30Hz 24Hz)" or "auto (50Hz 60Hz 24Hz)"))
-					else:
-						ratelist.append((rate, rate == "multi" and (mode == "2160p30" and "multi (25Hz 30Hz)" or "multi (50Hz 60Hz)") or rate))
+					if rate == "auto" and not Has24hz:
+						continue
+					ratelist.append((rate, rate))
 				config.av.videorate[mode] = ConfigSelection(choices=ratelist)
 		config.av.videoport = ConfigSelection(choices=lst)
 

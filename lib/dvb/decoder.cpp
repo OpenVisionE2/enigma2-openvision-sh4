@@ -622,6 +622,9 @@ int eDVBVideo::readApiSize(int fd, int &xres, int &yres, int &aspect)
 	{
 		xres = size.w;
 		yres = size.h;
+#ifdef DEBUG
+		eTrace("[eDVBVideo] readAPIsize xres - %d yres - %d", xres, yres);
+#endif
 		aspect = size.aspect_ratio == 0 ? 2 : 3;  // convert dvb api to etsi
 		return 0;
 	}
@@ -636,6 +639,9 @@ int eDVBVideo::getWidth()
 		if (m_width == -1)
 			readApiSize(m_fd, m_width, m_height, m_aspect);
 	}
+#ifdef DEBUG
+	eTrace("[eDVBVideo] m_width - %d", m_width);
+#endif
 	return m_width;
 }
 
@@ -647,6 +653,9 @@ int eDVBVideo::getHeight()
 		if (m_height == -1)
 			readApiSize(m_fd, m_width, m_height, m_aspect);
 	}
+#ifdef DEBUG
+	eTrace("[eDVBVideo] m_height - %d", m_height);
+#endif
 	return m_height;
 }
 
@@ -658,6 +667,9 @@ int eDVBVideo::getAspect()
 		if (m_aspect == -1)
 			readApiSize(m_fd, m_width, m_height, m_aspect);
 	}
+#ifdef DEBUG
+	eTrace("[eDVBVideo] m_aspect - %d", m_aspect);
+#endif
 	return m_aspect;
 }
 
@@ -689,6 +701,9 @@ int eDVBVideo::getFrameRate()
 			}
 		}
 	}
+#ifdef DEBUG
+	eTrace("[eDVBVideo] m_framerate - %d", m_framerate);
+#endif
 	return m_framerate;
 }
 

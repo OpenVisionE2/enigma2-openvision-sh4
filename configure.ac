@@ -705,19 +705,8 @@ AX_CHECK_COMPILE_FLAG([-Wattribute-alias], [CXXFLAGS="$CXXFLAGS -Wattribute-alia
 AX_CHECK_COMPILE_FLAG([-Wattribute-alias=1], [CXXFLAGS="$CXXFLAGS -Wattribute-alias=1"])
 
 CPPFLAGS="$CPPFLAGS $PYTHON_CPPFLAGS"
-CFLAGS="$CFLAGS -Wall"
-CXXFLAGS="$CXXFLAGS -Wall -Wextra \
-	-Wformat=2 -Wformat-nonliteral -Wformat-security \
-	-Wtrampolines \
-	-Wswitch \
-	-Wunused-but-set-parameter -Wuninitialized \
-	-Woverlength-strings \
-	-Wunsafe-loop-optimizations -Wpointer-arith \
-	-Wfloat-equal -Wlogical-op \
-	-Wno-error=ignored-qualifiers \
-	-Wno-error=shadow -Wno-error=cast-qual \
-	-Wno-error=aggregate-return -Wno-error=missing-field-initializers \
-	-Wno-error=packed -Wno-error=vla -Wno-error=clobbered -Wno-error=unused-parameter \
+CFLAGS="$CFLAGS"
+CXXFLAGS="$CXXFLAGS \
 	$BASE_CFLAGS $ENIGMA2_CFLAGS $PTHREAD_CFLAGS $OPENMP_CFLAGS $ALSA_CFLAGS"
 
 AC_CONFIG_FILES([

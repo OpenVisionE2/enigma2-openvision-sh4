@@ -321,74 +321,74 @@ def InitLcd():
 			ilcd.setLEDBlinkingTime(configElement.value)
 
 		def setPowerLEDstate(configElement):
-			if isfile("/proc/stb/power/powerled"):
-				fileWriteLine("/proc/stb/power/powerled", configElement.value)
+			fileWriteLine("/proc/stb/power/powerled", configElement.value)
 
 		def setPowerLEDstate2(configElement):
-			if isfile("/proc/stb/power/powerled2"):
-				fileWriteLine("/proc/stb/power/powerled2", configElement.value)
+			fileWriteLine("/proc/stb/power/powerled2", configElement.value)
 
 		def setPowerLEDstanbystate(configElement):
-			if isfile("/proc/stb/power/standbyled"):
-				fileWriteLine("/proc/stb/power/standbyled", configElement.value)
+			fileWriteLine("/proc/stb/power/standbyled", configElement.value)
 
 		def setPowerLEDdeepstanbystate(configElement):
-			if isfile("/proc/stb/power/suspendled"):
-				fileWriteLine("/proc/stb/power/suspendled", configElement.value)
+			fileWriteLine("/proc/stb/power/suspendled", configElement.value)
 
 		def setLedPowerColor(configElement):
-			if isfile("/proc/stb/fp/ledpowercolor"):
-				fileWriteLine("/proc/stb/fp/ledpowercolor", configElement.value)
+			fileWriteLine("/proc/stb/fp/ledpowercolor", configElement.value)
 
 		def setLedStandbyColor(configElement):
-			if isfile("/proc/stb/fp/ledstandbycolor"):
-				fileWriteLine("/proc/stb/fp/ledstandbycolor", configElement.value)
+			fileWriteLine("/proc/stb/fp/ledstandbycolor", configElement.value)
 
 		def setLedSuspendColor(configElement):
-			if isfile("/proc/stb/fp/ledsuspendledcolor"):
-				fileWriteLine("/proc/stb/fp/ledsuspendledcolor", configElement.value)
+			fileWriteLine("/proc/stb/fp/ledsuspendledcolor", configElement.value)
 
 		config.usage.lcd_powerled = ConfigSelection(choices=[
 			("off", _("Off")),
 			("on", _("On"))
 		], default="on")
-		config.usage.lcd_powerled.addNotifier(setPowerLEDstate)
+		if isfile("/proc/stb/power/powerled"):
+			config.usage.lcd_powerled.addNotifier(setPowerLEDstate)
 		config.usage.lcd_powerled2 = ConfigSelection(choices=[
 			("off", _("Off")),
 			("on", _("On"))
 		], default="on")
-		config.usage.lcd_powerled2.addNotifier(setPowerLEDstate2)
+		if isfile("/proc/stb/power/powerled2"):
+			config.usage.lcd_powerled2.addNotifier(setPowerLEDstate2)
 		config.usage.lcd_standbypowerled = ConfigSelection(choices=[
 			("off", _("Off")),
 			("on", _("On"))
 		], default="on")
-		config.usage.lcd_standbypowerled.addNotifier(setPowerLEDstanbystate)
+		if isfile("/proc/stb/power/standbyled"):
+			config.usage.lcd_standbypowerled.addNotifier(setPowerLEDstanbystate)
 		config.usage.lcd_deepstandbypowerled = ConfigSelection(choices=[
 			("off", _("Off")),
 			("on", _("On"))
 		], default="on")
-		config.usage.lcd_deepstandbypowerled.addNotifier(setPowerLEDdeepstanbystate)
+		if isfile("/proc/stb/power/suspendled"):
+			config.usage.lcd_deepstandbypowerled.addNotifier(setPowerLEDdeepstanbystate)
 		config.lcd.ledpowercolor = ConfigSelection(choices=[
 			("0", _("Off")),
 			("1", _("Blue")),
 			("2", _("Red")),
 			("3", _("Violet"))
 		], default="1")
-		config.lcd.ledpowercolor.addNotifier(setLedPowerColor)
+		if isfile("/proc/stb/fp/ledpowercolor"):
+			config.lcd.ledpowercolor.addNotifier(setLedPowerColor)
 		config.lcd.ledstandbycolor = ConfigSelection(choices=[
 			("0", _("Off")),
 			("1", _("Blue")),
 			("2", _("Red")),
 			("3", _("Violet"))
 		], default="3")
-		config.lcd.ledstandbycolor.addNotifier(setLedStandbyColor)
+		if isfile("/proc/stb/fp/ledstandbycolor"):
+			config.lcd.ledstandbycolor.addNotifier(setLedStandbyColor)
 		config.lcd.ledsuspendcolor = ConfigSelection(choices=[
 			("0", _("Off")),
 			("1", _("Blue")),
 			("2", _("Red")),
 			("3", _("Violet"))
 		], default="2")
-		config.lcd.ledsuspendcolor.addNotifier(setLedSuspendColor)
+		if isfile("/proc/stb/fp/ledsuspendledcolor"):
+			config.lcd.ledsuspendcolor.addNotifier(setLedSuspendColor)
 		colorsList = [
 			("0xff0000", _("Red")),
 			("0xff3333", _("Rose")),
@@ -441,7 +441,7 @@ def InitLcd():
 		VFD_scroll_repeats = BoxInfo.getItem("VFD_scroll_repeats")
 		if VFD_scroll_repeats:
 			def scroll_repeats(configElement):
-				fileWriteLine(VFD_scroll_repeats, configElement.value)
+				eDBoxLCD.getInstance().set_VFD_scroll_repeats(int(configElement.value))
 
 			config.usage.vfd_scroll_repeats = ConfigSelection(choices=[
 				("0", _("None")),
@@ -457,7 +457,7 @@ def InitLcd():
 		VFD_scroll_delay = BoxInfo.getItem("VFD_scroll_delay")
 		if VFD_scroll_delay:
 			def scroll_delay(configElement):
-				fileWriteLine(VFD_scroll_delay, configElement.value)
+				eDBoxLCD.getInstance().set_VFD_scroll_delay(int(configElement.value))
 
 			config.usage.vfd_scroll_delay = ConfigSlider(default=150, increment=10, limits=(0, 500))
 			config.usage.vfd_scroll_delay.addNotifier(scroll_delay, immediate_feedback=False)
@@ -468,7 +468,7 @@ def InitLcd():
 		VFD_initial_scroll_delay = BoxInfo.getItem("VFD_initial_scroll_delay")
 		if VFD_initial_scroll_delay:
 			def initial_scroll_delay(configElement):
-				fileWriteLine(VFD_initial_scroll_delay, configElement.value)
+				eDBoxLCD.getInstance().set_VFD_initial_scroll_delay(int(configElement.value))
 
 			config.usage.vfd_initial_scroll_delay = ConfigSelection(choices=[
 				("3000", "3 %s" % _("seconds")),
@@ -484,7 +484,7 @@ def InitLcd():
 		VFD_final_scroll_delay = BoxInfo.getItem("VFD_final_scroll_delay")
 		if VFD_final_scroll_delay:
 			def final_scroll_delay(configElement):
-				fileWriteLine(VFD_final_scroll_delay, configElement.value)
+				eDBoxLCD.getInstance().set_VFD_final_scroll_delay(int(configElement.value))
 
 			config.usage.vfd_final_scroll_delay = ConfigSelection(choices=[
 				("3000", "3 %s" % _("seconds")),

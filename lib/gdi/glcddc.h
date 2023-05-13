@@ -8,12 +8,9 @@ class gLCDDC: public gDC
 {
 	eLCD *lcd;
 	static gLCDDC *instance;
-	int update;
+	int update = 1;
 	void exec(const gOpcode *opcode);
 	gUnmanagedSurface surface;
-#ifdef HAVE_GRAPHLCD
-	struct timespec last_update;
-#endif
 public:
 	gLCDDC();
 	~gLCDDC();

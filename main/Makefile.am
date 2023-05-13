@@ -48,10 +48,6 @@ enigma2_LDADD = \
 	-ltuxtxt32bpp \
 	-lpthread -lresolv -lmmeimage
 
-if HAVE_GRAPHLCD
-enigma2_LDADD += -lglcddrivers -lglcdgraphics -lglcdskin
-endif
-
 enigma2_LDFLAGS = -Wl,--export-dynamic
 
 if HAVE_GIT_DIR

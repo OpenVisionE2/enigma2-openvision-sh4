@@ -560,9 +560,10 @@ profile("Network")
 from Components.Network import InitNetwork
 InitNetwork()
 
-profile("LCD")
-from Components.Lcd import IconCheck
-IconCheck()
+if BoxInfo.getItem("LCDSupport") or BoxInfo.getItem("LEDSupport"):
+	profile("LCD")
+	from Components.Lcd import IconCheck
+	IconCheck()
 
 if BoxInfo.getItem("RFmodSupport"):
 	profile("RFMod")

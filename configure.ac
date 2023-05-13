@@ -519,16 +519,6 @@ AC_ARG_WITH(7segment,
 )
 AC_SUBST(TEXTSKIN)
 
-AC_ARG_WITH(graphlcd,
-	AC_HELP_STRING([--with-graphlcd], [use GraphLCD color display, yes or no]),
-	[[withgraphlcd=$withval]],
-	[[withgraphlcd=no]]
-)
-if test x"$withgraphlcd" != xno ; then
-	AC_DEFINE(HAVE_GRAPHLCD, 1,[Define when using a GraphLCD color display device])
-fi
-AM_CONDITIONAL(HAVE_GRAPHLCD, test x"$withgraphlcd" != xno)
-
 AC_ARG_WITH(lcd,
 	AC_HELP_STRING([--with-lcd], [use LCD display, yes or no]),
 	[[withlcd=$withval]],

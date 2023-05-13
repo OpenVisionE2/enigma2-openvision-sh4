@@ -7,10 +7,19 @@
 #include <lib/gdi/esize.h>
 #include <lib/base/init.h>
 #include <lib/base/init_num.h>
-#ifdef HAVE_TEXTLCD
-	#include <lib/base/estring.h>
+#if defined(HAVE_TEXTLCD)
+#include <lib/base/estring.h>
 #endif
 #include <lib/gdi/glcddc.h>
+#include <lib/base/cfile.h>
+
+const char *OLED_PROC_1 = "/proc/stb/lcd/oled_brightness"; //  NOSONAR
+const char *OLED_PROC_2 = "/proc/stb/fp/oled_brightness";  //  NOSONAR
+
+const char *VFD_scroll_delay_proc = "/proc/stb/lcd/scroll_delay"; //  NOSONAR
+const char *VFD_initial_scroll_delay_proc = "/proc/stb/lcd/initial_scroll_delay"; //  NOSONAR
+const char *VFD_final_scroll_delay_proc = "/proc/stb/lcd/final_scroll_delay"; //  NOSONAR
+const char *VFD_scroll_repeats_proc = "/proc/stb/lcd/scroll_repeats"; //  NOSONAR
 
 eLCD *eLCD::instance;
 
@@ -39,7 +48,7 @@ void eLCD::setSize(int xres, int yres, int bpp)
 eLCD::~eLCD()
 {
 	if (_buffer)
-		delete [] _buffer;
+		delete[] _buffer;
 	instance = NULL;
 }
 
@@ -57,8 +66,72 @@ void eLCD::unlock()
 	locked = 0;
 }
 
+const char *eLCD::get_VFD_scroll_delay()
+{
+#if defined(HAVE_TEXTLCD)
+	return "";
+#else
+	return (access(VFD_scroll_delay_proc, W_OK) == 0) ? VFD_scroll_delay_proc : "";
+#endif
+}
+
+const char *eLCD::get_VFD_initial_scroll_delay()
+{
+#if defined(HAVE_TEXTLCD)
+	return "";
+#else
+	return (access(VFD_initial_scroll_delay_proc, W_OK) == 0) ? VFD_initial_scroll_delay_proc : "";
+#endif
+}
+
+const char *eLCD::get_VFD_final_scroll_delay()
+{
+#if defined(HAVE_TEXTLCD)
+	return "";
+#else
+	return (access(VFD_final_scroll_delay_proc, W_OK) == 0) ? VFD_final_scroll_delay_proc : "";
+#endif
+}
+
+const char *eLCD::get_VFD_scroll_repeats()
+{
+	return (access(VFD_scroll_repeats_proc, W_OK) == 0) ? VFD_scroll_repeats_proc : "";
+}
+
+void eLCD::set_VFD_scroll_delay(int delay)
+{
+#ifdef LCD_SCROLL_HEX
+	CFile::writeIntHex(VFD_scroll_delay_proc, delay);
+#else
+	CFile::writeInt(VFD_scroll_delay_proc, delay);
+#endif
+}
+
+void eLCD::set_VFD_initial_scroll_delay(int delay)
+{
+#ifdef LCD_SCROLL_HEX
+	CFile::writeIntHex(VFD_initial_scroll_delay_proc, delay);
+#else
+	CFile::writeInt(VFD_initial_scroll_delay_proc, delay);
+#endif
+}
+
+void eLCD::set_VFD_final_scroll_delay(int delay)
+{
+#ifdef LCD_SCROLL_HEX
+	CFile::writeIntHex(VFD_final_scroll_delay_proc, delay);
+#else
+	CFile::writeInt(VFD_final_scroll_delay_proc, delay);
+#endif
+}
+
+void eLCD::set_VFD_scroll_repeats(int delay)
+{
+	CFile::writeInt(VFD_scroll_repeats_proc, delay);
+}
+
 #ifndef NO_LCD
-#ifdef HAVE_TEXTLCD
+#if defined(HAVE_TEXTLCD)
 void eLCD::renderText(ePoint start, const char *text)
 {
 	if (lcdfd >= 0 && start.y() < 5)
@@ -80,7 +153,6 @@ void eLCD::renderText(const char *text)
 }
 #endif
 
-#ifndef HAVE_GRAPHLCD
 eDBoxLCD::eDBoxLCD()
 {
 	int xres = 32, yres = 32, bpp = 8;
@@ -89,12 +161,12 @@ eDBoxLCD::eDBoxLCD()
 	lcd_type = 0;
 #ifndef NO_LCD
 	FILE *fp_file;
-	if((fp_file = fopen("/proc/stb/fp/version", "r")) != NULL)
+	if ((fp_file = fopen("/proc/stb/fp/version", "r")) != NULL)
 	{
 		fgets(fp_version, sizeof(fp_version), fp_file);
 		fclose(fp_file);
 	}
-	if(strcmp(fp_version, "4\n") == 0)
+	if (strcmp(fp_version, "4\n") == 0)
 	{
 		lcdfd = open("/dev/null", O_RDWR);
 	}
@@ -104,24 +176,26 @@ eDBoxLCD::eDBoxLCD()
 	}	
 	if (lcdfd < 0)
 	{
-		if (!access("/proc/stb/lcd/oled_brightness", W_OK) ||
-		    !access("/proc/stb/fp/oled_brightness", W_OK) )
+		if (!access(OLED_PROC_1, W_OK) ||
+		    !access(OLED_PROC_2, W_OK) )
 			lcd_type = 2;
 		lcdfd = open("/dev/dbox/lcd0", O_RDWR);
-	} else
+	}
+	else
 	{
-		eDebug("[eLCD] found OLED display!");
+		eDebug("[eDboxLCD] found OLED display!");
 		lcd_type = 1;
 	}
 	if (lcdfd < 0)
-		eDebug("[eLCD] No oled0 or lcd0 device found!");
+		eDebug("[eDboxLCD] No oled0 or lcd0 device found!");
 	else
 	{
+
 #ifndef LCD_IOCTL_ASC_MODE
-#define LCDSET                  0x1000
-#define LCD_IOCTL_ASC_MODE	(21|LCDSET)
-#define	LCD_MODE_ASC		0
-#define	LCD_MODE_BIN		1
+#define LCDSET 0x1000
+#define LCD_IOCTL_ASC_MODE (21 | LCDSET)
+#define LCD_MODE_ASC 0
+#define LCD_MODE_BIN 1
 #endif
 
 		int i = LCD_MODE_BIN;
@@ -149,19 +223,16 @@ eDBoxLCD::eDBoxLCD()
 			}
 			lcd_type = 3;
 		}
-		eDebug("[eLCD] xres=%d, yres=%d, bpp=%d lcd_type=%d", xres, yres, bpp, lcd_type);
+		eDebug("[eDboxLCD] xres=%d, yres=%d, bpp=%d lcd_type=%d", xres, yres, bpp, lcd_type);
 	}
 #endif
-	if (access("/proc/stb/lcd/right_half", F_OK) == 0)
+	if (FILE *file = fopen("/proc/stb/lcd/right_half", "w"))
 	{
-		FILE *right_file;
-		if (right_file = fopen("/proc/stb/lcd/right_half", "w"))
-		{
-			fprintf(right_file,"skin");
-			fclose(right_file);
-		}
+		fprintf(file, "skin");
+		fclose(file);
 	}
 	instance = this;
+
 	setSize(xres, yres, bpp);
 #ifdef NO_LCD
 	vfd = new evfd;
@@ -180,48 +251,52 @@ void eDBoxLCD::setFlipped(bool onoff)
 	update();
 }
 
+void eDBoxLCD::setDump(bool onoff) // deprecated use dumpLCD instead
+{
+	dumpLCD(true);
+}
+
 int eDBoxLCD::setLCDContrast(int contrast)
 {
 #ifndef NO_LCD
 	if (lcdfd < 0)
-		return(0);
-
+		return 0;
 #ifndef LCD_IOCTL_SRV
-#define LCDSET                  0x1000
-#define	LCD_IOCTL_SRV			(10|LCDSET)
+#define LCDSET 0x1000
+#define LCD_IOCTL_SRV (10 | LCDSET)
 #endif
 	eTrace("[eLCD] setLCDContrast %d", contrast);
 
 	int fp;
-	if((fp = open("/dev/dbox/fp0", O_RDWR)) < 0)
+	if ((fp = open("/dev/dbox/fp0", O_RDWR)) < 0)
 	{
-		eDebug("[eLCD] can't open /dev/dbox/fp0");
-		return(-1);
+		eDebug("[eDboxLCD] can't open /dev/dbox/fp0");
+		return -1;
 	}
 
-	if(ioctl(lcdfd, LCD_IOCTL_SRV, &contrast) < 0)
+	if (ioctl(lcdfd, LCD_IOCTL_SRV, &contrast) < 0)
 	{
-		eDebug("[eLCD] can't set lcd contrast");
+		eDebug("[eDboxLCD] can't set lcd contrast");
 	}
 	close(fp);
 #endif
-	return(0);
+	return 0;
 }
 
 int eDBoxLCD::setLCDBrightness(int brightness)
 {
 #ifndef NO_LCD
 	if (lcdfd < 0)
-		return(0);
+		return 0;
 
 //	eTrace("[eLCD] setLCDBrightness %d", brightness);
-	FILE *f = fopen("/proc/stb/lcd/oled_brightness", "w");
+	FILE *f = fopen(OLED_PROC_1, "w");
 	if (!f)
-		f = fopen("/proc/stb/fp/oled_brightness", "w");
+		f = fopen(OLED_PROC_2, "w");
 	if (f)
 	{
 		if (fprintf(f, "%d", brightness) == 0)
-			eDebug("[eLCD] write /proc/stb/lcd|fp/oled_brightness failed!");
+			eDebug("[eDboxLCD] write /proc/stb/lcd|fp/oled_brightness failed!");
 		fclose(f);
 	}
 	else
@@ -229,41 +304,41 @@ int eDBoxLCD::setLCDBrightness(int brightness)
 		int fp;
 		if ((fp = open("/dev/dbox/fp0", O_RDWR)) < 0)
 		{
-			eDebug("[eLCD] can't open /dev/dbox/fp0");
-			return(-1);
+			eDebug("[eDboxLCD] can't open /dev/dbox/fp0");
+			return -1;
 		}
 #ifndef FP_IOCTL_LCD_DIMM
-#define FP_IOCTL_LCD_DIMM       3
+#define FP_IOCTL_LCD_DIMM 3
 #endif
 		if (ioctl(fp, FP_IOCTL_LCD_DIMM, &brightness) < 0)
-			eDebug("[eLCD] can't set lcd brightness");
+			eDebug("[eDboxLCD] can't set lcd brightness");
 		close(fp);
 	}
 #endif
-	return(0);
+	return 0;
 }
 
 int eDBoxLCD::setLED(int value, int option)
 {
-	switch(option)
+	switch (option)
 	{
-		case LED_BRIGHTNESS:
-			eDebug("[eLCD] setLEDNormalState %d", value);
-			if(ioctl(lcdfd, LED_IOCTL_BRIGHTNESS_NORMAL, (unsigned char)value) < 0)
-				eDebug("[eLCD] can't set led brightness");
-			break;
-		case LED_DEEPSTANDBY:
-			eDebug("[eLCD] setLEDBlinkingTime %d", value);
-			if(ioctl(lcdfd, LED_IOCTL_BRIGHTNESS_DEEPSTANDBY, (unsigned char)value) < 0)
-				eDebug("[eLCD] can't set led deep standby");
-			break;
-		case LED_BLINKINGTIME:
-			eDebug("[eLCD] setLEDBlinkingTime %d", value);
-			if(ioctl(lcdfd, LED_IOCTL_BLINKING_TIME, (unsigned char)value) < 0)
-				eDebug("[eLCD] can't set led blinking time");
-			break;
+	case LED_BRIGHTNESS:
+		eDebug("[eDboxLCD] setLEDNormalState %d", value);
+		if (ioctl(lcdfd, LED_IOCTL_BRIGHTNESS_NORMAL, (unsigned char)value) < 0)
+			eDebug("[eDboxLCD] can't set led brightness");
+		break;
+	case LED_DEEPSTANDBY:
+		eDebug("[eDboxLCD] setLEDBlinkingTime %d", value);
+		if (ioctl(lcdfd, LED_IOCTL_BRIGHTNESS_DEEPSTANDBY, (unsigned char)value) < 0)
+			eDebug("[eDboxLCD] can't set led deep standby");
+		break;
+	case LED_BLINKINGTIME:
+		eDebug("[eDboxLCD] setLEDBlinkingTime %d", value);
+		if (ioctl(lcdfd, LED_IOCTL_BLINKING_TIME, (unsigned char)value) < 0)
+			eDebug("[eDboxLCD] can't set led blinking time");
+		break;
 	}
-	return(0);
+	return 0;
 }
 
 eDBoxLCD::~eDBoxLCD()
@@ -279,10 +354,15 @@ eDBoxLCD::~eDBoxLCD()
 #endif
 }
 
+void eDBoxLCD::dumpLCD(bool png)
+{
+	return;
+}
+
 void eDBoxLCD::update()
 {
 #ifndef NO_LCD
-#ifndef HAVE_TEXTLCD
+#if !defined(HAVE_TEXTLCD)
 	if (lcdfd < 0)
 		return;
 
@@ -298,7 +378,7 @@ void eDBoxLCD::update()
 				for (yy = 0; yy < 8; yy++)
 					pix |= (_buffer[(y * 8 + yy) * 132 + x] >= 108) << yy;
 				if (flipped)
-				{
+				{return;
 					/* 8 pixels per byte, swap bits */
 #define BIT_SWAP(a) (( ((a << 7)&0x80) + ((a << 5)&0x40) + ((a << 3)&0x20) + ((a << 1)&0x10) + ((a >> 1)&0x08) + ((a >> 3)&0x04) + ((a >> 5)&0x02) + ((a >> 7)&0x01) )&0xff)
 					raw[(7 - y) * 132 + (131 - x)] = BIT_SWAP(pix ^ inverted);
@@ -364,147 +444,4 @@ void eDBoxLCD::update()
 	}
 #endif
 #endif
-}
-
-#else
-
-void eDBoxLCD::setFlipped(bool onoff)
-{
-	flipped = onoff;
-	update();
-}
-
-/* **************************************************************** */
-/* Pearl LCD */
-
-eDBoxLCD::eDBoxLCD()
-{
-	eDebug("eDBoxLCD::eDBoxLCD >");
-
-	displayNumber = 0;
-	is_oled = 1;
-
-	instance=this;
-
-	if (GLCD::Config.Load("/etc/graphlcd.conf") == false)
-	{
-		eDebug("Error loading config file!\n");
-		return;
-	}
-	if (GLCD::Config.driverConfigs.size() <= 0)
-	{
-		eDebug("ERROR: No displays specified in config file!\n");
-	}
-
-	GLCD::Config.driverConfigs[displayNumber].upsideDown ^= 0;
-	GLCD::Config.driverConfigs[displayNumber].invert ^= 0;
-
-	lcd = GLCD::CreateDriver(GLCD::Config.driverConfigs[displayNumber].id, &GLCD::Config.driverConfigs[displayNumber]);
-
-	if (!lcd)
-	{
-		eDebug("ERROR: Failed creating display object\n");
-		return;
-	}
-	if (lcd->Init() != 0)
-	{
-#if 0
-	// Returning an error here will break the code at various other places
-		eDebug("ERROR: Failed initializing display\n");
-		delete lcd;
-		lcd = NULL;
-		return;
-#endif
-	}
-	lcd->SetBrightness(GLCD::Config.driverConfigs[displayNumber].brightness);
-
-	lcd->GetFeature((std::string) "depth", depth);
-	width = GLCD::Config.driverConfigs[displayNumber].width;
-	height = GLCD::Config.driverConfigs[displayNumber].height;
-
-	eDebug("config -> (w %d, h %d)", width, height);
-
-	bitmap = new GLCD::cBitmap(width, height);
-	bitmap->Clear();
-
-	lcd->SetScreen(bitmap->Data(), bitmap->Width(), bitmap->Height());
-	lcd->Refresh(true);
-
-	lcdfd = 1; //needed for detected()
-	setSize(width, height, depth);
-
-	eDebug("eDBoxLCD::eDBoxLCD (w %d, h %d, depth %d)<", width, height, depth);
-}
-
-void eDBoxLCD::setInverted(unsigned char inv)
-{
-	eDebug("eDBoxLCD::setInverted");
-	inverted = inv;
-	update();
-}
-
-int eDBoxLCD::setLCDContrast(int contrast)
-{
-	eDebug("[LCD] setLCDContrast not supported");
-	return(0);
-}
-
-int eDBoxLCD::setLCDBrightness(int brightness)
-{
-	eDebug("eDBoxLCD::setLCDBrightness");
-/* fixme range check */
-	lcd->SetBrightness(brightness);
-	return(0);
-}
-
-eDBoxLCD::~eDBoxLCD()
-{
-	eDebug("eDBoxLCD::~eDBoxLCD");
-}
-
-eDBoxLCD *eDBoxLCD::getInstance()
-{
-	eDebug("eDBoxLCD::getInstance");
-	return instance;
-}
-
-void eDBoxLCD::update()
-{
-	if (lcdfd == 1)
-	{
-		bitmap->Clear();
-		for (int x = 0; x < width; x++)
-			for (int y = 0; y < height; y++)
-			{
-				uint16_t *buf16  = (uint16_t*) _buffer;
-#if BYTE_ORDER == LITTLE_ENDIAN
-				uint16_t col16 = bswap_16(*((uint16_t*)(((uint16_t*)buf16) + y * width + x)));
-#else
-				uint16_t col16 = *((uint16_t*)(((uint16_t*)buf16) + y * width + x));
-#endif
-				uint8_t red, green, blue, alpha; 
-				uint32_t color32;
-
-				/* BBBBB GGGGGG RRRRR */
-				blue  = ((col16 & 0xF800) >> 11) * ( 255 / 31);
-				green = ((col16 & 0x7E0) >> 5) * (255 / 63);
-				red   = (col16 & 0x1f) * (255 / 31);
-				alpha = 255;
-
-				color32 = alpha << 24 | red << 16 | green << 8 | blue;
-
-				if (inverted)
-					color32 = 0xFFFFFF - color32;
-
-				bitmap->DrawPixel(x, y, color32);
-			}
-		lcd->SetScreen(bitmap->Data(), bitmap->Width(), bitmap->Height());
-		lcd->Refresh(false); /* partial update */
-	}
-}
-#endif
-
-void eDBoxLCD::dumpLCD(bool png)
-{
-	return;
 }

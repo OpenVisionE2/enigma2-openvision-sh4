@@ -385,16 +385,22 @@ void bsodFatal(const char *component)
 	sleep(10);
 
 	/*
-	 * When 'component' is NULL, we are called because of a python exception.
-	 * In that case, we'd prefer to to a clean shutdown of the C++ objects,
-	 * and this should be safe, because the crash did not occur in the
-	 * C++ part.
-	 * However, when we got here for some other reason, a segfault probably,
-	 * we prefer to stop immediately instead of performing a clean shutdown.
-	 * We'd risk destroying things with every additional instruction we're
-	 * executing here.
-	 */
-	if (component) raise(SIGKILL);
+	* When 'component' is NULL, we are called because of a python exception.
+	* In that case, we'd prefer to to a clean shutdown of the C++ objects,
+	* and this should be safe, because the crash did not occur in the
+	* C++ part.
+	* However, when we got here for some other reason, a segfault probably,
+	* we prefer to stop immediately instead of performing a clean shutdown.
+	* We'd risk destroying things with every additional instruction we're
+	* executing here.
+	*/
+	if (component) {
+		/*
+		 *  We need to use a signal that generate core dump.
+		 */
+		if (eConfigManager::getConfigBoolValue("config.crash.coredump", false)) raise(SIGTRAP);
+		raise(SIGKILL);
+	}
 }
 
 void oops(const mcontext_t &context)

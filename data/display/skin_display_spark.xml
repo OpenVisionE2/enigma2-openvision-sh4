@@ -108,7 +108,7 @@
 		<widget source="parent.summary_job_name" render="Label" position="0,4" size="120,42" font="Regular;16" />
 		<widget source="parent.summary_job_task" render="Label" position="0,22" size="120,26" font="Regular;12" />
 		<widget source="parent.summary_job_progress" render="Progress" position="0,50" size="60,12" borderWidth="1" zPosition="1" />
-		<widget source="parent.summary_job_progress" render="Label" position="66,50" size="50,12" font="Regular;12" zPosition="2" transparent="1">
+		<widget source="parent.summary_job_progress" render="Label" position="66,50" size="50,12" font="Regular;12" transparent="1">
 			<convert type="ProgressToText" />
 		</widget>
 	</screen>

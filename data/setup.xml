@@ -86,6 +86,9 @@
 		<item level="0" requires="ConfigDisplay" text="Show HDD progress" description="Disable the HDD Process on VFD">config.lcd.hdd</item>
 		<item level="0" requires="ConfigDisplay" text="Show HDMI-Output Res" description="Show HDMI Output Resulution">config.lcd.showoutputresolution</item>
 	</setup>
+	<setup key="FlashExpander" title="Flash Expander">
+		<item level="0" text="Target location" description="Choose the target location for the expanded '/usr' directory.">config.flashExpander.location</item>
+	</setup>
 	<setup key="HardDisk" title="Hard Disk Setup" >
 		<item level="0" text="Hard disk standby after" description="Configure the hard disk drive to go to standby after the specified idle time.">config.usage.hdd_standby</item>
 	</setup>

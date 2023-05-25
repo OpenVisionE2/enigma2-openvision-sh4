@@ -89,7 +89,6 @@ def getMultiBootSlots():
 	global bootSlots, startupDevice
 	bootSlots = {}
 	mode12Found = False
-	BoxInfo.setItem("VuUUIDSlot", "")
 	UUID = ""
 	UUIDnum = 0
 	if startupDevice is None:
@@ -173,11 +172,6 @@ def getCurrentImage():
 				for slot in bootSlots.keys():
 					if bootSlots[slot]["device"] == device:
 						return slot
-		else: # kexec kernel multiboot VU+
-			rootsubdir = [x for x in bootArgs.split() if x.startswith("rootsubdir")]
-			char = "/" if "/" in rootsubdir[0] else "="
-			BoxInfo.setItem("VuUUIDSlot", UUID, UUIDnum if UUIDnum != 0 else "")
-			return int(rootsubdir[0].rsplit(char, 1)[1][11:])
 	return None
 
 

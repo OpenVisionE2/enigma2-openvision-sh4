@@ -83,6 +83,5 @@ install_PYTHON = \
 	UnhandledKey.py \
 	VirtualKeyBoard.py \
 	Volume.py \
-	VuKexec.py \
 	Wizard.py \
 	WizardLanguage.py

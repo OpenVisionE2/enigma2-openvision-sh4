@@ -6,7 +6,7 @@ datarootdir="@datarootdir@"
 
 export PATH="${PATH}:/usr/script"
 
-if [ -d /home/root ]; then
+if [ -d "/home/root" ]; then
 	export HOME="/home/root"
 	cd
 fi
@@ -19,16 +19,16 @@ echo "OV" > /dev/vfd
 # do not impact running code.
 #
 function check_busybox_update {
-	if [ -e /etc/enigma2/.busybox_update_required ]; then
+	if [ -e "/etc/enigma2/.busybox_update_required" ]; then
 		DEFERRED=`cat /etc/enigma2/.busybox_update_required`
-		rm /etc/enigma2/.busybox_update_required
+		rm -f /etc/enigma2/.busybox_update_required
 		${DEFERRED} 2>&1 | tee -a /home/root/opkgupgrade.log
 	fi
 }
 
 PYVER=`sed -En 's|^python=(.+)$|\1|p' /usr/lib/enigma.info`
 
-if [ -e @libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.py* ]; then
+if [ -e "@libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.py*" ]; then
 	cpufreq=`cat /etc/enigma2/settings | grep config.plugins.booster.normalfrequenz | cut -d "=" -f2`
 	case $cpufreq in
 		200) overclk=5123;;
@@ -57,7 +57,7 @@ if [ -z $LC_ALL ] && [ ${PYVER::1} == 3 ]; then
 fi
 
 # Check for sundtek tuner helper lib.
-if [ -e /opt/lib/libmediaclient.so ]; then
+if [ -e "/opt/lib/libmediaclient.so" ]; then
 	LIBS="/opt/lib/libmediaclient.so @libdir@/libopen.so.0.0.0"
 else
 	LIBS="@libdir@/libopen.so.0.0.0"
@@ -65,13 +65,14 @@ fi
 
 # This should not be done as it will suppress the appropriate diagnostic message from within Enigma2.
 #
-# if [ ! -e /etc/enigma2/settings ]; then
+# if [ ! -e "/etc/enigma2/settings" ]; then
 # 	touch /etc/enigma2/settings
 # fi
 
 # Enigma main loop.
 while : ; do
 	# Show backdrop on enigma2 start.
+	killall -9 showiframe; sleep 1
 	SKIN=`sed -En 's|^config\.skin\.primary_skin=(.+)/skin\.xml$|\1|p' "@sysconfdir@/enigma2/settings"`
 	if [ -n "${SKIN}" ]; then
 		SEARCHDIRS="@sysconfdir@/enigma2/$SKIN @sysconfdir@/enigma2/skin_common @sysconfdir@/enigma2 @datadir@/enigma2/$SKIN @datadir@/enigma2/skin_default @datadir@/enigma2"
@@ -79,8 +80,8 @@ while : ; do
 		SEARCHDIRS="@sysconfdir@/enigma2/skin_common @sysconfdir@/enigma2 @datadir@/enigma2/skin_default @datadir@/enigma2"
 	fi
 	for DIR in $SEARCHDIRS; do
-		if [ -d "${DIR}" ] && [ -f "${DIR}/backdrop.mvi" ] && [ -x "@bindir@/showiframe" ]; then
-			"@bindir@/showiframe" "${DIR}/backdrop.mvi"
+		if [ -d "${DIR}" ] && [ -f "${DIR}/backdrop.mvi" ] && [ -f "@bindir@/showiframe" ]; then
+			@bindir@/showiframe ${DIR}/backdrop.mvi
 			break
 		fi
 	done
@@ -89,13 +90,13 @@ while : ; do
 	/etc/init.d/networking restart &
 
 	# Hook to execute scripts always before enigma2 start.
-	if [ -x "@bindir@/enigma2_pre_start.sh" ]; then
-		"@bindir@/enigma2_pre_start.sh"
+	if [ -f "@bindir@/enigma2_pre_start.sh" ]; then
+		@bindir@/enigma2_pre_start.sh
 	fi
 
 	# Dreamci.
-	if [ -x "@bindir@/enigma2_pre_start_ciplus.sh" ]; then
-		"@bindir@/enigma2_pre_start_ciplus.sh"
+	if [ -f "@bindir@/enigma2_pre_start_ciplus.sh" ]; then
+		@bindir@/enigma2_pre_start_ciplus.sh
 	fi
 
 	# Start enigma.
@@ -129,7 +130,7 @@ while : ; do
 		for FILE in `ls -t "${DEBUGDIR}"enigma2_debug_*.log`; do
 			let "KEEP--"
 			if [ "${KEEP}" -lt "1" ]; then
-				rm "${FILE}"
+				rm -f "${FILE}"
 			fi
 		done
 		# Today's log file.
@@ -159,14 +160,14 @@ while : ; do
 	case ${RET} in
 		1)
 			check_busybox_update
-			if [ -x "@bindir@/turnoff_power" ]; then
-				"@bindir@/turnoff_power"
+			if [ -f "@bindir@/turnoff_power" ]; then
+				@bindir@/turnoff_power
 			else
 				/sbin/halt
 			fi
 			;;
 		2)
-			[ -f /proc/stb/fp/force_restart ] && echo "1" > /proc/stb/fp/force_restart
+			[ -f "/proc/stb/fp/force_restart" ] && echo "1" > /proc/stb/fp/force_restart
 			check_busybox_update
 			/sbin/reboot
 			;;
@@ -174,7 +175,7 @@ while : ; do
 			;;
 		4)
 			/sbin/rmmod lcd
-			"@sbindir@/fpupgrade" --upgrade 2>&1 | tee /home/root/fpupgrade.log
+			@sbindir@/fpupgrade --upgrade 2>&1 | tee /home/root/fpupgrade.log
 			sleep 0.1;
 			/sbin/rmmod fp
 			/sbin/modprobe fp
@@ -187,7 +188,7 @@ while : ; do
 			fi
 			;;
 		7)
-			rm -R /etc/enigma2
+			rm -fR /etc/enigma2
 			;;
 		42)
 			df -P | grep -v "tmpfs " | awk '{print $6}' | tail -n +3 > /tmp/upgrade_mountpoints.txt
@@ -197,7 +198,7 @@ while : ; do
 			fi
 			done < /tmp/upgrade_mountpoints.txt
 			# Bind the console (when available).
-			[ -f /sys/class/vtconsole/vtcon1/bind ] && echo "1" > /sys/class/vtconsole/vtcon1/bind
+			[ -f "/sys/class/vtconsole/vtcon1/bind" ] && echo "1" > /sys/class/vtconsole/vtcon1/bind
 			PREVUPD="0"
 			CURRUPD="999"
 			opkg update 2>&1 | tee /home/root/opkgupgrade.log
@@ -213,9 +214,9 @@ while : ; do
 			;;
 		43)
 			# Auto install and autobackup.
-			[ -f /sys/class/vtconsole/vtcon1/bind ] && echo "1" > /sys/class/vtconsole/vtcon1/bind
+			[ -f "/sys/class/vtconsole/vtcon1/bind" ] && echo "1" > /sys/class/vtconsole/vtcon1/bind
 			/etc/init.d/settings-restore.sh
-			if [ -f /etc/init.d/avahi-daemon ]; then
+			if [ -f "/etc/init.d/avahi-daemon" ]; then
 				/etc/init.d/avahi-daemon stop
 			fi
 			ifdown eth1
@@ -224,10 +225,10 @@ while : ; do
 			ip addr flush dev eth0 scope global
 			/etc/init.d/networking stop
 			killall -9 udhcpc
-			rm /var/run/udhcpc*
+			rm -f /var/run/udhcpc*
 			/etc/init.d/dbus-1 reload
 			/etc/init.d/networking start
-			if [ -f /etc/init.d/avahi-daemon ]; then
+			if [ -f "/etc/init.d/avahi-daemon" ]; then
 				/etc/init.d/avahi-daemon start
 			fi
 			/etc/init.d/softcam restart

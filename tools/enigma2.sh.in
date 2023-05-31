@@ -135,6 +135,7 @@ while : ; do
 	#  5 - install new settings
 	#  6 - restart enigma in debug
 	#  7 - manufacturer reset
+	#  8 - reboot (force)
 	# 12 - reboot to android
 	# 16 - reboot to recovery
 	# 42 - restart for unattended update
@@ -174,6 +175,9 @@ while : ; do
 			;;
 		7)
 			rm -fR /etc/enigma2
+			;;
+		8)
+			/sbin/reboot -f
 			;;
 		42)
 			df -P | grep -v "tmpfs " | awk '{print $6}' | tail -n +3 > /tmp/upgrade_mountpoints.txt

@@ -34,6 +34,7 @@ QUIT_UPGRADE_FP = 4
 QUIT_ERROR_RESTART = 5 # install new settings?
 QUIT_DEBUG_RESTART = 6
 QUIT_MANUFACTURER_RESET = 7
+QUIT_REBOOT_FORCE = 8
 QUIT_REBOOT_ANDROID = 12
 QUIT_REBOOT_RECOVERY = 16
 QUIT_UPGRADE_PROGRAM = 42
@@ -348,6 +349,7 @@ class QuitMainloopScreen(Screen):
 		text = {
 			QUIT_SHUTDOWN: _("Your %s %s is shutting down") % (displaybrand, displaymodel),
 			QUIT_REBOOT: _("Your %s %s is rebooting") % (displaybrand, displaymodel),
+			QUIT_REBOOT_FORCE: _("Your %s %s is force rebooting") % (displaybrand, displaymodel),
 			QUIT_RESTART: _("The user interface of your %s %s is restarting") % (displaybrand, displaymodel),
 			QUIT_UPGRADE_FP: _("Front processor of your %s %s will be updated\nThis may take a few minutes") % (displaybrand, displaymodel),
 			QUIT_DEBUG_RESTART: _("The user interface of your %s %s is restarting in debug mode") % (displaybrand, displaymodel),
@@ -393,6 +395,7 @@ class TryQuitMainloop(MessageBox):
 			text = {
 				QUIT_SHUTDOWN: _("Really shutdown?"),
 				QUIT_REBOOT: _("Really reboot?"),
+				QUIT_REBOOT_FORCE: _("Really force reboot?"),
 				QUIT_RESTART: _("Really restart?"),
 				QUIT_UPGRADE_FP: _("Really update the front processor and reboot?"),
 				QUIT_DEBUG_RESTART: _("Really restart in debug mode?"),

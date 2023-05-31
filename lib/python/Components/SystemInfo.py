@@ -248,13 +248,10 @@ SystemInfo["CanMeasureFrontendInputPower"] = eDVBResourceManager.getInstance().c
 SystemInfo["12V_Output"] = Misc_Options.getInstance().detected_12V_output()
 SystemInfo["ZapMode"] = fileCheck("/proc/stb/video/zapmode") or fileCheck("/proc/stb/video/zapping_mode")
 SystemInfo["NumFrontpanelLEDs"] = countFrontpanelLEDs()
-SystemInfo["FrontpanelDisplay"] = exists(scopeLCDSkin) and fileCheck("/dev/dbox/oled0") or exists(scopeLCDSkin) and fileCheck("/dev/dbox/lcd0")
-SystemInfo["NoFpDisplay"] = not exists(scopeLCDSkin)
 SystemInfo["LCDsymbol_circle_recording"] = fileCheck("/proc/stb/lcd/symbol_circle") or fileCheck("/proc/stb/lcd/symbol_recording")
 SystemInfo["LCDsymbol_timeshift"] = fileCheck("/proc/stb/lcd/symbol_timeshift")
 SystemInfo["LCDshow_symbols"] = fileCheck("/proc/stb/lcd/show_symbols")
 SystemInfo["LCDsymbol_hdd"] = fileCheck("/proc/stb/lcd/symbol_hdd")
-SystemInfo["FrontpanelDisplayGrayscale"] = fileCheck("/dev/dbox/oled0")
 SystemInfo["DeepstandbySupport"] = model not in ("adb_box", "hl101", "vip1_v1")
 SystemInfo["Fan"] = fileCheck("/proc/stb/fp/fan") or BoxInfo.getItem("fan")
 SystemInfo["FanPWM"] = BoxInfo.getItem("Fan") and fileCheck("/proc/stb/fp/fan_pwm")
@@ -262,7 +259,6 @@ SystemInfo["PowerLED"] = fileCheck("/proc/stb/power/powerled")
 SystemInfo["PowerLED2"] = fileCheck("/proc/stb/power/powerled2")
 SystemInfo["StandbyLED"] = fileCheck("/proc/stb/power/standbyled")
 SystemInfo["SuspendLED"] = fileCheck("/proc/stb/power/suspendled")
-SystemInfo["Display"] = BoxInfo.getItem("FrontpanelDisplay") or BoxInfo.getItem("StandbyLED")
 SystemInfo["LedPowerColor"] = fileCheck("/proc/stb/fp/ledpowercolor")
 SystemInfo["LedStandbyColor"] = fileCheck("/proc/stb/fp/ledstandbycolor")
 SystemInfo["LedSuspendColor"] = fileCheck("/proc/stb/fp/ledsuspendledcolor")
@@ -315,7 +311,7 @@ SystemInfo["NCamInstalled"] = fileCheck("/usr/bin/ncam")
 SystemInfo["NCamIsActive"] = BoxInfo.getItem("NCamInstalled") and fileCheck("/tmp/.ncam/ncam.version")
 SystemInfo["OpenVisionModule"] = fileCheck("/proc/enigma/distro")
 SystemInfo["7segment"] = displaytype == "7segment" or "7seg" in displaytype
-SystemInfo["ConfigDisplay"] = BoxInfo.getItem("FrontpanelDisplay") and displaytype != "7segment" and "7seg" not in displaytype
+SystemInfo["LCDSupport"] = "lcd" in displaytype or "lcd" in model
 SystemInfo["VFDSymbol"] = BoxInfo.getItem("vfdsymbol")
 SystemInfo["SeekStatePlay"] = False
 SystemInfo["StatePlayPause"] = False
@@ -356,5 +352,3 @@ SystemInfo["HasMultichannelPCM"] = fileCheck("/proc/stb/audio/multichannel_pcm")
 SystemInfo["HDMIAudioSource"] = fileCheck("/proc/stb/hdmi/audio_source")
 SystemInfo["HDRSupport"] = fileCheck("/proc/stb/hdmi/hlg_support_choices") or fileCheck("/proc/stb/hdmi/hlg_support")
 SystemInfo["RFmodSupport"] = model == "spark7162"
-SystemInfo["LCDSupport"] = False
-SystemInfo["LEDSupport"] = False

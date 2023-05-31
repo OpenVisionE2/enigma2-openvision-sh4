@@ -14,18 +14,6 @@ fi
 # write on vfd display
 echo "OV" > /dev/vfd
 
-# Function to determine if a BusyBox update has been flagged and do the update.
-# This code should be run just before a restart to ensure that any shell changes
-# do not impact running code.
-#
-function check_busybox_update {
-	if [ -e "/etc/enigma2/.busybox_update_required" ]; then
-		DEFERRED=`cat /etc/enigma2/.busybox_update_required`
-		rm -f /etc/enigma2/.busybox_update_required
-		${DEFERRED} 2>&1 | tee -a /home/root/opkgupgrade.log
-	fi
-}
-
 PYVER=`sed -En 's|^python=(.+)$|\1|p' /usr/lib/enigma.info`
 
 if [ -e "@libdir@/enigma2/python/Plugins/SystemPlugins/SH4BoosterControl/plugin.py*" ]; then
@@ -159,7 +147,6 @@ while : ; do
 	RET=$?
 	case ${RET} in
 		1)
-			check_busybox_update
 			if [ -f "@bindir@/turnoff_power" ]; then
 				@bindir@/turnoff_power
 			else
@@ -168,7 +155,6 @@ while : ; do
 			;;
 		2)
 			[ -f "/proc/stb/fp/force_restart" ] && echo "1" > /proc/stb/fp/force_restart
-			check_busybox_update
 			/sbin/reboot
 			;;
 		3)
@@ -179,7 +165,6 @@ while : ; do
 			sleep 0.1;
 			/sbin/rmmod fp
 			/sbin/modprobe fp
-			check_busybox_update
 			/sbin/reboot
 			;;
 		5)
@@ -209,7 +194,6 @@ while : ; do
 				CURRUPD=`opkg list-upgradable | wc -l`
 				echo "===> ${CURRUPD} PACKAGE(S) REMAINING" >> /home/root/opkupgrade.log
 			done
-			check_busybox_update
 			/sbin/reboot
 			;;
 		43)

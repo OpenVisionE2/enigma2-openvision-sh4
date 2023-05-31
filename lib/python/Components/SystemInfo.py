@@ -285,10 +285,6 @@ SystemInfo["CanNotDoSimultaneousTranscodeAndPIP"] = True
 SystemInfo["Has24hz"] = fileCheck("/proc/stb/video/videomode_24hz")
 SystemInfo["HasHDMI"] = BoxInfo.getItem("hdmi")
 SystemInfo["HasHDMI-CEC"] = BoxInfo.getItem("HasHDMI") and (fileCheck("/proc/stb/cec/send") or fileCheck("/proc/stb/hdmi/cec"))
-SystemInfo["HasYPbPr"] = BoxInfo.getItem("yuv")
-SystemInfo["HasScart"] = BoxInfo.getItem("scart")
-SystemInfo["HasSVideo"] = BoxInfo.getItem("svideo")
-SystemInfo["HasComposite"] = BoxInfo.getItem("rca")
 SystemInfo["HasOfflineDecoding"] = True
 SystemInfo["hasKexec"] = fileContains("/proc/cmdline", "kexec=1")
 SystemInfo["canKexec"] = False

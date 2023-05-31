@@ -5,6 +5,7 @@ from Components.SystemInfo import BoxInfo
 from os.path import exists
 
 CanProc = BoxInfo.getItem("CanProc")
+has_scart = BoxInfo.getItem("scart")
 
 
 class AVSwitch:
@@ -74,11 +75,11 @@ def InitAVSwitch():
 	colorformat_choices = {"cvbs": "CVBS"}
 
 	# when YUV, Scart or S-Video is not support by HW, don't let the user select it
-	if BoxInfo.getItem("HasYPbPr"):
+	if BoxInfo.getItem("yuv"):
 		colorformat_choices["yuv"] = "YPbPr"
-	if BoxInfo.getItem("HasScart"):
+	if has_scart:
 		colorformat_choices["rgb"] = "RGB"
-	if BoxInfo.getItem("HasSVideo"):
+	if BoxInfo.getItem("svideo"):
 		colorformat_choices["svideo"] = "S-Video"
 
 	config.av.colorformat = ConfigSelection(choices=colorformat_choices, default="cvbs")
@@ -175,7 +176,9 @@ def InitAVSwitch():
 	config.av.wss.addNotifier(setWSS)
 
 	iAVSwitch.setInput("ENCODER") # init on startup
-	detected = eAVSwitch.getInstance().haveScartSwitch()
+	detected = has_scart
+	if detected:
+		detected = eAVSwitch.getInstance().haveScartSwitch()
 
 	BoxInfo.setItem("ScartSwitch", detected)
 

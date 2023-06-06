@@ -561,10 +561,9 @@ loadKeymap(config.usage.keymap.value)
 from Components.Network import InitNetwork
 InitNetwork()
 
-if BoxInfo.getItem("LCDSupport"):
-#	profile("LCD")
-	from Components.Lcd import IconCheck
-	IconCheck()
+#profile("LCD")
+from Components.Lcd import IconCheck
+IconCheck()
 
 if BoxInfo.getItem("RFmodSupport"):
 #	profile("RFMod")

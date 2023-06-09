@@ -541,7 +541,7 @@ from Components.RecordingConfig import InitRecordingConfig
 InitRecordingConfig()
 
 #profile("UsageConfig")
-from Components.UsageConfig import InitUsageConfig
+from Components.UsageConfig import InitUsageConfig, DEFAULTKEYMAP
 InitUsageConfig()
 
 if config.crash.pythonStackOnSpinner.value:
@@ -555,7 +555,13 @@ InitTimeZones()
 
 #profile("Keymap")
 from Components.ActionMap import loadKeymap
-loadKeymap(config.usage.keymap.value)
+loadKeymap(DEFAULTKEYMAP)
+if config.usage.keymap.value != DEFAULTKEYMAP:
+	if isfile(config.usage.keymap.value):
+		loadKeymap(config.usage.keymap.value, replace=True)
+loadKeymap(config.usage.keytrans.value)
+if isfile(config.usage.keymap_usermod.value):
+	loadKeymap(config.usage.keymap_usermod.value)
 
 #profile("Network")
 from Components.Network import InitNetwork

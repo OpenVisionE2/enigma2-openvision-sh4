@@ -2,7 +2,7 @@
 from twisted.internet import threads
 from enigma import eTimer, iPlayableService, iServiceInformation
 import NavigationInstance
-from Tools.Directories import fileExists
+from os.path import isfile
 from Components.ParentalControl import parentalControl
 from Components.ServiceEventTracker import ServiceEventTracker
 from Components.SystemInfo import BoxInfo
@@ -59,7 +59,7 @@ class SymbolsCheckPoller:
 		del self.service
 
 	def Recording(self):
-		if fileExists("/proc/stb/lcd/symbol_circle"):
+		if isfile("/proc/stb/lcd/symbol_circle"):
 			recordings = len(NavigationInstance.instance.getRecordings())
 			print("[VfdSymbols] Write to /proc/stb/lcd/symbol_circle")
 			if recordings > 0:
@@ -67,7 +67,7 @@ class SymbolsCheckPoller:
 			else:
 				open("/proc/stb/lcd/symbol_circle", "w").write("0")
 		else:
-			if not fileExists("/proc/stb/lcd/symbol_recording") or not fileExists("/proc/stb/lcd/symbol_record_1") or not fileExists("/proc/stb/lcd/symbol_record_2"):
+			if not isfile("/proc/stb/lcd/symbol_recording") or not isfile("/proc/stb/lcd/symbol_record_1") or not isfile("/proc/stb/lcd/symbol_record_2"):
 				return
 
 			recordings = len(NavigationInstance.instance.getRecordings())
@@ -89,7 +89,7 @@ class SymbolsCheckPoller:
 				open("/proc/stb/lcd/symbol_record_2", "w").write("0")
 
 	def Subtitle(self):
-		if not fileExists("/proc/stb/lcd/symbol_smartcard") and not fileExists("/proc/stb/lcd/symbol_subtitle"):
+		if not isfile("/proc/stb/lcd/symbol_smartcard") and not isfile("/proc/stb/lcd/symbol_subtitle"):
 			return
 
 		subtitle = self.service and self.service.subtitle()
@@ -97,7 +97,7 @@ class SymbolsCheckPoller:
 
 		if subtitlelist:
 			subtitles = len(subtitlelist)
-			if fileExists("/proc/stb/lcd/symbol_subtitle"):
+			if isfile("/proc/stb/lcd/symbol_subtitle"):
 				print("[VfdSymbols] Write to /proc/stb/lcd/symbol_subtitle")
 				if subtitles > 0:
 					open("/proc/stb/lcd/symbol_subtitle", "w").write("1")
@@ -110,12 +110,12 @@ class SymbolsCheckPoller:
 				else:
 					open("/proc/stb/lcd/symbol_smartcard", "w").write("0")
 		else:
-			if fileExists("/proc/stb/lcd/symbol_smartcard"):
+			if isfile("/proc/stb/lcd/symbol_smartcard"):
 				print("[VfdSymbols] Write to /proc/stb/lcd/symbol_smartcard")
 				open("/proc/stb/lcd/symbol_smartcard", "w").write("0")
 
 	def ParentalControl(self):
-		if not fileExists("/proc/stb/lcd/symbol_parent_rating"):
+		if not isfile("/proc/stb/lcd/symbol_parent_rating"):
 			return
 
 		service = self.session.nav.getCurrentlyPlayingServiceReference()
@@ -130,7 +130,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_parent_rating", "w").write("0")
 
 	def PlaySymbol(self):
-		if not fileExists("/proc/stb/lcd/symbol_play"):
+		if not isfile("/proc/stb/lcd/symbol_play"):
 			return
 
 		print("[VfdSymbols] Write to /proc/stb/lcd/symbol_play")
@@ -140,7 +140,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_play", "w").write("0")
 
 	def PauseSymbol(self):
-		if not fileExists("/proc/stb/lcd/symbol_pause"):
+		if not isfile("/proc/stb/lcd/symbol_pause"):
 			return
 
 		print("[VfdSymbols] Write to /proc/stb/lcd/symbol_pause")
@@ -150,7 +150,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_pause", "w").write("0")
 
 	def PowerSymbol(self):
-		if not fileExists("/proc/stb/lcd/symbol_power"):
+		if not isfile("/proc/stb/lcd/symbol_power"):
 			return
 
 		print("[VfdSymbols] Write to /proc/stb/lcd/symbol_power")
@@ -160,7 +160,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_power", "w").write("1")
 
 	def Resolution(self):
-		if not fileExists("/proc/stb/lcd/symbol_hd"):
+		if not isfile("/proc/stb/lcd/symbol_hd"):
 			return
 
 		info = self.service and self.service.info()
@@ -176,7 +176,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_hd", "w").write("0")
 
 	def Crypted(self):
-		if not fileExists("/proc/stb/lcd/symbol_scramled"):
+		if not isfile("/proc/stb/lcd/symbol_scramled"):
 			return
 
 		info = self.service and self.service.info()
@@ -192,7 +192,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_scramled", "w").write("0")
 
 	def Teletext(self):
-		if not fileExists("/proc/stb/lcd/symbol_teletext"):
+		if not isfile("/proc/stb/lcd/symbol_teletext"):
 			return
 
 		info = self.service and self.service.info()
@@ -208,7 +208,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_teletext", "w").write("0")
 
 	def Hbbtv(self):
-		if not fileExists("/proc/stb/lcd/symbol_epg"):
+		if not isfile("/proc/stb/lcd/symbol_epg"):
 			return
 
 		info = self.service and self.service.info()
@@ -224,7 +224,7 @@ class SymbolsCheckPoller:
 			open("/proc/stb/lcd/symbol_epg", "w").write("1")
 
 	def Audio(self):
-		if not fileExists("/proc/stb/lcd/symbol_dolby_audio"):
+		if not isfile("/proc/stb/lcd/symbol_dolby_audio"):
 			return
 
 		audio = self.service.audioTracks()
@@ -242,7 +242,7 @@ class SymbolsCheckPoller:
 		open("/proc/stb/lcd/symbol_dolby_audio", "w").write("0")
 
 	def Timer(self):
-		if fileExists("/proc/stb/lcd/symbol_timer"):
+		if isfile("/proc/stb/lcd/symbol_timer"):
 			timer = NavigationInstance.instance.RecordTimer.getNextRecordingTime()
 			print("[VfdSymbols] Write to /proc/stb/lcd/symbol_timer")
 			if timer > 0:

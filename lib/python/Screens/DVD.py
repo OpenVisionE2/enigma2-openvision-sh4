@@ -10,8 +10,9 @@ from Components.Label import Label
 from Components.Pixmap import Pixmap
 from Components.ServiceEventTracker import ServiceEventTracker, InfoBarBase
 from Components.config import config
-from Tools.Directories import pathExists, fileExists
+from Tools.Directories import pathExists
 from Components.Harddisk import harddiskmanager
+from os.path import isfile
 
 lastpath = ""
 
@@ -211,7 +212,7 @@ class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarP
 			})
 
 		self["OkCancelActions"] = ActionMap(["OkCancelActions"],
-			{
+			{filee
 				"ok": self.keyOk,
 				"cancel": self.keyCancel,
 			}, -2)
@@ -258,7 +259,7 @@ class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarP
 		self.onFirstExecBegin.append(self.opened)
 		self.service = None
 		self.in_menu = False
-		if fileExists("/proc/stb/vmpeg/0/dst_left"):
+		if isfile("/proc/stb/vmpeg/0/dst_left"):
 			print("[DVD] Read /proc/stb/vmpeg/0/dst_left")
 			self.left = open("/proc/stb/vmpeg/0/dst_left", "r").read()
 			print("[DVD] Read /proc/stb/vmpeg/0/dst_width")

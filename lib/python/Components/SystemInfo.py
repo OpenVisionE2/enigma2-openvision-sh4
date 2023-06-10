@@ -305,9 +305,9 @@ SystemInfo["MiddleFlash"] = BoxInfo.getItem("middleflash") and not BoxInfo.getIt
 SystemInfo["HasCISSL"] = fileCheck("/etc/ssl/certs/customer.pem") and fileCheck("/etc/ssl/certs/device.pem")
 SystemInfo["CanChangeOsdAlpha"] = access("/proc/stb/video/alpha", R_OK) and True or False
 SystemInfo["ScalerSharpness"] = fileCheck("/proc/stb/vmpeg/0/pep_scaler_sharpness")
-SystemInfo["OScamInstalled"] = fileCheck("/usr/bin/oscam") or fileCheck("/usr/bin/oscam-emu") or fileCheck("/usr/bin/oscam-smod")
+SystemInfo["OScamInstalled"] = isfile("/usr/bin/oscam") or isfile("/usr/bin/oscam-emu") or isfile("/usr/bin/oscam-smod")
 SystemInfo["OScamIsActive"] = BoxInfo.getItem("OScamInstalled") and fileCheck("/tmp/.oscam/oscam.version")
-SystemInfo["NCamInstalled"] = fileCheck("/usr/bin/ncam")
+SystemInfo["NCamInstalled"] = isfile("/usr/bin/ncam")
 SystemInfo["NCamIsActive"] = BoxInfo.getItem("NCamInstalled") and fileCheck("/tmp/.ncam/ncam.version")
 SystemInfo["OpenVisionModule"] = fileCheck("/proc/enigma/distro")
 SystemInfo["7segment"] = displaytype == "7segment" or "7seg" in displaytype

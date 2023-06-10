@@ -35,7 +35,7 @@ from Screens.TimeDateInput import TimeDateInput
 from Screens.UnhandledKey import UnhandledKey
 from ServiceReference import ServiceReference, isPlayableForCur
 from Tools.ASCIItranslit import legacyEncode
-from Tools.Directories import fileExists, fileReadLines, fileReadLinesISO, getRecordingFilename, moveFiles, isPluginInstalled
+from Tools.Directories import fileReadLines, fileReadLinesISO, getRecordingFilename, moveFiles, isPluginInstalled
 from Tools.Notifications import AddNotificationWithCallback, AddPopup, current_notifications, lock, notificationAdded, notifications, RemovePopup, AddNotification
 from keyids import KEYFLAGS, KEYIDS, KEYIDNAMES
 from Components.Console import Console
@@ -2283,9 +2283,9 @@ class InfoBarTimeshift():
 
 			fileList = []
 			fileList.append((self.current_timeshift_filename, filename))
-			if fileExists(self.current_timeshift_filename + ".sc"):
+			if isfile(self.current_timeshift_filename + ".sc"):
 				fileList.append((self.current_timeshift_filename + ".sc", filename + ".sc"))
-			if fileExists(self.current_timeshift_filename + ".cuts"):
+			if isfile(self.current_timeshift_filename + ".cuts"):
 				fileList.append((self.current_timeshift_filename + ".cuts", filename + ".cuts"))
 
 			moveFiles(fileList)

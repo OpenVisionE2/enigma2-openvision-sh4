@@ -188,7 +188,6 @@ class LCD:
 
 	def setMode(self, value):
 		if isfile("/proc/stb/lcd/show_symbols"):
-			print("[Lcd] setLCDMode='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/show_symbols", value)
 		if config.lcd.mode.value == "0":
 			BoxInfo.setItem("SeekStatePlay", False)
@@ -210,30 +209,24 @@ class LCD:
 
 	def setPower(self, value):
 		if isfile("/proc/stb/power/vfd"):
-			print("[Lcd] setLCDPower='%s'." % value)
 			fileWriteLine("/proc/stb/power/vfd", value)
 		elif isfile("/proc/stb/lcd/vfd"):
-			print("[Lcd] setLCDPower='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/vfd", value)
 
 	def setShowoutputresolution(self, value):
 		if isfile("/proc/stb/lcd/show_outputresolution"):
-			print("[Lcd] setLCDShowoutputresolution='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/show_outputresolution", value)
 
 	def setfblcddisplay(self, value):
 		if isfile("/proc/stb/fb/sd_detach"):
-			print("[Lcd] setfblcddisplay='%s'." % value)
 			fileWriteLine("/proc/stb/fb/sd_detach", value)
 
 	def setRepeat(self, value):
 		if isfile("/proc/stb/lcd/scroll_repeats"):
-			print("[Lcd] setLCDRepeat='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/scroll_repeats", value)
 
 	def setScrollspeed(self, value):
 		if isfile("/proc/stb/lcd/scroll_delay"):
-			print("[Lcd] setLCDScrollspeed='%s'." % value)
 			fileWriteLine("/proc/stb/lcd/scroll_delay", value)
 
 	def setLEDNormalState(self, value):
@@ -321,25 +314,32 @@ def InitLcd():
 			ilcd.setLEDBlinkingTime(configElement.value)
 
 		def setPowerLEDstate(configElement):
-			fileWriteLine("/proc/stb/power/powerled", configElement.value)
+			if isfile("/proc/stb/power/powerled"):
+				fileWriteLine("/proc/stb/power/powerled", configElement.value)
 
 		def setPowerLEDstate2(configElement):
-			fileWriteLine("/proc/stb/power/powerled2", configElement.value)
+			if isfile("/proc/stb/power/powerled2"):
+				fileWriteLine("/proc/stb/power/powerled2", configElement.value)
 
 		def setPowerLEDstanbystate(configElement):
-			fileWriteLine("/proc/stb/power/standbyled", configElement.value)
+			if isfile("/proc/stb/power/standbyled"):
+				fileWriteLine("/proc/stb/power/standbyled", configElement.value)
 
 		def setPowerLEDdeepstanbystate(configElement):
-			fileWriteLine("/proc/stb/power/suspendled", configElement.value)
+			if isfile("/proc/stb/power/suspendled"):
+				fileWriteLine("/proc/stb/power/suspendled", configElement.value)
 
 		def setLedPowerColor(configElement):
-			fileWriteLine("/proc/stb/fp/ledpowercolor", configElement.value)
+			if isfile("/proc/stb/fp/ledpowercolor"):
+				fileWriteLine("/proc/stb/fp/ledpowercolor", configElement.value)
 
 		def setLedStandbyColor(configElement):
-			fileWriteLine("/proc/stb/fp/ledstandbycolor", configElement.value)
+			if isfile("/proc/stb/fp/ledstandbycolor"):
+				fileWriteLine("/proc/stb/fp/ledstandbycolor", configElement.value)
 
 		def setLedSuspendColor(configElement):
-			fileWriteLine("/proc/stb/fp/ledsuspendledcolor", configElement.value)
+			if isfile("/proc/stb/fp/ledsuspendledcolor"):
+				fileWriteLine("/proc/stb/fp/ledsuspendledcolor", configElement.value)
 
 		config.usage.lcd_powerled = ConfigSelection(choices=[
 			("off", _("Off")),

@@ -92,9 +92,7 @@ class VideoSetup(ConfigListScreen, Screen):
 			self.list.append(getConfigListEntry(_("Color format"), config.av.colorformat_yuv))
 
 		if config.av.videoport.value == "HDMI":
-
 			self.list.append(getConfigListEntry(_("Color format"), config.av.colorformat_hdmi))
-
 			if level >= 1:
 				self.list.append(getConfigListEntry(_("Allow unsupported modes"), config.av.edid_override, _("When selected this allows video modes to be selected even if they are not reported as supported.")))
 				if BoxInfo.getItem("HasBypassEdidChecking"):

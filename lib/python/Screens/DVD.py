@@ -211,7 +211,7 @@ class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarP
 			})
 
 		self["OkCancelActions"] = ActionMap(["OkCancelActions"],
-			{filee
+			{
 				"ok": self.keyOk,
 				"cancel": self.keyCancel,
 			}, -2)

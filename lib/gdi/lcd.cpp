@@ -7,7 +7,7 @@
 #include <lib/gdi/esize.h>
 #include <lib/base/init.h>
 #include <lib/base/init_num.h>
-#if defined(HAVE_TEXTLCD)
+#if defined(HAVE_TEXTLCD) || defined(HAVE_7SEGMENT)
 #include <lib/base/estring.h>
 #endif
 #include <lib/gdi/glcddc.h>
@@ -66,39 +66,43 @@ void eLCD::unlock()
 	locked = 0;
 }
 
-const char *eLCD::get_VFD_scroll_delay()
+const char *eLCD::get_VFD_scroll_delay() const
 {
-#if defined(HAVE_TEXTLCD)
+#if defined(HAVE_7SEGMENT)
 	return "";
 #else
 	return (access(VFD_scroll_delay_proc, W_OK) == 0) ? VFD_scroll_delay_proc : "";
 #endif
 }
 
-const char *eLCD::get_VFD_initial_scroll_delay()
+const char *eLCD::get_VFD_initial_scroll_delay() const
 {
-#if defined(HAVE_TEXTLCD)
+#if defined(HAVE_7SEGMENT)
 	return "";
 #else
 	return (access(VFD_initial_scroll_delay_proc, W_OK) == 0) ? VFD_initial_scroll_delay_proc : "";
 #endif
 }
 
-const char *eLCD::get_VFD_final_scroll_delay()
+const char *eLCD::get_VFD_final_scroll_delay() const
 {
-#if defined(HAVE_TEXTLCD)
+#if defined(HAVE_7SEGMENT)
 	return "";
 #else
 	return (access(VFD_final_scroll_delay_proc, W_OK) == 0) ? VFD_final_scroll_delay_proc : "";
 #endif
 }
 
-const char *eLCD::get_VFD_scroll_repeats()
+const char *eLCD::get_VFD_scroll_repeats() const
 {
+#if defined(HAVE_7SEGMENT)
+	return "";
+#else
 	return (access(VFD_scroll_repeats_proc, W_OK) == 0) ? VFD_scroll_repeats_proc : "";
+#endif
 }
 
-void eLCD::set_VFD_scroll_delay(int delay)
+void eLCD::set_VFD_scroll_delay(int delay) const
 {
 #ifdef LCD_SCROLL_HEX
 	CFile::writeIntHex(VFD_scroll_delay_proc, delay);
@@ -107,7 +111,7 @@ void eLCD::set_VFD_scroll_delay(int delay)
 #endif
 }
 
-void eLCD::set_VFD_initial_scroll_delay(int delay)
+void eLCD::set_VFD_initial_scroll_delay(int delay) const
 {
 #ifdef LCD_SCROLL_HEX
 	CFile::writeIntHex(VFD_initial_scroll_delay_proc, delay);
@@ -116,7 +120,7 @@ void eLCD::set_VFD_initial_scroll_delay(int delay)
 #endif
 }
 
-void eLCD::set_VFD_final_scroll_delay(int delay)
+void eLCD::set_VFD_final_scroll_delay(int delay) const
 {
 #ifdef LCD_SCROLL_HEX
 	CFile::writeIntHex(VFD_final_scroll_delay_proc, delay);
@@ -125,13 +129,13 @@ void eLCD::set_VFD_final_scroll_delay(int delay)
 #endif
 }
 
-void eLCD::set_VFD_scroll_repeats(int delay)
+void eLCD::set_VFD_scroll_repeats(int delay) const
 {
 	CFile::writeInt(VFD_scroll_repeats_proc, delay);
 }
 
 #ifndef NO_LCD
-#if defined(HAVE_TEXTLCD)
+#if defined(HAVE_TEXTLCD) || defined(HAVE_7SEGMENT)
 void eLCD::renderText(ePoint start, const char *text)
 {
 	if (lcdfd >= 0 && start.y() < 5)
@@ -362,7 +366,7 @@ void eDBoxLCD::dumpLCD(bool png)
 void eDBoxLCD::update()
 {
 #ifndef NO_LCD
-#if !defined(HAVE_TEXTLCD)
+#if defined(HAVE_TEXTLCD) || defined(HAVE_7SEGMENT)
 	if (lcdfd < 0)
 		return;
 

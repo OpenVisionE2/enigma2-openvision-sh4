@@ -311,7 +311,8 @@ SystemInfo["NCamInstalled"] = isfile("/usr/bin/ncam")
 SystemInfo["NCamIsActive"] = BoxInfo.getItem("NCamInstalled") and fileCheck("/tmp/.ncam/ncam.version")
 SystemInfo["OpenVisionModule"] = fileCheck("/proc/enigma/distro")
 SystemInfo["7segment"] = displaytype == "7segment" or "7seg" in displaytype
-SystemInfo["LCDSupport"] = "lcd" in displaytype or "lcd" in model
+SystemInfo["textlcd"] = displaytype == "textlcd" or "text" in displaytype
+SystemInfo["LCDSupport"] = ("lcd" in displaytype or "lcd" in model) and not BoxInfo.getItem("textlcd")
 SystemInfo["VFDSymbol"] = BoxInfo.getItem("vfdsymbol")
 SystemInfo["SeekStatePlay"] = False
 SystemInfo["StatePlayPause"] = False

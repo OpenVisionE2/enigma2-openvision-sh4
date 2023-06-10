@@ -20,8 +20,6 @@ from Tools.Directories import SCOPE_HDD, SCOPE_TIMESHIFT, defaultRecordingLocati
 originalAudioTracks = "orj dos ory org esl qaa und mis mul ORY ORJ Audio_ORJ oth"
 visuallyImpairedCommentary = "NAR qad"
 
-displaytype = BoxInfo.getItem("displaytype")
-
 
 def InitUsageConfig():
 	config.usage = ConfigSubsection()
@@ -581,30 +579,28 @@ def InitUsageConfig():
 	config.usage.show_event_progress_in_servicelist.addNotifier(refreshServiceList)
 	config.usage.show_channel_numbers_in_servicelist.addNotifier(refreshServiceList)
 
-	if displaytype == "7segment" or "7seg" in displaytype:
+	if BoxInfo.getItem("7segment"):
 		config.usage.blinking_display_clock_during_recording = ConfigSelection(default="Rec", choices=[
 			("Rec", _("REC")),
 			("RecBlink", _("Blinking REC")),
 			("Time", _("Time")),
 			("Nothing", _("Nothing"))
 		])
-	else:
-		config.usage.blinking_display_clock_during_recording = ConfigYesNo(default=False)
-
-	if displaytype == "textlcd" or "text" in displaytype:
-		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default="Channel", choices=[
-			("Rec", _("REC symbol")),
-			("RecBlink", _("Blinking REC symbol")),
-			("Channel", _("Channel name"))
-		])
-	if displaytype == "7segment" or "7seg" in displaytype:
 		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default="Rec", choices=[
 			("Rec", _("REC")),
 			("RecBlink", _("Blinking REC")),
 			("Time", _("Time"))
 		])
 	else:
+		config.usage.blinking_display_clock_during_recording = ConfigYesNo(default=False)
 		config.usage.blinking_rec_symbol_during_recording = ConfigYesNo(default=True)
+
+	if BoxInfo.getItem("textlcd"):
+		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default="Channel", choices=[
+			("Rec", _("REC symbol")),
+			("RecBlink", _("Blinking REC symbol")),
+			("Channel", _("Channel name"))
+		])
 
 	config.usage.show_in_standby = ConfigSelection(default="time", choices=[
 		("time", _("Time")),

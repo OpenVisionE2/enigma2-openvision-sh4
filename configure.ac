@@ -494,23 +494,23 @@ AC_DEFINE_UNQUOTED(ARCHITECTURE,"$ARCHITECTURE",[architecture type])
 
 AC_ARG_WITH(nolcd,
 	AC_HELP_STRING([--with-nolcd], [disable ascii based lcd, yes or no]),
-	[[withnolcd=$withval]],
-	[[withnolcd=no]]
+	[[with_nolcd=$withval]],
+	[[with_nolcd=no]]
 )
-if test x"$withnolcd" != xno ; then
+if test x"$with_nolcd" != xno ; then
 	AC_DEFINE(NO_LCD, 1,[Define when disable an ascii based lcd device])
 fi
-AM_CONDITIONAL(NO_LCD, test x"$withnolcd" != xno)
+AM_CONDITIONAL(NO_LCD, test x"$with_nolcd" != xno)
 
 AC_ARG_WITH(textlcd,
 	AC_HELP_STRING([--with-textlcd], [use ascii based lcd, yes or no]),
-	[[withtextlcd=$withval]],
-	[[withtextlcd=no]]
+	[[with_textlcd=$withval]],
+	[[with_textlcd=no]]
 )
-if test x"$withtextlcd" != xno ; then
+if test x"$with_textlcd" != xno ; then
 	AC_DEFINE(HAVE_TEXTLCD, 1,[Define when using an ascii based lcd device])
 fi
-AM_CONDITIONAL(HAVE_TEXTLCD, test x"$withtextlcd" != xno)
+AM_CONDITIONAL(HAVE_TEXTLCD, test x"$with_textlcd" != xno)
 
 AC_ARG_WITH(7segment,
 	AC_HELP_STRING([--with-7segment], [use 7 segment lcd, yes or no]),
@@ -521,13 +521,13 @@ AC_SUBST(TEXTSKIN)
 
 AC_ARG_WITH(lcd,
 	AC_HELP_STRING([--with-lcd], [use LCD display, yes or no]),
-	[[withlcd=$withval]],
-	[[withlcd=no]]
+	[[with_lcd=$withval]],
+	[[with_lcd=no]]
 )
-if ! test x"$withlcd" != xno ; then
+if ! test x"$with_lcd" != xno ; then
 	AC_DEFINE(NO_LCD, 1,[Define when not using a LCD display device])
 fi
-AM_CONDITIONAL(NO_LCD, test x"$withlcd" != xno)
+AM_CONDITIONAL(NO_LCD, test x"$with_lcd" != xno)
 
 AC_ARG_WITH(libsdl,
 	AS_HELP_STRING([--with-libsdl],[use libsdl, yes or no]),
@@ -661,6 +661,16 @@ AC_ARG_WITH(accelerationaccumulation,
 if test x"$with_accelerationaccumulation" = xyes ; then
 	AC_DEFINE(SUPPORT_ACCUMULATED_ACCELERATION_OPERATIONS, 1,[Accumulate blit/fill acceleration operations])
 fi
+
+AC_ARG_WITH(fhdskin,
+	AC_HELP_STRING([--with-fhdskin], [use full hd skin, yes or no]),
+	[[with_fhdskin=$withval]],
+	[[with_fhdskin=no]]
+)
+if test x"$with_fhdskin" != xno ; then
+	AC_DEFINE(HAVE_FHDSKIN, 1,[Define if box supports full hd skin])
+fi
+AM_CONDITIONAL(HAVE_FHDSKIN, test x"$with_fhdskin" != xno)
 
 AC_ARG_WITH(subttxtabnormalptsdiffs,
 	AC_HELP_STRING([--with-subttxtabnormalptsdiffs=n], [use n/90 msec diffs for subtitle and teletext abnormal pts]),

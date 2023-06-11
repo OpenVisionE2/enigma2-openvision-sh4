@@ -42,7 +42,7 @@ void eLCD::setSize(int xres, int yres, int bpp)
 	_buffer = new unsigned char[xres * yres * bpp/8];
 	memset(_buffer, 0, res.height() * res.width() * bpp / 8);
 	_stride = res.width() * bpp / 8;
-	eDebug("[eLCD] (%dx%dx%d) buffer %p %d bytes, stride %d", xres, yres, bpp, _buffer, xres * yres * bpp / 8, _stride);
+	eTrace("[eLCD] (%dx%dx%d) buffer %p %d bytes, stride %d", xres, yres, bpp, _buffer, xres * yres * bpp / 8, _stride);
 }
 
 eLCD::~eLCD()
@@ -144,7 +144,7 @@ void eLCD::renderText(ePoint start, const char *text)
 		message = replace_all(message, "\n", " ");
 		if (::write(lcdfd, message.c_str(), message.size()) == -1)
 		{
-			eDebug("[eLCD] renderText %s failed (%m)", text);
+			eTrace("[eLCD] renderText %s failed (%m)", text);
 		}
 	}
 }

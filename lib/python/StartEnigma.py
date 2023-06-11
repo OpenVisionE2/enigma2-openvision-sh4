@@ -419,6 +419,7 @@ if isfile("/etc/init.d/inetd.busybox"):
 #
 #profile("InitializeConfigs")
 config.crash = ConfigSubsection()
+config.crash.debugSkin = ConfigYesNo(default=False)
 config.crash.debugInternational = ConfigYesNo(default=False)
 config.crash.debugActionMaps = ConfigYesNo(default=False)
 config.crash.debugKeyboards = ConfigYesNo(default=False)

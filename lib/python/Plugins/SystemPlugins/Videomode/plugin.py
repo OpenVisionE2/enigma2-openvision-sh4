@@ -68,31 +68,21 @@ class VideoSetup(ConfigListScreen, Screen):
 				self.list.append(getConfigListEntry(_("Refresh rate"), config.av.videorate[config.av.videomode[config.av.videoport.value].value], _("Configure the refresh rate of the screen.")))
 		self.list.append(getConfigListEntry(_("3d mode"), config.av.threedmode))
 
-		port = config.av.videoport.value
-		if port not in config.av.videomode:
-			mode = None
-		else:
-			mode = config.av.videomode[port].value
+		self.list.append(getConfigListEntry(_("Aspect ratio"), config.av.aspect, _("Configure the aspect ratio of the screen.")))
+		self.list.append(getConfigListEntry(_("Display 4:3 content as"), config.av.policy_43, _("When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture.")))
+		try:
+			if hasattr(config.av, 'policy_169'):
+				self.list.append(getConfigListEntry(_("Display 16:9 content as"), config.av.policy_169, _("When the content has an aspect ratio of 16:9, choose whether to scale/stretch the picture.")))
+		except:
+			pass
 
-		# some modes (720p, 1080i) are always widescreen. Don't let the user select something here, "auto" is not what he wants.
-		force_wide = self.hw.isWidescreenMode(port, mode)
+		self.list.append(getConfigListEntry(_("Force frame"), config.av.force, _("Allow forcing the frames per second.")))
 
-		if not force_wide:
-			self.list.append(getConfigListEntry(_("Aspect ratio"), config.av.aspect, _("Configure the aspect ratio of the screen.")))
-
-		if force_wide or config.av.aspect.value in ("16_9", "16_10"):
-			self.list.extend((
-				getConfigListEntry(_("Display 4:3 content as"), config.av.policy_43, _("When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture.")),
-				getConfigListEntry(_("Display >16:9 content as"), config.av.policy_169, _("When the content has an aspect ratio of 16:9, choose whether to scale/stretch the picture."))
-			))
-		elif config.av.aspect.value == "4_3":
-			self.list.append(getConfigListEntry(_("Display 16:9 content as"), config.av.policy_169, _("When the content has an aspect ratio of 16:9, choose whether to scale/stretch the picture.")))
-
-		if config.av.videoport.value == "Component":
-			self.list.append(getConfigListEntry(_("Color format"), config.av.colorformat_yuv))
+		if config.av.videoport.value == "YPbPr":
+			self.list.append(getConfigListEntry(_("YPbPr Color format"), config.av.colorformat_yuv, _("Configure which color format should be used on the YPbPr output.")))
 
 		if config.av.videoport.value == "HDMI":
-			self.list.append(getConfigListEntry(_("Color format"), config.av.colorformat_hdmi))
+			self.list.append(getConfigListEntry(_("HDMI Color format"), config.av.colorformat_hdmi, _("Configure which color format should be used on the HDMI output.")))
 			if level >= 1:
 				self.list.append(getConfigListEntry(_("Allow unsupported modes"), config.av.edid_override, _("When selected this allows video modes to be selected even if they are not reported as supported.")))
 				if BoxInfo.getItem("HasBypassEdidChecking"):
@@ -116,7 +106,7 @@ class VideoSetup(ConfigListScreen, Screen):
 					self.list.append(getConfigListEntry(_("Video sync mode"), config.av.sync_mode, _("This option allows you to use video sync mode.")))
 
 		if config.av.videoport.value == "Scart":
-			self.list.append(getConfigListEntry(_("Color format"), config.av.colorformat, _("Configure which color format should be used on the SCART output.")))
+			self.list.append(getConfigListEntry(_("Scart Color format"), config.av.colorformat, _("Configure which color format should be used on the SCART output.")))
 			if level >= 1:
 				self.list.append(getConfigListEntry(_("WSS on 4:3"), config.av.wss, _("When enabled, content with an aspect ratio of 4:3 will be stretched to fit the screen.")))
 				if BoxInfo.getItem("ScartSwitch"):

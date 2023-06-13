@@ -2,6 +2,7 @@
 from Components.config import config, ConfigSelection, ConfigSubDict, ConfigYesNo
 from Components.SystemInfo import BoxInfo
 from Tools.CList import CList
+from os.path import isfile
 
 has_scart = BoxInfo.getItem("scart")
 has_yuv = BoxInfo.getItem("yuv")
@@ -27,9 +28,9 @@ class VideoHardware:
 	rates["576i"] = {"50Hz": {50: "576i"}}
 	rates["480p"] = {"60Hz": {60: "480p"}}
 	rates["576p"] = {"50Hz": {50: "576p"}}
-	rates["720p"] = {"50Hz": {50: "720p50"}, "60Hz": {60: "720p"}}
-	rates["1080i"] = {"50Hz": {50: "1080i50"}, "59Hz": {60: "1080i59"}, "60Hz": {60: "1080i"}}
-	rates["1080p"] = {"23Hz": {50: "1080p23"}, "24Hz": {60: "1080p24"}, "25Hz": {60: "1080p25"}, "29Hz": {60: "1080p29"}, "30Hz": {60: "1080p30"}, "50Hz": {60: "1080p50"}, "59Hz": {60: "1080p59"}, "60Hz": {60: "1080p"}}
+	rates["720p"] = {"50Hz": {50: "720p50"}, "60Hz": {60: "720p"}, "multi": {50: "720p50", 60: "720p"}, "auto": {50: "720p50", 60: "720p"}}
+	rates["1080i"] = {"50Hz": {50: "1080i50"}, "60Hz": {60: "1080i"}, "multi": {50: "1080i50", 60: "1080i"}, "auto": {50: "1080i50", 60: "1080i", 24: "1080i24"}}
+	rates["1080p"] = {"23Hz": {23: "1080p23"}, "24Hz": {24: "1080p24"}, "25Hz": {25: "1080p25"}, "29Hz": {29: "1080p29"}, "30Hz": {30: "1080p30"}, "50Hz": {50: "1080p50"}, "59Hz": {59: "1080p59"}, "60Hz": {60: "1080p"}, "multi": {50: "1080p50", 60: "1080p"}, "auto": {50: "1080p50", 60: "1080p", 24: "1080p24"}}
 
 	rates["PC"] = {
 		"1024x768": {60: "1024x768", 70: "1024x768_70", 75: "1024x768_75", 90: "1024x768_90", 100: "1024x768_100"},
@@ -49,7 +50,8 @@ class VideoHardware:
 
 	modes["HDMI-PC"] = ["PC"]
 
-	modes["YPbPr"] = modes["HDMI"]
+	if has_yuv:
+		modes["YPbPr"] = modes["HDMI"]
 
 	if "YPbPr" in modes and not has_yuv:
 		del modes["YPbPr"]
@@ -65,7 +67,7 @@ class VideoHardware:
 		ret = (16, 9)
 		port = config.av.videoport.value
 		if port not in config.av.videomode:
-			print("[Videomode] VideoHardware current port not available in getOutputAspect!!! force 16:9")
+			print("[VideoHardware] Current port not available in getOutputAspect!!! force 16:9")
 		else:
 			mode = config.av.videomode[port].value
 			force_widescreen = self.isWidescreenMode(port, mode)
@@ -79,12 +81,13 @@ class VideoHardware:
 					if aspect == "16:10":
 						ret = (16, 10)
 			elif is_auto:
-				try:
-					aspect_str = open("/proc/stb/vmpeg/0/aspect", "r").read()
-					if aspect_str == "1": # 4:3
-						ret = (4, 3)
-				except IOError:
-					print("[Videomode] Read /proc/stb/vmpeg/0/aspect failed!")
+				if isfile("/proc/stb/vmpeg/0/aspect"):
+					try:
+						aspect_str = open("/proc/stb/vmpeg/0/aspect", "r").read()
+						if aspect_str == "1": # 4:3
+							ret = (4, 3)
+					except IOError:
+						print("[VideoHardware] Read /proc/stb/vmpeg/0/aspect failed!")
 			else:  # 4:3
 				ret = (4, 3)
 		return ret
@@ -99,10 +102,10 @@ class VideoHardware:
 		self.readPreferredModes()
 
 		if "HDMI-PC" in self.modes and not self.getModeList("HDMI-PC"):
-			print("[Videomode] VideoHardware remove HDMI-PC because of not existing modes")
+			print("[VideoHardware] Remove HDMI-PC because of not existing modes")
 			del self.modes["HDMI-PC"]
 		if "Scart" in self.modes and not self.getModeList("Scart"):
-			print("[Videomode] VideoHardware remove Scart because of not existing modes")
+			print("[VideoHardware] Remove Scart because of not existing modes")
 			del self.modes["Scart"]
 		if "YPbPr" in self.modes and not has_yuv:
 			del self.modes["YPbPr"]
@@ -132,46 +135,44 @@ class VideoHardware:
 
 		config.av.aspect.addNotifier(self.updateAspect)
 		config.av.wss.addNotifier(self.updateAspect)
-		config.av.policy_169.addNotifier(self.updateAspect)
 		config.av.policy_43.addNotifier(self.updateAspect)
+		if hasattr(config.av, 'policy_169'):
+			config.av.policy_169.addNotifier(self.updateAspect)
 
 	def readAvailableModes(self):
 		try:
 			modes = open("/proc/stb/video/videomode_choices").read()[:-1]
 		except IOError:
-			print("[Videomode] Read /proc/stb/video/videomode_choices failed!")
+			print("[VideoHardware] Read /proc/stb/video/videomode_choices failed!")
 			self.modes_available = []
 			return
 		self.modes_available = modes.split(' ')
 
 	def readPreferredModes(self):
 		if config.av.edid_override.value == False:
-			try:
+			if isfile("/proc/stb/video/videomode_preferred"):
+				modes = open("/proc/stb/video/videomode_preferred").read()[:-1]
+				self.modes_preferred = modes.split(' ')
+				print("[VideoHardware] Reading preferred modes: ", self.modes_preferred)
+			elif isfile("/proc/stb/video/videomode_edid"):
 				modes = open("/proc/stb/video/videomode_edid").read()[:-1]
 				self.modes_preferred = modes.split(' ')
-				print("[Videomode] VideoHardware reading edid modes: ", self.modes_preferred)
-			except IOError:
-				print("[Videomode] Read /proc/stb/video/videomode_edid failed!")
-				try:
-					modes = open("/proc/stb/video/videomode_preferred").read()[:-1]
-					self.modes_preferred = modes.split(' ')
-				except IOError:
-					print("[Videomode] Read /proc/stb/video/videomode_preferred failed!")
-					self.modes_preferred = self.modes_available
-
+				print("[VideoHardware] Reading edid modes: ", self.modes_preferred)
+			else:
+				self.modes_preferred = self.modes_available
 			if len(self.modes_preferred) <= 1:
 				self.modes_preferred = self.modes_available
-				print("[Videomode] VideoHardware reading preferred modes is empty, using all video modes")
+				print("[VideoHardware] Reading preferred modes is empty, using all video modes")
 		else:
 			self.modes_preferred = self.modes_available
-			print("[Videomode] VideoHardware reading preferred modes override, using all video modes")
+			print("[VideoHardware] edid_override enabled, using all video modes")
 		self.last_modes_preferred = self.modes_preferred
 
 	# check if a high-level mode with a given rate is available.
 	def isModeAvailable(self, port, mode, rate):
 		rate = self.rates[mode][rate]
 		for mode in rate.values():
-			if port == "HDMI-PC":
+			if port != "HDMI":
 				if mode not in self.modes_preferred:
 					return False
 			else:
@@ -182,55 +183,74 @@ class VideoHardware:
 	def isWidescreenMode(self, port, mode):
 		return mode in self.widescreen_modes
 
-	def setMode(self, port, mode, rate, force=None):
-		print("[Videomode] VideoHardware setMode - port:", port, "mode:", mode, "rate:", rate)
+	def setMode(self, port, mode, rate):
+		force = config.av.force.value
+		print("[VideoHardware] setMode - port:", port, "mode:", mode, "rate:", rate, "force:", force)
 		# we can ignore "port"
 		self.current_mode = mode
 		self.current_port = port
 		modes = self.rates[mode][rate]
 
-		mode_50 = modes.get(50)
-		mode_60 = modes.get(60)
-		mode_30 = modes.get(30)
-		mode_25 = modes.get(25)
+		mode_23 = modes.get(23)
 		mode_24 = modes.get(24)
+		mode_25 = modes.get(25)
+		mode_29 = modes.get(29)
+		mode_30 = modes.get(30)
+		mode_50 = modes.get(50)
+		mode_59 = modes.get(59)
+		mode_60 = modes.get(60)
 
 		if mode_50 is None or force == 60:
 			mode_50 = mode_60
+		if mode_59 is None or force == 50:
+			mode_59 = mode_50
 		if mode_60 is None or force == 50:
 			mode_60 = mode_50
 
-		if mode_30 is None or force:
-			mode_30 = mode_60
+		if mode_23 is None or force:
+			mode_23 = mode_60
 			if force == 50:
-				mode_30 = mode_50
-		if mode_25 is None or force:
-			mode_25 = mode_60
-			if force == 50:
-				mode_25 = mode_50
+				mode_23 = mode_50
 		if mode_24 is None or force:
 			mode_24 = mode_60
 			if force == 50:
 				mode_24 = mode_50
+		if mode_25 is None or force:
+			mode_25 = mode_60
+			if force == 50:
+				mode_25 = mode_50
+		if mode_29 is None or force:
+			mode_29 = mode_60
+			if force == 50:
+				mode_29 = mode_50
+		if mode_30 is None or force:
+			mode_30 = mode_60
+			if force == 50:
+				mode_30 = mode_50
 
-		try:
-			open("/proc/stb/video/videomode_50hz", "w").write(mode_50)
-		except IOError:
-			print("[Videomode] Write to /proc/stb/video/videomode_50hz failed!")
+		if mode_50 is not None:
 			try:
-				# fallback if no possibility to setup 50 hz mode
-				open("/proc/stb/video/videomode", "w").write(mode_50)
+				open("/proc/stb/video/videomode_50hz", "w").write(mode_50)
 			except IOError:
-				print("[Videomode] Write to /proc/stb/video/videomode failed!")
-		try:
-			open("/proc/stb/video/videomode_60hz", "w").write(mode_60)
-		except IOError:
-			print("[Videomode] Write to /proc/stb/video/videomode_60hz failed!")
-		if Has24hz:
+				print("[VideoHardware] Write to /proc/stb/video/videomode_50hz failed!")
+				if isfile("/proc/stb/video/videomode"):
+					try:
+						# fallback if no possibility to setup 50 hz mode
+						open("/proc/stb/video/videomode", "w").write(mode_50)
+					except IOError:
+						print("[VideoHardware] Write to /proc/stb/video/videomode failed!")
+
+		if mode_60 is not None:
+			try:
+				open("/proc/stb/video/videomode_60hz", "w").write(mode_60)
+			except IOError:
+				print("[VideoHardware] Write to /proc/stb/video/videomode_60hz failed!")
+
+		if Has24hz and mode_24 is not None:
 			try:
 				open("/proc/stb/video/videomode_24hz", "w").write(mode_24)
 			except IOError:
-				print("[Videomode] Write to /proc/stb/video/videomode_24hz failed!")
+				print("[VideoHardware] Write to /proc/stb/video/videomode_24hz failed!")
 
 		#call setResolution() with -1,-1 to read the new scrren dimesions without changing the framebuffer resolution
 		from enigma import gMainDC
@@ -240,7 +260,7 @@ class VideoHardware:
 		self.updateColor(port)
 
 	def saveMode(self, port, mode, rate):
-		print("[Videomode] VideoHardware saveMode", port, mode, rate)
+		print("[VideoHardware] saveMode", port, mode, rate)
 		config.av.videoport.value = port
 		config.av.videoport.save()
 		if port in config.av.videomode:
@@ -266,7 +286,7 @@ class VideoHardware:
 
 	# get a list with all modes, with all rates, for a given port.
 	def getModeList(self, port):
-		print("[Videomode] VideoHardware getModeList for port", port)
+		print("[VideoHardware] getModeList for port", port)
 		res = []
 		for mode in self.modes[port]:
 			# list all rates which are completely valid
@@ -287,6 +307,10 @@ class VideoHardware:
 		portlist = self.getPortList()
 		for port in portlist:
 			descr = port
+			if descr == "Scart" and has_rca and not has_scart:
+				descr = "RCA"
+			if descr == "Scart" and has_avjack and not has_scart:
+				descr = "Jack"
 			lst.append((port, descr))
 
 			# create list of available modes
@@ -305,126 +329,92 @@ class VideoHardware:
 	def setConfiguredMode(self):
 		port = config.av.videoport.value
 		if port not in config.av.videomode:
-			print("[Videomode] VideoHardware current port not available, not setting videomode")
+			print("[VideoHardware] Current port not available, not setting videomode")
 			return
 
 		mode = config.av.videomode[port].value
 
 		if mode not in config.av.videorate:
-			print("[Videomode] VideoHardware current mode not available, not setting videomode")
+			print("[VideoHardware] Current mode not available, not setting videomode")
 			return
 
 		rate = config.av.videorate[mode].value
 		self.setMode(port, mode, rate)
 
 	def updateAspect(self, cfgelement):
-		# determine aspect = {any,4:3,16:9,16:10}
-		# determine policy = {bestfit,letterbox,panscan,nonlinear}
-
-		# based on;
-		#   config.av.videoport.value: current video output device
-		#     Scart:
-		#   config.av.aspect:
-		#     4_3:            use policy_169
-		#     16_9,16_10:     use policy_43
-		#     auto            always "bestfit"
-		#   config.av.policy_169
-		#     letterbox       use letterbox
-		#     panscan         use panscan
-		#     scale           use bestfit
-		#   config.av.policy_43
-		#     pillarbox       use panscan
-		#     panscan         use letterbox  ("panscan" is just a bad term, it's inverse-panscan)
-		#     nonlinear       use nonlinear
-		#     scale           use bestfit
-
 		port = config.av.videoport.value
 		if port not in config.av.videomode:
-			print("[Videomode] VideoHardware current port not available, not setting videomode")
+			print("[VideoHardware] Current port not available, not setting videomode")
 			return
 		mode = config.av.videomode[port].value
-
-		force_widescreen = self.isWidescreenMode(port, mode)
-
-		is_widescreen = force_widescreen or config.av.aspect.value in ("16_9", "16_10")
-		is_auto = config.av.aspect.value == "auto"
-		policy2 = "policy" # use main policy
-
-		if is_widescreen:
-			if force_widescreen:
-				aspect = "16:9"
-			else:
-				aspect = {"16_9": "16:9", "16_10": "16:10"}[config.av.aspect.value]
-			policy_choices = {"pillarbox": "panscan", "panscan": "letterbox", "nonlinear": "nonlinear", "scale": "bestfit", "full": "full", "auto": "auto"}
-			policy = policy_choices[config.av.policy_43.value]
-			policy2_choices = {"letterbox": "letterbox", "panscan": "panscan", "scale": "bestfit", "full": "full", "auto": "auto"}
-			policy2 = policy2_choices[config.av.policy_169.value]
-		elif is_auto:
-			aspect = "any"
-			if "auto" in config.av.policy_43.choices:
-				policy = "auto"
-			else:
-				policy = "bestfit"
-		else:
-			aspect = "4:3"
-			policy = {"letterbox": "letterbox", "panscan": "panscan", "scale": "bestfit", "full": "full", "auto": "auto"}[config.av.policy_169.value]
+		aspect = config.av.aspect.value
 
 		if not config.av.wss.value:
 			wss = "auto(4:3_off)"
 		else:
 			wss = "auto"
 
-		print("[Videomode] VideoHardware -> setting aspect, policy, policy2, wss", aspect, policy, policy2, wss)
-		try:
-			open("/proc/stb/video/aspect", "w").write(aspect)
-		except IOError:
-			print("[Videomode] Write to /proc/stb/video/aspect failed!")
-		try:
-			open("/proc/stb/video/policy", "w").write(policy)
-		except IOError:
-			print("[Videomode] Write to /proc/stb/video/policy failed!")
-		try:
-			open("/proc/stb/denc/0/wss", "w").write(wss)
-		except IOError:
-			print("[Videomode] Write to /proc/stb/denc/0/wss failed!")
-		try:
-			open("/proc/stb/video/policy2", "w").write(policy2)
-		except IOError:
-			print("[Videomode] Write to /proc/stb/video/policy2 failed!")
+		policy = config.av.policy_43.value
+		if hasattr(config.av, 'policy_169'):
+			policy2 = config.av.policy_169.value
+			print("[VideoHardware] -> setting aspect, policy, policy2, wss", aspect, policy, policy2, wss)
+		else:
+			print("[VideoHardware] -> setting aspect, policy, wss", aspect, policy, wss)
+
+		if isfile("/proc/stb/video/aspect"):
+			try:
+				open("/proc/stb/video/aspect", "w").write(aspect)
+			except IOError:
+				print("[VideoHardware] Write to /proc/stb/video/aspect failed!")
+		if isfile("/proc/stb/video/policy"):
+			try:
+				open("/proc/stb/video/policy", "w").write(policy)
+			except IOError:
+				print("[VideoHardware] Write to /proc/stb/video/policy failed!")
+		if isfile("/proc/stb/denc/0/wss"):
+			try:
+				open("/proc/stb/denc/0/wss", "w").write(wss)
+			except IOError:
+				print("[VideoHardware] Write to /proc/stb/denc/0/wss failed!")
+		if isfile("/proc/stb/video/policy2") and hasattr(config.av, 'policy_169'):
+			try:
+				open("/proc/stb/video/policy2", "w").write(policy2)
+			except IOError:
+				print("[VideoHardware] Write to /proc/stb/video/policy2 failed!")
 
 	def set3DMode(self, configElement):
 		try:
 			open("/proc/stb/video/3d_mode", "w").write(configElement.value)
 		except:
-			print("[Videomode] Write to /proc/stb/video/3d_mode failed!")
+			print("[VideoHardware] Write to /proc/stb/video/3d_mode failed!")
 
 	def setHDMIAudioSource(self, configElement):
 		try:
 			open("/proc/stb/hdmi/audio_source", "w").write(configElement.value)
 		except:
-			print("[Videomode] Write to /proc/stb/hdmi/audio_source failed!")
+			print("[VideoHardware] Write to /proc/stb/hdmi/audio_source failed!")
 
 	def setHDMIColor(self, configElement):
 		map = {"hdmi_rgb": 0, "hdmi_yuv": 1, "hdmi_422": 2}
 		try:
 			open("/proc/stb/avs/0/colorformat", "w").write(configElement.value)
 		except:
-			print("[Videomode] Write to /proc/stb/avs/0/colorformat failed!")
+			print("[VideoHardware] Write to /proc/stb/avs/0/colorformat failed!")
 
 	def setYUVColor(self, configElement):
 		map = {"yuv": 0}
 		try:
 			open("/proc/stb/avs/0/colorformat", "w").write(configElement.value)
 		except:
-			print("[Videomode] Write to /proc/stb/avs/0/colorformat failed!")
+			print("[VideoHardware] Write to /proc/stb/avs/0/colorformat failed!")
 
 	def updateColor(self, port):
-		print("[Videomode] VideoHardware updateColor: ", port)
+		print("[VideoHardware] updateColor: ", port)
 		if port == "HDMI":
 			self.setHDMIColor(config.av.colorformat_hdmi)
-		elif port == "YPbPr":
+		elif port == "YPbPr" and has_yuv:
 			self.setYUVColor(config.av.colorformat_yuv)
-		elif port == "Scart":
+		elif port == "Scart" and has_scart:
 			map = {"cvbs": 0, "rgb": 1, "svideo": 2, "yuv": 3}
 			from enigma import eAVSwitch
 			eAVSwitch.getInstance().setColorFormat(map[config.av.colorformat.value])

@@ -49,11 +49,6 @@
 			<convert type="ClockToText">LED</convert>
 		</widget>
 	</screen>
-	<screen name="VideoWizardSummary" position="0,0" size="1,1">
-		<widget source="global.CurrentTime" render="Label" position="0,0" size="1,1">
-			<convert type="ClockToText">LED</convert>
-		</widget>
-	</screen>
 	<screen name="StandbySummary" position="0,0" size="1,1">
 		<widget source="global.CurrentTime" render="Label" position="0,0" size="1,1">
 			<convert type="ClockToText">LED</convert>

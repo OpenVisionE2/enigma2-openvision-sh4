@@ -402,7 +402,7 @@ def InitLcd():
 			("0x6666ff", _("Azure")),
 			("0x9900ff", _("Purple")),
 			("0xff0066", _("Pink")),
-			("0xffffff", _("White")),
+			("0xffffff", _("White"))
 		]
 		standby_default = 1
 		if not ilcd.isOled():

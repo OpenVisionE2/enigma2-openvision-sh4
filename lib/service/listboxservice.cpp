@@ -916,7 +916,7 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 							{
 								std::string piconFilename = PyString_AS_STRING(pRet);
 								if (!piconFilename.empty())
-									loadImage(piconPixmap, piconFilename.c_str());
+									loadPNG(piconPixmap, piconFilename.c_str());
 							}
 							Py_DECREF(pRet);
 						}
@@ -949,7 +949,7 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 						if (PyCallable_Check(m_GetPiconNameFunc) and (m_column_width || piconPixmap))
 						{
 							eRect area = m_element_position[celServiceInfo];
-							/* PIcons are usually about 100:60. Make it a
+							/* Picons are usually about 100:60. Make it a
 							 * bit wider in case the icons are diffently
 							 * shaped, and to add a bit of margin between
 							 * icon and text. */
@@ -1062,7 +1062,7 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 							painter.blit(m_pixmaps[picRecord], ePoint(area.left() + offs, offset.y() + correction), area, gPainter::BT_ALPHABLEND);
 							painter.clippop();
 						}
-						if (m_show_two_lines > 0)
+						if (m_show_two_lines)
 						{
 							if(!next_event_name.empty())
 							{

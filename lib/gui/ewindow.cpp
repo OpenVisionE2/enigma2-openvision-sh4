@@ -114,3 +114,9 @@ int eWindow::event(int event, void *data, void *data2)
 	return eWidget::event(event, data, data2);
 }
 
+void eWindow::setBackgroundGradient(const gRGB &startcolor, const gRGB &endcolor, int direction, int blend)
+{
+	/* set background gradient for child, too */
+	eWidget::setBackgroundGradient(startcolor,endcolor,direction,blend);
+	m_child->setBackgroundGradient(startcolor,endcolor,direction,blend);
+}
